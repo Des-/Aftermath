@@ -20,6 +20,8 @@
 #ifndef TILEUNIT_HPP_INCLUDED
 #define TILEUNIT_HPP_INCLUDED
 
+namespace Aftermath { class TileUnit; }
+
 #include "Player.hpp"
 #include "SpecialistType.hpp"
 

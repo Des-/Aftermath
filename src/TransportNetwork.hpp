@@ -20,6 +20,8 @@
 #ifndef TRANSPORTNETWORK_HPP_INCLUDED
 #define TRANSPORTNETWORK_HPP_INCLUDED
 
+namespace Aftermath { class TransportNetwork; }
+
 #include "Count.hpp"
 #include "Player.hpp"
 #include "Resource.hpp"

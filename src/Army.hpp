@@ -20,6 +20,8 @@
 #ifndef ARMY_HPP_INCLUDED
 #define ARMY_HPP_INCLUDED
 
+namespace Aftermath { class Army; }
+
 #include "SelectiveCollection.hpp"
 #include "TileGroupUnit.hpp"
 

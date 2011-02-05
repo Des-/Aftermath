@@ -20,6 +20,8 @@
 #ifndef MERCHANTMARINE_HPP_INCLUDED
 #define MERCHANTMARINE_HPP_INCLUDED
 
+namespace Aftermath { class MerchantMarine; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

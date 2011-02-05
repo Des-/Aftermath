@@ -20,6 +20,8 @@
 #ifndef DATE_HPP_INCLUDED
 #define DATE_HPP_INCLUDED
 
+namespace Aftermath { class Date; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

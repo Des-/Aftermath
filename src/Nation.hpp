@@ -20,6 +20,8 @@
 #ifndef NATION_HPP_INCLUDED
 #define NATION_HPP_INCLUDED
 
+namespace Aftermath { class Nation; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

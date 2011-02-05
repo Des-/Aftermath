@@ -20,6 +20,8 @@
 #ifndef TILEGROUP_HPP_INCLUDED
 #define TILEGROUP_HPP_INCLUDED
 
+namespace Aftermath { class TileGroup; }
+
 #include <string>
 
 #include "Player.hpp"
@@ -41,9 +43,8 @@ namespace Aftermath {
      * TileGroups are a named collections of Tiles. Each TileGroup has its own
      * SelectiveCollection of TileGroupUnit objects.
      */
-    class TileGroup : SelectiveCollection<Tile *> {
+    class TileGroup : public SelectiveCollection<Tile *> {
         public:
-
             /**
              * Constructs a TileGroup with the given name and no unit list.
              */

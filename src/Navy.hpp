@@ -20,6 +20,8 @@
 #ifndef NAVY_HPP_INCLUDED
 #define NAVY_HPP_INCLUDED
 
+namespace Aftermath { class Navy; }
+
 #include "SelectiveCollection.hpp"
 #include "TileGroupUnit.hpp"
 

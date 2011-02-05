@@ -20,6 +20,8 @@
 #ifndef TREATY_HPP_INCLUDED
 #define TREATY_HPP_INCLUDED
 
+namespace Aftermath { class Treaty; }
+
 /**
  * @file Treaty.hpp
  *

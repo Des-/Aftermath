@@ -20,6 +20,8 @@
 #ifndef NAMEDTYPE_HPP_INCLUDED
 #define NAMEDTYPE_HPP_INCLUDED
 
+namespace Aftermath { class NamedType; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.
@@ -49,13 +51,13 @@ namespace Aftermath {
              * @param description - A brief description of the type.
              * @param image - The image of the type.
              */
-            Type(const std::string & name, const std::string &
+            NamedType(const std::string & name, const std::string &
                 description, const sf::Image * image);
 
             /**
              * Virtual destructor for NamedType. Frees the image of this type.
              */
-            virtual ~Type();
+            virtual ~NamedType();
 
             /**
              * Gets the name of this type.

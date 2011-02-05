@@ -20,6 +20,8 @@
 #ifndef SEA_HPP_INCLUDED
 #define SEA_HPP_INCLUDED
 
+namespace Aftermath { class Sea; }
+
 #include <string>
 
 #include "Player.hpp"

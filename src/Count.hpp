@@ -20,6 +20,8 @@
 #ifndef COUNT_HPP_INCLUDED
 #define COUNT_HPP_INCLUDED
 
+namespace Aftermath { template <typename T> class Count; }
+
 #include <map>
 
 /**
@@ -38,7 +40,7 @@ namespace Aftermath {
      * @param T - The type of elements to count.
      */
     template <typename T>
-    class Count : public std::map<T, int> {}
+    class Count : public std::map<T, int> {};
 
 }
 

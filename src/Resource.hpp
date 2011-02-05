@@ -20,6 +20,8 @@
 #ifndef RESOURCE_HPP_INCLUDED
 #define RESOURCE_HPP_INCLUDED
 
+namespace Aftermath { class Resource; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

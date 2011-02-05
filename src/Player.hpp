@@ -20,6 +20,8 @@
 #ifndef PLAYER_HPP_INCLUDED
 #define PLAYER_HPP_INCLUDED
 
+namespace Aftermath { class Player; }
+
 #include <string>
 
 #include "Collection.hpp"
@@ -112,7 +114,7 @@ namespace Aftermath {
              * @return The next move of this player, or NULL if the player
              * ends his or her turn.
              */
-            Move * getMove(const Game & game) = 0;
+            virtual Move * getMove(const Game & game) = 0;
 
             /**
              * Gets the current diplomatic relationship that this player has

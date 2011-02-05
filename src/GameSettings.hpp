@@ -20,6 +20,8 @@
 #ifndef GAMESETTINGS_HPP_INCLUDED
 #define GAMESETTINGS_HPP_INCLUDED
 
+namespace Aftermath { class GameSettings; }
+
 #include <map>
 #include <string>
 

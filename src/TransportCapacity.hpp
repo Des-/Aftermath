@@ -20,6 +20,8 @@
 #ifndef TRANSPORTCAPACITY_HPP_INCLUDED
 #define TRANSPORTCAPACITY_HPP_INCLUDED
 
+namespace Aftermath { class TransportCapacity; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

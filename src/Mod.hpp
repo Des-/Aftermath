@@ -20,6 +20,8 @@
 #ifndef MOD_HPP_INCLUDED
 #define MOD_HPP_INCLUDED
 
+namespace Aftermath { class Mod; }
+
 #include <map>
 #include <string>
 
@@ -38,7 +40,7 @@
 #include "TileAction.hpp"
 #include "TransportCapacity.hpp"
 #include "UnitType.hpp"
-#include "WorkerTypes.hpp"
+#include "WorkerType.hpp"
 
 /**
  * @file Mod.hpp

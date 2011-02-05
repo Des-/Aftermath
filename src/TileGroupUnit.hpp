@@ -20,6 +20,8 @@
 #ifndef TILEGROUPUNIT_HPP_INCLUDED
 #define TILEGROUPUNIT_HPP_INCLUDED
 
+namespace Aftermath { class TileGroupUnit; }
+
 #include "UnitLevel.hpp"
 #include "UnitType.hpp"
 #include "Upgradable.hpp"
@@ -41,11 +43,19 @@ namespace Aftermath {
     class TileGroupUnit : public Upgradable<UnitLevel> {
         public:
             /**
-             * Constructs a new TileGroupUnit of the given UnitType.
+             * Constructs a new TileGroupUnit of the given UnitType and adds
+             * its merchant marine capacity to its owner.
              *
              * @param type - The unit type of this unit.
+             * @param owner - The owner of this unit.
              */
-            TileGroupUnit(const UnitType * type);
+            TileGroupUnit(const UnitType * type, const Player * owner);
+
+            /**
+             * Frees this TileGroupUnit and removes its merchant marine
+             * capacity from its owner.
+             */
+            ~TileGroupUnit();
 
             /**
              * Gets the UnitType of this unit.
@@ -77,9 +87,21 @@ namespace Aftermath {
              */
             void addToughness(int toughness);
 
+            /**
+             * @return The owner of this TileGroupUnit.
+             */
+            const Player * getOwner() const;
+
+            /**
+             * Upgrades to the next level and updates the owner's merchant
+             * marine capacity.
+             */
+            void finishUpgrade();
+
         private:
             int mToughness;
             const UnitType * mType;
+            const Player * mOwner;
     };
 
 }

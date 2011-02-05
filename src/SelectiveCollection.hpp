@@ -21,6 +21,8 @@
 #ifndef SELECTIVECOLLECTION_HPP_INCLUDED
 #define SELECTIVECOLLECTION_HPP_INCLUDED
 
+namespace Aftermath { template <typename T> class SelectiveCollection; }
+
 #include "Collection.hpp"
 
 /**
@@ -43,7 +45,7 @@ namespace Aftermath {
             /**
              * Virtual destructor for selective collections. Does nothing.
              */
-            virtual ~SelectiveCollection();
+            virtual ~SelectiveCollection() {}
 
             /**
              * Returns whether or not this collection supports adding the
@@ -64,17 +66,11 @@ namespace Aftermath {
              *
              * @param element - The element to add.
              */
-            virtual void add(const T & element);
+            virtual void add(const T & element) {
+                if(canAdd(element))
+                    Collection<T>::add(element);
+            }
     };
-
-    template <typename T>
-    virtual SelectiveCollection<T>::~SelectiveCollection();
-
-    template <typename T>
-    virtual void SelectiveCollection<T>::add(const T & element) {
-        if(canAdd(element))
-            Collection<T>::add(element);
-    }
 
 }
 

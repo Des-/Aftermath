@@ -20,6 +20,8 @@
 #ifndef TILEACTION_HPP_INCLUDED
 #define TILEACTION_HPP_INCLUDED
 
+namespace Aftermath { class TileAction; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.
@@ -66,7 +68,7 @@ namespace Aftermath {
              * @return true if this action can be performed on the given tile;
              * false otherwise.
              */
-            bool canPerform(const TileUnit & unit, const Tile & tile)
+            virtual bool canPerform(const TileUnit & unit, const Tile & tile)
                 const = 0;
 
             /**
@@ -76,7 +78,7 @@ namespace Aftermath {
              * @param unit - The unit to perform this action.
              * @param tile - The tile that this action is being performed on.
              */
-            void perform(const TileUnit & unit, Tile & tile) = 0;
+            virtual void perform(const TileUnit & unit, Tile & tile) = 0;
     };
 
 }

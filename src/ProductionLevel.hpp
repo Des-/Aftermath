@@ -20,6 +20,8 @@
 #ifndef PRODUCTIONLEVEL_HPP_INCLUDED
 #define PRODUCTIONLEVEL_HPP_INCLUDED
 
+namespace Aftermath { class ProductionLevel; }
+
 #include "Count.hpp"
 #include "NamedType.hpp"
 

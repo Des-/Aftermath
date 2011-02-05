@@ -20,6 +20,8 @@
 #ifndef LEVEL_HPP_INCLUDED
 #define LEVEL_HPP_INCLUDED
 
+namespace Aftermath { class Level; }
+
 #include "Count.hpp"
 #include "NamedType.hpp"
 

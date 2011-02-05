@@ -20,6 +20,8 @@
 #ifndef TERRAIN_HPP_INCLUDED
 #define TERRAIN_HPP_INCLUDED
 
+namespace Aftermath { class Terrain; }
+
 #include <map>
 #include <string>
 

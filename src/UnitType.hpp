@@ -20,6 +20,8 @@
 #ifndef UNITTYPE_HPP_INCLUDED
 #define UNITTYPE_HPP_INCLUDED
 
+namespace Aftermath { class UnitType; }
+
 #include <string>
 #include <vector>
 

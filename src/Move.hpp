@@ -20,6 +20,8 @@
 #ifndef MOVE_HPP_INCLUDED
 #define MOVE_HPP_INCLUDED
 
+namespace Aftermath { class Move; }
+
 #include "Game.hpp"
 
 /**

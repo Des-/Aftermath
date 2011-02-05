@@ -20,6 +20,8 @@
 #ifndef SPECIALISTTYPE_HPP_INCLUDED
 #define SPECIALISTTYPE_HPP_INCLUDED
 
+namespace Aftermath { class SpecialistType; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

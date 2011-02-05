@@ -20,6 +20,8 @@
 #ifndef PRODUCTIONFORMULA_HPP_INCLUDED
 #define PRODUCTIONFORMULA_HPP_INCLUDED
 
+namespace Aftermath { class ProductionFormula; }
+
 #include <map>
 
 #include "Count.hpp"

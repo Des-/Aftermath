@@ -20,6 +20,8 @@
 #ifndef WORKERTYPE_HPP_INCLUDED
 #define WORKERTYPE_HPP_INCLUDED
 
+namespace Aftermath { class WorkerType; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

@@ -20,6 +20,8 @@
 #ifndef MONEY_HPP_INCLUDED
 #define MONEY_HPP_INCLUDED
 
+namespace Aftermath { class Money; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.

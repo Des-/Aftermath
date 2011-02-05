@@ -20,6 +20,8 @@
 #ifndef GAME_HPP_INCLUDED
 #define GAME_HPP_INCLUDED
 
+namespace Aftermath { class Game; }
+
 #include "Collection.hpp"
 #include "GameSettings.hpp"
 #include "TileMap.hpp"

@@ -20,6 +20,8 @@
 #ifndef TECHNOLOGYTREE_HPP_INCLUDED
 #define TECHNOLOGYTREE_HPP_INCLUDED
 
+namespace Aftermath { class TechnologyTree; }
+
 #include "Collection.hpp"
 #include "ProductionCenter.hpp"
 #include "Technology.hpp"

@@ -20,6 +20,8 @@
 #ifndef PRODUCTIONCENTERTYPE_HPP_INCLUDED
 #define PRODUCTIONCENTERTYPE_HPP_INCLUDED
 
+namespace Aftermath { class ProductionCenterType; }
+
 #include <string>
 #include <vector>
 
@@ -60,7 +62,7 @@ namespace Aftermath {
              * @param formulas - The formulas that this ProductionCenterType
              * can use.
              */
-            ProductionCenter(const std::string & name, const sf::Image *
+            ProductionCenterType(const std::string & name, const sf::Image *
                 image, const std::vector<const ProductionLevel *> & levels,
                 const Collection<const ProductionFormula *> & formulas);
 

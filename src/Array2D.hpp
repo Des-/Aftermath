@@ -20,6 +20,8 @@
 #ifndef ARRAY2D_HPP_INCLUDED
 #define ARRAY2D_HPP_INCLUDED
 
+namespace Aftermath { template <typename T> class Array2D; }
+
 #include <cstdlib>
 #include <utility>
 

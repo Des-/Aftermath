@@ -20,6 +20,8 @@
 #ifndef PRODUCTIONCENTER_HPP_INCLUDED
 #define PRODUCTIONCENTER_HPP_INCLUDED
 
+namespace Aftermath { class ProductionCenter; }
+
 #include "Count.hpp"
 #include "Player.hpp"
 #include "ProductionCenterType.hpp"

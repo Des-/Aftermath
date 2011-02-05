@@ -20,6 +20,8 @@
 #ifndef TILE_HPP_INCLUDED
 #define TILE_HPP_INCLUDED
 
+namespace Aftermath { class Tile; }
+
 #include "Resource.hpp"
 #include "SelectiveCollection.hpp"
 #include "Terrain.hpp"

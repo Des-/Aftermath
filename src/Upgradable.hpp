@@ -20,11 +20,12 @@
 #ifndef UPGRADABLE_HPP_INCLUDED
 #define UPGRADABLE_HPP_INCLUDED
 
+namespace Aftermath { template <class LevelType> class Upgradable; }
+
 #include <vector>
 
 #include "Count.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 
 /**
  * @file Upgradable.hpp
@@ -57,12 +58,13 @@ namespace Aftermath {
              *
              * @param levels - The levels to upgrade through, starting at 0.
              */
-            Upgradable(const std::vector<const LevelType *> & levels);
+            Upgradable(const std::vector<const LevelType *> & levels) :
+                 mUpgrading(false), mLevel(0), mLevels(levels) {};
 
             /**
              * Virtual destructor for this Upgradable. This does nothing.
              */
-            virtual ~Upgradable();
+            virtual ~Upgradable() {};
 
             /**
              * Gets the current level of this Upgradable. This will be in the
@@ -70,14 +72,18 @@ namespace Aftermath {
              *
              * @return The current level of this Upgradable.
              */
-            const LevelType & getLevel() const;
+            const LevelType & getLevel() const {
+                return *(mLevels[mLevel]);
+            }
 
             /**
              * Returns whether not this Upgradable is on its last level.
              *
              * @return true if there is a next level, false otherwise.
              */
-            bool hasNextLevel() const;
+            bool hasNextLevel() const {
+                return mLevel + 1 < mLevels.size();
+            }
 
             /**
              * Gets the cost of the next upgrade. This function calls
@@ -85,7 +91,9 @@ namespace Aftermath {
              *
              * @return The cost of the next upgrade.
              */
-            const Count<const NamedType *> & getCost() const;
+            const Count<const NamedType *> & getCost() const {
+                return mLevels[mLevel + 1]->getCost();
+            }
 
             /**
              * Gets whether the given player has the capacity to upgrade this
@@ -99,7 +107,12 @@ namespace Aftermath {
              * and technology, there is a next level, and this Upgradable is
              * not currently upgrading; false otherwise.
              */
-            bool canUpgrade(const Player & player) const;
+            template <class PlayerType>
+            bool canUpgrade(const PlayerType & player) const {
+                return  !getUpgrading() &&
+                        hasNextLevel() &&
+                        player.canTake(getCost());
+            }
 
             /**
              * Upgrades immediately, deducting the required resources and
@@ -108,7 +121,11 @@ namespace Aftermath {
              *
              * @param player - The player to pay for the upgrade.
              */
-            void upgrade(Player & player);
+            template <class PlayerType>
+            void upgrade(PlayerType & player) {
+                startUpgrade(player);
+                finishUpgrade();
+            }
 
             /**
              * Returns whether this Upgradable is currently in the process of
@@ -117,7 +134,9 @@ namespace Aftermath {
              * @return true if startUpgrade() was called without a following
              * cancelUpgrade() or finishUpgrade(); false otherwise.
              */
-            bool getUpgrading() const;
+            bool getUpgrading() const {
+                return mUpgrading;
+            }
 
             /**
              * Starts a turn-long upgrade, deducting the required resoures and
@@ -126,7 +145,11 @@ namespace Aftermath {
              *
              * @param player - The player to pay for the upgrade.
              */
-            void startUpgrade(Player & player);
+            template <class PlayerType>
+            void startUpgrade(PlayerType & player) {
+                mUpgrading = true;
+                player.take(getCost());
+            }
 
             /**
              * Cancels a turn-long upgrade, refunding the required money and
@@ -134,78 +157,26 @@ namespace Aftermath {
              *
              * @param player - The player to refund.
              */
-            void cancelUpgrade(Player & player);
+            template <class PlayerType>
+            void cancelUpgrade(PlayerType & player) {
+                player.give(getCost());
+                mUpgrading = false;
+            }
 
             /**
              * Completes a turn-long upgrade. This actually advances this
              * Upgradable's level.
              */
-            void finishUpgrade();
+            virtual void finishUpgrade() {
+                mUpgrading = false;
+                ++mLevel;
+            }
 
         private:
             bool mUpgrading;
             int mLevel;
             std::vector<const LevelType *> & mLevels;
-    }
-
-    template <class LevelType>
-    inline Upgradable<LevelType>::Upgradable(const std::vector<const LevelType
-        *> & levels) : mUpgrading(false), mLevel(0), mLevels(levels) {}
-
-    template <class LevelType>
-    virtual Upgradable<LevelType>::~Upgradable() {}
-
-    template <class LevelType>
-    const LevelType & Upgradable<LevelType>::getLevel() const {
-        return *(mLevels[mLevel]);
-    }
-
-    template <class LevelType>
-    inline bool Upgradable<LevelType>::hasNextLevel() const {
-        return mLevel + 1 < mLevels.size();
-    }
-
-    template <class LevelType>
-    inline const Count<const NamedType *> & Upgradable<LevelType>::getCost()
-            const {
-        return mLevels[mLevel + 1]->getCost();
-    }
-
-    template <class LevelType>
-    inline bool Upgradable<LevelType>::canUpgrade(const Player & player) const {
-        return  !getUpgrading() &&
-                hasNextLevel() &&
-                player.canTake(getCost());
-    }
-
-    template <class LevelType>
-    inline void Upgradable<LevelType>::upgrade(Player & player) {
-        startUpgrade(player);
-        finishUpgrade();
-    }
-
-    template <class LevelType>
-    inline bool Upgradable<LevelType>::getUpgrading() const {
-        return mUpgrading;
-    }
-
-    template <class LevelType>
-    inline void Upgradable<LevelType>::startUpgrade(Player & player) {
-        mUpgrading = true;
-        player.take(getCost());
-    }
-
-    template <class LevelType>
-    inline void Upgradable<LevelType>::cancelUpgrade(Player & player) {
-        player.give(getCost());
-        mUpgrading = false;
-    }
-
-    template <class LevelType>
-    inline void Upgradable<LevelType>::finishUpgrade() {
-        mUpgrading = false;
-        ++mLevel;
-    }
+    };
 
 }
 

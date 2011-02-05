@@ -20,6 +20,8 @@
 #ifndef COLLECTION_HPP_INCLUDED
 #define COLLECTION_HPP_INCLUDED
 
+namespace Aftermath { template <typename T> class Collection; }
+
 #include <set>
 
 /**
@@ -41,13 +43,13 @@ namespace Aftermath {
     template <typename T>
     class Collection {
         public:
-            typedef std::set<T>::iterator iterator;
-            typedef std::set<const T>::const_iterator const_iterator;
+            typedef typename std::set<T>::iterator iterator;
+            typedef typename std::set<T>::const_iterator const_iterator;
 
             /**
              * Virtual collection destructor. Does nothing.
              */
-            virtual ~Collection();
+            virtual ~Collection() {}
 
             /**
              * Adds an element to this collection. If the element is already
@@ -55,19 +57,25 @@ namespace Aftermath {
              *
              * @param element - The element to add.
              */
-            virtual void add(const T & element);
+            virtual void add(const T & element) {
+                mElements.insert(element);
+            }
 
             /**
              * Removes an element from this collection.
              *
              * @param element - The element to remove.
              */
-            virtual void remove(const T & element);
+            virtual void remove(const T & element) {
+                mElements.erase(element);
+            }
 
             /**
              * Removes all elements from this collection.
              */
-            void clear();
+            void clear() {
+                mElements.clear();
+            }
 
             /**
              * Finds if this collection contains the given element.
@@ -77,94 +85,58 @@ namespace Aftermath {
              * @return true if this collection contains the element, false
              * otherwise.
              */
-            bool contains(const T & element) const;
+            bool contains(const T & element) const {
+                return mElements.find(element) != end();
+            }
 
             /**
              * Returns an iterator at the first element in this collection.
              *
              * @return An iterator starting at the first element.
              */
-            iterator begin();
+            iterator begin() {
+                return mElements.begin();
+            }
 
             /**
              * Returns a const iterator to the first element.
              *
              * @see begin()
              */
-            const_iterator begin() const;
+            const_iterator begin() const {
+                return mElements.begin();
+            }
 
             /**
              * Returns an iterator past the last element in this collection.
              *
              * @return An iterator past the end of this collection.
              */
-            iterator end();
+            iterator end() {
+                return mElements.end();
+            }
 
             /**
              * Returns a const iterator past the last element.
              *
              * @see end()
              */
-            const_iterator end() const;
+            const_iterator end() const {
+                return mElements.end();
+            }
 
             /**
              * Gets the number of elements in this Collection.
              *
              * @return The number of elements, as an unsigned integer.
              */
-            unsigned size() const;
+            unsigned size() const {
+                return mElements.size();
+            }
 
         private:
             std::set<T> mElements;
     };
-
-    template <typename T>
-    virtual Collection<T>::~Collection() {}
-
-    template <typename T>
-    virtual void Collection<T>::add(const T & element) {
-        mElements.insert(element);
-    }
-
-    template <typename T>
-    virtual void Collection<T>::remove(const T & element) {
-        mElements.erase(element);
-    }
-
-    template <typename T>
-    void Collection<T>::clear() {
-        mElements.clear();
-    }
-
-    template <typename T>
-    inline bool Collection<T>::contains(const T & element) const {
-        return mElements.find(element) != end();
-    }
-
-    template <typename T>
-    inline Collection<T>::iterator Collection<T>::begin() {
-        return mElements.begin();
-    }
-
-    template <typename T>
-    inline Collection<T>::const_iterator Collection<T>::begin() const {
-        return mElements.begin();
-    }
-
-    template <typename T>
-    inline Collection<T>::iterator Collection<T>::end() {
-        return mElements.end();
-    }
-
-    template <typename T>
-    inline Collection<T>::const_iterator Collection<T>::end() const {
-        return mElements.end();
-    }
-
-    template <typename T>
-    inline unsigned Collection<T>::size() const {
-        return mElements.size();
-    }
 
 }
 

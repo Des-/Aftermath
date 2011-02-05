@@ -20,6 +20,8 @@
 #ifndef PROVINCE_HPP_INCLUDED
 #define PROVINCE_HPP_INCLUDED
 
+namespace Aftermath { class Province; }
+
 #include <string>
 
 #include "Player.hpp"

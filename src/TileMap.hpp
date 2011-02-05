@@ -20,6 +20,8 @@
 #ifndef TILEMAP_HPP_INCLUDED
 #define TILEMAP_HPP_INCLUDED
 
+namespace Aftermath { class TileMap; }
+
 #include <string>
 
 #include "Array2D.hpp"

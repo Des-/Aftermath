@@ -20,6 +20,8 @@
 #ifndef LABOR_HPP_INCLUDED
 #define LABOR_HPP_INCLUDED
 
+namespace Aftermath { class Labor; }
+
 #include <string>
 
 // TODO: Decide for certain what graphics library to use.
