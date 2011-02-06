@@ -77,26 +77,27 @@ Inheritance diagram for Aftermath::Level:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Level.html#a26f94355116d05b16d025d6a14cf6aad">Level</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *cost)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Level.html" title="An upgradable&#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a> with the given monetary, resource, and research cost.  <a href="#a26f94355116d05b16d025d6a14cf6aad"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae73b077e699ba52d46f6a0d1b200e929"></a><!-- doxytag: member="Aftermath::Level::~Level" ref="ae73b077e699ba52d46f6a0d1b200e929" args="()" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Level.html#ae73b077e699ba52d46f6a0d1b200e929">~Level</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Level.html#aabed2daf86c5ec0df5122ea5c0b696e8">Level</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *cost)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Level.html" title="An upgradable&#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a> with the given monetary, resource, and research cost.  <a href="#aabed2daf86c5ec0df5122ea5c0b696e8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a249eac1e8f19ff44134efa5e986feaca"></a><!-- doxytag: member="Aftermath::Level::~Level" ref="a249eac1e8f19ff44134efa5e986feaca" args="()" -->
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Level.html#a249eac1e8f19ff44134efa5e986feaca">~Level</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for <a class="el" href="classAftermath_1_1Level.html" title="An upgradable&#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a>; this frees this level's cost. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Level.html#adea0927f5eb81ee337bc68380f7ecf72">getCost</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cost of upgrading to this level.  <a href="#adea0927f5eb81ee337bc68380f7ecf72"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <br class="typebreak"/>
+<a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Level.html#a1e73ec0f860ea2acd82b5c35eecbd1e7">getCost</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cost of upgrading to this level.  <a href="#a1e73ec0f860ea2acd82b5c35eecbd1e7"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>An upgradable's level needs to hold certain information about the costs of aquiring that level. </p>
 <p>This includes monetary, resource, and research costs. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a26f94355116d05b16d025d6a14cf6aad"></a><!-- doxytag: member="Aftermath::Level::Level" ref="a26f94355116d05b16d025d6a14cf6aad" args="(const Count&lt; const NamedType * &gt; *cost)" -->
+<a class="anchor" id="aabed2daf86c5ec0df5122ea5c0b696e8"></a><!-- doxytag: member="Aftermath::Level::Level" ref="aabed2daf86c5ec0df5122ea5c0b696e8" args="(const Count&lt; const Transferable * &gt; *cost)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::Level::Level </td>
+          <td class="memname">Level::Level </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *&#160;</td>
           <td class="paramname"> <em>cost</em>&#160;)</td>
           <td></td>
         </tr>
@@ -115,12 +116,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="adea0927f5eb81ee337bc68380f7ecf72"></a><!-- doxytag: member="Aftermath::Level::getCost" ref="adea0927f5eb81ee337bc68380f7ecf72" args="() const " -->
+<a class="anchor" id="a1e73ec0f860ea2acd82b5c35eecbd1e7"></a><!-- doxytag: member="Aftermath::Level::getCost" ref="a1e73ec0f860ea2acd82b5c35eecbd1e7" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt;const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> *&gt;&amp; Aftermath::Level::getCost </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp; Level::getCost </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -134,8 +135,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Level_8hpp_source.html">Level.hpp</a></li>
+<li>src/Level.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -152,7 +154,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

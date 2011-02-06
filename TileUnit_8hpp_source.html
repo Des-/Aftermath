@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -70,23 +69,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="preprocessor">#ifndef TILEUNIT_HPP_INCLUDED</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define TILEUNIT_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="SpecialistType_8hpp.html" title="The specialist role of a TileUnit.">SpecialistType.hpp</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player;
+<a name="l00024"></a>00024                       <span class="keyword">class </span>SpecialistType; }
 <a name="l00025"></a>00025 
 <a name="l00034"></a>00034 <span class="keyword">namespace </span>Aftermath {
 <a name="l00035"></a>00035 
 <a name="l00040"></a><a class="code" href="classAftermath_1_1TileUnit.html">00040</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> {
 <a name="l00041"></a>00041         <span class="keyword">public</span>:
-<a name="l00049"></a>00049             <a class="code" href="classAftermath_1_1TileUnit.html#a09893554deb7bcae44bf7d3bd2b65c68" title="Constructs a new TileUnit with the given owner and type.">TileUnit</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * owner, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> * type);
+<a name="l00049"></a>00049             <a class="code" href="classAftermath_1_1TileUnit.html#ad7dca1bc0451137bcee414ca5b667a77" title="Constructs a new TileUnit with the given owner and type.">TileUnit</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; owner, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> * type);
 <a name="l00050"></a>00050 
-<a name="l00057"></a>00057             <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; <a class="code" href="classAftermath_1_1TileUnit.html#a33a11a7d7982e9572e0cd124cca0d9f8" title="Gets the owner of this unit.">getOwner</a>();
+<a name="l00057"></a>00057             <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; <a class="code" href="classAftermath_1_1TileUnit.html#ab0c24c772721f4f988cdd152abbf2c04" title="Gets the owner of this unit.">getOwner</a>();
 <a name="l00058"></a>00058 
-<a name="l00064"></a>00064             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; <a class="code" href="classAftermath_1_1TileUnit.html#a33a11a7d7982e9572e0cd124cca0d9f8" title="Gets the owner of this unit.">getOwner</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; <a class="code" href="classAftermath_1_1TileUnit.html#ab0c24c772721f4f988cdd152abbf2c04" title="Gets the owner of this unit.">getOwner</a>() <span class="keyword">const</span>;
 <a name="l00065"></a>00065 
-<a name="l00072"></a>00072             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> &amp; <a class="code" href="classAftermath_1_1TileUnit.html#a3456b7ec2a9f554c1688071d79687a79" title="Gets the type of this unit.">getType</a>() <span class="keyword">const</span>;
+<a name="l00072"></a>00072             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> * <a class="code" href="classAftermath_1_1TileUnit.html#a0518f523815fc7fb3f50b10179dcb50e" title="Gets the type of this unit.">getType</a>() <span class="keyword">const</span>;
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074         <span class="keyword">private</span>:
-<a name="l00075"></a>00075             <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * mOwner;
+<a name="l00075"></a>00075             <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; mOwner;
 <a name="l00076"></a>00076             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> * mType;
 <a name="l00077"></a>00077     };
 <a name="l00078"></a>00078 
@@ -109,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

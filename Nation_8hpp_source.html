@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -72,28 +71,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="comment">// TODO: Decide for certain what graphics library to use.</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;SFML/Graphics/Color.hpp&gt;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;SFML/Graphics/Image.hpp&gt;</span>
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
-<a name="l00030"></a>00030 
-<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
-<a name="l00040"></a>00040 
-<a name="l00046"></a><a class="code" href="classAftermath_1_1Nation.html">00046</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a> {
-<a name="l00047"></a>00047         <span class="keyword">public</span>:
-<a name="l00058"></a>00058             <a class="code" href="classAftermath_1_1Nation.html#a64e404a89d38f6c0195bfd804c4be2bb" title="Constructs a new Nation with the given name, description, color, and flag.">Nation</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp; description,
-<a name="l00059"></a>00059                 <span class="keyword">const</span> sf::Color &amp; color, <span class="keyword">const</span> sf::Image * flag);
-<a name="l00060"></a>00060 
-<a name="l00067"></a>00067             <span class="keyword">const</span> sf::Color &amp; <a class="code" href="classAftermath_1_1Nation.html#a2e2a9fba1d76e89326e30da69e39c5fb" title="Gets the color of this nation.">getColor</a>() <span class="keyword">const</span>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069         <span class="keyword">private</span>:
-<a name="l00070"></a>00070             sf::Color mColor;
-<a name="l00071"></a>00071     };
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 }
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <span class="preprocessor">#endif // NATION_HPP_INCLUDED</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Graphics_8hpp.html" title="An interface for graphical elements.">Graphics.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
+<a name="l00027"></a>00027 
+<a name="l00036"></a>00036 <span class="keyword">namespace </span>Aftermath {
+<a name="l00037"></a>00037 
+<a name="l00043"></a><a class="code" href="classAftermath_1_1Nation.html">00043</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a> {
+<a name="l00044"></a>00044         <span class="keyword">public</span>:
+<a name="l00055"></a>00055             <a class="code" href="classAftermath_1_1Nation.html#ab30778223c0b5b7ef24c0cda0c0d0f55" title="Constructs a new Nation with the given name, description, color, and flag.">Nation</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp; description,
+<a name="l00056"></a>00056                 <span class="keyword">const</span> Color &amp; color, <span class="keyword">const</span> Image * flag);
+<a name="l00057"></a>00057 
+<a name="l00064"></a>00064             <span class="keyword">const</span> Color &amp; <a class="code" href="classAftermath_1_1Nation.html#a6c37bad3cb23ef1dba5921a1c370d054" title="Gets the color of this nation.">getColor</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066         <span class="keyword">private</span>:
+<a name="l00067"></a>00067             Color mColor;
+<a name="l00068"></a>00068     };
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="preprocessor">#endif // NATION_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -110,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

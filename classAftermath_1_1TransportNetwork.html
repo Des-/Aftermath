@@ -67,83 +67,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c3670b7aa3d34c38b1767d3beb011f0"></a><!-- doxytag: member="Aftermath::TransportNetwork::TransportNetwork" ref="a2c3670b7aa3d34c38b1767d3beb011f0" args="()" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a2c3670b7aa3d34c38b1767d3beb011f0">TransportNetwork</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new transport network with no capacity. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a4b8fae7cd67f8983b67ea7e5dab49c82">getAvailable</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of the given resource type that is connected to this transport network.  <a href="#a4b8fae7cd67f8983b67ea7e5dab49c82"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a27dc4dbcba4dc7ec346d98f80d793346">addAvailable</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one unit of the given resource to this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#a27dc4dbcba4dc7ec346d98f80d793346"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a982768d8a00e2cecf0fd1090e4e09aca">removeAvailable</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one unit of the given resource from this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#a982768d8a00e2cecf0fd1090e4e09aca"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a4ce37994973e448ee2f2b3a49a992759">getTransporting</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of the given type of resource that is being transported across this transport network.  <a href="#a4ce37994973e448ee2f2b3a49a992759"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a2f085d00ebcf51414b6af89ff9315237">startTransporting</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts to transport one unit of the given resource.  <a href="#a2f085d00ebcf51414b6af89ff9315237"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#acfab0137816272a8099809adebd928fe">cancelTransporting</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops transporting one unit of the given resource.  <a href="#acfab0137816272a8099809adebd928fe"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#abdd3fb581ed8d1e16bafe3bdeb227d8d">finishTransporting</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ships the resources in the transport queue to the given player.  <a href="#abdd3fb581ed8d1e16bafe3bdeb227d8d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#aa1ffb2078eb91dc9f26013c3b76c609e">getTotalTransporting</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total units of resources that are being transported.  <a href="#aa1ffb2078eb91dc9f26013c3b76c609e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a6a0d4ef878307b3ef4193912b94341c8">getCapacity</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capacity of this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>, in units.  <a href="#a6a0d4ef878307b3ef4193912b94341c8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a4ada3e00cb44382a642a5fb86b9c8519">addCapacity</a> (int capacity)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the total capacity of this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#a4ada3e00cb44382a642a5fb86b9c8519"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a0c1a94581bdcda3a1dd0e7c5ce0b4424">getMerchantMarine</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capacity of the merchant marine.  <a href="#a0c1a94581bdcda3a1dd0e7c5ce0b4424"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a755ad6d6ce446d93d18e6365c785f0ea">addMerchantMarine</a> (int capacity)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the merchant marine capacity.  <a href="#a755ad6d6ce446d93d18e6365c785f0ea"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#ad626cfa4e110e899f118a630abf3502a">getTrading</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of the resource type that is being traded internationally.  <a href="#ad626cfa4e110e899f118a630abf3502a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a8695d14f0d4ca8e8856d64991d043740">getBidding</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total number of resources that are being bid on.  <a href="#a8695d14f0d4ca8e8856d64991d043740"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a94f58b96ea2e87ab9ebed10574ad1589">startTrading</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds one unit to the amount of the given resource type that is being traded.  <a href="#a94f58b96ea2e87ab9ebed10574ad1589"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#af75b0fbfd2f9f5f208bb00159acb15bd">cancelTrading</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts one unit from the amount of the given resource type that is being traded.  <a href="#af75b0fbfd2f9f5f208bb00159acb15bd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a08ad33f264fe7c6be64d919aaea528fd">startBidding</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts bidding on the given resource.  <a href="#a08ad33f264fe7c6be64d919aaea528fd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#ab665d77ad79988f3510472ab2ca16576">cancelBidding</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops bidding on the given resource.  <a href="#ab665d77ad79988f3510472ab2ca16576"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a1c7a53e05762a0669b78446ce083ebfa">finishTrade</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the given player one unit of the given resource and takes the resource off of the trading queue.  <a href="#a1c7a53e05762a0669b78446ce083ebfa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#af7abf3939305faa104832470a803fc65">getAvailable</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of the given resource type that is connected to this transport network.  <a href="#af7abf3939305faa104832470a803fc65"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a4ae0fee1ccd7b45dc9e7c89f732b49b6">addAvailable</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the given resource to this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#a4ae0fee1ccd7b45dc9e7c89f732b49b6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#af1980486104ae345d016202c81cff949">removeAvailable</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the given resource from this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#af1980486104ae345d016202c81cff949"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a5bb7546ce7a8d87686af503c693e192c">getTransporting</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of the given type of resource that is being transported across this transport network.  <a href="#a5bb7546ce7a8d87686af503c693e192c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a6cca337dad81f7e78f681450b66fb024">startTransporting</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts to transport the given resource.  <a href="#a6cca337dad81f7e78f681450b66fb024"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#ac41e8bea16bace5776fe93be2f30b68e">stopTransporting</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops transporting one unit of the given resource.  <a href="#ac41e8bea16bace5776fe93be2f30b68e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#acf29f82cc69252512946b27d92c0d68c">finishTransporting</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ships the resources in the transport queue to the given player.  <a href="#acf29f82cc69252512946b27d92c0d68c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a329c8904ede2c39a44fa754f964c87ec">getTotalTransporting</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total units of resources that are being transported.  <a href="#a329c8904ede2c39a44fa754f964c87ec"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#afa74152d6a8fb3b3ce08a7970d414d42">getTrading</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of the resource type that is being traded internationally.  <a href="#afa74152d6a8fb3b3ce08a7970d414d42"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#af3c8254a9405b667e71c54d0261f8f4d">startTrading</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the amount of the given resource type that is being traded.  <a href="#af3c8254a9405b667e71c54d0261f8f4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a6dd4d23fb856f3fb1c0ee30f19f80021">stopTrading</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts from the amount of the given resource type that is being traded.  <a href="#a6dd4d23fb856f3fb1c0ee30f19f80021"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#ac1736aecc16ca12b591ce79cfcef9e57">finishTrade</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the given player an amount of the given resource and takes the resource off of the trading queue.  <a href="#ac1736aecc16ca12b591ce79cfcef9e57"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <br class="typebreak"/>
+<a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a11299b6f8dd4c3c42600f0c6b1006390">getBidding</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a1ca0ad6ea3cdb879343bcfe403d3a157">startBidding</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts bidding on the given resource.  <a href="#a1ca0ad6ea3cdb879343bcfe403d3a157"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#ad1f8032179885f5f36f0a9f1a30c3b08">cancelBidding</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *resource)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops bidding on the given resource.  <a href="#ad1f8032179885f5f36f0a9f1a30c3b08"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a6daad824149a320b6dd01c9477e6eab1">getCapacity</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capacity of this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>, in units.  <a href="#a6daad824149a320b6dd01c9477e6eab1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a2eb6c90bf3e7d5fcace60d899ef5a9a9">addCapacity</a> (int capacity)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the total capacity of this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#a2eb6c90bf3e7d5fcace60d899ef5a9a9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a00a5a901f2ab8b8eca6668e01601f71d">getMerchantMarine</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capacity of the merchant marine.  <a href="#a00a5a901f2ab8b8eca6668e01601f71d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TransportNetwork.html#a1fdccede7f298cff009807c8f1b06583">addMerchantMarine</a> (int capacity)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds to the merchant marine capacity.  <a href="#a1fdccede7f298cff009807c8f1b06583"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a> handles all of the resources connected to a player's capital by their network of railroads and ports. </p>
 <p>It also handles the merchant marine and actual turn-to-turn shipping of resources. </p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a27dc4dbcba4dc7ec346d98f80d793346"></a><!-- doxytag: member="Aftermath::TransportNetwork::addAvailable" ref="a27dc4dbcba4dc7ec346d98f80d793346" args="(const Resource *resource)" -->
+<a class="anchor" id="a4ae0fee1ccd7b45dc9e7c89f732b49b6"></a><!-- doxytag: member="Aftermath::TransportNetwork::addAvailable" ref="a4ae0fee1ccd7b45dc9e7c89f732b49b6" args="(const Resource *resource, int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::addAvailable </td>
+          <td class="memname">void TransportNetwork::addAvailable </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
-          <td class="paramname"> <em>resource</em>&#160;)</td>
+          <td class="paramname"> <em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Adds one unit of the given resource to this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>. </p>
+<p>Adds the given resource to this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">resource</td><td>- The type of resource to add. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to add. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a4ada3e00cb44382a642a5fb86b9c8519"></a><!-- doxytag: member="Aftermath::TransportNetwork::addCapacity" ref="a4ada3e00cb44382a642a5fb86b9c8519" args="(int capacity)" -->
+<a class="anchor" id="a2eb6c90bf3e7d5fcace60d899ef5a9a9"></a><!-- doxytag: member="Aftermath::TransportNetwork::addCapacity" ref="a2eb6c90bf3e7d5fcace60d899ef5a9a9" args="(int capacity)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::addCapacity </td>
+          <td class="memname">void TransportNetwork::addCapacity </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>capacity</em>&#160;)</td>
@@ -164,12 +172,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a755ad6d6ce446d93d18e6365c785f0ea"></a><!-- doxytag: member="Aftermath::TransportNetwork::addMerchantMarine" ref="a755ad6d6ce446d93d18e6365c785f0ea" args="(int capacity)" -->
+<a class="anchor" id="a1fdccede7f298cff009807c8f1b06583"></a><!-- doxytag: member="Aftermath::TransportNetwork::addMerchantMarine" ref="a1fdccede7f298cff009807c8f1b06583" args="(int capacity)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::addMerchantMarine </td>
+          <td class="memname">void TransportNetwork::addMerchantMarine </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>capacity</em>&#160;)</td>
@@ -180,16 +188,22 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Adds to the merchant marine capacity. </p>
-<p>This changes the amount of any single resource type that can be traded internationally. </p>
+<p>This changes the amount of any single resource type that can be traded internationally.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">capacity</td><td>- The capacity to add. This can be negative. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="ab665d77ad79988f3510472ab2ca16576"></a><!-- doxytag: member="Aftermath::TransportNetwork::cancelBidding" ref="ab665d77ad79988f3510472ab2ca16576" args="(const Resource *resource)" -->
+<a class="anchor" id="ad1f8032179885f5f36f0a9f1a30c3b08"></a><!-- doxytag: member="Aftermath::TransportNetwork::cancelBidding" ref="ad1f8032179885f5f36f0a9f1a30c3b08" args="(const Resource *resource)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::cancelBidding </td>
+          <td class="memname">void TransportNetwork::cancelBidding </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
           <td class="paramname"> <em>resource</em>&#160;)</td>
@@ -209,12 +223,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af75b0fbfd2f9f5f208bb00159acb15bd"></a><!-- doxytag: member="Aftermath::TransportNetwork::cancelTrading" ref="af75b0fbfd2f9f5f208bb00159acb15bd" args="(Player &amp;player, const Resource *resource)" -->
+<a class="anchor" id="ac1736aecc16ca12b591ce79cfcef9e57"></a><!-- doxytag: member="Aftermath::TransportNetwork::finishTrade" ref="ac1736aecc16ca12b591ce79cfcef9e57" args="(Player &amp;player, const Resource *resource, int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::cancelTrading </td>
+          <td class="memname">void TransportNetwork::finishTrade </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -223,7 +237,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
-          <td class="paramname"> <em>resource</em>&#160;</td>
+          <td class="paramname"> <em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -234,86 +254,25 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Subtracts one unit from the amount of the given resource type that is being traded. </p>
-<p>Also refunds the resources to the given player.</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">player</td><td>- The player to refund. </td></tr>
-    <tr><td class="paramname">resource</td><td>- The resource to cancel selling. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="acfab0137816272a8099809adebd928fe"></a><!-- doxytag: member="Aftermath::TransportNetwork::cancelTransporting" ref="acfab0137816272a8099809adebd928fe" args="(const Resource *resource)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Aftermath::TransportNetwork::cancelTransporting </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
-          <td class="paramname"> <em>resource</em>&#160;)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Stops transporting one unit of the given resource. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">resource</td><td>- The type of resource to stop transporting. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a1c7a53e05762a0669b78446ce083ebfa"></a><!-- doxytag: member="Aftermath::TransportNetwork::finishTrade" ref="a1c7a53e05762a0669b78446ce083ebfa" args="(Player &amp;player, const Resource *resource)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Aftermath::TransportNetwork::finishTrade </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
-          <td class="paramname"> <em>player</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
-          <td class="paramname"> <em>resource</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Gives the given player one unit of the given resource and takes the resource off of the trading queue. </p>
+<p>Gives the given player an amount of the given resource and takes the resource off of the trading queue. </p>
 <p>This does NOT pay the selling player, it only gives the resource to the buyer.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to sell to. </td></tr>
     <tr><td class="paramname">resource</td><td>- The resource to sell. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to sell. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="abdd3fb581ed8d1e16bafe3bdeb227d8d"></a><!-- doxytag: member="Aftermath::TransportNetwork::finishTransporting" ref="abdd3fb581ed8d1e16bafe3bdeb227d8d" args="(Player &amp;player)" -->
+<a class="anchor" id="acf29f82cc69252512946b27d92c0d68c"></a><!-- doxytag: member="Aftermath::TransportNetwork::finishTransporting" ref="acf29f82cc69252512946b27d92c0d68c" args="(Player &amp;player)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::finishTransporting </td>
+          <td class="memname">void TransportNetwork::finishTransporting </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>&#160;)</td>
@@ -334,12 +293,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4b8fae7cd67f8983b67ea7e5dab49c82"></a><!-- doxytag: member="Aftermath::TransportNetwork::getAvailable" ref="a4b8fae7cd67f8983b67ea7e5dab49c82" args="(const Resource *resource) const " -->
+<a class="anchor" id="af7abf3939305faa104832470a803fc65"></a><!-- doxytag: member="Aftermath::TransportNetwork::getAvailable" ref="af7abf3939305faa104832470a803fc65" args="(const Resource *resource) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TransportNetwork::getAvailable </td>
+          <td class="memname">int TransportNetwork::getAvailable </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
           <td class="paramname"> <em>resource</em>&#160;)</td>
@@ -360,12 +319,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8695d14f0d4ca8e8856d64991d043740"></a><!-- doxytag: member="Aftermath::TransportNetwork::getBidding" ref="a8695d14f0d4ca8e8856d64991d043740" args="() const " -->
+<a class="anchor" id="a11299b6f8dd4c3c42600f0c6b1006390"></a><!-- doxytag: member="Aftermath::TransportNetwork::getBidding" ref="a11299b6f8dd4c3c42600f0c6b1006390" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TransportNetwork::getBidding </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp; TransportNetwork::getBidding </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -373,19 +332,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Gets the total number of resources that are being bid on. </p>
-<p>This number cannot exceed the limit established by the mod pack and game settings.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The number of resources being bid on. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The collection of resources that are being bid on. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a6a0d4ef878307b3ef4193912b94341c8"></a><!-- doxytag: member="Aftermath::TransportNetwork::getCapacity" ref="a6a0d4ef878307b3ef4193912b94341c8" args="() const " -->
+<a class="anchor" id="a6daad824149a320b6dd01c9477e6eab1"></a><!-- doxytag: member="Aftermath::TransportNetwork::getCapacity" ref="a6daad824149a320b6dd01c9477e6eab1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TransportNetwork::getCapacity </td>
+          <td class="memname">int TransportNetwork::getCapacity </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -400,12 +356,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0c1a94581bdcda3a1dd0e7c5ce0b4424"></a><!-- doxytag: member="Aftermath::TransportNetwork::getMerchantMarine" ref="a0c1a94581bdcda3a1dd0e7c5ce0b4424" args="() const " -->
+<a class="anchor" id="a00a5a901f2ab8b8eca6668e01601f71d"></a><!-- doxytag: member="Aftermath::TransportNetwork::getMerchantMarine" ref="a00a5a901f2ab8b8eca6668e01601f71d" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TransportNetwork::getMerchantMarine </td>
+          <td class="memname">int TransportNetwork::getMerchantMarine </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -419,12 +375,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa1ffb2078eb91dc9f26013c3b76c609e"></a><!-- doxytag: member="Aftermath::TransportNetwork::getTotalTransporting" ref="aa1ffb2078eb91dc9f26013c3b76c609e" args="() const " -->
+<a class="anchor" id="a329c8904ede2c39a44fa754f964c87ec"></a><!-- doxytag: member="Aftermath::TransportNetwork::getTotalTransporting" ref="a329c8904ede2c39a44fa754f964c87ec" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TransportNetwork::getTotalTransporting </td>
+          <td class="memname">int TransportNetwork::getTotalTransporting </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -434,17 +390,17 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Gets the total units of resources that are being transported. </p>
-<p>If this would go above <a class="el" href="classAftermath_1_1TransportNetwork.html#a6a0d4ef878307b3ef4193912b94341c8" title="Gets the capacity of this TransportNetwork, in units.">getCapacity()</a>, then transporting a new item is illegal.</p>
+<p>If this would go above <a class="el" href="classAftermath_1_1TransportNetwork.html#a6daad824149a320b6dd01c9477e6eab1" title="Gets the capacity of this TransportNetwork, in units.">getCapacity()</a>, then transporting a new item is illegal.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The total units being transported this turn. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ad626cfa4e110e899f118a630abf3502a"></a><!-- doxytag: member="Aftermath::TransportNetwork::getTrading" ref="ad626cfa4e110e899f118a630abf3502a" args="(const Resource *resource) const " -->
+<a class="anchor" id="afa74152d6a8fb3b3ce08a7970d414d42"></a><!-- doxytag: member="Aftermath::TransportNetwork::getTrading" ref="afa74152d6a8fb3b3ce08a7970d414d42" args="(const Resource *resource) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TransportNetwork::getTrading </td>
+          <td class="memname">int TransportNetwork::getTrading </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
           <td class="paramname"> <em>resource</em>&#160;)</td>
@@ -455,23 +411,22 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Gets the amount of the resource type that is being traded internationally. </p>
-<p>A positive number indicates the units of resources that are being exported. Any negative number indicates that the resource is being bid for.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">resource</td><td>- The resource to check for.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The units of the resource type that are being offered for sale; any negative number means a bid for the resource. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The units of the resource type that are being offered for sale. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4ce37994973e448ee2f2b3a49a992759"></a><!-- doxytag: member="Aftermath::TransportNetwork::getTransporting" ref="a4ce37994973e448ee2f2b3a49a992759" args="(const Resource *resource) const " -->
+<a class="anchor" id="a5bb7546ce7a8d87686af503c693e192c"></a><!-- doxytag: member="Aftermath::TransportNetwork::getTransporting" ref="a5bb7546ce7a8d87686af503c693e192c" args="(const Resource *resource) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TransportNetwork::getTransporting </td>
+          <td class="memname">int TransportNetwork::getTransporting </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
           <td class="paramname"> <em>resource</em>&#160;)</td>
@@ -492,37 +447,48 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a982768d8a00e2cecf0fd1090e4e09aca"></a><!-- doxytag: member="Aftermath::TransportNetwork::removeAvailable" ref="a982768d8a00e2cecf0fd1090e4e09aca" args="(const Resource *resource)" -->
+<a class="anchor" id="af1980486104ae345d016202c81cff949"></a><!-- doxytag: member="Aftermath::TransportNetwork::removeAvailable" ref="af1980486104ae345d016202c81cff949" args="(const Resource *resource, int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::removeAvailable </td>
+          <td class="memname">void TransportNetwork::removeAvailable </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
-          <td class="paramname"> <em>resource</em>&#160;)</td>
+          <td class="paramname"> <em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Removes one unit of the given resource from this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>. </p>
+<p>Removes the given resource from this <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">resource</td><td>- The type of resource to remove. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to remove. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a08ad33f264fe7c6be64d919aaea528fd"></a><!-- doxytag: member="Aftermath::TransportNetwork::startBidding" ref="a08ad33f264fe7c6be64d919aaea528fd" args="(const Resource *resource)" -->
+<a class="anchor" id="a1ca0ad6ea3cdb879343bcfe403d3a157"></a><!-- doxytag: member="Aftermath::TransportNetwork::startBidding" ref="a1ca0ad6ea3cdb879343bcfe403d3a157" args="(const Resource *resource)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::startBidding </td>
+          <td class="memname">void TransportNetwork::startBidding </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
           <td class="paramname"> <em>resource</em>&#160;)</td>
@@ -542,12 +508,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a94f58b96ea2e87ab9ebed10574ad1589"></a><!-- doxytag: member="Aftermath::TransportNetwork::startTrading" ref="a94f58b96ea2e87ab9ebed10574ad1589" args="(Player &amp;player, const Resource *resource)" -->
+<a class="anchor" id="af3c8254a9405b667e71c54d0261f8f4d"></a><!-- doxytag: member="Aftermath::TransportNetwork::startTrading" ref="af3c8254a9405b667e71c54d0261f8f4d" args="(Player &amp;player, const Resource *resource, int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::startTrading </td>
+          <td class="memname">void TransportNetwork::startTrading </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -556,7 +522,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
-          <td class="paramname"> <em>resource</em>&#160;</td>
+          <td class="paramname"> <em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -567,45 +539,138 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Adds one unit to the amount of the given resource type that is being traded. </p>
-<p>Also takes a unit from the given player.</p>
+<p>Adds to the amount of the given resource type that is being traded. </p>
+<p>Also takes from the given player.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to sell the resource. </td></tr>
     <tr><td class="paramname">resource</td><td>- The resource to sell. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to sell. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a2f085d00ebcf51414b6af89ff9315237"></a><!-- doxytag: member="Aftermath::TransportNetwork::startTransporting" ref="a2f085d00ebcf51414b6af89ff9315237" args="(const Resource *resource)" -->
+<a class="anchor" id="a6cca337dad81f7e78f681450b66fb024"></a><!-- doxytag: member="Aftermath::TransportNetwork::startTransporting" ref="a6cca337dad81f7e78f681450b66fb024" args="(const Resource *resource, int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TransportNetwork::startTransporting </td>
+          <td class="memname">void TransportNetwork::startTransporting </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
-          <td class="paramname"> <em>resource</em>&#160;)</td>
+          <td class="paramname"> <em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Starts to transport one unit of the given resource. </p>
+<p>Starts to transport the given resource. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">resource</td><td>- The type of resource to transport. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to transport. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a class="anchor" id="a6dd4d23fb856f3fb1c0ee30f19f80021"></a><!-- doxytag: member="Aftermath::TransportNetwork::stopTrading" ref="a6dd4d23fb856f3fb1c0ee30f19f80021" args="(Player &amp;player, const Resource *resource, int amount)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TransportNetwork::stopTrading </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
+          <td class="paramname"> <em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
+          <td class="paramname"> <em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Subtracts from the amount of the given resource type that is being traded. </p>
+<p>Also refunds the resources to the given player.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>- The player to refund. </td></tr>
+    <tr><td class="paramname">resource</td><td>- The resource to cancel selling. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to cancel selling. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac41e8bea16bace5776fe93be2f30b68e"></a><!-- doxytag: member="Aftermath::TransportNetwork::stopTransporting" ref="ac41e8bea16bace5776fe93be2f30b68e" args="(const Resource *resource, int amount)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TransportNetwork::stopTransporting </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&#160;</td>
+          <td class="paramname"> <em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Stops transporting one unit of the given resource. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>- The type of resource to stop transporting. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to stop transporting. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="TransportNetwork_8hpp_source.html">TransportNetwork.hpp</a></li>
+<li>src/TransportNetwork.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -622,7 +687,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:33 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:42 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

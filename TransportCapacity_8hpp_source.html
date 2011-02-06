@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -72,34 +71,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="comment">// TODO: Decide for certain what graphics library to use.</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;SFML/Graphics/Image.hpp&gt;</span>
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="Transferable_8hpp.html" title="A type that can be given and taken from a player.">Transferable.hpp</a>&quot;</span>
-<a name="l00031"></a>00031 
-<a name="l00040"></a>00040 <span class="keyword">namespace </span>Aftermath {
-<a name="l00041"></a>00041 
-<a name="l00046"></a><a class="code" href="classAftermath_1_1TransportCapacity.html">00046</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TransportCapacity.html" title="TransportCapacity is the capacity of a TransportNetwork to transport goods.">TransportCapacity</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a>, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> {
-<a name="l00047"></a>00047         <span class="keyword">public</span>:
-<a name="l00056"></a>00056             <a class="code" href="classAftermath_1_1TransportCapacity.html#afaeda7575013c899dd929ba8292f2842" title="Constructs a new TransportCapacity with the given name, description, and image.">TransportCapacity</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp;
-<a name="l00057"></a>00057                 description, <span class="keyword">const</span> sf::Image * image);
-<a name="l00058"></a>00058 
-<a name="l00066"></a>00066             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#a1c1662457ab6689649f59ad8ab783e70" title="Gives the specified amount of transport capacity to the given player.">giveTo</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00067"></a>00067 
-<a name="l00077"></a>00077             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#a596cc6dad776d996bf2e570ccf110545" title="Checks if the given player can receive the given amount of transport capacity.">canGiveTo</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00078"></a>00078 
-<a name="l00086"></a>00086             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#af63215a7ddc7af88127bfe4e35b41a13" title="Takes the given amount of transport capacity from the specified player.">takeFrom</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00087"></a>00087 
-<a name="l00097"></a>00097             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#aa04b3dc8c30c37584a83184065dd41a2" title="Checks if the given player has enough transport capacity.">canTakeFrom</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00098"></a>00098     };
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 }
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="preprocessor">#endif // TRANSPORTCAPACITY_HPP_INCLUDED</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
-<a name="l00104"></a>00104 
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Graphics_8hpp.html" title="An interface for graphical elements.">Graphics.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="Transferable_8hpp.html" title="A type that can be given and taken from a player.">Transferable.hpp</a>&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player; }
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
+<a name="l00040"></a>00040 
+<a name="l00045"></a><a class="code" href="classAftermath_1_1TransportCapacity.html">00045</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TransportCapacity.html" title="TransportCapacity is the capacity of a TransportNetwork to transport goods.">TransportCapacity</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a>, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> {
+<a name="l00046"></a>00046         <span class="keyword">public</span>:
+<a name="l00055"></a>00055             <a class="code" href="classAftermath_1_1TransportCapacity.html#ad9d243c4577344ab4ef86133710a1048" title="Constructs a new TransportCapacity with the given name, description, and image.">TransportCapacity</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp;
+<a name="l00056"></a>00056                 description, <span class="keyword">const</span> Image * image);
+<a name="l00057"></a>00057 
+<a name="l00065"></a>00065             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#a1a89ab39b086b5e007551f69fc74368e" title="Gives the specified amount of transport capacity to the given player.">giveTo</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00066"></a>00066 
+<a name="l00076"></a>00076             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#a86233eefb09cda2e022b55089d7073ed" title="Checks if the given player can receive the given amount of transport capacity.">canGiveTo</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00077"></a>00077 
+<a name="l00085"></a>00085             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#af38fe10d857a247b7f6eb05ea909e273" title="Takes the given amount of transport capacity from the specified player.">takeFrom</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00086"></a>00086 
+<a name="l00096"></a>00096             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TransportCapacity.html#a5d50d87a353c63a6830e7d595b3bcd9f" title="Checks if the given player has enough transport capacity.">canTakeFrom</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00097"></a>00097     };
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 }
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="preprocessor">#endif // TRANSPORTCAPACITY_HPP_INCLUDED</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00103"></a>00103 
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -116,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

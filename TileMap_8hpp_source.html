@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -74,27 +73,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Array2D_8hpp.html" title="A 2D array.">Array2D.hpp</a>&quot;</span>
 <a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Collection_8hpp.html" title="A generic collection.">Collection.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="Tile_8hpp.html" title="A map tile.">Tile.hpp</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="TileGroup_8hpp.html" title="A group of Tiles.">TileGroup.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 
-<a name="l00038"></a>00038 <span class="keyword">namespace </span>Aftermath {
-<a name="l00039"></a>00039 
-<a name="l00045"></a><a class="code" href="classAftermath_1_1TileMap.html">00045</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TileMap.html" title="A TileMap is a map of tiles, each belonging to a TileGroup.">TileMap</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Array2D.html" title="A generic, 2D array.">Array2D</a>&lt;Tile&gt;, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a>&lt;TileGroup *&gt; {
-<a name="l00046"></a>00046         <span class="keyword">public</span>:
-<a name="l00055"></a>00055             <a class="code" href="classAftermath_1_1TileMap.html#ad2f0e7b8516809623a4c335efc01a93d" title="Constructs a new TileMap with the given dimensions and no TileGroup objects.">TileMap</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keywordtype">unsigned</span> <a class="code" href="classAftermath_1_1Array2D.html#aeccb0001f4a36cdac770887ef28f102e" title="Gets the first dimensional size of this array.">rows</a>,
-<a name="l00056"></a>00056                 <span class="keywordtype">unsigned</span> <a class="code" href="classAftermath_1_1Array2D.html#abbc5bb0352c1f908a01294c69abfcc56" title="Gets the second dimensional size of this array.">columns</a>);
-<a name="l00057"></a>00057 
-<a name="l00061"></a>00061             <a class="code" href="classAftermath_1_1TileMap.html#a577a24ee3fb245c11abc3c27a8beb9f1" title="Destructs this TileMap and all Tiles and TileGroups in the map.">~TileMap</a>();
-<a name="l00062"></a>00062 
-<a name="l00068"></a>00068             <span class="keyword">const</span> std::string &amp; <a class="code" href="classAftermath_1_1TileMap.html#a69e8dbaed54466645b117695db437ca6" title="Gets the name of this TileMap.">getName</a>() <span class="keyword">const</span>;
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070         <span class="keyword">private</span>:
-<a name="l00071"></a>00071             std::string &amp; mName;
-<a name="l00072"></a>00072     };
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 }
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="preprocessor">#endif // TILEMAP_HPP_INCLUDED</span>
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Tile;
+<a name="l00029"></a>00029                       <span class="keyword">class </span>TileGroup; }
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
+<a name="l00040"></a>00040 
+<a name="l00046"></a><a class="code" href="classAftermath_1_1TileMap.html">00046</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TileMap.html" title="A TileMap is a map of tiles, each belonging to a TileGroup.">TileMap</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Array2D.html" title="A generic, 2D array.">Array2D</a>&lt;Tile&gt;, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a>&lt;TileGroup *&gt; {
+<a name="l00047"></a>00047         <span class="keyword">public</span>:
+<a name="l00056"></a>00056             <a class="code" href="classAftermath_1_1TileMap.html#acf42a5dc74d0e2dd89c8750dee02bd53" title="Constructs a new TileMap with the given dimensions and no TileGroup objects.">TileMap</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keywordtype">unsigned</span> <a class="code" href="classAftermath_1_1Array2D.html#aeccb0001f4a36cdac770887ef28f102e" title="Gets the first dimensional size of this array.">rows</a>,
+<a name="l00057"></a>00057                 <span class="keywordtype">unsigned</span> <a class="code" href="classAftermath_1_1Array2D.html#abbc5bb0352c1f908a01294c69abfcc56" title="Gets the second dimensional size of this array.">columns</a>);
+<a name="l00058"></a>00058 
+<a name="l00062"></a>00062             <a class="code" href="classAftermath_1_1TileMap.html#a3448728e45d6a43fff3a02d4c6d72e9d" title="Destructs this TileMap and all Tiles and TileGroups in the map.">~TileMap</a>();
+<a name="l00063"></a>00063 
+<a name="l00069"></a>00069             <span class="keyword">const</span> std::string &amp; <a class="code" href="classAftermath_1_1TileMap.html#a31128993490b60708aea2d48fb678370" title="Gets the name of this TileMap.">getName</a>() <span class="keyword">const</span>;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071         <span class="keyword">private</span>:
+<a name="l00072"></a>00072             std::string mName;
+<a name="l00073"></a>00073     };
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 }
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 <span class="preprocessor">#endif // TILEMAP_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

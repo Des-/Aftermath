@@ -69,33 +69,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#af4e49af6bd6796fe7eab29de8490a2fb">Upgradable</a> (const std::vector&lt; const LevelType * &gt; &amp;levels)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a> at level 0 and with the given set of levels.  <a href="#af4e49af6bd6796fe7eab29de8490a2fb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#acfff91ce7b58e337e3abe8b555a83128">~Upgradable</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>.  <a href="#acfff91ce7b58e337e3abe8b555a83128"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const LevelType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a40cca9adaa8640f575b7da3582841a53">getLevel</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current level of this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>.  <a href="#a40cca9adaa8640f575b7da3582841a53"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#accfa70387ee2442751f965cfeab9bf6f">~Upgradable</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>.  <a href="#accfa70387ee2442751f965cfeab9bf6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const LevelType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a29722453021c7dddef0a350eff199c4f">getLevel</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current level of this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>.  <a href="#a29722453021c7dddef0a350eff199c4f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const LevelType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a7a5fec3d91733370fb6cd4c27c8c96f1">getNextLevel</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next level of this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>.  <a href="#a7a5fec3d91733370fb6cd4c27c8c96f1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a1db4aae9ff9b869f1f44cca12d6ce1de">hasNextLevel</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether not this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a> is on its last level.  <a href="#a1db4aae9ff9b869f1f44cca12d6ce1de"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a7bb034575184b38b48b895c64d14aa3c">getCost</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cost of the next upgrade.  <a href="#a7bb034575184b38b48b895c64d14aa3c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#ac69a307c4a276a9a71a5391cc69675da">canUpgrade</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether the given player has the capacity to upgrade this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>.  <a href="#ac69a307c4a276a9a71a5391cc69675da"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a2c432119611d3976d75b9d9ff2be61c9">upgrade</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrades immediately, deducting the required resources and money from the given player.  <a href="#a2c432119611d3976d75b9d9ff2be61c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a9927327c0e8cbd71b430ccb2ddf18377">getCost</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cost of the next upgrade.  <a href="#a9927327c0e8cbd71b430ccb2ddf18377"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class PlayerType &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a5c5df9b4e96e3876445c35ce68e27910">canUpgrade</a> (const PlayerType &amp;player) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether the given player has the capacity to upgrade this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>.  <a href="#a5c5df9b4e96e3876445c35ce68e27910"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class PlayerType &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a2bee2764a1cf562acc016ad4e4275566">upgrade</a> (PlayerType &amp;player)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrades immediately, deducting the required resources and money from the given player.  <a href="#a2bee2764a1cf562acc016ad4e4275566"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#ad1ec7ec8f632923728828ed0399b1329">getUpgrading</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a> is currently in the process of a turn-long upgrade.  <a href="#ad1ec7ec8f632923728828ed0399b1329"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#acb71d284d92d8481d7e2b43318b30b06">startUpgrade</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a turn-long upgrade, deducting the required resoures and money from the given player.  <a href="#acb71d284d92d8481d7e2b43318b30b06"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a74f749699245bdd687ab1cdda2e71c46">cancelUpgrade</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels a turn-long upgrade, refunding the required money and resources.  <a href="#a74f749699245bdd687ab1cdda2e71c46"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#aa8d43395be57b632102f8eedceead12f">finishUpgrade</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes a turn-long upgrade.  <a href="#aa8d43395be57b632102f8eedceead12f"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class PlayerType &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#a0be0c1ec54852170e17fd8f1fc3af542">startUpgrade</a> (PlayerType &amp;player)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a turn-long upgrade, deducting the required resoures and money from the given player.  <a href="#a0be0c1ec54852170e17fd8f1fc3af542"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class PlayerType &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#ab44cdd2477b66bdeefb1925cf7ba76f0">cancelUpgrade</a> (PlayerType &amp;player)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels a turn-long upgrade, refunding the required money and resources.  <a href="#ab44cdd2477b66bdeefb1925cf7ba76f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Upgradable.html#aa6f53b318ef12b4a7704f8ea01661e29">finishUpgrade</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes a turn-long upgrade.  <a href="#aa6f53b318ef12b4a7704f8ea01661e29"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <h3>template&lt;class LevelType&gt;<br/>
  class Aftermath::Upgradable&lt; LevelType &gt;</h3>
 
 <p>An <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a> object can be upgraded by a <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> for the proper amount of Resources and money. </p>
-<p>There are two methods of upgrading: <a class="el" href="classAftermath_1_1Upgradable.html#a2c432119611d3976d75b9d9ff2be61c9" title="Upgrades immediately, deducting the required resources and money from the given player.">upgrade()</a> will upgrade immediately and offer no chance to cancel the upgrade. This is suitable for upgrades that happen in one turn like unit upgrades. <a class="el" href="classAftermath_1_1Upgradable.html#acb71d284d92d8481d7e2b43318b30b06" title="Starts a turn-long upgrade, deducting the required resoures and money from the given player...">startUpgrade()</a> starts a turn-long upgrade, which can be cancelled at any time with <a class="el" href="classAftermath_1_1Upgradable.html#a74f749699245bdd687ab1cdda2e71c46" title="Cancels a turn-long upgrade, refunding the required money and resources.">cancelUpgrade()</a>. A turn-long upgrade must be completed the next turn with <a class="el" href="classAftermath_1_1Upgradable.html#aa8d43395be57b632102f8eedceead12f" title="Completes a turn-long upgrade.">finishUpgrade()</a>.</p>
+<p>There are two methods of upgrading: <a class="el" href="classAftermath_1_1Upgradable.html#a2bee2764a1cf562acc016ad4e4275566" title="Upgrades immediately, deducting the required resources and money from the given player.">upgrade()</a> will upgrade immediately and offer no chance to cancel the upgrade. This is suitable for upgrades that happen in one turn like unit upgrades. <a class="el" href="classAftermath_1_1Upgradable.html#a0be0c1ec54852170e17fd8f1fc3af542" title="Starts a turn-long upgrade, deducting the required resoures and money from the given player...">startUpgrade()</a> starts a turn-long upgrade, which can be cancelled at any time with <a class="el" href="classAftermath_1_1Upgradable.html#ab44cdd2477b66bdeefb1925cf7ba76f0" title="Cancels a turn-long upgrade, refunding the required money and resources.">cancelUpgrade()</a>. A turn-long upgrade must be completed the next turn with <a class="el" href="classAftermath_1_1Upgradable.html#aa6f53b318ef12b4a7704f8ea01661e29" title="Completes a turn-long upgrade.">finishUpgrade()</a>.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">LevelType</td><td>- The type of level to upgrade from and to. This should be a derived class of <a class="el" href="classAftermath_1_1Level.html" title="An upgradable&#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a>. </td></tr>
@@ -114,7 +120,7 @@ template&lt;class LevelType&gt; </div>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; const LevelType * &gt; &amp;&#160;</td>
           <td class="paramname"> <em>levels</em>&#160;)</td>
-          <td></td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -130,17 +136,17 @@ template&lt;class LevelType&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="acfff91ce7b58e337e3abe8b555a83128"></a><!-- doxytag: member="Aftermath::Upgradable::~Upgradable" ref="acfff91ce7b58e337e3abe8b555a83128" args="()" -->
+<a class="anchor" id="accfa70387ee2442751f965cfeab9bf6f"></a><!-- doxytag: member="Aftermath::Upgradable::~Upgradable" ref="accfa70387ee2442751f965cfeab9bf6f" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::~<a class="el" href="classAftermath_1_1Upgradable.html">Upgradable</a> </td>
+          <td class="memname">virtual <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::~<a class="el" href="classAftermath_1_1Upgradable.html">Upgradable</a> </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -152,16 +158,18 @@ template&lt;class LevelType &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a74f749699245bdd687ab1cdda2e71c46"></a><!-- doxytag: member="Aftermath::Upgradable::cancelUpgrade" ref="a74f749699245bdd687ab1cdda2e71c46" args="(Player &amp;player)" -->
+<a class="anchor" id="ab44cdd2477b66bdeefb1925cf7ba76f0"></a><!-- doxytag: member="Aftermath::Upgradable::cancelUpgrade" ref="ab44cdd2477b66bdeefb1925cf7ba76f0" args="(PlayerType &amp;player)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
+<div class="memtemplate">
+template&lt;class PlayerType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::cancelUpgrade </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
+          <td class="paramtype">PlayerType &amp;&#160;</td>
           <td class="paramname"> <em>player</em>&#160;)</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -179,16 +187,18 @@ template&lt;class LevelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac69a307c4a276a9a71a5391cc69675da"></a><!-- doxytag: member="Aftermath::Upgradable::canUpgrade" ref="ac69a307c4a276a9a71a5391cc69675da" args="(const Player &amp;player) const " -->
+<a class="anchor" id="a5c5df9b4e96e3876445c35ce68e27910"></a><!-- doxytag: member="Aftermath::Upgradable::canUpgrade" ref="a5c5df9b4e96e3876445c35ce68e27910" args="(const PlayerType &amp;player) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
+<div class="memtemplate">
+template&lt;class PlayerType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::canUpgrade </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
+          <td class="paramtype">const PlayerType &amp;&#160;</td>
           <td class="paramname"> <em>player</em>&#160;)</td>
           <td> const<code> [inline]</code></td>
         </tr>
@@ -208,17 +218,17 @@ template&lt;class LevelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa8d43395be57b632102f8eedceead12f"></a><!-- doxytag: member="Aftermath::Upgradable::finishUpgrade" ref="aa8d43395be57b632102f8eedceead12f" args="()" -->
+<a class="anchor" id="aa6f53b318ef12b4a7704f8ea01661e29"></a><!-- doxytag: member="Aftermath::Upgradable::finishUpgrade" ref="aa6f53b318ef12b4a7704f8ea01661e29" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::finishUpgrade </td>
+          <td class="memname">virtual void <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::finishUpgrade </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
-          <td><code> [inline]</code></td>
+          <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -227,16 +237,18 @@ template&lt;class LevelType &gt; </div>
 <p>Completes a turn-long upgrade. </p>
 <p>This actually advances this Upgradable's level. </p>
 
+<p>Reimplemented in <a class="el" href="classAftermath_1_1TileGroupUnit.html#a20897597129e7bbcfad2f165f9a145f6">Aftermath::TileGroupUnit</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a7bb034575184b38b48b895c64d14aa3c"></a><!-- doxytag: member="Aftermath::Upgradable::getCost" ref="a7bb034575184b38b48b895c64d14aa3c" args="() const " -->
+<a class="anchor" id="a9927327c0e8cbd71b430ccb2ddf18377"></a><!-- doxytag: member="Aftermath::Upgradable::getCost" ref="a9927327c0e8cbd71b430ccb2ddf18377" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp; <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::getCost </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt;const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> *&gt;&amp; <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::getCost </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const<code> [inline]</code></td>
@@ -246,22 +258,22 @@ template&lt;class LevelType &gt; </div>
 <div class="memdoc">
 
 <p>Gets the cost of the next upgrade. </p>
-<p>This function calls <a class="el" href="classAftermath_1_1Level.html#adea0927f5eb81ee337bc68380f7ecf72" title="Gets the cost of upgrading to this level.">Level::getCost()</a> on the next level.</p>
+<p>This function calls <a class="el" href="classAftermath_1_1Level.html#a1e73ec0f860ea2acd82b5c35eecbd1e7" title="Gets the cost of upgrading to this level.">Level::getCost()</a> on the next level.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The cost of the next upgrade. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a40cca9adaa8640f575b7da3582841a53"></a><!-- doxytag: member="Aftermath::Upgradable::getLevel" ref="a40cca9adaa8640f575b7da3582841a53" args="() const " -->
+<a class="anchor" id="a29722453021c7dddef0a350eff199c4f"></a><!-- doxytag: member="Aftermath::Upgradable::getLevel" ref="a29722453021c7dddef0a350eff199c4f" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const LevelType &amp; <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::getLevel </td>
+          <td class="memname">const LevelType&amp; <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::getLevel </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
-          <td> const</td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -273,11 +285,33 @@ template&lt;class LevelType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a7a5fec3d91733370fb6cd4c27c8c96f1"></a><!-- doxytag: member="Aftermath::Upgradable::getNextLevel" ref="a7a5fec3d91733370fb6cd4c27c8c96f1" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LevelType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const LevelType&amp; <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::getNextLevel </td>
+          <td>(</td>
+          <td class="paramname">&#160;)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gets the next level of this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>. </p>
+<p>This will be in the set of levels that was passed to this Upgradable's constructor.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The next level of this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ad1ec7ec8f632923728828ed0399b1329"></a><!-- doxytag: member="Aftermath::Upgradable::getUpgrading" ref="ad1ec7ec8f632923728828ed0399b1329" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::getUpgrading </td>
@@ -290,7 +324,7 @@ template&lt;class LevelType &gt; </div>
 <div class="memdoc">
 
 <p>Returns whether this <a class="el" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a> is currently in the process of a turn-long upgrade. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if <a class="el" href="classAftermath_1_1Upgradable.html#acb71d284d92d8481d7e2b43318b30b06" title="Starts a turn-long upgrade, deducting the required resoures and money from the given player...">startUpgrade()</a> was called without a following <a class="el" href="classAftermath_1_1Upgradable.html#a74f749699245bdd687ab1cdda2e71c46" title="Cancels a turn-long upgrade, refunding the required money and resources.">cancelUpgrade()</a> or <a class="el" href="classAftermath_1_1Upgradable.html#aa8d43395be57b632102f8eedceead12f" title="Completes a turn-long upgrade.">finishUpgrade()</a>; false otherwise. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if <a class="el" href="classAftermath_1_1Upgradable.html#a0be0c1ec54852170e17fd8f1fc3af542" title="Starts a turn-long upgrade, deducting the required resoures and money from the given player...">startUpgrade()</a> was called without a following <a class="el" href="classAftermath_1_1Upgradable.html#ab44cdd2477b66bdeefb1925cf7ba76f0" title="Cancels a turn-long upgrade, refunding the required money and resources.">cancelUpgrade()</a> or <a class="el" href="classAftermath_1_1Upgradable.html#aa6f53b318ef12b4a7704f8ea01661e29" title="Completes a turn-long upgrade.">finishUpgrade()</a>; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -298,7 +332,7 @@ template&lt;class LevelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::hasNextLevel </td>
@@ -315,16 +349,18 @@ template&lt;class LevelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="acb71d284d92d8481d7e2b43318b30b06"></a><!-- doxytag: member="Aftermath::Upgradable::startUpgrade" ref="acb71d284d92d8481d7e2b43318b30b06" args="(Player &amp;player)" -->
+<a class="anchor" id="a0be0c1ec54852170e17fd8f1fc3af542"></a><!-- doxytag: member="Aftermath::Upgradable::startUpgrade" ref="a0be0c1ec54852170e17fd8f1fc3af542" args="(PlayerType &amp;player)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
+<div class="memtemplate">
+template&lt;class PlayerType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::startUpgrade </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
+          <td class="paramtype">PlayerType &amp;&#160;</td>
           <td class="paramname"> <em>player</em>&#160;)</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -333,7 +369,7 @@ template&lt;class LevelType &gt; </div>
 <div class="memdoc">
 
 <p>Starts a turn-long upgrade, deducting the required resoures and money from the given player. </p>
-<p>This upgrade can be finished with <a class="el" href="classAftermath_1_1Upgradable.html#aa8d43395be57b632102f8eedceead12f" title="Completes a turn-long upgrade.">finishUpgrade()</a> or cancelled with <a class="el" href="classAftermath_1_1Upgradable.html#a74f749699245bdd687ab1cdda2e71c46" title="Cancels a turn-long upgrade, refunding the required money and resources.">cancelUpgrade()</a>.</p>
+<p>This upgrade can be finished with <a class="el" href="classAftermath_1_1Upgradable.html#aa6f53b318ef12b4a7704f8ea01661e29" title="Completes a turn-long upgrade.">finishUpgrade()</a> or cancelled with <a class="el" href="classAftermath_1_1Upgradable.html#ab44cdd2477b66bdeefb1925cf7ba76f0" title="Cancels a turn-long upgrade, refunding the required money and resources.">cancelUpgrade()</a>.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to pay for the upgrade. </td></tr>
@@ -343,16 +379,18 @@ template&lt;class LevelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a2c432119611d3976d75b9d9ff2be61c9"></a><!-- doxytag: member="Aftermath::Upgradable::upgrade" ref="a2c432119611d3976d75b9d9ff2be61c9" args="(Player &amp;player)" -->
+<a class="anchor" id="a2bee2764a1cf562acc016ad4e4275566"></a><!-- doxytag: member="Aftermath::Upgradable::upgrade" ref="a2bee2764a1cf562acc016ad4e4275566" args="(PlayerType &amp;player)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class LevelType &gt; </div>
+template&lt;class LevelType&gt; </div>
+<div class="memtemplate">
+template&lt;class PlayerType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classAftermath_1_1Upgradable.html">Aftermath::Upgradable</a>&lt; LevelType &gt;::upgrade </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
+          <td class="paramtype">PlayerType &amp;&#160;</td>
           <td class="paramname"> <em>player</em>&#160;)</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -389,7 +427,7 @@ template&lt;class LevelType &gt; </div>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:33 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:42 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1>Aftermath::ProductionLevel Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Aftermath::ProductionLevel" --><!-- doxytag: inherits="Aftermath::Level" -->
+<!-- doxytag: class="Aftermath::ProductionLevel" --><!-- doxytag: inherits="Aftermath::NamedType,Aftermath::Level" -->
 <p>A <a class="el" href="classAftermath_1_1ProductionLevel.html" title="A ProductionLevel is the Level of a ProductionCenter.">ProductionLevel</a> is the <a class="el" href="classAftermath_1_1Level.html" title="An upgradable&#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a> of a <a class="el" href="classAftermath_1_1ProductionCenter.html" title="ProductionCenters are upgradable centers of production.">ProductionCenter</a>.  
 <a href="#_details">More...</a></p>
 
@@ -70,29 +70,48 @@ Inheritance diagram for Aftermath::ProductionLevel:<!-- endSectionHeader --></di
  <div class="center">
   <img src="classAftermath_1_1ProductionLevel.png" usemap="#Aftermath::ProductionLevel_map" alt=""/>
   <map id="Aftermath::ProductionLevel_map" name="Aftermath::ProductionLevel_map">
-<area href="classAftermath_1_1Level.html" alt="Aftermath::Level" shape="rect" coords="0,0,164,24"/>
+<area href="classAftermath_1_1NamedType.html" alt="Aftermath::NamedType" shape="rect" coords="0,0,164,24"/>
+<area href="classAftermath_1_1Level.html" alt="Aftermath::Level" shape="rect" coords="174,0,338,24"/>
 </map>
  </div><!-- endSectionContent --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1ProductionLevel.html#a44da7117d6f2a443ba5f7ae8ee05fabc">ProductionLevel</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *cost, int maxOutput)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1ProductionLevel.html" title="A ProductionLevel is the Level of a ProductionCenter.">ProductionLevel</a> with the given monetary, resource, and research cost.  <a href="#a44da7117d6f2a443ba5f7ae8ee05fabc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1ProductionLevel.html#a6727ecd7b37a8e263bde0ac8527c1554">getMaxOutput</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The production of any single product cannot surpass the production capacity.  <a href="#a6727ecd7b37a8e263bde0ac8527c1554"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1ProductionLevel.html#a85e166b1b7e8b4cc5ba6788b609db8d5">ProductionLevel</a> (const std::string &amp;name, const std::string &amp;description, const Image *image, const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *cost, int maxOutput)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1ProductionLevel.html" title="A ProductionLevel is the Level of a ProductionCenter.">ProductionLevel</a> with the given monetary, resource, and research cost.  <a href="#a85e166b1b7e8b4cc5ba6788b609db8d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1ProductionLevel.html#ae20af40e80068208daa09de2f4a49bff">getMaxOutput</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The production of any single product cannot surpass the production capacity.  <a href="#ae20af40e80068208daa09de2f4a49bff"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1ProductionLevel.html" title="A ProductionLevel is the Level of a ProductionCenter.">ProductionLevel</a> is the <a class="el" href="classAftermath_1_1Level.html" title="An upgradable&#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a> of a <a class="el" href="classAftermath_1_1ProductionCenter.html" title="ProductionCenters are upgradable centers of production.">ProductionCenter</a>. </p>
 <p>In addition to the properties that a <a class="el" href="classAftermath_1_1Level.html" title="An upgradable&#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a> must have, a <a class="el" href="classAftermath_1_1ProductionLevel.html" title="A ProductionLevel is the Level of a ProductionCenter.">ProductionLevel</a> has a max output. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a44da7117d6f2a443ba5f7ae8ee05fabc"></a><!-- doxytag: member="Aftermath::ProductionLevel::ProductionLevel" ref="a44da7117d6f2a443ba5f7ae8ee05fabc" args="(const Count&lt; const NamedType * &gt; *cost, int maxOutput)" -->
+<a class="anchor" id="a85e166b1b7e8b4cc5ba6788b609db8d5"></a><!-- doxytag: member="Aftermath::ProductionLevel::ProductionLevel" ref="a85e166b1b7e8b4cc5ba6788b609db8d5" args="(const std::string &amp;name, const std::string &amp;description, const Image *image, const Count&lt; const Transferable * &gt; *cost, int maxOutput)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::ProductionLevel::ProductionLevel </td>
+          <td class="memname">ProductionLevel::ProductionLevel </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"> <em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Image *&#160;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *&#160;</td>
           <td class="paramname"> <em>cost</em>, </td>
         </tr>
         <tr>
@@ -113,6 +132,9 @@ Public Member Functions</h2></td></tr>
 <p>Constructs a new <a class="el" href="classAftermath_1_1ProductionLevel.html" title="A ProductionLevel is the Level of a ProductionCenter.">ProductionLevel</a> with the given monetary, resource, and research cost. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
+    <tr><td class="paramname">name</td><td>- The name of this level. </td></tr>
+    <tr><td class="paramname">description</td><td>- The description of this level. </td></tr>
+    <tr><td class="paramname">image</td><td>- The image of this level. </td></tr>
     <tr><td class="paramname">cost</td><td>- The cost of upgrading to this level. </td></tr>
     <tr><td class="paramname">maxOutput</td><td>- The maximum output for any single product. </td></tr>
   </table>
@@ -122,12 +144,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a6727ecd7b37a8e263bde0ac8527c1554"></a><!-- doxytag: member="Aftermath::ProductionLevel::getMaxOutput" ref="a6727ecd7b37a8e263bde0ac8527c1554" args="() const " -->
+<a class="anchor" id="ae20af40e80068208daa09de2f4a49bff"></a><!-- doxytag: member="Aftermath::ProductionLevel::getMaxOutput" ref="ae20af40e80068208daa09de2f4a49bff" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::ProductionLevel::getMaxOutput </td>
+          <td class="memname">int ProductionLevel::getMaxOutput </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -141,8 +163,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="ProductionLevel_8hpp_source.html">ProductionLevel.hpp</a></li>
+<li>src/ProductionLevel.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -159,7 +182,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

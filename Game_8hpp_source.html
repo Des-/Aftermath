@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -71,37 +70,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define GAME_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Collection_8hpp.html" title="A generic collection.">Collection.hpp</a>&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="GameSettings_8hpp.html" title="A game&amp;#39;s global settings.">GameSettings.hpp</a>&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="TileMap_8hpp.html" title="A two-dimensional map of tiles.">TileMap.hpp</a>&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 
-<a name="l00036"></a>00036 <span class="keyword">namespace </span>Aftermath {
-<a name="l00037"></a>00037 
-<a name="l00044"></a><a class="code" href="classAftermath_1_1Game.html">00044</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a>&lt;Player *&gt; {
-<a name="l00055"></a>00055             <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a>(<a class="code" href="classAftermath_1_1TileMap.html" title="A TileMap is a map of tiles, each belonging to a TileGroup.">TileMap</a> * map, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a> &amp; settings,
-<a name="l00056"></a>00056                 <span class="keywordtype">unsigned</span> turn = 0);
-<a name="l00057"></a>00057 
-<a name="l00061"></a>00061             ~<a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a>();
-<a name="l00062"></a>00062 
-<a name="l00067"></a>00067             <span class="keywordtype">void</span> playTurn();
-<a name="l00068"></a>00068 
-<a name="l00074"></a>00074             <span class="keywordtype">unsigned</span> getTurn() <span class="keyword">const</span>;
-<a name="l00075"></a>00075 
-<a name="l00079"></a>00079             <span class="keywordtype">unsigned</span> getDate() <span class="keyword">const</span>;
-<a name="l00080"></a>00080 
-<a name="l00084"></a>00084             <span class="keywordtype">void</span> add(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> *&amp; player);
-<a name="l00085"></a>00085 
-<a name="l00089"></a>00089             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a> &amp; getSettings() <span class="keyword">const</span>;
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091         <span class="keyword">private</span>:
-<a name="l00092"></a>00092             <a class="code" href="classAftermath_1_1TileMap.html" title="A TileMap is a map of tiles, each belonging to a TileGroup.">TileMap</a> * mMap;
-<a name="l00093"></a>00093             <span class="keywordtype">unsigned</span> mTurn;
-<a name="l00094"></a>00094             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a> &amp; mSettings;
-<a name="l00095"></a>00095     };
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 }
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 <span class="preprocessor">#endif // GAME_HPP_INCLUDED</span>
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>GameSettings;
+<a name="l00026"></a>00026                       <span class="keyword">class </span>Player;
+<a name="l00027"></a>00027                       <span class="keyword">class </span>TileMap; }
+<a name="l00028"></a>00028 
+<a name="l00037"></a>00037 <span class="keyword">namespace </span>Aftermath {
+<a name="l00038"></a>00038 
+<a name="l00045"></a><a class="code" href="classAftermath_1_1Game.html">00045</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a>&lt;Player *&gt; {
+<a name="l00046"></a>00046         <span class="keyword">public</span>:
+<a name="l00057"></a>00057             <a class="code" href="classAftermath_1_1Game.html#a68efbd8d93f8263142d65b5cd698b7b7" title="Constructs a zero-player Game with the given map, starting from the given turn.">Game</a>(<a class="code" href="classAftermath_1_1TileMap.html" title="A TileMap is a map of tiles, each belonging to a TileGroup.">TileMap</a> * map, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a> &amp; settings, <span class="keywordtype">int</span> turn = 0);
+<a name="l00058"></a>00058 
+<a name="l00062"></a>00062             <a class="code" href="classAftermath_1_1Game.html#ae3d112ca6e0e55150d2fdbc704474530" title="Destructs this Game object, its Map, and its Player objects.">~Game</a>();
+<a name="l00063"></a>00063 
+<a name="l00068"></a>00068             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Game.html#aaf1abd91e5bb55f91ebb0438bb5b1273" title="Advances this Game&amp;#39;s turn.">playTurn</a>();
+<a name="l00069"></a>00069 
+<a name="l00075"></a>00075             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Game.html#ad3a5dcb92c257124b87e6eb15e07b728" title="Returns the number of times playTurn() has been called.">getTurn</a>() <span class="keyword">const</span>;
+<a name="l00076"></a>00076 
+<a name="l00080"></a>00080             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Game.html#a4e8178643619a52274e6e7d7a9022b12">getDate</a>() <span class="keyword">const</span>;
+<a name="l00081"></a>00081 
+<a name="l00085"></a>00085             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a> &amp; <a class="code" href="classAftermath_1_1Game.html#a0728585542039156174ba807196656a8">getSettings</a>() <span class="keyword">const</span>;
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087         <span class="keyword">private</span>:
+<a name="l00088"></a>00088             <a class="code" href="classAftermath_1_1TileMap.html" title="A TileMap is a map of tiles, each belonging to a TileGroup.">TileMap</a> * mMap;
+<a name="l00089"></a>00089             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a> &amp; mSettings;
+<a name="l00090"></a>00090             <span class="keywordtype">int</span> mTurn;
+<a name="l00091"></a>00091     };
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 }
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="preprocessor">#endif // GAME_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -118,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

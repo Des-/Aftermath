@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -72,34 +71,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="SelectiveCollection_8hpp.html" title="A collection that chooses whether or not to accept elements.">SelectiveCollection.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="Tile_8hpp.html" title="A map tile.">Tile.hpp</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="TileGroupUnit_8hpp.html" title="A unit that resides in a TileGroup.">TileGroupUnit.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 
-<a name="l00038"></a>00038 <span class="keyword">namespace </span>Aftermath {
-<a name="l00039"></a>00039 
-<a name="l00044"></a><a class="code" href="classAftermath_1_1TileGroup.html">00044</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> : <a class="code" href="classAftermath_1_1SelectiveCollection.html" title="A SelectiveCollection is a type of collection that decides whether or not to accept its elements...">SelectiveCollection</a>&lt;Tile *&gt; {
-<a name="l00045"></a>00045         <span class="keyword">public</span>:
-<a name="l00046"></a>00046 
-<a name="l00050"></a>00050             <a class="code" href="classAftermath_1_1TileGroup.html#a22ba655752426a0958ebae221adc661f" title="Constructs a TileGroup with the given name and no unit list.">TileGroup</a>(<span class="keyword">const</span> std::string &amp; name);
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="SelectiveCollection_8hpp.html" title="A collection that chooses whether or not to accept elements.">SelectiveCollection.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player;
+<a name="l00028"></a>00028                       <span class="keyword">class </span>Tile;
+<a name="l00029"></a>00029                       <span class="keyword">class </span>TileGroupUnit; }
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
+<a name="l00040"></a>00040 
+<a name="l00045"></a><a class="code" href="classAftermath_1_1TileGroup.html">00045</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1SelectiveCollection.html" title="A SelectiveCollection is a type of collection that decides whether or not to accept its elements...">SelectiveCollection</a>&lt;Tile *&gt; {
+<a name="l00046"></a>00046         <span class="keyword">public</span>:
+<a name="l00050"></a>00050             <a class="code" href="classAftermath_1_1TileGroup.html#a44e9d1804c15bb765e125b9e23f19735" title="Constructs a TileGroup with the given name and no unit list.">TileGroup</a>(<span class="keyword">const</span> std::string &amp; name);
 <a name="l00051"></a>00051 
-<a name="l00055"></a>00055             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1TileGroup.html#ae6cc7af4bc5a74fbbe26edeed91b7e66" title="Destructor frees the list of TileGroupUnits.">~TileGroup</a>();
+<a name="l00055"></a>00055             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1TileGroup.html#aa9cc5a5093504d60ee3b55ddb06f2f69" title="Destructor frees the list of TileGroupUnits.">~TileGroup</a>();
 <a name="l00056"></a>00056 
-<a name="l00062"></a>00062             <span class="keyword">const</span> std::string &amp; <a class="code" href="classAftermath_1_1TileGroup.html#a231af7af02924e269628004b334b499c" title="Gets the name of this TileGroup.">getName</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062             <span class="keyword">const</span> std::string &amp; <a class="code" href="classAftermath_1_1TileGroup.html#a815525272a9d31a0e61c66bd5b68a3ea" title="Gets the name of this TileGroup.">getName</a>() <span class="keyword">const</span>;
 <a name="l00063"></a>00063 
-<a name="l00069"></a>00069             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TileGroup.html#a79d3ec2989cd768750757eb7d826fc23" title="Set the name of this TileGroup.">setName</a>(<span class="keyword">const</span> std::string &amp; name);
+<a name="l00069"></a>00069             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TileGroup.html#a7620049a2da899deae6f02ee129667ea" title="Set the name of this TileGroup.">setName</a>(<span class="keyword">const</span> std::string &amp; name);
 <a name="l00070"></a>00070 
-<a name="l00077"></a>00077             <a class="code" href="classAftermath_1_1SelectiveCollection.html">SelectiveCollection&lt;TileGroupUnit *&gt;</a> &amp; <a class="code" href="classAftermath_1_1TileGroup.html#ab82e2ee2aa29e2d3cd57e09981ebdfff" title="Gets the collection of TileGroupUnits in this TileGroup.">getUnits</a>();
+<a name="l00077"></a>00077             <a class="code" href="classAftermath_1_1SelectiveCollection.html">SelectiveCollection&lt;TileGroupUnit *&gt;</a> &amp; <a class="code" href="classAftermath_1_1TileGroup.html#a66a6b0b528c2b5e63ccab505f0617e9a" title="Gets the collection of TileGroupUnits in this TileGroup.">getUnits</a>();
 <a name="l00078"></a>00078 
 <a name="l00084"></a>00084             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1SelectiveCollection.html" title="A SelectiveCollection is a type of collection that decides whether or not to accept its elements...">SelectiveCollection&lt;const TileGroupUnit *&gt;</a> &amp;
-<a name="l00085"></a>00085                 <a class="code" href="classAftermath_1_1TileGroup.html#ab82e2ee2aa29e2d3cd57e09981ebdfff" title="Gets the collection of TileGroupUnits in this TileGroup.">getUnits</a>() <span class="keyword">const</span>;
+<a name="l00085"></a>00085                 <a class="code" href="classAftermath_1_1TileGroup.html#a66a6b0b528c2b5e63ccab505f0617e9a" title="Gets the collection of TileGroupUnits in this TileGroup.">getUnits</a>() <span class="keyword">const</span>;
 <a name="l00086"></a>00086 
-<a name="l00094"></a>00094             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TileGroup.html#a93d64b179c7156eb3ca9cacae36c13c3" title="If canAdd(tile) returns true, and the Tile isn&amp;#39;t already in this TileGroup, this function adds th...">add</a>(<a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> *&amp; tile);
+<a name="l00094"></a>00094             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TileGroup.html#a177a764505e6b2255b3eb5477836aa10" title="If canAdd(tile) returns true, and the Tile isn&amp;#39;t already in this TileGroup, this function adds th...">add</a>(<a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> *&amp; tile);
 <a name="l00095"></a>00095 
-<a name="l00101"></a>00101             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TileGroup.html#a081cd351df94403b9bcf310781387f85" title="Gets whether this TileGroup is a land-based group.">isLand</a>() = 0;
+<a name="l00101"></a>00101             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TileGroup.html#a63028b5405e2bd11de7613e6caa08a54" title="Gets whether this TileGroup is a land-based group.">isLand</a>() <span class="keyword">const</span> = 0;
 <a name="l00102"></a>00102 
-<a name="l00108"></a>00108             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TileGroup.html#a6a926afcec675e339daff6c385790018" title="Returns whether or not this TileGroup is a sea-based group.">isSea</a>() = 0;
+<a name="l00108"></a>00108             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1TileGroup.html#a7fa7e97ca474ea9ea6f82f251d02cfd7" title="Returns whether or not this TileGroup is a sea-based group.">isSea</a>() <span class="keyword">const</span> = 0;
 <a name="l00109"></a>00109 
 <a name="l00116"></a>00116             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * <a class="code" href="classAftermath_1_1TileGroup.html#aeecbc9ca0b01e21a4106349995d2a505" title="Gets the owning Player of this TileGroup.">getOwner</a>() = 0;
 <a name="l00117"></a>00117 
@@ -140,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

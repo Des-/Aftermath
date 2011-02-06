@@ -77,26 +77,26 @@ Inheritance diagram for Aftermath::Technology:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#a24bf340fb56972725a8ae4ced113d08d">Technology</a> (const std::string &amp;name, const std::string &amp;description, const sf::Image *image)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a> with the given name, description, and image.  <a href="#a24bf340fb56972725a8ae4ced113d08d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#a39f1a939577610d892231f964abedf57">giveTo</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This adds this technology to the given player's <a class="el" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a>.  <a href="#a39f1a939577610d892231f964abedf57"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#ac5beadb02ce1716ff0a99ba19332c519">canGiveTo</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A player should always be allowed to acquire new technology, so this function should return true.  <a href="#ac5beadb02ce1716ff0a99ba19332c519"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#aa47a7100aecd849be8ad8c02eb2f1df4">takeFrom</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Taking a technology from a player does nothing.  <a href="#aa47a7100aecd849be8ad8c02eb2f1df4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#a975ea8cf8e1b1020b520d3a0839e0849">canTakeFrom</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gets if the given player has this technology.  <a href="#a975ea8cf8e1b1020b520d3a0839e0849"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#abd148e1f0e4c3006fba32ccb7d907edb">Technology</a> (const std::string &amp;name, const std::string &amp;description, const Image *image)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a> with the given name, description, and image.  <a href="#abd148e1f0e4c3006fba32ccb7d907edb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#ac861e54ec2ec110fde88f3b4f43e22bc">giveTo</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This adds this technology to the given player's technology.  <a href="#ac861e54ec2ec110fde88f3b4f43e22bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#a7a8b7e24a0bf80ad814274bcb30e20c5">canGiveTo</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A player should always be allowed to acquire new technology, so this function should return true.  <a href="#a7a8b7e24a0bf80ad814274bcb30e20c5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#a8762ee0df6342d6ef93a14e1872b35ad">takeFrom</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes this technology from the given players' technology.  <a href="#a8762ee0df6342d6ef93a14e1872b35ad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Technology.html#a9dda3ce81336faf53bdff5dc723a1480">canTakeFrom</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gets if the given player has this technology.  <a href="#a9dda3ce81336faf53bdff5dc723a1480"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a> is a technological advance researched by a <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a24bf340fb56972725a8ae4ced113d08d"></a><!-- doxytag: member="Aftermath::Technology::Technology" ref="a24bf340fb56972725a8ae4ced113d08d" args="(const std::string &amp;name, const std::string &amp;description, const sf::Image *image)" -->
+<a class="anchor" id="abd148e1f0e4c3006fba32ccb7d907edb"></a><!-- doxytag: member="Aftermath::Technology::Technology" ref="abd148e1f0e4c3006fba32ccb7d907edb" args="(const std::string &amp;name, const std::string &amp;description, const Image *image)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::Technology::Technology </td>
+          <td class="memname">Technology::Technology </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"> <em>name</em>, </td>
@@ -110,7 +110,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const sf::Image *&#160;</td>
+          <td class="paramtype">const Image *&#160;</td>
           <td class="paramname"> <em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -135,12 +135,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac5beadb02ce1716ff0a99ba19332c519"></a><!-- doxytag: member="Aftermath::Technology::canGiveTo" ref="ac5beadb02ce1716ff0a99ba19332c519" args="(const Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a7a8b7e24a0bf80ad814274bcb30e20c5"></a><!-- doxytag: member="Aftermath::Technology::canGiveTo" ref="a7a8b7e24a0bf80ad814274bcb30e20c5" args="(const Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Technology::canGiveTo </td>
+          <td class="memname">bool Technology::canGiveTo </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -174,12 +174,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a975ea8cf8e1b1020b520d3a0839e0849"></a><!-- doxytag: member="Aftermath::Technology::canTakeFrom" ref="a975ea8cf8e1b1020b520d3a0839e0849" args="(const Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a9dda3ce81336faf53bdff5dc723a1480"></a><!-- doxytag: member="Aftermath::Technology::canTakeFrom" ref="a9dda3ce81336faf53bdff5dc723a1480" args="(const Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Technology::canTakeFrom </td>
+          <td class="memname">bool Technology::canTakeFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -213,12 +213,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a39f1a939577610d892231f964abedf57"></a><!-- doxytag: member="Aftermath::Technology::giveTo" ref="a39f1a939577610d892231f964abedf57" args="(Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="ac861e54ec2ec110fde88f3b4f43e22bc"></a><!-- doxytag: member="Aftermath::Technology::giveTo" ref="ac861e54ec2ec110fde88f3b4f43e22bc" args="(Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Technology::giveTo </td>
+          <td class="memname">void Technology::giveTo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -238,7 +238,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>This adds this technology to the given player's <a class="el" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a>. </p>
+<p>This adds this technology to the given player's technology. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to give to. </td></tr>
@@ -251,12 +251,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa47a7100aecd849be8ad8c02eb2f1df4"></a><!-- doxytag: member="Aftermath::Technology::takeFrom" ref="aa47a7100aecd849be8ad8c02eb2f1df4" args="(Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a8762ee0df6342d6ef93a14e1872b35ad"></a><!-- doxytag: member="Aftermath::Technology::takeFrom" ref="a8762ee0df6342d6ef93a14e1872b35ad" args="(Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Technology::takeFrom </td>
+          <td class="memname">void Technology::takeFrom </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -276,7 +276,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Taking a technology from a player does nothing. </p>
+<p>Removes this technology from the given players' technology. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to take from. </td></tr>
@@ -289,8 +289,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Technology_8hpp_source.html">Technology.hpp</a></li>
+<li>src/Technology.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -307,7 +308,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

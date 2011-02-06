@@ -76,23 +76,23 @@ Inheritance diagram for Aftermath::TileAction:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileAction.html#a252838846e74f06393e16ddde5884180">TileAction</a> (const std::string &amp;name, const std::string &amp;description, const sf::Image *image)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1TileAction.html" title="A TileAction is an action performed on a Tile by a TileUnit.">TileAction</a> with the given name, description, and image.  <a href="#a252838846e74f06393e16ddde5884180"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileAction.html#a03edb8dba68b430140fb8538d400c7e7">canPerform</a> (const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> &amp;unit, const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> &amp;tile) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This checks to see if this action can be performed on the given tile.  <a href="#a03edb8dba68b430140fb8538d400c7e7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileAction.html#abeb14207e3f48e12a7190a8df129dbf0">perform</a> (const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> &amp;unit, <a class="el" href="classAftermath_1_1Tile.html">Tile</a> &amp;tile)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs this action on the given tile.  <a href="#abeb14207e3f48e12a7190a8df129dbf0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileAction.html#acacb1edae87ddf6e07108d8e985a442b">TileAction</a> (const std::string &amp;name, const std::string &amp;description, const Image *image)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1TileAction.html" title="A TileAction is an action performed on a Tile by a TileUnit.">TileAction</a> with the given name, description, and image.  <a href="#acacb1edae87ddf6e07108d8e985a442b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileAction.html#a3601728df1b8725041776c6f7ba2e285">canPerform</a> (const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> &amp;unit, const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> &amp;tile) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This checks to see if this action can be performed on the given tile.  <a href="#a3601728df1b8725041776c6f7ba2e285"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileAction.html#acf48d332c5610889cc65d300c35d1d32">perform</a> (const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> &amp;unit, <a class="el" href="classAftermath_1_1Tile.html">Tile</a> &amp;tile)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs this action on the given tile.  <a href="#acf48d332c5610889cc65d300c35d1d32"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1TileAction.html" title="A TileAction is an action performed on a Tile by a TileUnit.">TileAction</a> is an action performed on a <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> by a <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a>. </p>
 <p>This could be improving the yield or constructing an improvement. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a252838846e74f06393e16ddde5884180"></a><!-- doxytag: member="Aftermath::TileAction::TileAction" ref="a252838846e74f06393e16ddde5884180" args="(const std::string &amp;name, const std::string &amp;description, const sf::Image *image)" -->
+<a class="anchor" id="acacb1edae87ddf6e07108d8e985a442b"></a><!-- doxytag: member="Aftermath::TileAction::TileAction" ref="acacb1edae87ddf6e07108d8e985a442b" args="(const std::string &amp;name, const std::string &amp;description, const Image *image)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::TileAction::TileAction </td>
+          <td class="memname">TileAction::TileAction </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"> <em>name</em>, </td>
@@ -106,7 +106,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const sf::Image *&#160;</td>
+          <td class="paramtype">const Image *&#160;</td>
           <td class="paramname"> <em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -131,12 +131,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a03edb8dba68b430140fb8538d400c7e7"></a><!-- doxytag: member="Aftermath::TileAction::canPerform" ref="a03edb8dba68b430140fb8538d400c7e7" args="(const TileUnit &amp;unit, const Tile &amp;tile) const =0" -->
+<a class="anchor" id="a3601728df1b8725041776c6f7ba2e285"></a><!-- doxytag: member="Aftermath::TileAction::canPerform" ref="a3601728df1b8725041776c6f7ba2e285" args="(const TileUnit &amp;unit, const Tile &amp;tile) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::TileAction::canPerform </td>
+          <td class="memname">virtual bool Aftermath::TileAction::canPerform </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> &amp;&#160;</td>
           <td class="paramname"> <em>unit</em>, </td>
@@ -169,12 +169,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abeb14207e3f48e12a7190a8df129dbf0"></a><!-- doxytag: member="Aftermath::TileAction::perform" ref="abeb14207e3f48e12a7190a8df129dbf0" args="(const TileUnit &amp;unit, Tile &amp;tile)=0" -->
+<a class="anchor" id="acf48d332c5610889cc65d300c35d1d32"></a><!-- doxytag: member="Aftermath::TileAction::perform" ref="acf48d332c5610889cc65d300c35d1d32" args="(const TileUnit &amp;unit, Tile &amp;tile)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TileAction::perform </td>
+          <td class="memname">virtual void Aftermath::TileAction::perform </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> &amp;&#160;</td>
           <td class="paramname"> <em>unit</em>, </td>
@@ -206,8 +206,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="TileAction_8hpp_source.html">TileAction.hpp</a></li>
+<li>src/TileAction.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -224,7 +225,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -72,39 +71,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Collection_8hpp.html" title="A generic collection.">Collection.hpp</a>&quot;</span>
 <a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="ProductionCenter_8hpp.html" title="A center of production.">ProductionCenter.hpp</a>&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="WorkerType_8hpp.html" title="A type of laborer.">WorkerType.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 
-<a name="l00036"></a>00036 <span class="keyword">namespace </span>Aftermath {
-<a name="l00037"></a>00037 
-<a name="l00043"></a><a class="code" href="classAftermath_1_1Industry.html">00043</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a>&lt;ProductionCenter *&gt; {
-<a name="l00044"></a>00044         <span class="keyword">public</span>:
-<a name="l00048"></a>00048             <a class="code" href="classAftermath_1_1Industry.html#ae830d21791a8e2521bacf8d0c0397211" title="Constructs a new, empty Industry.">Industry</a>();
-<a name="l00049"></a>00049 
-<a name="l00053"></a>00053             <a class="code" href="classAftermath_1_1Industry.html#ae7fd56de1c386931b5ea8d76960c5650" title="Frees the ProductionCenters in this industry.">~Industry</a>();
-<a name="l00054"></a>00054 
-<a name="l00061"></a>00061             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#a0a5f24c9745688a9fba5f579ac63abb2">countWorkers</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> * type) <span class="keyword">const</span>;
-<a name="l00062"></a>00062 
-<a name="l00069"></a>00069             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Industry.html#a253bd7f59c5f66f549c1054abedb55fa" title="Adds a number of workers to the labor pool.">addWorkers</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> * type, <span class="keywordtype">int</span> amount);
-<a name="l00070"></a>00070 
-<a name="l00077"></a>00077             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Industry.html#a3d5af6e7b006e7faac515a223155f378" title="Removes a given number of workers from the labor pool.">removeWorkers</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> * type, <span class="keywordtype">int</span> amount);
-<a name="l00078"></a>00078 
-<a name="l00085"></a>00085             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#a9e7d7da9089f65d76e69976606eacbc6" title="Gets the maximum labor output per turn.">getMaxLabor</a>() <span class="keyword">const</span>;
-<a name="l00086"></a>00086 
-<a name="l00090"></a>00090             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#a1ffa674311eaaf93359555276863b6e1">getAllocatedLabor</a>() <span class="keyword">const</span>;
-<a name="l00091"></a>00091 
-<a name="l00097"></a>00097             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#ae22611642b68eb1eb93542b50b443e90" title="Gets the amount of labor that has yet to be allocated.">getFreeLabor</a>() <span class="keyword">const</span>;
-<a name="l00098"></a>00098 
-<a name="l00105"></a>00105             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Industry.html#ac91cf32bfd44a5027238cf0716eea0f9" title="Allocates the given amount of labor.">allocateLabor</a>(<span class="keywordtype">int</span> amount);
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107         <span class="keyword">private</span>:
-<a name="l00108"></a>00108             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const WorkerType *&gt;</a> mWorkers;
-<a name="l00109"></a>00109             <span class="keywordtype">int</span> mAllocated;
-<a name="l00110"></a>00110     };
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112 }
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="preprocessor">#endif // INDUSTRY_HPP_INCLUDED</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>ProductionCenter;
+<a name="l00027"></a>00027                       <span class="keyword">class </span>WorkerType; }
+<a name="l00028"></a>00028 
+<a name="l00037"></a>00037 <span class="keyword">namespace </span>Aftermath {
+<a name="l00038"></a>00038 
+<a name="l00044"></a><a class="code" href="classAftermath_1_1Industry.html">00044</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a>&lt;ProductionCenter *&gt; {
+<a name="l00045"></a>00045         <span class="keyword">public</span>:
+<a name="l00049"></a>00049             <a class="code" href="classAftermath_1_1Industry.html#aaf396b75d3c9b9277ca8928d879bd1ba" title="Constructs a new, empty Industry.">Industry</a>();
+<a name="l00050"></a>00050 
+<a name="l00054"></a>00054             <a class="code" href="classAftermath_1_1Industry.html#ac0b5a2811e211cc0a5fb3f608b3c6bbb" title="Frees the ProductionCenters in this industry.">~Industry</a>();
+<a name="l00055"></a>00055 
+<a name="l00062"></a>00062             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#a21602ed9e981f167bb9abd6829b59891">countWorkers</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> * type) <span class="keyword">const</span>;
+<a name="l00063"></a>00063 
+<a name="l00070"></a>00070             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Industry.html#a5ec2b872a2165868d57ccff1b7ab6635" title="Adds a number of workers to the labor pool.">addWorkers</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> * type, <span class="keywordtype">int</span> amount);
+<a name="l00071"></a>00071 
+<a name="l00078"></a>00078             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Industry.html#a3f8819dc16fa7d54e71854bc8d285a0f" title="Removes a given number of workers from the labor pool.">removeWorkers</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> * type, <span class="keywordtype">int</span> amount);
+<a name="l00079"></a>00079 
+<a name="l00086"></a>00086             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#add4c26f68d1196ffa8cf56602efaba72" title="Gets the maximum labor output per turn.">getMaxLabor</a>() <span class="keyword">const</span>;
+<a name="l00087"></a>00087 
+<a name="l00091"></a>00091             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#ad40fe94d4c004481b5abdf64a8f08ad3">getAllocatedLabor</a>() <span class="keyword">const</span>;
+<a name="l00092"></a>00092 
+<a name="l00098"></a>00098             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Industry.html#a38acfe13628b362aa675425c443442bb" title="Gets the amount of labor that has yet to be allocated.">getFreeLabor</a>() <span class="keyword">const</span>;
+<a name="l00099"></a>00099 
+<a name="l00106"></a>00106             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Industry.html#a653929e95eed21538bba0262589b912c" title="Allocates the given amount of labor.">allocateLabor</a>(<span class="keywordtype">int</span> amount);
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108         <span class="keyword">private</span>:
+<a name="l00109"></a>00109             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const WorkerType *&gt;</a> mWorkers;
+<a name="l00110"></a>00110             <span class="keywordtype">int</span> mAllocated;
+<a name="l00111"></a>00111     };
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="preprocessor">#endif // INDUSTRY_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

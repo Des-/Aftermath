@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -72,40 +71,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Tile_8hpp.html" title="A map tile.">Tile.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="TileGroup_8hpp.html" title="A group of Tiles.">TileGroup.hpp</a>&quot;</span>
-<a name="l00028"></a>00028 
-<a name="l00037"></a>00037 <span class="keyword">namespace </span>Aftermath {
-<a name="l00038"></a>00038 
-<a name="l00043"></a><a class="code" href="classAftermath_1_1Sea.html">00043</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Sea.html" title="Seas are TileGroups that are without owners and without capitals.">Sea</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> {
-<a name="l00044"></a>00044         <span class="keyword">public</span>:
-<a name="l00048"></a>00048             <a class="code" href="classAftermath_1_1Sea.html#a17848cbf2baeb6ef4ef70f947bdb2be4" title="Constructs an empty sea with the given name.">Sea</a>(<span class="keyword">const</span> std::string &amp; name);
-<a name="l00049"></a>00049 
-<a name="l00054"></a>00054             <a class="code" href="classAftermath_1_1Sea.html#ae4f46695a5860c8c21ddf02db537a366" title="Frees this Sea and all units on it.">~Sea</a>();
-<a name="l00055"></a>00055 
-<a name="l00061"></a>00061             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Sea.html#aacdf4c574ec463dfa7c75f2b6299a63d" title="Returns whether or not this TileGroup is a land-based group.">isLand</a>();
-<a name="l00062"></a>00062 
-<a name="l00068"></a>00068             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Sea.html#a44aa40d0e50b6955614ee8a57970044f" title="Returns whether or not this TileGroup is a sea-based group.">isSea</a>();
-<a name="l00069"></a>00069 
-<a name="l00075"></a>00075             <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * <a class="code" href="classAftermath_1_1Sea.html#a5287e9c5532a60560c802673837bd5b3" title="This function does nothing for a Sea.">getOwner</a>();
-<a name="l00076"></a>00076 
-<a name="l00082"></a>00082             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * <a class="code" href="classAftermath_1_1Sea.html#a5287e9c5532a60560c802673837bd5b3" title="This function does nothing for a Sea.">getOwner</a>() <span class="keyword">const</span>;
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="TileGroup_8hpp.html" title="A group of Tiles.">TileGroup.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player;
+<a name="l00028"></a>00028                       <span class="keyword">class </span>Tile; }
+<a name="l00029"></a>00029 
+<a name="l00038"></a>00038 <span class="keyword">namespace </span>Aftermath {
+<a name="l00039"></a>00039 
+<a name="l00044"></a><a class="code" href="classAftermath_1_1Sea.html">00044</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Sea.html" title="Seas are TileGroups that are without owners and without capitals.">Sea</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> {
+<a name="l00045"></a>00045         <span class="keyword">public</span>:
+<a name="l00049"></a>00049             <a class="code" href="classAftermath_1_1Sea.html#a82237a05444b7262f2a8886e7c2c5a36" title="Constructs an empty sea with the given name.">Sea</a>(<span class="keyword">const</span> std::string &amp; name);
+<a name="l00050"></a>00050 
+<a name="l00056"></a>00056             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Sea.html#ac1d658e5d4f460b24699d750ac655922" title="Returns whether or not this TileGroup is a land-based group.">isLand</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057 
+<a name="l00063"></a>00063             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Sea.html#a5068de84c213f50543fd8707726fcc96" title="Returns whether or not this TileGroup is a sea-based group.">isSea</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064 
+<a name="l00070"></a>00070             <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * <a class="code" href="classAftermath_1_1Sea.html#ae5cb2a7677a89400d7308b6ce7a2648b" title="This function does nothing for a Sea.">getOwner</a>();
+<a name="l00071"></a>00071 
+<a name="l00077"></a>00077             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * <a class="code" href="classAftermath_1_1Sea.html#ae5cb2a7677a89400d7308b6ce7a2648b" title="This function does nothing for a Sea.">getOwner</a>() <span class="keyword">const</span>;
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Sea.html#af9d3e6fa8d412498c0ee89c033d54c5a" title="This function does nothing for a Sea.">setOwner</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * owner);
 <a name="l00083"></a>00083 
-<a name="l00087"></a>00087             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Sea.html#ae0d70be6309456f42ddea61e4497d738" title="This function does nothing for a Sea.">setOwner</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * owner);
-<a name="l00088"></a>00088 
-<a name="l00094"></a>00094             <a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> * <a class="code" href="classAftermath_1_1Sea.html#aedf9beead9e77288f1512f1bbef4384d" title="This function does nothing for a Sea.">getCapital</a>();
-<a name="l00095"></a>00095 
-<a name="l00101"></a>00101             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> * <a class="code" href="classAftermath_1_1Sea.html#aedf9beead9e77288f1512f1bbef4384d" title="This function does nothing for a Sea.">getCapital</a>() <span class="keyword">const</span>;
+<a name="l00089"></a>00089             <a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> * <a class="code" href="classAftermath_1_1Sea.html#a9b37ab8320eaaf0d8550ad3211b39d98" title="This function does nothing for a Sea.">getCapital</a>();
+<a name="l00090"></a>00090 
+<a name="l00096"></a>00096             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> * <a class="code" href="classAftermath_1_1Sea.html#a9b37ab8320eaaf0d8550ad3211b39d98" title="This function does nothing for a Sea.">getCapital</a>() <span class="keyword">const</span>;
+<a name="l00097"></a>00097 
+<a name="l00101"></a>00101             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Sea.html#a1e4962162177d96a634d541e2080a18c" title="This function does nothing for a Sea.">setCapital</a>(<a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> * capital);
 <a name="l00102"></a>00102 
-<a name="l00106"></a>00106             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Sea.html#a6141491d13adea220f8f1de9c22df405" title="This function does nothing for a Sea.">setCapital</a>(<a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> * capital);
-<a name="l00107"></a>00107 
-<a name="l00117"></a>00117             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Sea.html#a62fea8facc1447dd1bbb9670dfc3c45d" title="Tells whether or not the given tile can be successfully added to this Sea.">canAdd</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> *&amp; tile) <span class="keyword">const</span>;
-<a name="l00118"></a>00118     };
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120 }
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="preprocessor">#endif // SEA_HPP_INCLUDED</span>
+<a name="l00112"></a>00112             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Sea.html#a48f1fff6f62763ee5d7f37c82df53b70" title="Tells whether or not the given tile can be successfully added to this Sea.">canAdd</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> *&amp; tile) <span class="keyword">const</span>;
+<a name="l00113"></a>00113     };
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 }
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117 <span class="preprocessor">#endif // SEA_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -122,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

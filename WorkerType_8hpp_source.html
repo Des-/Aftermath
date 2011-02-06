@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -72,38 +71,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="comment">// TODO: Decide for certain what graphics library to use.</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;SFML/Graphics/Image.hpp&gt;</span>
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="Transferable_8hpp.html" title="A type that can be given and taken from a player.">Transferable.hpp</a>&quot;</span>
-<a name="l00031"></a>00031 
-<a name="l00040"></a>00040 <span class="keyword">namespace </span>Aftermath {
-<a name="l00041"></a>00041 
-<a name="l00046"></a><a class="code" href="classAftermath_1_1WorkerType.html">00046</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a>, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> {
-<a name="l00047"></a>00047         <span class="keyword">public</span>:
-<a name="l00057"></a>00057             <a class="code" href="classAftermath_1_1WorkerType.html#ac36d14a828f3331b22ddf9da7f245067" title="Constructs a new WorkerType with the given name, description, and image.">WorkerType</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp;
-<a name="l00058"></a>00058                 description, <span class="keyword">const</span> sf::Image * image, <span class="keywordtype">int</span> labor);
-<a name="l00059"></a>00059 
-<a name="l00063"></a>00063             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1WorkerType.html#abb20302db2daab95fa4963e65ba02c24">getLabor</a>() <span class="keyword">const</span>;
-<a name="l00064"></a>00064 
-<a name="l00071"></a>00071             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1WorkerType.html#af3a493747b3379db703532a1e687694c" title="Adds a number of workers of this type to the given player.">giveTo</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00072"></a>00072 
-<a name="l00082"></a>00082             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1WorkerType.html#aeb316e7a53f367f06015bbbe5b1d62c7" title="Checks if the given player can receive the given amount of workers.">canGiveTo</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00083"></a>00083 
-<a name="l00090"></a>00090             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1WorkerType.html#af5dcf528f4c7904eea1e17177e18775c" title="Takes the given amount of this worker type from a player.">takeFrom</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00091"></a>00091 
-<a name="l00101"></a>00101             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1WorkerType.html#a8ebe220fc549caeaa8909458e1643cac" title="Checks if the given player has enough workers.">canTakeFrom</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103         <span class="keyword">private</span>:
-<a name="l00104"></a>00104             <span class="keywordtype">int</span> mLabor;
-<a name="l00105"></a>00105     };
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 }
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="preprocessor">#endif // WORKERTYPE_HPP_INCLUDED</span>
-<a name="l00110"></a>00110 <span class="preprocessor"></span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Graphics_8hpp.html" title="An interface for graphical elements.">Graphics.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="Transferable_8hpp.html" title="A type that can be given and taken from a player.">Transferable.hpp</a>&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player; }
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
+<a name="l00040"></a>00040 
+<a name="l00045"></a><a class="code" href="classAftermath_1_1WorkerType.html">00045</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1WorkerType.html" title="A WorkerType is a type of laborer that can work for a Player to manufacture products using labor...">WorkerType</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a>, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> {
+<a name="l00046"></a>00046         <span class="keyword">public</span>:
+<a name="l00056"></a>00056             <a class="code" href="classAftermath_1_1WorkerType.html#ab369a353f6de3a4ca42190fc84b76d27" title="Constructs a new WorkerType with the given name, description, and image.">WorkerType</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp;
+<a name="l00057"></a>00057                 description, <span class="keyword">const</span> Image * image, <span class="keywordtype">int</span> labor);
+<a name="l00058"></a>00058 
+<a name="l00062"></a>00062             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1WorkerType.html#aa2328632e0e44a690912265d3a68d7f6">getLabor</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063 
+<a name="l00070"></a>00070             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1WorkerType.html#a9e980337ab98153c446c053e7b937a7d" title="Adds a number of workers of this type to the given player.">giveTo</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00071"></a>00071 
+<a name="l00081"></a>00081             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1WorkerType.html#ab3cf44f50fe3301fa5429972777a7032" title="Checks if the given player can receive the given amount of workers.">canGiveTo</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00082"></a>00082 
+<a name="l00089"></a>00089             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1WorkerType.html#aeba1778619debfb9e57c10afd50b43b4" title="Takes the given amount of this worker type from a player.">takeFrom</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00090"></a>00090 
+<a name="l00100"></a>00100             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1WorkerType.html#aa9e5c29ee954091a1cc71dc534fd665c" title="Checks if the given player has enough workers.">canTakeFrom</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102         <span class="keyword">private</span>:
+<a name="l00103"></a>00103             <span class="keywordtype">int</span> mLabor;
+<a name="l00104"></a>00104     };
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="preprocessor">#endif // WORKERTYPE_HPP_INCLUDED</span>
+<a name="l00109"></a>00109 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -120,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

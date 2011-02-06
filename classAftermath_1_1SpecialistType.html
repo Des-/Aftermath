@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1>Aftermath::SpecialistType Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Aftermath::SpecialistType" --><!-- doxytag: inherits="Aftermath::NamedType,Aftermath::Transferable,Collection&lt; TileAction &gt;" -->
+<!-- doxytag: class="Aftermath::SpecialistType" --><!-- doxytag: inherits="Aftermath::NamedType,Aftermath::Transferable,Collection&lt; const TileAction * &gt;" -->
 <p>A <a class="el" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> is the role of a <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a>.  
 <a href="#_details">More...</a></p>
 
@@ -70,35 +70,35 @@ Inheritance diagram for Aftermath::SpecialistType:<!-- endSectionHeader --></div
  <div class="center">
   <img src="classAftermath_1_1SpecialistType.png" usemap="#Aftermath::SpecialistType_map" alt=""/>
   <map id="Aftermath::SpecialistType_map" name="Aftermath::SpecialistType_map">
-<area href="classAftermath_1_1NamedType.html" alt="Aftermath::NamedType" shape="rect" coords="0,0,208,24"/>
-<area href="classAftermath_1_1Transferable.html" alt="Aftermath::Transferable" shape="rect" coords="218,0,426,24"/>
-<area href="classAftermath_1_1Collection.html" alt="Aftermath::Collection&lt; TileAction &gt;" shape="rect" coords="436,0,644,24"/>
+<area href="classAftermath_1_1NamedType.html" alt="Aftermath::NamedType" shape="rect" coords="0,0,255,24"/>
+<area href="classAftermath_1_1Transferable.html" alt="Aftermath::Transferable" shape="rect" coords="265,0,520,24"/>
+<area href="classAftermath_1_1Collection.html" alt="Aftermath::Collection&lt; const TileAction * &gt;" shape="rect" coords="530,0,785,24"/>
 </map>
  </div><!-- endSectionContent --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#ae4e13b03572efc8b8f539e15d13b4ab7">SpecialistType</a> (const std::string &amp;name, const std::string &amp;description, const sf::Image *image)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> with the given name, description, and image.  <a href="#ae4e13b03572efc8b8f539e15d13b4ab7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#a13ce828a5197d0df67a6e98f84279a66">giveTo</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs one <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this type and gives it to the given player.  <a href="#a13ce828a5197d0df67a6e98f84279a66"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#ae525f259618ee7d068b60288f463eace">canGiveTo</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given player can receive a specialist of this type.  <a href="#ae525f259618ee7d068b60288f463eace"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#a716a35e34303bb0a61b28ceea6888dbf">takeFrom</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Taking a specialist from a player is undefined and thus this function does nothing.  <a href="#a716a35e34303bb0a61b28ceea6888dbf"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#afc7b9bce13199fa83ff2a212ff507fd7">canTakeFrom</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Taking a specialist from a player is undefined and thus this function returns false.  <a href="#afc7b9bce13199fa83ff2a212ff507fd7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#a605d71e9c0f3d43b650ad27db264cd4a">SpecialistType</a> (const std::string &amp;name, const std::string &amp;description, const Image *image)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> with the given name, description, and image.  <a href="#a605d71e9c0f3d43b650ad27db264cd4a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#a40f941fc9413b0d7af395bfe7a164172">giveTo</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs one <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this type and gives it to the given player.  <a href="#a40f941fc9413b0d7af395bfe7a164172"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#ac0f2a654c96f08c4129497500c555a70">canGiveTo</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given player can receive a specialist of this type.  <a href="#ac0f2a654c96f08c4129497500c555a70"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#afb44957892507336203e9f6d91b2b734">takeFrom</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Taking a specialist from a player is undefined and thus this function does nothing.  <a href="#afb44957892507336203e9f6d91b2b734"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1SpecialistType.html#a7a292775c68d1bed5327c764edcd6019">canTakeFrom</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Taking a specialist from a player does nothing.  <a href="#a7a292775c68d1bed5327c764edcd6019"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1SpecialistType.html" title="A SpecialistType is the role of a TileUnit.">SpecialistType</a> is the role of a <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a>. </p>
 <p>SpecialistTypes have actions that they can perform on Tiles called TileActions. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae4e13b03572efc8b8f539e15d13b4ab7"></a><!-- doxytag: member="Aftermath::SpecialistType::SpecialistType" ref="ae4e13b03572efc8b8f539e15d13b4ab7" args="(const std::string &amp;name, const std::string &amp;description, const sf::Image *image)" -->
+<a class="anchor" id="a605d71e9c0f3d43b650ad27db264cd4a"></a><!-- doxytag: member="Aftermath::SpecialistType::SpecialistType" ref="a605d71e9c0f3d43b650ad27db264cd4a" args="(const std::string &amp;name, const std::string &amp;description, const Image *image)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::SpecialistType::SpecialistType </td>
+          <td class="memname">SpecialistType::SpecialistType </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"> <em>name</em>, </td>
@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const sf::Image *&#160;</td>
+          <td class="paramtype">const Image *&#160;</td>
           <td class="paramname"> <em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -138,12 +138,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae525f259618ee7d068b60288f463eace"></a><!-- doxytag: member="Aftermath::SpecialistType::canGiveTo" ref="ae525f259618ee7d068b60288f463eace" args="(const Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="ac0f2a654c96f08c4129497500c555a70"></a><!-- doxytag: member="Aftermath::SpecialistType::canGiveTo" ref="ac0f2a654c96f08c4129497500c555a70" args="(const Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::SpecialistType::canGiveTo </td>
+          <td class="memname">bool SpecialistType::canGiveTo </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -178,12 +178,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afc7b9bce13199fa83ff2a212ff507fd7"></a><!-- doxytag: member="Aftermath::SpecialistType::canTakeFrom" ref="afc7b9bce13199fa83ff2a212ff507fd7" args="(const Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a7a292775c68d1bed5327c764edcd6019"></a><!-- doxytag: member="Aftermath::SpecialistType::canTakeFrom" ref="a7a292775c68d1bed5327c764edcd6019" args="(const Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::SpecialistType::canTakeFrom </td>
+          <td class="memname">bool SpecialistType::canTakeFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -203,7 +203,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Taking a specialist from a player is undefined and thus this function returns false. </p>
+<p>Taking a specialist from a player does nothing. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to take from. </td></tr>
@@ -211,18 +211,18 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>false. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true. </dd></dl>
 
 <p>Implements <a class="el" href="classAftermath_1_1Transferable.html#a6f2b2e0caa7c8c21558ea403b3966736">Aftermath::Transferable</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a13ce828a5197d0df67a6e98f84279a66"></a><!-- doxytag: member="Aftermath::SpecialistType::giveTo" ref="a13ce828a5197d0df67a6e98f84279a66" args="(Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a40f941fc9413b0d7af395bfe7a164172"></a><!-- doxytag: member="Aftermath::SpecialistType::giveTo" ref="a40f941fc9413b0d7af395bfe7a164172" args="(Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::SpecialistType::giveTo </td>
+          <td class="memname">void SpecialistType::giveTo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -255,12 +255,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a716a35e34303bb0a61b28ceea6888dbf"></a><!-- doxytag: member="Aftermath::SpecialistType::takeFrom" ref="a716a35e34303bb0a61b28ceea6888dbf" args="(Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="afb44957892507336203e9f6d91b2b734"></a><!-- doxytag: member="Aftermath::SpecialistType::takeFrom" ref="afb44957892507336203e9f6d91b2b734" args="(Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::SpecialistType::takeFrom </td>
+          <td class="memname">void SpecialistType::takeFrom </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -293,8 +293,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="SpecialistType_8hpp_source.html">SpecialistType.hpp</a></li>
+<li>src/SpecialistType.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -311,7 +312,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

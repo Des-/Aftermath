@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -71,41 +70,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define PRODUCTIONCENTER_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="ProductionCenterType_8hpp.html" title="A type of ProductionCenter.">ProductionCenterType.hpp</a>&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="ProductionFormula_8hpp.html" title="A formula with inputs and outputs.">ProductionFormula.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="ProductionLevel_8hpp.html" title="The level of a ProductionCenter.">ProductionLevel.hpp</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="Upgradable_8hpp.html" title="A type that can be upgraded.">Upgradable.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 
-<a name="l00038"></a>00038 <span class="keyword">namespace </span>Aftermath {
-<a name="l00039"></a>00039 
-<a name="l00044"></a><a class="code" href="classAftermath_1_1ProductionCenter.html">00044</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1ProductionCenter.html" title="ProductionCenters are upgradable centers of production.">ProductionCenter</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>&lt;ProductionLevel&gt; {
-<a name="l00045"></a>00045         <span class="keyword">public</span>:
-<a name="l00051"></a>00051             <a class="code" href="classAftermath_1_1ProductionCenter.html#a7a2657a0ff50a44b26cf073a75dc6e0f" title="Constructs a new ProductionCenter of the given type.">ProductionCenter</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionCenterType.html" title="A ProductionCenterType is a type of ProductionCenter.">ProductionCenterType</a> * type);
-<a name="l00052"></a>00052 
-<a name="l00056"></a>00056             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionCenterType.html" title="A ProductionCenterType is a type of ProductionCenter.">ProductionCenterType</a> &amp; <a class="code" href="classAftermath_1_1ProductionCenter.html#ac2cd59f0e06980a9a12503cc967910db">getType</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057 
-<a name="l00066"></a>00066             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#ad8a28add4fb2511a2cee16f6794d43c7" title="Gets the number of times the given formula is being produced.">getProducing</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (N...">ProductionFormula</a> * formula) <span class="keyword">const</span>;
-<a name="l00067"></a>00067 
-<a name="l00078"></a>00078             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#a6d9dbf1794a11fc4ca3927c9d3876055" title="Returns whether or not this production center can produce the given formula and the player can pay fo...">canProduce</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (N...">ProductionFormula</a> *
-<a name="l00079"></a>00079                 formula) <span class="keyword">const</span>;
-<a name="l00080"></a>00080 
-<a name="l00088"></a>00088             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#a32ccc0ce74a38b8e17cce7a9580ca813" title="Starts the production of the given formula at this center.">startProduction</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (N...">ProductionFormula</a> *
-<a name="l00089"></a>00089                 formula);
-<a name="l00090"></a>00090 
-<a name="l00098"></a>00098             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#aa28f138ba454139844ec539d1f50bed3" title="Cancels production of the given formula at this center.">cancelProduction</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (N...">ProductionFormula</a> *
-<a name="l00099"></a>00099                 formula);
-<a name="l00100"></a>00100 
-<a name="l00105"></a>00105             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#a3287de1b6c5230731e2e5e80f60a58e4" title="Finishes all production at this center.">finishProduction</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player);
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107         <span class="keyword">private</span>:
-<a name="l00108"></a>00108             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionCenterType.html" title="A ProductionCenterType is a type of ProductionCenter.">ProductionCenterType</a> * mType;
-<a name="l00109"></a>00109             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const ProductionFormula *&gt;</a> mProducing;
-<a name="l00110"></a>00110     };
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112 }
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="Upgradable_8hpp.html" title="A type that can be upgraded.">Upgradable.hpp</a>&quot;</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player;
+<a name="l00027"></a>00027                       <span class="keyword">class </span>ProductionCenterType;
+<a name="l00028"></a>00028                       <span class="keyword">class </span>ProductionFormula;
+<a name="l00029"></a>00029                       <span class="keyword">class </span>ProductionLevel; }
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
+<a name="l00040"></a>00040 
+<a name="l00045"></a><a class="code" href="classAftermath_1_1ProductionCenter.html">00045</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1ProductionCenter.html" title="ProductionCenters are upgradable centers of production.">ProductionCenter</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>&lt;ProductionLevel&gt; {
+<a name="l00046"></a>00046         <span class="keyword">public</span>:
+<a name="l00052"></a>00052             <a class="code" href="classAftermath_1_1ProductionCenter.html#afbeb14fba86b6f23425364d2cce73a55" title="Constructs a new ProductionCenter of the given type.">ProductionCenter</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionCenterType.html" title="A ProductionCenterType is a type of ProductionCenter.">ProductionCenterType</a> * type);
+<a name="l00053"></a>00053 
+<a name="l00057"></a>00057             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionCenterType.html" title="A ProductionCenterType is a type of ProductionCenter.">ProductionCenterType</a> &amp; <a class="code" href="classAftermath_1_1ProductionCenter.html#ac89e3d0addb8786de6896556d0bb7028">getType</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058 
+<a name="l00067"></a>00067             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#ac9dd3fd9bca10f0601e79b17e74c47ff" title="Gets the number of times the given formula is being produced.">getProducing</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (T...">ProductionFormula</a> * formula) <span class="keyword">const</span>;
+<a name="l00068"></a>00068 
+<a name="l00080"></a>00080             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#a69b3dbaf8172db7d44625241d249f3f1" title="Returns whether or not this production center can produce the given formula and the player can pay fo...">canProduce</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (T...">ProductionFormula</a> *
+<a name="l00081"></a>00081                 formula) <span class="keyword">const</span>;
+<a name="l00082"></a>00082 
+<a name="l00090"></a>00090             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#a208a1d1b8a3c3663729a88b109b1ea95" title="Starts the production of the given formula at this center.">startProduction</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (T...">ProductionFormula</a> *
+<a name="l00091"></a>00091                 formula);
+<a name="l00092"></a>00092 
+<a name="l00100"></a>00100             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#a5dfd771fda47fc99d62fa46fb02197a4" title="Cancels production of the given formula at this center.">cancelProduction</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (T...">ProductionFormula</a> *
+<a name="l00101"></a>00101                 formula);
+<a name="l00102"></a>00102 
+<a name="l00107"></a>00107             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1ProductionCenter.html#a9996bbd3273b9ea02fff7a7f265cb5e8" title="Finishes all production at this center.">finishProduction</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player);
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109         <span class="keyword">private</span>:
+<a name="l00110"></a>00110             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1ProductionCenterType.html" title="A ProductionCenterType is a type of ProductionCenter.">ProductionCenterType</a> * mType;
+<a name="l00111"></a>00111             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const ProductionFormula *&gt;</a> mProducing;
+<a name="l00112"></a>00112     };
 <a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="preprocessor">#endif // PRODUCTIONCENTER_HPP_INCLUDED</span>
+<a name="l00114"></a>00114 }
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="preprocessor">#endif // PRODUCTIONCENTER_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

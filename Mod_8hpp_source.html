@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -73,97 +72,105 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;map&gt;</span>
 <a name="l00024"></a>00024 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Collection_8hpp.html" title="A generic collection.">Collection.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="Date_8hpp.html" title="A historical date type.">Date.hpp</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="Labor_8hpp.html" title="Labor points for use in manufacturing.">Labor.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="MerchantMarine_8hpp.html" title="The capacity of international trade.">MerchantMarine.hpp</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="Money_8hpp.html" title="Money used for purchasing products.">Money.hpp</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="Nation_8hpp.html" title="The nation that a player controls.">Nation.hpp</a>&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="ProductionCenterType_8hpp.html" title="A type of ProductionCenter.">ProductionCenterType.hpp</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="Resource_8hpp.html" title="A resource type.">Resource.hpp</a>&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="SpecialistType_8hpp.html" title="The specialist role of a TileUnit.">SpecialistType.hpp</a>&quot;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="Technology_8hpp.html" title="A technological advance.">Technology.hpp</a>&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="Terrain_8hpp.html" title="A terrain type for tiles.">Terrain.hpp</a>&quot;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="TileAction_8hpp.html" title="An action performed on a Tile by a TileUnit.">TileAction.hpp</a>&quot;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;<a class="code" href="TransportCapacity_8hpp.html" title="The capacity of a transport network.">TransportCapacity.hpp</a>&quot;</span>
-<a name="l00040"></a>00040 <span class="preprocessor">#include &quot;<a class="code" href="UnitType_8hpp.html" title="A type of unit.">UnitType.hpp</a>&quot;</span>
-<a name="l00041"></a>00041 <span class="preprocessor">#include &quot;WorkerTypes.hpp&quot;</span>
-<a name="l00042"></a>00042 
-<a name="l00051"></a>00051 <span class="keyword">namespace </span>Aftermath {
-<a name="l00052"></a>00052 
-<a name="l00057"></a><a class="code" href="classAftermath_1_1Mod.html">00057</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Mod.html" title="A Mod is a pack of tiles, resources, nations, units, technologies, images, and more.">Mod</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a> {
-<a name="l00058"></a>00058         <span class="keyword">public</span>:
-<a name="l00065"></a>00065             <a class="code" href="classAftermath_1_1Mod.html#a3e862f37a3625d0cb909e169ea269909" title="Constructs a new Mod and loads all data from the given root directory.">Mod</a>(<span class="keyword">const</span> std::string &amp; directory);
-<a name="l00066"></a>00066 
-<a name="l00070"></a>00070             <a class="code" href="classAftermath_1_1Mod.html#aa08c166b9b3f1af3fc69aa6473e0d377" title="Frees this mod and all data that it loaded.">~Mod</a>();
-<a name="l00071"></a>00071 
-<a name="l00075"></a>00075             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Date.html" title="Date is a NamedType representing a historical date.">Date</a> * <a class="code" href="classAftermath_1_1Mod.html#ad9c0742ebdf9b510cc2a0958d6df70db">getDate</a>() <span class="keyword">const</span>;
-<a name="l00076"></a>00076 
-<a name="l00080"></a>00080             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> * <a class="code" href="classAftermath_1_1Mod.html#a226f67ce0b94c6402d89806a6a22e3f8">getLabor</a>() <span class="keyword">const</span>;
-<a name="l00081"></a>00081 
-<a name="l00085"></a>00085             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1MerchantMarine.html" title="MerchantMarine is the max amount of any one product type to be traded internationally per turn...">MerchantMarine</a> * <a class="code" href="classAftermath_1_1Mod.html#ad0501ea0985625ad0cde69f7eb22f3c6">getMerchantMarine</a>() <span class="keyword">const</span>;
-<a name="l00086"></a>00086 
-<a name="l00090"></a>00090             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Money.html" title="Money is used to purchase goods, technology, and upgrades.">Money</a> * <a class="code" href="classAftermath_1_1Mod.html#adba8d0a1dcb32bb0a51f04af1e5866fe">getMoney</a>() <span class="keyword">const</span>;
-<a name="l00091"></a>00091 
-<a name="l00095"></a>00095             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TransportCapacity.html" title="TransportCapacity is the capacity of a TransportNetwork to transport goods.">TransportCapacity</a> * <a class="code" href="classAftermath_1_1Mod.html#a83f09b331c50bc8514476a1690d9242f">getTransportCapacity</a>() <span class="keyword">const</span>;
-<a name="l00096"></a>00096 
-<a name="l00101"></a>00101             <span class="keyword">const</span> std::map&lt;std::string, const Nation *&gt; &amp;
-<a name="l00102"></a>00102                 <a class="code" href="classAftermath_1_1Mod.html#a2bd3c09856d74942f2b8cd2fda931dbb">getNations</a>() <span class="keyword">const</span>;
-<a name="l00103"></a>00103 
-<a name="l00108"></a>00108             <span class="keyword">const</span> std::map&lt;std::string, const ProductionCenterType *&gt; &amp;
-<a name="l00109"></a>00109                 <a class="code" href="classAftermath_1_1Mod.html#aa5ba289127001f295685dba8badbd4cb">getProductionCenterTypes</a>() <span class="keyword">const</span>;
-<a name="l00110"></a>00110 
-<a name="l00115"></a>00115             <span class="keyword">const</span> std::map&lt;std::string, const Resource *&gt; &amp;
-<a name="l00116"></a>00116                 <a class="code" href="classAftermath_1_1Mod.html#a49022e31bd08ae9178431510e07c1d88">getResources</a>() <span class="keyword">const</span>;
-<a name="l00117"></a>00117 
-<a name="l00122"></a>00122             <span class="keyword">const</span> std::map&lt;std::string, const SpecialistType *&gt; &amp;
-<a name="l00123"></a>00123                 <a class="code" href="classAftermath_1_1Mod.html#acdffedc311a750714254ca3554e283b6">getSpecialistTypes</a>() <span class="keyword">const</span>;
-<a name="l00124"></a>00124 
-<a name="l00129"></a>00129             <span class="keyword">const</span> std::map&lt;std::string, const Technology *&gt; &amp;
-<a name="l00130"></a>00130                 <a class="code" href="classAftermath_1_1Mod.html#aa850a04a305d8a397365f8e331c7e7a5">getTechnology</a>() <span class="keyword">const</span>;
-<a name="l00131"></a>00131 
-<a name="l00136"></a>00136             <span class="keyword">const</span> std::map&lt;std::string, const Terrain *&gt; &amp;
-<a name="l00137"></a>00137                 <a class="code" href="classAftermath_1_1Mod.html#a403449ef2345ed405876745ea40d4b5d">getTerrain</a>() <span class="keyword">const</span>;
-<a name="l00138"></a>00138 
-<a name="l00143"></a>00143             <span class="keyword">const</span> std::map&lt;std::string, const TileAction *&gt; &amp;
-<a name="l00144"></a>00144                 <a class="code" href="classAftermath_1_1Mod.html#abff35cf1ad495e9c6cd50e3dadaefd86">getTileActions</a>() <span class="keyword">const</span>;
-<a name="l00145"></a>00145 
-<a name="l00150"></a>00150             <span class="keyword">const</span> std::map&lt;std::string, const UnitType *&gt; &amp;
-<a name="l00151"></a>00151                 <a class="code" href="classAftermath_1_1Mod.html#a7859043d3b95cb7e5c816eb6daa8ff8e">getUnitTypes</a>() <span class="keyword">const</span>;
-<a name="l00152"></a>00152 
-<a name="l00157"></a>00157             <span class="keyword">const</span> std::map&lt;std::string, const WorkerType *&gt; &amp;
-<a name="l00158"></a>00158                 <a class="code" href="classAftermath_1_1Mod.html#a085608e8cd364e1731521972833235fa">getWorkerTypes</a>() <span class="keyword">const</span>;
-<a name="l00159"></a>00159 
-<a name="l00164"></a>00164             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Mod.html#a77152a80bdae15ad50725d028badab78">getStartingTypes</a>() <span class="keyword">const</span>;
-<a name="l00165"></a>00165 
-<a name="l00169"></a>00169             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Mod.html#a49ed48e762f16eb6f88170ca2595d8e8">getMaxBids</a>() <span class="keyword">const</span>;
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171         <span class="keyword">private</span>:
-<a name="l00172"></a>00172             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Date.html" title="Date is a NamedType representing a historical date.">Date</a> * mDate;
-<a name="l00173"></a>00173             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> * mLabor;
-<a name="l00174"></a>00174             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1MerchantMarine.html" title="MerchantMarine is the max amount of any one product type to be traded internationally per turn...">MerchantMarine</a> * mMerchantMarine;
-<a name="l00175"></a>00175             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Money.html" title="Money is used to purchase goods, technology, and upgrades.">Money</a> * mMoney;
-<a name="l00176"></a>00176             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TransportCapacity.html" title="TransportCapacity is the capacity of a TransportNetwork to transport goods.">TransportCapacity</a> * mTransportCapacity;
-<a name="l00177"></a>00177             std::map&lt;std::string, const Nation *&gt; mNations;
-<a name="l00178"></a>00178             std::map&lt;std::string, const ProductionCenterType *&gt;
-<a name="l00179"></a>00179                 mProductionCenterTypes;
-<a name="l00180"></a>00180             std::map&lt;std::string, const Resource *&gt; mResources;
-<a name="l00181"></a>00181             std::map&lt;std::string, const SpecialistType *&gt; mSpecialistTypes;
-<a name="l00182"></a>00182             std::map&lt;std::string, const Technology *&gt; mTechnology;
-<a name="l00183"></a>00183             std::map&lt;std::string, const Terrain *&gt; mTerrain;
-<a name="l00184"></a>00184             std::map&lt;std::string, const TileAction *&gt; mTileActions;
-<a name="l00185"></a>00185             std::map&lt;std::string, const UnitType *&gt; mUnitTypes;
-<a name="l00186"></a>00186             std::map&lt;std::string, const WorkerType *&gt; mWorkerTypes;
-<a name="l00187"></a>00187 
-<a name="l00188"></a>00188             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> mStartingTypes;
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190             <span class="keywordtype">int</span> mMaxBids;
-<a name="l00191"></a>00191     };
-<a name="l00192"></a>00192 
-<a name="l00193"></a>00193 }
-<a name="l00194"></a>00194 
-<a name="l00195"></a>00195 <span class="preprocessor">#endif // MOD_HPP_INCLUDED</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Date;
+<a name="l00030"></a>00030                       <span class="keyword">class </span>Labor;
+<a name="l00031"></a>00031                       <span class="keyword">class </span>MerchantMarine;
+<a name="l00032"></a>00032                       <span class="keyword">class </span>Money;
+<a name="l00033"></a>00033                       <span class="keyword">class </span>Nation;
+<a name="l00034"></a>00034                       <span class="keyword">class </span>ProductionCenterType;
+<a name="l00035"></a>00035                       <span class="keyword">class </span>Resource;
+<a name="l00036"></a>00036                       <span class="keyword">class </span>SpecialistType;
+<a name="l00037"></a>00037                       <span class="keyword">class </span>Technology;
+<a name="l00038"></a>00038                       <span class="keyword">class </span>Terrain;
+<a name="l00039"></a>00039                       <span class="keyword">class </span>TileAction;
+<a name="l00040"></a>00040                       <span class="keyword">class </span>Transferable;
+<a name="l00041"></a>00041                       <span class="keyword">class </span>TransportCapacity;
+<a name="l00042"></a>00042                       <span class="keyword">class </span>UnitType;
+<a name="l00043"></a>00043                       <span class="keyword">class </span>WorkerType; }
+<a name="l00044"></a>00044 
+<a name="l00053"></a>00053 <span class="keyword">namespace </span>Aftermath {
+<a name="l00054"></a>00054 
+<a name="l00059"></a><a class="code" href="classAftermath_1_1Mod.html">00059</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Mod.html" title="A Mod is a pack of tiles, resources, nations, units, technologies, images, and more.">Mod</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a> {
+<a name="l00060"></a>00060         <span class="keyword">public</span>:
+<a name="l00067"></a>00067             <a class="code" href="classAftermath_1_1Mod.html#a5cb8a0c05f7f44e812880fa15a441c84" title="Constructs a new Mod and loads all data from the given root directory.">Mod</a>(<span class="keyword">const</span> std::string &amp; directory);
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072             <a class="code" href="classAftermath_1_1Mod.html#a547076d7ba8fbc97050041f810ecb743" title="Frees this mod and all data that it loaded.">~Mod</a>();
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Date.html" title="Date is a NamedType representing a historical date.">Date</a> * <a class="code" href="classAftermath_1_1Mod.html#a79d6c8521dae304ab893089ab2c02c3d">getDate</a>() <span class="keyword">const</span>;
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> * <a class="code" href="classAftermath_1_1Mod.html#aecbec064a89776d9eb597bc5e40835af">getLabor</a>() <span class="keyword">const</span>;
+<a name="l00083"></a>00083 
+<a name="l00087"></a>00087             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1MerchantMarine.html" title="MerchantMarine is the max amount of any one product type to be traded internationally per turn...">MerchantMarine</a> * <a class="code" href="classAftermath_1_1Mod.html#a4f0798fab3ab97035388ad85513cad7a">getMerchantMarine</a>() <span class="keyword">const</span>;
+<a name="l00088"></a>00088 
+<a name="l00092"></a>00092             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Money.html" title="Money is used to purchase goods, technology, and upgrades.">Money</a> * <a class="code" href="classAftermath_1_1Mod.html#ae92ccca4ac6b0b1bbc49c9159e92c16f">getMoney</a>() <span class="keyword">const</span>;
+<a name="l00093"></a>00093 
+<a name="l00097"></a>00097             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TransportCapacity.html" title="TransportCapacity is the capacity of a TransportNetwork to transport goods.">TransportCapacity</a> * <a class="code" href="classAftermath_1_1Mod.html#aeb76f7673c224b9386f95d77af3cf172">getTransportCapacity</a>() <span class="keyword">const</span>;
+<a name="l00098"></a>00098 
+<a name="l00103"></a>00103             <span class="keyword">const</span> std::map&lt;std::string, const Nation *&gt; &amp;
+<a name="l00104"></a>00104                 <a class="code" href="classAftermath_1_1Mod.html#a36f6451c82fadcc5f00c1cf5b6b9e714">getNations</a>() <span class="keyword">const</span>;
+<a name="l00105"></a>00105 
+<a name="l00110"></a>00110             <span class="keyword">const</span> std::map&lt;std::string, const ProductionCenterType *&gt; &amp;
+<a name="l00111"></a>00111                 <a class="code" href="classAftermath_1_1Mod.html#a87120cf799304febeca1f51addb06bce">getProductionCenterTypes</a>() <span class="keyword">const</span>;
+<a name="l00112"></a>00112 
+<a name="l00117"></a>00117             <span class="keyword">const</span> std::map&lt;std::string, const Resource *&gt; &amp;
+<a name="l00118"></a>00118                 <a class="code" href="classAftermath_1_1Mod.html#a619fdfd36362cdd7fe8eac385c0116d4">getResources</a>() <span class="keyword">const</span>;
+<a name="l00119"></a>00119 
+<a name="l00124"></a>00124             <span class="keyword">const</span> std::map&lt;std::string, const SpecialistType *&gt; &amp;
+<a name="l00125"></a>00125                 <a class="code" href="classAftermath_1_1Mod.html#a02326d973c4e2c799c946ffd8a07e510">getSpecialistTypes</a>() <span class="keyword">const</span>;
+<a name="l00126"></a>00126 
+<a name="l00131"></a>00131             <span class="keyword">const</span> std::map&lt;std::string, const Technology *&gt; &amp;
+<a name="l00132"></a>00132                 <a class="code" href="classAftermath_1_1Mod.html#aaff6bec0e61f514b3aa0751717ac23aa">getTechnology</a>() <span class="keyword">const</span>;
+<a name="l00133"></a>00133 
+<a name="l00138"></a>00138             <span class="keyword">const</span> std::map&lt;std::string, const Terrain *&gt; &amp;
+<a name="l00139"></a>00139                 <a class="code" href="classAftermath_1_1Mod.html#ab3ca0c7ac6c19536416b352e4be2336d">getTerrain</a>() <span class="keyword">const</span>;
+<a name="l00140"></a>00140 
+<a name="l00145"></a>00145             <span class="keyword">const</span> std::map&lt;std::string, const TileAction *&gt; &amp;
+<a name="l00146"></a>00146                 <a class="code" href="classAftermath_1_1Mod.html#a72c5481545721f88b345062a783e0a01">getTileActions</a>() <span class="keyword">const</span>;
+<a name="l00147"></a>00147 
+<a name="l00152"></a>00152             <span class="keyword">const</span> std::map&lt;std::string, const UnitType *&gt; &amp;
+<a name="l00153"></a>00153                 <a class="code" href="classAftermath_1_1Mod.html#aad12465307302b2dfb71e4ca3b75500c">getUnitTypes</a>() <span class="keyword">const</span>;
+<a name="l00154"></a>00154 
+<a name="l00159"></a>00159             <span class="keyword">const</span> std::map&lt;std::string, const WorkerType *&gt; &amp;
+<a name="l00160"></a>00160                 <a class="code" href="classAftermath_1_1Mod.html#a25e7c8af6a5153ea7dca5b6f54b3e5aa">getWorkerTypes</a>() <span class="keyword">const</span>;
+<a name="l00161"></a>00161 
+<a name="l00166"></a>00166             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Mod.html#aa236aae29ee635ee4e6a3eb475cc4115">getStartingTypes</a>() <span class="keyword">const</span>;
+<a name="l00167"></a>00167 
+<a name="l00171"></a>00171             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Mod.html#ae083bfae564177172feb937132a72045">getMaxBids</a>() <span class="keyword">const</span>;
+<a name="l00172"></a>00172 
+<a name="l00176"></a>00176             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Mod.html#af34b8472604e620281f5f10d4f60df8c">getStartDate</a>() <span class="keyword">const</span>;
+<a name="l00177"></a>00177 
+<a name="l00181"></a>00181             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Mod.html#a86a8702bf1c6810dbcbfea1c4d1a4140">getDatePerTurn</a>() <span class="keyword">const</span>;
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183         <span class="keyword">private</span>:
+<a name="l00184"></a>00184             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Date.html" title="Date is a NamedType representing a historical date.">Date</a> * mDate;
+<a name="l00185"></a>00185             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> * mLabor;
+<a name="l00186"></a>00186             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1MerchantMarine.html" title="MerchantMarine is the max amount of any one product type to be traded internationally per turn...">MerchantMarine</a> * mMerchantMarine;
+<a name="l00187"></a>00187             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Money.html" title="Money is used to purchase goods, technology, and upgrades.">Money</a> * mMoney;
+<a name="l00188"></a>00188             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TransportCapacity.html" title="TransportCapacity is the capacity of a TransportNetwork to transport goods.">TransportCapacity</a> * mTransportCapacity;
+<a name="l00189"></a>00189             std::map&lt;std::string, const Nation *&gt; mNations;
+<a name="l00190"></a>00190             std::map&lt;std::string, const ProductionCenterType *&gt;
+<a name="l00191"></a>00191                 mProductionCenterTypes;
+<a name="l00192"></a>00192             std::map&lt;std::string, const Resource *&gt; mResources;
+<a name="l00193"></a>00193             std::map&lt;std::string, const SpecialistType *&gt; mSpecialistTypes;
+<a name="l00194"></a>00194             std::map&lt;std::string, const Technology *&gt; mTechnology;
+<a name="l00195"></a>00195             std::map&lt;std::string, const Terrain *&gt; mTerrain;
+<a name="l00196"></a>00196             std::map&lt;std::string, const TileAction *&gt; mTileActions;
+<a name="l00197"></a>00197             std::map&lt;std::string, const UnitType *&gt; mUnitTypes;
+<a name="l00198"></a>00198             std::map&lt;std::string, const WorkerType *&gt; mWorkerTypes;
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> mStartingTypes;
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202             <span class="keywordtype">int</span> mMaxBids;
+<a name="l00203"></a>00203             <span class="keywordtype">int</span> mStartDate;
+<a name="l00204"></a>00204             <span class="keywordtype">int</span> mDatePerTurn;
+<a name="l00205"></a>00205     };
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207 }
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209 <span class="preprocessor">#endif // MOD_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -180,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

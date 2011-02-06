@@ -77,81 +77,96 @@ Inheritance diagram for Aftermath::Player:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ac3fb46cd21124bfee4a9b3d0a61991e7">Player</a> (const std::string &amp;name, const <a class="el" href="classAftermath_1_1GameSettings.html">GameSettings</a> &amp;settings, bool initFromSettings=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new player with the given name and no nationality.  <a href="#ac3fb46cd21124bfee4a9b3d0a61991e7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2de4054ceb334b39fc83b70eea0d2233"></a><!-- doxytag: member="Aftermath::Player::~Player" ref="a2de4054ceb334b39fc83b70eea0d2233" args="()" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a2de4054ceb334b39fc83b70eea0d2233">~Player</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructs a player object and the <a class="el" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> that they control. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a573adea29cc34fe12e1884336c8b2b20">getName</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of this player.  <a href="#a573adea29cc34fe12e1884336c8b2b20"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a2974c0249ea461a9bf4e648279ada786">setName</a> (const std::string &amp;name)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name of this player.  <a href="#a2974c0249ea461a9bf4e648279ada786"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Nation.html">Nation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a91f2254abffb8a633e7031e6a33d3eee">getNation</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> that this player controls.  <a href="#a91f2254abffb8a633e7031e6a33d3eee"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#aa58091d8fbe901d11b4cc435266dbb58">setNation</a> (const <a class="el" href="classAftermath_1_1Nation.html">Nation</a> *nation)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> that this player controls.  <a href="#aa58091d8fbe901d11b4cc435266dbb58"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Move.html">Move</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a7807190bef26a37459489d6a5db41db2">getMove</a> (const <a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;game)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next <a class="el" href="classAftermath_1_1Move.html" title="Move is an entirely abstract interface for defining a type of move that can be applied to a Game...">Move</a> for this player to make.  <a href="#a7807190bef26a37459489d6a5db41db2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Treaty.html">Treaty</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a846a1a1ea9302c262a430c73ab3b92e7">getTreaty</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> *player)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current diplomatic relationship that this player has with the given player.  <a href="#a846a1a1ea9302c262a430c73ab3b92e7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Treaty.html">Treaty</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ae9738818eb8e8591a5e071eef4ce64e2">getTreaty</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> *player) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const <a class="el" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> object between these two players.  <a href="#ae9738818eb8e8591a5e071eef4ce64e2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a6eb8aeb5bf0649babd28926021230292">canAdd</a> (const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&amp;group) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> can be claimed by this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a6eb8aeb5bf0649babd28926021230292"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a646f8232246539616e9cbfa9414cd42a">getStockpile</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's stockpile.  <a href="#a646f8232246539616e9cbfa9414cd42a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a2ec090f23796f28944ba88d8866e6b2f">getStockpile</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's stockpile.  <a href="#a2ec090f23796f28944ba88d8866e6b2f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TechnologyTree.html">TechnologyTree</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a514be0690057eff564007ad8abcbe746">getTechnology</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's technology.  <a href="#a514be0690057eff564007ad8abcbe746"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TechnologyTree.html">TechnologyTree</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a974ced410f62177374b9b6bc45d9ffa4">getTechnology</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's technology.  <a href="#a974ced410f62177374b9b6bc45d9ffa4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Industry.html">Industry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a11f016db9b306e719507cc83078985af">getIndustry</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's industry.  <a href="#a11f016db9b306e719507cc83078985af"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Industry.html">Industry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a9ea5c940c24fb093ba414178fb994928">getIndustry</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's industry.  <a href="#a9ea5c940c24fb093ba414178fb994928"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a9e8540348c6b0f258df9534b6d0c081c">getTransport</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's transport network.  <a href="#a9e8540348c6b0f258df9534b6d0c081c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a27dfc486ca3173cec3da586d009d798e">getTransport</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's transport network.  <a href="#a27dfc486ca3173cec3da586d009d798e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; <a class="el" href="classAftermath_1_1Tile.html">Tile</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a7d338fb6eccf5f5a3ac94a4648c25729">getRevealed</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Tiles that have been surveyed by this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a7d338fb6eccf5f5a3ac94a4648c25729"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a4563dec8a2c043103145019019116bff">getRevealed</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const Tiles that have been surveyed by this player.  <a href="#a4563dec8a2c043103145019019116bff"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a0fc6e54238d8a732bc963b0e75d12d27">take</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;types)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes an amount of various types from this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a0fc6e54238d8a732bc963b0e75d12d27"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a67b51a12671d192ea2cb181765320ad2">canTake</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;types) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether or not the given amount of types can be taken from this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a67b51a12671d192ea2cb181765320ad2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a7782c86e8235271bbee1eb5bc15e4b11">give</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;types)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives an amount of various types to this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a7782c86e8235271bbee1eb5bc15e4b11"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a5ded8a232ad8cd363322632d46d771a9">canGive</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;types) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether or not the given amount of types can be given to this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a5ded8a232ad8cd363322632d46d771a9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a5bd15b900f53d66ff8f40784ac5863bd">getCapital</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a5bd15b900f53d66ff8f40784ac5863bd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a424cb90932ec7546984ef66d460d6dcf">getCapital</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a424cb90932ec7546984ef66d460d6dcf"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#aa0363b628bae0b11f0a71be4094eeab8">setCapital</a> (<a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *capital)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#aa0363b628bae0b11f0a71be4094eeab8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a2422e03039112b20a22297731fe4d833">getMoney</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ab0ac07458715cae583264ab878c14f03">giveMoney</a> (int amount)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives an amount of money to this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#ab0ac07458715cae583264ab878c14f03"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a0021489943de87e6201d4ac32cc1dd29">takeMoney</a> (int amount)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes an amount of money from this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a0021489943de87e6201d4ac32cc1dd29"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a96388f76e413125e474bf8fad0d3e958">getGame</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a11673e621ab7aeb2127a6e94186a0600">getGame</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ab0ba56ae5409dafca7d6514c45376aa4">setGame</a> (<a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;game)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the game that this player belongs to.  <a href="#ab0ba56ae5409dafca7d6514c45376aa4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a1789697ffe8acf91f31e5a16c41351f8">Player</a> (const std::string &amp;name, <a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;game, bool initFromSettings=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new player with the given name and no nationality.  <a href="#a1789697ffe8acf91f31e5a16c41351f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a749d2c00e1fe0f5c2746f7505a58c062"></a><!-- doxytag: member="Aftermath::Player::~Player" ref="a749d2c00e1fe0f5c2746f7505a58c062" args="()" -->
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor, frees tech, industry, and transport. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a6085fffc71ce461f8f580c803079f975">getName</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of this player.  <a href="#a6085fffc71ce461f8f580c803079f975"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a77cfdb8708c16a0726d5bdd9e7b356d1">setName</a> (const std::string &amp;name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name of this player.  <a href="#a77cfdb8708c16a0726d5bdd9e7b356d1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Nation.html">Nation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a1d597835af7a45667c6222a24f858c0c">getNation</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> that this player controls.  <a href="#a1d597835af7a45667c6222a24f858c0c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a13c1a5c1d7e9b527ce875142beb0f567">setNation</a> (const <a class="el" href="classAftermath_1_1Nation.html">Nation</a> *nation)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> that this player controls.  <a href="#a13c1a5c1d7e9b527ce875142beb0f567"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classAftermath_1_1Move.html">Move</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a4d45b7ef9d012dd39b39048c2cfaa78f">getMove</a> (const <a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;game)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next <a class="el" href="classAftermath_1_1Move.html" title="Move is an entirely abstract interface for defining a type of move that can be applied to a Game...">Move</a> for this player to make.  <a href="#a4d45b7ef9d012dd39b39048c2cfaa78f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Treaty.html">Treaty</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a02030c447e4a9befccf98b7a8ce9e774">getTreaty</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> *player)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current diplomatic relationship that this player has with the given player.  <a href="#a02030c447e4a9befccf98b7a8ce9e774"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Treaty.html">Treaty</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a9414033c0b144e8ebd33386d61be2aaa">getTreaty</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> *player) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const <a class="el" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> object between these two players.  <a href="#a9414033c0b144e8ebd33386d61be2aaa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a7c11b9ed2b1d2d31350c983508dcb852">canAdd</a> (const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&amp;group) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> can be claimed by this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a7c11b9ed2b1d2d31350c983508dcb852"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a43cec14114c126968ca17f30b3484cc2">getStockpile</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's stockpile.  <a href="#a43cec14114c126968ca17f30b3484cc2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a6af6a743385d1a5feb28cf613233599c">getStockpile</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's stockpile.  <a href="#a6af6a743385d1a5feb28cf613233599c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <a class="el" href="classAftermath_1_1Technology.html">Technology</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ac5702a8ae96887d029a43b234724190d">getTechnology</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's technology.  <a href="#ac5702a8ae96887d029a43b234724190d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <br class="typebreak"/>
+<a class="el" href="classAftermath_1_1Technology.html">Technology</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a0e935187ee30eea4619ff4e6127ebb29">getTechnology</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's technology.  <a href="#a0e935187ee30eea4619ff4e6127ebb29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Industry.html">Industry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a018c18a886d36b1641b6713aa8218d04">getIndustry</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's industry.  <a href="#a018c18a886d36b1641b6713aa8218d04"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Industry.html">Industry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a752033d893de7c50490f3afca99fc004">getIndustry</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's industry.  <a href="#a752033d893de7c50490f3afca99fc004"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a26aee5260f584528c423b2124336f7e5">getTransport</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to this Player's transport network.  <a href="#a26aee5260f584528c423b2124336f7e5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ac73516ec8c7d2a15f46eca604be2a758">getTransport</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to this Player's transport network.  <a href="#ac73516ec8c7d2a15f46eca604be2a758"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; <a class="el" href="classAftermath_1_1Tile.html">Tile</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ac0a7a65cc660ffb2ca2d8a6a701086e7">getRevealed</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Tiles that have been surveyed by this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#ac0a7a65cc660ffb2ca2d8a6a701086e7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ac326b0d7992217891515a06115bc701c">getRevealed</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const Tiles that have been surveyed by this player.  <a href="#ac326b0d7992217891515a06115bc701c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a737b2af15aecc0a13767fed8f3ac4749">getCapital</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a737b2af15aecc0a13767fed8f3ac4749"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a888f06af820ed4fa1023f902f9422df9">getCapital</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a888f06af820ed4fa1023f902f9422df9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a80bd59a894d49a9fd3d0a0c2f767834c">setCapital</a> (<a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *capital)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a80bd59a894d49a9fd3d0a0c2f767834c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a112f9f769543d697cc85914a2c35ed2f">getHarbor</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the harbor <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a112f9f769543d697cc85914a2c35ed2f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#aae2dace479798b4265fcd93ccce9ba35">getHarbor</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const harbor <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#aae2dace479798b4265fcd93ccce9ba35"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a459720d5483641d324191cdc74d803f9">setHarbor</a> (<a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *harbor)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the harbor <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a459720d5483641d324191cdc74d803f9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#aaac448d1bbc041adffce6359d7fcb634">getMoney</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a550c1d36a61d3f413d2febfa84119910">giveMoney</a> (int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives an amount of money to this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a550c1d36a61d3f413d2febfa84119910"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a7275d17eb1bd1ac0d39cfbde9d1e3b70">takeMoney</a> (int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes an amount of money from this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a7275d17eb1bd1ac0d39cfbde9d1e3b70"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a579afe0b56535f637d7f000b59b90435">getGame</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#adcd926462e40f5d208fb8e0605a429b5">getGame</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a37d6adf9c8a8466691e542d46ce086ab">placeTileUnit</a> (const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *unit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the given <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> on a <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> controlled by this player.  <a href="#a37d6adf9c8a8466691e542d46ce086ab"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a989893460b80ab543b49aa9e31172990">take</a> (const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *type, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes an amount of the given transferable from this player.  <a href="#a989893460b80ab543b49aa9e31172990"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#acd174eeac81abea14350c1a42ff30eb9">take</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;types)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes an amount of various types from this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#acd174eeac81abea14350c1a42ff30eb9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ad067dcd11696c76ba7e80bae253c9f6c">canTake</a> (const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *type, int amount) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets if an amount of the specified type can be taken from this player.  <a href="#ad067dcd11696c76ba7e80bae253c9f6c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a8bc85bd9e4484cf1c60420169d597ba6">canTake</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;types) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether or not the given amount of types can be taken from this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#a8bc85bd9e4484cf1c60420169d597ba6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a3cff9bafd8bf6e986ea589188851da5c">give</a> (const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *type, int amount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives this player an amount of the given transferable.  <a href="#a3cff9bafd8bf6e986ea589188851da5c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ab67bd1c0d817484c60f4e2f09880da0c">give</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;types)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives an amount of various types to this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#ab67bd1c0d817484c60f4e2f09880da0c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#a59c3ea753d7a04e96e1761d1c0dee7e0">canGive</a> (const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *type, int amount) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets if an amount of the specified type can be given to this player.  <a href="#a59c3ea753d7a04e96e1761d1c0dee7e0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Player.html#ad910c2b1dc066cdbdb86b4f9d48fd510">canGive</a> (const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;types) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether or not the given amount of types can be given to this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>.  <a href="#ad910c2b1dc066cdbdb86b4f9d48fd510"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> object represents a player of the game. </p>
-<p>Players have their own <a class="el" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a>, name, and method of making moves. That means Players can be controlled by both humans and AI. Players also have Treaties with other players, a list of TileGroups that they control, a stockpile of Resources, a <a class="el" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a>, an <a class="el" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a>, and a <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>. Players also keep track of which Tiles they have surveyed. </p>
+<p>Players have their own <a class="el" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a>, name, and method of making moves. That means Players can be controlled by both humans and AI. Players also have Treaties with other players, a list of TileGroups that they control, a stockpile of Resources, a <a class="el" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a> of <a class="el" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a>, an <a class="el" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a>, and a <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>. Players also keep track of which Tiles they have surveyed. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac3fb46cd21124bfee4a9b3d0a61991e7"></a><!-- doxytag: member="Aftermath::Player::Player" ref="ac3fb46cd21124bfee4a9b3d0a61991e7" args="(const std::string &amp;name, const GameSettings &amp;settings, bool initFromSettings=true)" -->
+<a class="anchor" id="a1789697ffe8acf91f31e5a16c41351f8"></a><!-- doxytag: member="Aftermath::Player::Player" ref="a1789697ffe8acf91f31e5a16c41351f8" args="(const std::string &amp;name, Game &amp;game, bool initFromSettings=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::Player::Player </td>
+          <td class="memname">Player::Player </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"> <em>name</em>, </td>
@@ -159,8 +174,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1GameSettings.html">GameSettings</a> &amp;&#160;</td>
-          <td class="paramname"> <em>settings</em>, </td>
+          <td class="paramtype"><a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;&#160;</td>
+          <td class="paramname"> <em>game</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -181,7 +196,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>- The name of the new player. </td></tr>
-    <tr><td class="paramname">settings</td><td>- The current <a class="el" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a>. </td></tr>
+    <tr><td class="paramname">game</td><td>- The game for this player to belong to. </td></tr>
     <tr><td class="paramname">initFromSettings</td><td>- Whether or not to initialize this player using the given game settings. This adds starting technologies and resources. </td></tr>
   </table>
   </dd>
@@ -190,12 +205,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a6eb8aeb5bf0649babd28926021230292"></a><!-- doxytag: member="Aftermath::Player::canAdd" ref="a6eb8aeb5bf0649babd28926021230292" args="(const TileGroup *&amp;group) const " -->
+<a class="anchor" id="a7c11b9ed2b1d2d31350c983508dcb852"></a><!-- doxytag: member="Aftermath::Player::canAdd" ref="a7c11b9ed2b1d2d31350c983508dcb852" args="(const TileGroup *&amp;group) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Player::canAdd </td>
+          <td class="memname">bool Player::canAdd </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&amp;&#160;</td>
           <td class="paramname"> <em>group</em>&#160;)</td>
@@ -206,20 +221,57 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> can be claimed by this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if <a class="el" href="classAftermath_1_1TileGroup.html#a081cd351df94403b9bcf310781387f85" title="Gets whether this TileGroup is a land-based group.">TileGroup::isLand()</a> returns true and this player does not already control the given group. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if <a class="el" href="classAftermath_1_1TileGroup.html#a63028b5405e2bd11de7613e6caa08a54" title="Gets whether this TileGroup is a land-based group.">TileGroup::isLand()</a> returns true and this player does not already control the given group. </dd></dl>
 
 <p>Implements <a class="el" href="classAftermath_1_1SelectiveCollection.html#a6335562def3436350170775e4489e5f6">Aftermath::SelectiveCollection&lt; TileGroup * &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5ded8a232ad8cd363322632d46d771a9"></a><!-- doxytag: member="Aftermath::Player::canGive" ref="a5ded8a232ad8cd363322632d46d771a9" args="(const Count&lt; const NamedType * &gt; &amp;types) const " -->
+<a class="anchor" id="a59c3ea753d7a04e96e1761d1c0dee7e0"></a><!-- doxytag: member="Aftermath::Player::canGive" ref="a59c3ea753d7a04e96e1761d1c0dee7e0" args="(const Transferable *type, int amount) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Player::canGive </td>
+          <td class="memname">bool Player::canGive </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *&#160;</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gets if an amount of the specified type can be given to this player. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>- The type of transferable to give. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to give.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if this player can be given amount of type; false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad910c2b1dc066cdbdb86b4f9d48fd510"></a><!-- doxytag: member="Aftermath::Player::canGive" ref="ad910c2b1dc066cdbdb86b4f9d48fd510" args="(const Count&lt; const Transferable * &gt; &amp;types) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::canGive </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;&#160;</td>
           <td class="paramname"> <em>types</em>&#160;)</td>
           <td> const</td>
         </tr>
@@ -239,14 +291,51 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a67b51a12671d192ea2cb181765320ad2"></a><!-- doxytag: member="Aftermath::Player::canTake" ref="a67b51a12671d192ea2cb181765320ad2" args="(const Count&lt; const NamedType * &gt; &amp;types) const " -->
+<a class="anchor" id="ad067dcd11696c76ba7e80bae253c9f6c"></a><!-- doxytag: member="Aftermath::Player::canTake" ref="ad067dcd11696c76ba7e80bae253c9f6c" args="(const Transferable *type, int amount) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Player::canTake </td>
+          <td class="memname">bool Player::canTake </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *&#160;</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gets if an amount of the specified type can be taken from this player. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>- The type of transferable to take. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to take.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the type can be take from this player; false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8bc85bd9e4484cf1c60420169d597ba6"></a><!-- doxytag: member="Aftermath::Player::canTake" ref="a8bc85bd9e4484cf1c60420169d597ba6" args="(const Count&lt; const Transferable * &gt; &amp;types) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::canTake </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;&#160;</td>
           <td class="paramname"> <em>types</em>&#160;)</td>
           <td> const</td>
         </tr>
@@ -266,12 +355,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a5bd15b900f53d66ff8f40784ac5863bd"></a><!-- doxytag: member="Aftermath::Player::getCapital" ref="a5bd15b900f53d66ff8f40784ac5863bd" args="()" -->
+<a class="anchor" id="a737b2af15aecc0a13767fed8f3ac4749"></a><!-- doxytag: member="Aftermath::Player::getCapital" ref="a737b2af15aecc0a13767fed8f3ac4749" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a>* Aftermath::Player::getCapital </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> * Player::getCapital </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -281,16 +370,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Gets the capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> specified as capital by the <a class="el" href="classAftermath_1_1Player.html#aa0363b628bae0b11f0a71be4094eeab8" title="Sets the capital TileGroup of this Player.">setCapital()</a> function, or NULL if the captial has not been set. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> specified as capital by the <a class="el" href="classAftermath_1_1Player.html#a80bd59a894d49a9fd3d0a0c2f767834c" title="Sets the capital TileGroup of this Player.">setCapital()</a> function, or NULL if the captial has not been set. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a424cb90932ec7546984ef66d460d6dcf"></a><!-- doxytag: member="Aftermath::Player::getCapital" ref="a424cb90932ec7546984ef66d460d6dcf" args="() const " -->
+<a class="anchor" id="a888f06af820ed4fa1023f902f9422df9"></a><!-- doxytag: member="Aftermath::Player::getCapital" ref="a888f06af820ed4fa1023f902f9422df9" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a>* Aftermath::Player::getCapital </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> * Player::getCapital </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -300,16 +389,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Gets the const capital <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a5bd15b900f53d66ff8f40784ac5863bd" title="Gets the capital TileGroup of this Player.">getCapital()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a737b2af15aecc0a13767fed8f3ac4749" title="Gets the capital TileGroup of this Player.">getCapital()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a96388f76e413125e474bf8fad0d3e958"></a><!-- doxytag: member="Aftermath::Player::getGame" ref="a96388f76e413125e474bf8fad0d3e958" args="()" -->
+<a class="anchor" id="a579afe0b56535f637d7f000b59b90435"></a><!-- doxytag: member="Aftermath::Player::getGame" ref="a579afe0b56535f637d7f000b59b90435" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Game.html">Game</a>&amp; Aftermath::Player::getGame </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1Game.html">Game</a> &amp; Player::getGame </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -321,12 +410,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a11673e621ab7aeb2127a6e94186a0600"></a><!-- doxytag: member="Aftermath::Player::getGame" ref="a11673e621ab7aeb2127a6e94186a0600" args="() const " -->
+<a class="anchor" id="adcd926462e40f5d208fb8e0605a429b5"></a><!-- doxytag: member="Aftermath::Player::getGame" ref="adcd926462e40f5d208fb8e0605a429b5" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Game.html">Game</a>&amp; Aftermath::Player::getGame </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Game.html">Game</a> &amp; Player::getGame </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -334,16 +423,54 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
       </table>
 </div>
 <div class="memdoc">
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a96388f76e413125e474bf8fad0d3e958">getGame()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a579afe0b56535f637d7f000b59b90435">getGame()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a11f016db9b306e719507cc83078985af"></a><!-- doxytag: member="Aftermath::Player::getIndustry" ref="a11f016db9b306e719507cc83078985af" args="()" -->
+<a class="anchor" id="a112f9f769543d697cc85914a2c35ed2f"></a><!-- doxytag: member="Aftermath::Player::getHarbor" ref="a112f9f769543d697cc85914a2c35ed2f" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Industry.html">Industry</a>&amp; Aftermath::Player::getIndustry </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> * Player::getHarbor </td>
+          <td>(</td>
+          <td class="paramname">&#160;)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gets the harbor <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> specified as harbor by the <a class="el" href="classAftermath_1_1Player.html#a459720d5483641d324191cdc74d803f9" title="Sets the harbor TileGroup of this Player.">setHarbor()</a> function, or NULL if the harbor has not been set. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae2dace479798b4265fcd93ccce9ba35"></a><!-- doxytag: member="Aftermath::Player::getHarbor" ref="aae2dace479798b4265fcd93ccce9ba35" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> * Player::getHarbor </td>
+          <td>(</td>
+          <td class="paramname">&#160;)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gets the const harbor <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a112f9f769543d697cc85914a2c35ed2f" title="Gets the harbor TileGroup of this Player.">getHarbor()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a018c18a886d36b1641b6713aa8218d04"></a><!-- doxytag: member="Aftermath::Player::getIndustry" ref="a018c18a886d36b1641b6713aa8218d04" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAftermath_1_1Industry.html">Industry</a> &amp; Player::getIndustry </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -357,12 +484,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a9ea5c940c24fb093ba414178fb994928"></a><!-- doxytag: member="Aftermath::Player::getIndustry" ref="a9ea5c940c24fb093ba414178fb994928" args="() const " -->
+<a class="anchor" id="a752033d893de7c50490f3afca99fc004"></a><!-- doxytag: member="Aftermath::Player::getIndustry" ref="a752033d893de7c50490f3afca99fc004" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Industry.html">Industry</a>&amp; Aftermath::Player::getIndustry </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Industry.html">Industry</a> &amp; Player::getIndustry </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -372,16 +499,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Provides const access to this Player's industry. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a11f016db9b306e719507cc83078985af" title="Provides access to this Player&#39;s industry.">getIndustry()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a018c18a886d36b1641b6713aa8218d04" title="Provides access to this Player&#39;s industry.">getIndustry()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a2422e03039112b20a22297731fe4d833"></a><!-- doxytag: member="Aftermath::Player::getMoney" ref="a2422e03039112b20a22297731fe4d833" args="() const " -->
+<a class="anchor" id="aaac448d1bbc041adffce6359d7fcb634"></a><!-- doxytag: member="Aftermath::Player::getMoney" ref="aaac448d1bbc041adffce6359d7fcb634" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::Player::getMoney </td>
+          <td class="memname">int Player::getMoney </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -393,12 +520,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a7807190bef26a37459489d6a5db41db2"></a><!-- doxytag: member="Aftermath::Player::getMove" ref="a7807190bef26a37459489d6a5db41db2" args="(const Game &amp;game)=0" -->
+<a class="anchor" id="a4d45b7ef9d012dd39b39048c2cfaa78f"></a><!-- doxytag: member="Aftermath::Player::getMove" ref="a4d45b7ef9d012dd39b39048c2cfaa78f" args="(const Game &amp;game)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Move.html">Move</a>* Aftermath::Player::getMove </td>
+          <td class="memname">virtual <a class="el" href="classAftermath_1_1Move.html">Move</a>* Aftermath::Player::getMove </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;&#160;</td>
           <td class="paramname"> <em>game</em>&#160;)</td>
@@ -419,12 +546,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a573adea29cc34fe12e1884336c8b2b20"></a><!-- doxytag: member="Aftermath::Player::getName" ref="a573adea29cc34fe12e1884336c8b2b20" args="() const " -->
+<a class="anchor" id="a6085fffc71ce461f8f580c803079f975"></a><!-- doxytag: member="Aftermath::Player::getName" ref="a6085fffc71ce461f8f580c803079f975" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string&amp; Aftermath::Player::getName </td>
+          <td class="memname">const std::string &amp; Player::getName </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -439,12 +566,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a91f2254abffb8a633e7031e6a33d3eee"></a><!-- doxytag: member="Aftermath::Player::getNation" ref="a91f2254abffb8a633e7031e6a33d3eee" args="() const " -->
+<a class="anchor" id="a1d597835af7a45667c6222a24f858c0c"></a><!-- doxytag: member="Aftermath::Player::getNation" ref="a1d597835af7a45667c6222a24f858c0c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Nation.html">Nation</a>* Aftermath::Player::getNation </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Nation.html">Nation</a> * Player::getNation </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -458,12 +585,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a7d338fb6eccf5f5a3ac94a4648c25729"></a><!-- doxytag: member="Aftermath::Player::getRevealed" ref="a7d338fb6eccf5f5a3ac94a4648c25729" args="()" -->
+<a class="anchor" id="ac0a7a65cc660ffb2ca2d8a6a701086e7"></a><!-- doxytag: member="Aftermath::Player::getRevealed" ref="ac0a7a65cc660ffb2ca2d8a6a701086e7" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt;<a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&gt; Aftermath::Player::getRevealed </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; <a class="el" href="classAftermath_1_1Tile.html">Tile</a> * &gt; &amp; Player::getRevealed </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -477,12 +604,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a4563dec8a2c043103145019019116bff"></a><!-- doxytag: member="Aftermath::Player::getRevealed" ref="a4563dec8a2c043103145019019116bff" args="() const " -->
+<a class="anchor" id="ac326b0d7992217891515a06115bc701c"></a><!-- doxytag: member="Aftermath::Player::getRevealed" ref="ac326b0d7992217891515a06115bc701c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt;const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&gt; Aftermath::Player::getRevealed </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> * &gt; &amp; Player::getRevealed </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -492,16 +619,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Gets the const Tiles that have been surveyed by this player. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a7d338fb6eccf5f5a3ac94a4648c25729" title="Gets the Tiles that have been surveyed by this Player.">getRevealed()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#ac0a7a65cc660ffb2ca2d8a6a701086e7" title="Gets the Tiles that have been surveyed by this Player.">getRevealed()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a646f8232246539616e9cbfa9414cd42a"></a><!-- doxytag: member="Aftermath::Player::getStockpile" ref="a646f8232246539616e9cbfa9414cd42a" args="()" -->
+<a class="anchor" id="a43cec14114c126968ca17f30b3484cc2"></a><!-- doxytag: member="Aftermath::Player::getStockpile" ref="a43cec14114c126968ca17f30b3484cc2" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Count.html">Count</a>&lt;const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&gt;&amp; Aftermath::Player::getStockpile </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp; Player::getStockpile </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -515,12 +642,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a2ec090f23796f28944ba88d8866e6b2f"></a><!-- doxytag: member="Aftermath::Player::getStockpile" ref="a2ec090f23796f28944ba88d8866e6b2f" args="() const " -->
+<a class="anchor" id="a6af6a743385d1a5feb28cf613233599c"></a><!-- doxytag: member="Aftermath::Player::getStockpile" ref="a6af6a743385d1a5feb28cf613233599c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt;const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&gt;&amp; Aftermath::Player::getStockpile </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> * &gt; &amp; Player::getStockpile </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -530,16 +657,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Provides const access to this Player's stockpile. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a646f8232246539616e9cbfa9414cd42a" title="Provides access to this Player&#39;s stockpile.">getStockpile()</a>; </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a43cec14114c126968ca17f30b3484cc2" title="Provides access to this Player&#39;s stockpile.">getStockpile()</a>; </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a514be0690057eff564007ad8abcbe746"></a><!-- doxytag: member="Aftermath::Player::getTechnology" ref="a514be0690057eff564007ad8abcbe746" args="()" -->
+<a class="anchor" id="ac5702a8ae96887d029a43b234724190d"></a><!-- doxytag: member="Aftermath::Player::getTechnology" ref="ac5702a8ae96887d029a43b234724190d" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1TechnologyTree.html">TechnologyTree</a>&amp; Aftermath::Player::getTechnology </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <a class="el" href="classAftermath_1_1Technology.html">Technology</a> * &gt; &amp; Player::getTechnology </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -549,16 +676,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Provides access to this Player's technology. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>A reference to this Player's <a class="el" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a>. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A reference to this Player's technology. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a974ced410f62177374b9b6bc45d9ffa4"></a><!-- doxytag: member="Aftermath::Player::getTechnology" ref="a974ced410f62177374b9b6bc45d9ffa4" args="() const " -->
+<a class="anchor" id="a0e935187ee30eea4619ff4e6127ebb29"></a><!-- doxytag: member="Aftermath::Player::getTechnology" ref="a0e935187ee30eea4619ff4e6127ebb29" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1TechnologyTree.html">TechnologyTree</a>&amp; Aftermath::Player::getTechnology </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Collection.html">Collection</a>&lt; const <a class="el" href="classAftermath_1_1Technology.html">Technology</a> * &gt; &amp; Player::getTechnology </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -568,16 +695,35 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="memdoc">
 
 <p>Provides const access to this Player's technology. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a514be0690057eff564007ad8abcbe746" title="Provides access to this Player&#39;s technology.">getTechnology()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#ac5702a8ae96887d029a43b234724190d" title="Provides access to this Player&#39;s technology.">getTechnology()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a9e8540348c6b0f258df9534b6d0c081c"></a><!-- doxytag: member="Aftermath::Player::getTransport" ref="a9e8540348c6b0f258df9534b6d0c081c" args="()" -->
+<a class="anchor" id="ac73516ec8c7d2a15f46eca604be2a758"></a><!-- doxytag: member="Aftermath::Player::getTransport" ref="ac73516ec8c7d2a15f46eca604be2a758" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a>&amp; Aftermath::Player::getTransport </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a> &amp; Player::getTransport </td>
+          <td>(</td>
+          <td class="paramname">&#160;)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Provides const access to this Player's transport network. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a26aee5260f584528c423b2124336f7e5" title="Provides access to this Player&#39;s transport network.">getTransport()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26aee5260f584528c423b2124336f7e5"></a><!-- doxytag: member="Aftermath::Player::getTransport" ref="a26aee5260f584528c423b2124336f7e5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a> &amp; Player::getTransport </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -591,53 +737,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a27dfc486ca3173cec3da586d009d798e"></a><!-- doxytag: member="Aftermath::Player::getTransport" ref="a27dfc486ca3173cec3da586d009d798e" args="() const " -->
+<a class="anchor" id="a02030c447e4a9befccf98b7a8ce9e774"></a><!-- doxytag: member="Aftermath::Player::getTreaty" ref="a02030c447e4a9befccf98b7a8ce9e774" args="(const Player *player)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1TransportNetwork.html">TransportNetwork</a>&amp; Aftermath::Player::getTransport </td>
-          <td>(</td>
-          <td class="paramname">&#160;)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Provides const access to this Player's transport network. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a9e8540348c6b0f258df9534b6d0c081c" title="Provides access to this Player&#39;s transport network.">getTransport()</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae9738818eb8e8591a5e071eef4ce64e2"></a><!-- doxytag: member="Aftermath::Player::getTreaty" ref="ae9738818eb8e8591a5e071eef4ce64e2" args="(const Player *player) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Treaty.html">Treaty</a>&amp; Aftermath::Player::getTreaty </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1Treaty.html">Treaty</a> &amp; Player::getTreaty </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td>
-          <td class="paramname"> <em>player</em>&#160;)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Gets the const <a class="el" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> object between these two players. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a846a1a1ea9302c262a430c73ab3b92e7" title="Gets the current diplomatic relationship that this player has with the given player.">getTreaty()</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a846a1a1ea9302c262a430c73ab3b92e7"></a><!-- doxytag: member="Aftermath::Player::getTreaty" ref="a846a1a1ea9302c262a430c73ab3b92e7" args="(Player *player)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Treaty.html">Treaty</a>&amp; Aftermath::Player::getTreaty </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td>
           <td class="paramname"> <em>player</em>&#160;)</td>
           <td></td>
         </tr>
@@ -656,14 +763,70 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a7782c86e8235271bbee1eb5bc15e4b11"></a><!-- doxytag: member="Aftermath::Player::give" ref="a7782c86e8235271bbee1eb5bc15e4b11" args="(const Count&lt; const NamedType * &gt; &amp;types)" -->
+<a class="anchor" id="a9414033c0b144e8ebd33386d61be2aaa"></a><!-- doxytag: member="Aftermath::Player::getTreaty" ref="a9414033c0b144e8ebd33386d61be2aaa" args="(const Player *player) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::give </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Treaty.html">Treaty</a> &amp; Player::getTreaty </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td>
+          <td class="paramname"> <em>player</em>&#160;)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gets the const <a class="el" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> object between these two players. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Player.html#a02030c447e4a9befccf98b7a8ce9e774" title="Gets the current diplomatic relationship that this player has with the given player.">getTreaty()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3cff9bafd8bf6e986ea589188851da5c"></a><!-- doxytag: member="Aftermath::Player::give" ref="a3cff9bafd8bf6e986ea589188851da5c" args="(const Transferable *type, int amount)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::give </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *&#160;</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gives this player an amount of the given transferable. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>- The type of transferable to give. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to give. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab67bd1c0d817484c60f4e2f09880da0c"></a><!-- doxytag: member="Aftermath::Player::give" ref="ab67bd1c0d817484c60f4e2f09880da0c" args="(const Count&lt; const Transferable * &gt; &amp;types)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::give </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;&#160;</td>
           <td class="paramname"> <em>types</em>&#160;)</td>
           <td></td>
         </tr>
@@ -682,12 +845,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="ab0ac07458715cae583264ab878c14f03"></a><!-- doxytag: member="Aftermath::Player::giveMoney" ref="ab0ac07458715cae583264ab878c14f03" args="(int amount)" -->
+<a class="anchor" id="a550c1d36a61d3f413d2febfa84119910"></a><!-- doxytag: member="Aftermath::Player::giveMoney" ref="a550c1d36a61d3f413d2febfa84119910" args="(int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::giveMoney </td>
+          <td class="memname">void Player::giveMoney </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>amount</em>&#160;)</td>
@@ -707,12 +870,38 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="aa0363b628bae0b11f0a71be4094eeab8"></a><!-- doxytag: member="Aftermath::Player::setCapital" ref="aa0363b628bae0b11f0a71be4094eeab8" args="(TileGroup *capital)" -->
+<a class="anchor" id="a37d6adf9c8a8466691e542d46ce086ab"></a><!-- doxytag: member="Aftermath::Player::placeTileUnit" ref="a37d6adf9c8a8466691e542d46ce086ab" args="(const TileUnit *unit)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::setCapital </td>
+          <td class="memname">bool Player::placeTileUnit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *&#160;</td>
+          <td class="paramname"> <em>unit</em>&#160;)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Places the given <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> on a <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> controlled by this player. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>- The unit to place.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the unit was successfully placed; false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a80bd59a894d49a9fd3d0a0c2f767834c"></a><!-- doxytag: member="Aftermath::Player::setCapital" ref="a80bd59a894d49a9fd3d0a0c2f767834c" args="(TileGroup *capital)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setCapital </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td>
           <td class="paramname"> <em>capital</em>&#160;)</td>
@@ -733,38 +922,38 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="ab0ba56ae5409dafca7d6514c45376aa4"></a><!-- doxytag: member="Aftermath::Player::setGame" ref="ab0ba56ae5409dafca7d6514c45376aa4" args="(Game &amp;game)" -->
+<a class="anchor" id="a459720d5483641d324191cdc74d803f9"></a><!-- doxytag: member="Aftermath::Player::setHarbor" ref="a459720d5483641d324191cdc74d803f9" args="(TileGroup *harbor)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::setGame </td>
+          <td class="memname">void Player::setHarbor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classAftermath_1_1Game.html">Game</a> &amp;&#160;</td>
-          <td class="paramname"> <em>game</em>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td>
+          <td class="paramname"> <em>harbor</em>&#160;)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Sets the game that this player belongs to. </p>
-<p>This does NOT add this player to the given game. To do that, use Game::add().</p>
+<p>Sets the harbor <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </p>
+<p>The function does not add the harbor to this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>, it is assumed that the given <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> is already owned by the player.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">game</td><td>- The game for this player to belong to. </td></tr>
+    <tr><td class="paramname">harbor</td><td>- The new harbor of this <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a2974c0249ea461a9bf4e648279ada786"></a><!-- doxytag: member="Aftermath::Player::setName" ref="a2974c0249ea461a9bf4e648279ada786" args="(const std::string &amp;name)" -->
+<a class="anchor" id="a77cfdb8708c16a0726d5bdd9e7b356d1"></a><!-- doxytag: member="Aftermath::Player::setName" ref="a77cfdb8708c16a0726d5bdd9e7b356d1" args="(const std::string &amp;name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::setName </td>
+          <td class="memname">void Player::setName </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"> <em>name</em>&#160;)</td>
@@ -784,12 +973,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="aa58091d8fbe901d11b4cc435266dbb58"></a><!-- doxytag: member="Aftermath::Player::setNation" ref="aa58091d8fbe901d11b4cc435266dbb58" args="(const Nation *nation)" -->
+<a class="anchor" id="a13c1a5c1d7e9b527ce875142beb0f567"></a><!-- doxytag: member="Aftermath::Player::setNation" ref="a13c1a5c1d7e9b527ce875142beb0f567" args="(const Nation *nation)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::setNation </td>
+          <td class="memname">void Player::setNation </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Nation.html">Nation</a> *&#160;</td>
           <td class="paramname"> <em>nation</em>&#160;)</td>
@@ -809,14 +998,50 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a0fc6e54238d8a732bc963b0e75d12d27"></a><!-- doxytag: member="Aftermath::Player::take" ref="a0fc6e54238d8a732bc963b0e75d12d27" args="(const Count&lt; const NamedType * &gt; &amp;types)" -->
+<a class="anchor" id="a989893460b80ab543b49aa9e31172990"></a><!-- doxytag: member="Aftermath::Player::take" ref="a989893460b80ab543b49aa9e31172990" args="(const Transferable *type, int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::take </td>
+          <td class="memname">void Player::take </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> *&#160;</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"> <em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Takes an amount of the given transferable from this player. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>- The type of transferable to take. </td></tr>
+    <tr><td class="paramname">amount</td><td>- The amount to take. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acd174eeac81abea14350c1a42ff30eb9"></a><!-- doxytag: member="Aftermath::Player::take" ref="acd174eeac81abea14350c1a42ff30eb9" args="(const Count&lt; const Transferable * &gt; &amp;types)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::take </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;&#160;</td>
           <td class="paramname"> <em>types</em>&#160;)</td>
           <td></td>
         </tr>
@@ -835,12 +1060,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a class="anchor" id="a0021489943de87e6201d4ac32cc1dd29"></a><!-- doxytag: member="Aftermath::Player::takeMoney" ref="a0021489943de87e6201d4ac32cc1dd29" args="(int amount)" -->
+<a class="anchor" id="a7275d17eb1bd1ac0d39cfbde9d1e3b70"></a><!-- doxytag: member="Aftermath::Player::takeMoney" ref="a7275d17eb1bd1ac0d39cfbde9d1e3b70" args="(int amount)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Player::takeMoney </td>
+          <td class="memname">void Player::takeMoney </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>amount</em>&#160;)</td>
@@ -860,8 +1085,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Player_8hpp_source.html">Player.hpp</a></li>
+<li>src/Player.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -878,7 +1104,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

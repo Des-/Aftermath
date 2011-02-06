@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -72,32 +71,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="comment">// TODO: Decide for certain what graphics library to use.</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;SFML/Graphics/Image.hpp&gt;</span>
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html" title="An Aftermath player.">Player.hpp</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="Transferable_8hpp.html" title="A type that can be given and taken from a player.">Transferable.hpp</a>&quot;</span>
-<a name="l00031"></a>00031 
-<a name="l00040"></a>00040 <span class="keyword">namespace </span>Aftermath {
-<a name="l00041"></a>00041 
-<a name="l00045"></a><a class="code" href="classAftermath_1_1Technology.html">00045</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a>, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> {
-<a name="l00046"></a>00046         <span class="keyword">public</span>:
-<a name="l00055"></a>00055             <a class="code" href="classAftermath_1_1Technology.html#a24bf340fb56972725a8ae4ced113d08d" title="Constructs a new Technology with the given name, description, and image.">Technology</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp;
-<a name="l00056"></a>00056                 description, <span class="keyword">const</span> sf::Image * image);
-<a name="l00057"></a>00057 
-<a name="l00064"></a>00064             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Technology.html#a39f1a939577610d892231f964abedf57" title="This adds this technology to the given player&amp;#39;s TechnologyTree.">giveTo</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00065"></a>00065 
-<a name="l00075"></a>00075             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Technology.html#ac5beadb02ce1716ff0a99ba19332c519" title="A player should always be allowed to acquire new technology, so this function should return true...">canGiveTo</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00076"></a>00076 
-<a name="l00083"></a>00083             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Technology.html#aa47a7100aecd849be8ad8c02eb2f1df4" title="Taking a technology from a player does nothing.">takeFrom</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00084"></a>00084 
-<a name="l00095"></a>00095             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Technology.html#a975ea8cf8e1b1020b520d3a0839e0849" title="This method gets if the given player has this technology.">canTakeFrom</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
-<a name="l00096"></a>00096     };
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 }
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 <span class="preprocessor">#endif // TECHNOLOGY_HPP_INCLUDED</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Graphics_8hpp.html" title="An interface for graphical elements.">Graphics.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="Transferable_8hpp.html" title="A type that can be given and taken from a player.">Transferable.hpp</a>&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player; }
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
+<a name="l00040"></a>00040 
+<a name="l00044"></a><a class="code" href="classAftermath_1_1Technology.html">00044</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a>, <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> {
+<a name="l00045"></a>00045         <span class="keyword">public</span>:
+<a name="l00054"></a>00054             <a class="code" href="classAftermath_1_1Technology.html#abd148e1f0e4c3006fba32ccb7d907edb" title="Constructs a new Technology with the given name, description, and image.">Technology</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp;
+<a name="l00055"></a>00055                 description, <span class="keyword">const</span> Image * image);
+<a name="l00056"></a>00056 
+<a name="l00063"></a>00063             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Technology.html#ac861e54ec2ec110fde88f3b4f43e22bc" title="This adds this technology to the given player&amp;#39;s technology.">giveTo</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00064"></a>00064 
+<a name="l00074"></a>00074             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Technology.html#a7a8b7e24a0bf80ad814274bcb30e20c5" title="A player should always be allowed to acquire new technology, so this function should return true...">canGiveTo</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00075"></a>00075 
+<a name="l00082"></a>00082             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Technology.html#a8762ee0df6342d6ef93a14e1872b35ad" title="Removes this technology from the given players&amp;#39; technology.">takeFrom</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00083"></a>00083 
+<a name="l00094"></a>00094             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Technology.html#a9dda3ce81336faf53bdff5dc723a1480" title="This method gets if the given player has this technology.">canTakeFrom</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keywordtype">int</span> amount = 0) <span class="keyword">const</span>;
+<a name="l00095"></a>00095     };
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 }
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 <span class="preprocessor">#endif // TECHNOLOGY_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -114,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

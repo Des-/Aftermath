@@ -70,67 +70,46 @@ Inheritance diagram for Aftermath::Province:<!-- endSectionHeader --></div>
  <div class="center">
   <img src="classAftermath_1_1Province.png" usemap="#Aftermath::Province_map" alt=""/>
   <map id="Aftermath::Province_map" name="Aftermath::Province_map">
-<area href="classAftermath_1_1TileGroup.html" alt="Aftermath::TileGroup" shape="rect" coords="0,56,236,80"/>
-<area href="classAftermath_1_1SelectiveCollection.html" alt="Aftermath::SelectiveCollection&lt; Tile * &gt;" shape="rect" coords="0,0,236,24"/>
+<area href="classAftermath_1_1TileGroup.html" alt="Aftermath::TileGroup" shape="rect" coords="0,112,236,136"/>
+<area href="classAftermath_1_1SelectiveCollection.html" alt="Aftermath::SelectiveCollection&lt; Tile * &gt;" shape="rect" coords="0,56,236,80"/>
+<area href="classAftermath_1_1Collection.html" alt="Aftermath::Collection&lt; Tile * &gt;" shape="rect" coords="0,0,236,24"/>
 </map>
  </div><!-- endSectionContent --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e4deb877c1061c2409e11a5b70b47e8"></a><!-- doxytag: member="Aftermath::Province::Province" ref="a7e4deb877c1061c2409e11a5b70b47e8" args="(const std::string &amp;name)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a7e4deb877c1061c2409e11a5b70b47e8">Province</a> (const std::string &amp;name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0469506d5763ec9607755bd3a68c1e48"></a><!-- doxytag: member="Aftermath::Province::Province" ref="a0469506d5763ec9607755bd3a68c1e48" args="(const std::string &amp;name)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a0469506d5763ec9607755bd3a68c1e48">Province</a> (const std::string &amp;name)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a province with the given name and an empty <a class="el" href="classAftermath_1_1Army.html" title="An Army is a number of TileGroupUnits that travel on land.">Army</a>. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a988e4a68d41ab3456762020db931320b">~Province</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a> and all units on it.  <a href="#a988e4a68d41ab3456762020db931320b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a848d1e28febeede18ccba7839e89756c">isLand</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> is a land-based group.  <a href="#a848d1e28febeede18ccba7839e89756c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#acc0f3b66003c95d021c5d03ce8ce0e35">isSea</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> is a sea-based group.  <a href="#acc0f3b66003c95d021c5d03ce8ce0e35"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a9ff76d4743d00926397eeb555844f96d">getOwner</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the owning <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a9ff76d4743d00926397eeb555844f96d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a534c2fc77aaaa44ababba9569e13db70">getOwner</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const owner of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a534c2fc77aaaa44ababba9569e13db70"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a45dbb7c949fe09c2fa0c942bd7f10164">setOwner</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> *owner)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by Player::addTileGroup().  <a href="#a45dbb7c949fe09c2fa0c942bd7f10164"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a00da8522ce29404eec91fc9cb70e059b">getCapital</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a00da8522ce29404eec91fc9cb70e059b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#ab0851f4f30ecd9a48b1f7ae7457936eb">getCapital</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#ab0851f4f30ecd9a48b1f7ae7457936eb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a594d151b8a745ccccffe1bb2e690fbdc">setCapital</a> (<a class="el" href="classAftermath_1_1Tile.html">Tile</a> *capital)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a594d151b8a745ccccffe1bb2e690fbdc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a3c5ddb90fd9a8a655db178b301b1e746">canAdd</a> (const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&amp;tile) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells whether or not the given tile can be successfully added to this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a3c5ddb90fd9a8a655db178b301b1e746"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a3e3b207931262a0b5f1576faf3e1e7f2">isLand</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> is a land-based group.  <a href="#a3e3b207931262a0b5f1576faf3e1e7f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#afb10e6f5bad2db22d9573384e2dc9d9f">isSea</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> is a sea-based group.  <a href="#afb10e6f5bad2db22d9573384e2dc9d9f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#aa139d0330fd5363dfb03e9018cd14a1e">getOwner</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the owning <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#aa139d0330fd5363dfb03e9018cd14a1e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a7299a4df6e09af669d78294736a53fda">getOwner</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const owner of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a7299a4df6e09af669d78294736a53fda"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#ab70872424af0e6b56c64b1e26274a92c">setOwner</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> *owner)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by Player::addTileGroup().  <a href="#ab70872424af0e6b56c64b1e26274a92c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a83786dce4bf44a6c4f835d31ec1005e3">getCapital</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a83786dce4bf44a6c4f835d31ec1005e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#a07390a86717219bf57e6ea9794111382">getCapital</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the const capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#a07390a86717219bf57e6ea9794111382"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#ab21cd4cee3139b4e4a5add73bc3d35d1">setCapital</a> (<a class="el" href="classAftermath_1_1Tile.html">Tile</a> *capital)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#ab21cd4cee3139b4e4a5add73bc3d35d1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Province.html#ae46b67325d636a6e3ebe26a2d7b4c7b8">canAdd</a> (const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&amp;tile) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells whether or not the given tile can be successfully added to this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>.  <a href="#ae46b67325d636a6e3ebe26a2d7b4c7b8"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Provinces are TileGroups that are controlled by Players. </p>
 <p>They have room for an army of ProvinceUnits and have a single <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> designated as a capital. </p>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a988e4a68d41ab3456762020db931320b"></a><!-- doxytag: member="Aftermath::Province::~Province" ref="a988e4a68d41ab3456762020db931320b" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Aftermath::Province::~Province </td>
-          <td>(</td>
-          <td class="paramname">&#160;)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Frees this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a> and all units on it. </p>
-<p>This does not free any tiles that were once a part of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>. </p>
-
-</div>
-</div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a3c5ddb90fd9a8a655db178b301b1e746"></a><!-- doxytag: member="Aftermath::Province::canAdd" ref="a3c5ddb90fd9a8a655db178b301b1e746" args="(const Tile *&amp;tile) const " -->
+<a class="anchor" id="ae46b67325d636a6e3ebe26a2d7b4c7b8"></a><!-- doxytag: member="Aftermath::Province::canAdd" ref="ae46b67325d636a6e3ebe26a2d7b4c7b8" args="(const Tile *&amp;tile) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Province::canAdd </td>
+          <td class="memname">bool Province::canAdd </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&amp;&#160;</td>
           <td class="paramname"> <em>tile</em>&#160;)</td>
@@ -147,18 +126,18 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if the tile's <a class="el" href="classAftermath_1_1Terrain.html#a6fc02568ee41a3207a037a7272e87222" title="Retrieves whether or not this terrain is of a land type.">Terrain::isLandTerrain()</a> returns true, false otherwise. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the tile's <a class="el" href="classAftermath_1_1Terrain.html#a6b514d9050d78a79ed71c3026ba5a3ad" title="Retrieves whether or not this terrain is of a land type.">Terrain::isLandTerrain()</a> returns true, false otherwise. </dd></dl>
 
 <p>Implements <a class="el" href="classAftermath_1_1SelectiveCollection.html#a6335562def3436350170775e4489e5f6">Aftermath::SelectiveCollection&lt; Tile * &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a00da8522ce29404eec91fc9cb70e059b"></a><!-- doxytag: member="Aftermath::Province::getCapital" ref="a00da8522ce29404eec91fc9cb70e059b" args="()" -->
+<a class="anchor" id="a83786dce4bf44a6c4f835d31ec1005e3"></a><!-- doxytag: member="Aftermath::Province::getCapital" ref="a83786dce4bf44a6c4f835d31ec1005e3" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Tile.html">Tile</a>* Aftermath::Province::getCapital </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1Tile.html">Tile</a> * Province::getCapital </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [virtual]</code></td>
@@ -168,18 +147,18 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Gets the capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> specified as capital by the <a class="el" href="classAftermath_1_1Province.html#a594d151b8a745ccccffe1bb2e690fbdc" title="Sets the capital Tile of this Province.">setCapital()</a> function, or NULL if the captial has not been set. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> specified as capital by the <a class="el" href="classAftermath_1_1Province.html#ab21cd4cee3139b4e4a5add73bc3d35d1" title="Sets the capital Tile of this Province.">setCapital()</a> function, or NULL if the captial has not been set. </dd></dl>
 
 <p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a38d8621c25a5725552e556ad4157a3d6">Aftermath::TileGroup</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab0851f4f30ecd9a48b1f7ae7457936eb"></a><!-- doxytag: member="Aftermath::Province::getCapital" ref="ab0851f4f30ecd9a48b1f7ae7457936eb" args="() const " -->
+<a class="anchor" id="a07390a86717219bf57e6ea9794111382"></a><!-- doxytag: member="Aftermath::Province::getCapital" ref="a07390a86717219bf57e6ea9794111382" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Tile.html">Tile</a>* Aftermath::Province::getCapital </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Tile.html">Tile</a> * Province::getCapital </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const<code> [virtual]</code></td>
@@ -189,18 +168,18 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Gets the const capital <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Province.html#a00da8522ce29404eec91fc9cb70e059b" title="Gets the capital Tile of this Province.">getCapital()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Province.html#a83786dce4bf44a6c4f835d31ec1005e3" title="Gets the capital Tile of this Province.">getCapital()</a> </dd></dl>
 
 <p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a7babaf4dcc07e4f6026d1520882c23c8">Aftermath::TileGroup</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a534c2fc77aaaa44ababba9569e13db70"></a><!-- doxytag: member="Aftermath::Province::getOwner" ref="a534c2fc77aaaa44ababba9569e13db70" args="() const " -->
+<a class="anchor" id="a7299a4df6e09af669d78294736a53fda"></a><!-- doxytag: member="Aftermath::Province::getOwner" ref="a7299a4df6e09af669d78294736a53fda" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Player.html">Player</a>* Aftermath::Province::getOwner </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Player.html">Player</a> * Province::getOwner </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const<code> [virtual]</code></td>
@@ -210,18 +189,18 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Gets the const owner of this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Province.html#a9ff76d4743d00926397eeb555844f96d" title="Gets the owning Player of this Province.">getOwner()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Province.html#aa139d0330fd5363dfb03e9018cd14a1e" title="Gets the owning Player of this Province.">getOwner()</a> </dd></dl>
 
 <p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a8171a3e1f10c3280941196b1a9abc58e">Aftermath::TileGroup</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9ff76d4743d00926397eeb555844f96d"></a><!-- doxytag: member="Aftermath::Province::getOwner" ref="a9ff76d4743d00926397eeb555844f96d" args="()" -->
+<a class="anchor" id="aa139d0330fd5363dfb03e9018cd14a1e"></a><!-- doxytag: member="Aftermath::Province::getOwner" ref="aa139d0330fd5363dfb03e9018cd14a1e" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1Player.html">Player</a>* Aftermath::Province::getOwner </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1Player.html">Player</a> * Province::getOwner </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [virtual]</code></td>
@@ -237,15 +216,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a848d1e28febeede18ccba7839e89756c"></a><!-- doxytag: member="Aftermath::Province::isLand" ref="a848d1e28febeede18ccba7839e89756c" args="()" -->
+<a class="anchor" id="a3e3b207931262a0b5f1576faf3e1e7f2"></a><!-- doxytag: member="Aftermath::Province::isLand" ref="a3e3b207931262a0b5f1576faf3e1e7f2" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Province::isLand </td>
+          <td class="memname">bool Province::isLand </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
-          <td><code> [virtual]</code></td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -254,19 +233,19 @@ Public Member Functions</h2></td></tr>
 <p>Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> is a land-based group. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>This function always returns true for a <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a081cd351df94403b9bcf310781387f85">Aftermath::TileGroup</a>.</p>
+<p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a63028b5405e2bd11de7613e6caa08a54">Aftermath::TileGroup</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acc0f3b66003c95d021c5d03ce8ce0e35"></a><!-- doxytag: member="Aftermath::Province::isSea" ref="acc0f3b66003c95d021c5d03ce8ce0e35" args="()" -->
+<a class="anchor" id="afb10e6f5bad2db22d9573384e2dc9d9f"></a><!-- doxytag: member="Aftermath::Province::isSea" ref="afb10e6f5bad2db22d9573384e2dc9d9f" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Province::isSea </td>
+          <td class="memname">bool Province::isSea </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
-          <td><code> [virtual]</code></td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -275,16 +254,16 @@ Public Member Functions</h2></td></tr>
 <p>Returns whether or not this <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> is a sea-based group. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>This function always returns false for a <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a6a926afcec675e339daff6c385790018">Aftermath::TileGroup</a>.</p>
+<p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a7fa7e97ca474ea9ea6f82f251d02cfd7">Aftermath::TileGroup</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a594d151b8a745ccccffe1bb2e690fbdc"></a><!-- doxytag: member="Aftermath::Province::setCapital" ref="a594d151b8a745ccccffe1bb2e690fbdc" args="(Tile *capital)" -->
+<a class="anchor" id="ab21cd4cee3139b4e4a5add73bc3d35d1"></a><!-- doxytag: member="Aftermath::Province::setCapital" ref="ab21cd4cee3139b4e4a5add73bc3d35d1" args="(Tile *capital)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Province::setCapital </td>
+          <td class="memname">void Province::setCapital </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Tile.html">Tile</a> *&#160;</td>
           <td class="paramname"> <em>capital</em>&#160;)</td>
@@ -307,12 +286,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a45dbb7c949fe09c2fa0c942bd7f10164"></a><!-- doxytag: member="Aftermath::Province::setOwner" ref="a45dbb7c949fe09c2fa0c942bd7f10164" args="(Player *owner)" -->
+<a class="anchor" id="ab70872424af0e6b56c64b1e26274a92c"></a><!-- doxytag: member="Aftermath::Province::setOwner" ref="ab70872424af0e6b56c64b1e26274a92c" args="(Player *owner)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Province::setOwner </td>
+          <td class="memname">void Province::setOwner </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> *&#160;</td>
           <td class="paramname"> <em>owner</em>&#160;)</td>
@@ -323,14 +302,15 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>To be used by Player::addTileGroup(). </p>
-<p><a class="el" href="classAftermath_1_1Province.html#a45dbb7c949fe09c2fa0c942bd7f10164" title="To be used by Player::addTileGroup().">setOwner()</a> does NOT add this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a> to the given <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. Instead, use Player::addProvince(). </p>
+<p><a class="el" href="classAftermath_1_1Province.html#ab70872424af0e6b56c64b1e26274a92c" title="To be used by Player::addTileGroup().">setOwner()</a> does NOT add this <a class="el" href="classAftermath_1_1Province.html" title="Provinces are TileGroups that are controlled by Players.">Province</a> to the given <a class="el" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a>. Instead, use Player::addProvince(). </p>
 
 <p>Implements <a class="el" href="classAftermath_1_1TileGroup.html#a9edc7488f5202352d18dd72a71c564e5">Aftermath::TileGroup</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Province_8hpp_source.html">Province.hpp</a></li>
+<li>src/Province.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -347,7 +327,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

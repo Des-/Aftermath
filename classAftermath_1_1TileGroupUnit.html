@@ -76,40 +76,58 @@ Inheritance diagram for Aftermath::TileGroupUnit:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#ab1a4aad5c08cd0e127d794237e7c8858">TileGroupUnit</a> (const <a class="el" href="classAftermath_1_1UnitType.html">UnitType</a> *type)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> of the given <a class="el" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a>.  <a href="#ab1a4aad5c08cd0e127d794237e7c8858"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1UnitType.html">UnitType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a3d0dfd5fbde441523b9d72011ba264a2">getType</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a> of this unit.  <a href="#a3d0dfd5fbde441523b9d72011ba264a2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a69d59fe6883ac726abe3796b43bf455b">getToughness</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of damage that this unit can sustain.  <a href="#a69d59fe6883ac726abe3796b43bf455b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#ae55a88e2762a84ddb21b12814cde3148">setToughness</a> (int toughness)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current toughness of this unit.  <a href="#ae55a88e2762a84ddb21b12814cde3148"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a882de55399f2dc64661b149dd227127a">addToughness</a> (int toughness)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the given amount of toughness to this unit.  <a href="#a882de55399f2dc64661b149dd227127a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a250855b200458465d7ae7e868fb3c25a">TileGroupUnit</a> (const <a class="el" href="classAftermath_1_1UnitType.html">UnitType</a> *type, <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;owner)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> of the given <a class="el" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a> and adds its merchant marine capacity to its owner.  <a href="#a250855b200458465d7ae7e868fb3c25a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad75cd51a99d53138401a63da9a7b3bc1"></a><!-- doxytag: member="Aftermath::TileGroupUnit::~TileGroupUnit" ref="ad75cd51a99d53138401a63da9a7b3bc1" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#ad75cd51a99d53138401a63da9a7b3bc1">~TileGroupUnit</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees this <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> and removes its merchant marine capacity from its owner. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1UnitType.html">UnitType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a46331a4f2a87501eb95eebf4722dae9c">getType</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a> of this unit.  <a href="#a46331a4f2a87501eb95eebf4722dae9c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a95f87af33e1106e88ed318be724ce57e">getToughness</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of damage that this unit can sustain.  <a href="#a95f87af33e1106e88ed318be724ce57e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a07fcc909f62964a113c79d51ccee9c6b">setToughness</a> (int toughness)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current toughness of this unit.  <a href="#a07fcc909f62964a113c79d51ccee9c6b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#abcea01d3a7061acd4d2098a7ce1ef3d2">addToughness</a> (int toughness)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the given amount of toughness to this unit.  <a href="#abcea01d3a7061acd4d2098a7ce1ef3d2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#ac9905802b61766b8c1fb1d08f4904ce8">getOwner</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20897597129e7bbcfad2f165f9a145f6"></a><!-- doxytag: member="Aftermath::TileGroupUnit::finishUpgrade" ref="a20897597129e7bbcfad2f165f9a145f6" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1TileGroupUnit.html#a20897597129e7bbcfad2f165f9a145f6">finishUpgrade</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrades to the next level and updates the owner's merchant marine capacity. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> is a unit that travels across TileGroups. </p>
 <p>They are primarily <a class="el" href="classAftermath_1_1Army.html" title="An Army is a number of TileGroupUnits that travel on land.">Army</a> or <a class="el" href="classAftermath_1_1Navy.html" title="A Navy is a number of TileGroupUnits that travel on water.">Navy</a> units. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab1a4aad5c08cd0e127d794237e7c8858"></a><!-- doxytag: member="Aftermath::TileGroupUnit::TileGroupUnit" ref="ab1a4aad5c08cd0e127d794237e7c8858" args="(const UnitType *type)" -->
+<a class="anchor" id="a250855b200458465d7ae7e868fb3c25a"></a><!-- doxytag: member="Aftermath::TileGroupUnit::TileGroupUnit" ref="a250855b200458465d7ae7e868fb3c25a" args="(const UnitType *type, Player &amp;owner)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::TileGroupUnit::TileGroupUnit </td>
+          <td class="memname">TileGroupUnit::TileGroupUnit </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1UnitType.html">UnitType</a> *&#160;</td>
-          <td class="paramname"> <em>type</em>&#160;)</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
+          <td class="paramname"> <em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> of the given <a class="el" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a>. </p>
+<p>Constructs a new <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> of the given <a class="el" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a> and adds its merchant marine capacity to its owner. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>- The unit type of this unit. </td></tr>
+    <tr><td class="paramname">owner</td><td>- The owner of this unit. </td></tr>
   </table>
   </dd>
 </dl>
@@ -117,12 +135,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a882de55399f2dc64661b149dd227127a"></a><!-- doxytag: member="Aftermath::TileGroupUnit::addToughness" ref="a882de55399f2dc64661b149dd227127a" args="(int toughness)" -->
+<a class="anchor" id="abcea01d3a7061acd4d2098a7ce1ef3d2"></a><!-- doxytag: member="Aftermath::TileGroupUnit::addToughness" ref="abcea01d3a7061acd4d2098a7ce1ef3d2" args="(int toughness)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TileGroupUnit::addToughness </td>
+          <td class="memname">void TileGroupUnit::addToughness </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>toughness</em>&#160;)</td>
@@ -142,12 +160,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a69d59fe6883ac726abe3796b43bf455b"></a><!-- doxytag: member="Aftermath::TileGroupUnit::getToughness" ref="a69d59fe6883ac726abe3796b43bf455b" args="() const " -->
+<a class="anchor" id="ac9905802b61766b8c1fb1d08f4904ce8"></a><!-- doxytag: member="Aftermath::TileGroupUnit::getOwner" ref="ac9905802b61766b8c1fb1d08f4904ce8" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::TileGroupUnit::getToughness </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp; TileGroupUnit::getOwner </td>
+          <td>(</td>
+          <td class="paramname">&#160;)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Returns:</b></dt><dd>The owner of this <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a95f87af33e1106e88ed318be724ce57e"></a><!-- doxytag: member="Aftermath::TileGroupUnit::getToughness" ref="a95f87af33e1106e88ed318be724ce57e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TileGroupUnit::getToughness </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -162,12 +197,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3d0dfd5fbde441523b9d72011ba264a2"></a><!-- doxytag: member="Aftermath::TileGroupUnit::getType" ref="a3d0dfd5fbde441523b9d72011ba264a2" args="() const " -->
+<a class="anchor" id="a46331a4f2a87501eb95eebf4722dae9c"></a><!-- doxytag: member="Aftermath::TileGroupUnit::getType" ref="a46331a4f2a87501eb95eebf4722dae9c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1UnitType.html">UnitType</a>&amp; Aftermath::TileGroupUnit::getType </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1UnitType.html">UnitType</a> &amp; TileGroupUnit::getType </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -181,12 +216,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae55a88e2762a84ddb21b12814cde3148"></a><!-- doxytag: member="Aftermath::TileGroupUnit::setToughness" ref="ae55a88e2762a84ddb21b12814cde3148" args="(int toughness)" -->
+<a class="anchor" id="a07fcc909f62964a113c79d51ccee9c6b"></a><!-- doxytag: member="Aftermath::TileGroupUnit::setToughness" ref="a07fcc909f62964a113c79d51ccee9c6b" args="(int toughness)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::TileGroupUnit::setToughness </td>
+          <td class="memname">void TileGroupUnit::setToughness </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>toughness</em>&#160;)</td>
@@ -206,8 +241,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="TileGroupUnit_8hpp_source.html">TileGroupUnit.hpp</a></li>
+<li>src/TileGroupUnit.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -224,7 +260,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

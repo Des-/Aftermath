@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1>Aftermath::Tile Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Aftermath::Tile" --><!-- doxytag: inherits="SelectiveCollection&lt; Resource * &gt;" -->
+<!-- doxytag: class="Aftermath::Tile" --><!-- doxytag: inherits="SelectiveCollection&lt; const Resource * &gt;" -->
 <p><a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> objects are what game maps are made out of.  
 <a href="#_details">More...</a></p>
 
@@ -70,52 +70,52 @@ Inheritance diagram for Aftermath::Tile:<!-- endSectionHeader --></div>
  <div class="center">
   <img src="classAftermath_1_1Tile.png" usemap="#Aftermath::Tile_map" alt=""/>
   <map id="Aftermath::Tile_map" name="Aftermath::Tile_map">
-<area href="classAftermath_1_1SelectiveCollection.html" alt="Aftermath::SelectiveCollection&lt; Resource * &gt;" shape="rect" coords="0,56,270,80"/>
-<area href="classAftermath_1_1Collection.html" alt="Aftermath::Collection&lt; Resource * &gt;" shape="rect" coords="0,0,270,24"/>
+<area href="classAftermath_1_1SelectiveCollection.html" alt="Aftermath::SelectiveCollection&lt; const Resource * &gt;" shape="rect" coords="0,56,305,80"/>
+<area href="classAftermath_1_1Collection.html" alt="Aftermath::Collection&lt; const Resource * &gt;" shape="rect" coords="0,0,305,24"/>
 </map>
  </div><!-- endSectionContent --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#ab5e1038c9b97b975db52395235a1f23d">Tile</a> (const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *terrain, bool genResources=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> object from the given <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> info and with a yield of one.  <a href="#ab5e1038c9b97b975db52395235a1f23d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a19bfcf1f2e855ef39d3a861f49b03d97">~Tile</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> object.  <a href="#a19bfcf1f2e855ef39d3a861f49b03d97"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a09cf401bbe6b7ccf86ffa9bd7671ae45">getTileGroup</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> that this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> belongs to.  <a href="#a09cf401bbe6b7ccf86ffa9bd7671ae45"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#aaa5dab24232bca69dbeded06e477c9c6">getTileGroup</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets const group of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#aaa5dab24232bca69dbeded06e477c9c6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a90c5e830d765668a0245d5c25d86ac67">setTileGroup</a> (<a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *group)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by <a class="el" href="classAftermath_1_1TileGroup.html#a93d64b179c7156eb3ca9cacae36c13c3" title="If canAdd(tile) returns true, and the Tile isn&#39;t already in this TileGroup, this function adds th...">TileGroup::add()</a>.  <a href="#a90c5e830d765668a0245d5c25d86ac67"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#adf664bad0ab2c959980806d57d0cc47a">getTerrain</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> associated with this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> object.  <a href="#adf664bad0ab2c959980806d57d0cc47a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#afd289eb856bfcc80751a73bc2f0a101e">setTerrain</a> (const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *terrain, bool genResources=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> type of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#afd289eb856bfcc80751a73bc2f0a101e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a8d7eb55756e281acfc0b3ef113ceea28">getTileUnit</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#a8d7eb55756e281acfc0b3ef113ceea28"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a482a7d17fe9db3d594908573a6729ef2">getTileUnit</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets const <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#a482a7d17fe9db3d594908573a6729ef2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a88558b8d7e7153e5d56257de8d13bb18">setTileUnit</a> (<a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *tileUnit)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#a88558b8d7e7153e5d56257de8d13bb18"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a568a45b4cb53976f15f1489689408425">canAdd</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&amp;resource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> supports adding this type of resource.  <a href="#a568a45b4cb53976f15f1489689408425"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a63b6f2908f762f8de4752f4deddac6ed">getYield</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of each resource present that this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> provides to a <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#a63b6f2908f762f8de4752f4deddac6ed"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a11468ba296ab626a986b4a34dc066d8c">setYield</a> (int yield)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the per-resource yield of this tile to a given value.  <a href="#a11468ba296ab626a986b4a34dc066d8c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a2f002a807d9905e8e0d7fa84a0c0c271">addYield</a> (int yield)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a given amount to the per-resource yield of this tile.  <a href="#a2f002a807d9905e8e0d7fa84a0c0c271"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a17fba50229074043747db58f3e5cc6e0">Tile</a> (const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *terrain, bool genResources=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> object from the given <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> info and with a yield of one.  <a href="#a17fba50229074043747db58f3e5cc6e0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a98634abbd93fa13d0578d7103202d03d">~Tile</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> object.  <a href="#a98634abbd93fa13d0578d7103202d03d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a95d23985085d66fb946b3b9824cca2d3">getTileGroup</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> that this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> belongs to.  <a href="#a95d23985085d66fb946b3b9824cca2d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a86e1609ea1c2f5b74c4ed919472a53bd">getTileGroup</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets const group of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#a86e1609ea1c2f5b74c4ed919472a53bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a8d7840f9a671e1634ab779783cee1651">setTileGroup</a> (<a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *group)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by <a class="el" href="classAftermath_1_1TileGroup.html#a177a764505e6b2255b3eb5477836aa10" title="If canAdd(tile) returns true, and the Tile isn&#39;t already in this TileGroup, this function adds th...">TileGroup::add()</a>.  <a href="#a8d7840f9a671e1634ab779783cee1651"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#ad2d02944eb111fe5513845b35331f213">getTerrain</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> associated with this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> object.  <a href="#ad2d02944eb111fe5513845b35331f213"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a31eb50c68e5e9298379bf3db7129448d">setTerrain</a> (const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *terrain, bool genResources=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> type of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#a31eb50c68e5e9298379bf3db7129448d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a1014752b072e8fa06e09bd95b4e732c0">getTileUnit</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#a1014752b072e8fa06e09bd95b4e732c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#afc3e69733aa3c10df5f7f005a07e4921">getTileUnit</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets const <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#afc3e69733aa3c10df5f7f005a07e4921"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a53ec91dbe43b5369b0432883e40b28eb">setTileUnit</a> (<a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *tileUnit)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>.  <a href="#a53ec91dbe43b5369b0432883e40b28eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a1cf3ad6dcb41d7202b60de3bf3c4450e">canAdd</a> (const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&amp;resource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> supports adding this type of resource.  <a href="#a1cf3ad6dcb41d7202b60de3bf3c4450e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a75f8d05a39b6e122581da2296e0ad30b">getYield</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of each resource present that this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> provides to a <a class="el" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&#39;s capital by their network ...">TransportNetwork</a>.  <a href="#a75f8d05a39b6e122581da2296e0ad30b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#a8f827faec3e76a724f5271852515eac9">setYield</a> (int yield)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the per-resource yield of this tile to a given value.  <a href="#a8f827faec3e76a724f5271852515eac9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Tile.html#aeeb8393aadc5a0d7984425d482222419">addYield</a> (int yield)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a given amount to the per-resource yield of this tile.  <a href="#aeeb8393aadc5a0d7984425d482222419"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p><a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> objects are what game maps are made out of. </p>
 <p>They have their own <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> type, Resources, and room for a <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a>. Tiles also belong to TileGroups. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab5e1038c9b97b975db52395235a1f23d"></a><!-- doxytag: member="Aftermath::Tile::Tile" ref="ab5e1038c9b97b975db52395235a1f23d" args="(const Terrain *terrain, bool genResources=true)" -->
+<a class="anchor" id="a17fba50229074043747db58f3e5cc6e0"></a><!-- doxytag: member="Aftermath::Tile::Tile" ref="a17fba50229074043747db58f3e5cc6e0" args="(const Terrain *terrain, bool genResources=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::Tile::Tile </td>
+          <td class="memname">Tile::Tile </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *&#160;</td>
           <td class="paramname"> <em>terrain</em>, </td>
@@ -146,12 +146,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a19bfcf1f2e855ef39d3a861f49b03d97"></a><!-- doxytag: member="Aftermath::Tile::~Tile" ref="a19bfcf1f2e855ef39d3a861f49b03d97" args="()" -->
+<a class="anchor" id="a98634abbd93fa13d0578d7103202d03d"></a><!-- doxytag: member="Aftermath::Tile::~Tile" ref="a98634abbd93fa13d0578d7103202d03d" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::Tile::~Tile </td>
+          <td class="memname">Tile::~Tile </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -161,17 +161,17 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Deletes this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> object. </p>
-<p>This does not free the <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> type or Resources of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>, however, as there can be multiple Tiles with the same <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> type and resources. </p>
+<p>The <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> on this tile is also deleted. This does not free the <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> type or Resources of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>, however, as there can be multiple Tiles with the same <a class="el" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> type and resources. </p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a2f002a807d9905e8e0d7fa84a0c0c271"></a><!-- doxytag: member="Aftermath::Tile::addYield" ref="a2f002a807d9905e8e0d7fa84a0c0c271" args="(int yield)" -->
+<a class="anchor" id="aeeb8393aadc5a0d7984425d482222419"></a><!-- doxytag: member="Aftermath::Tile::addYield" ref="aeeb8393aadc5a0d7984425d482222419" args="(int yield)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Tile::addYield </td>
+          <td class="memname">void Tile::addYield </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>yield</em>&#160;)</td>
@@ -191,16 +191,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a568a45b4cb53976f15f1489689408425"></a><!-- doxytag: member="Aftermath::Tile::canAdd" ref="a568a45b4cb53976f15f1489689408425" args="(const Resource *&amp;resource) const " -->
+<a class="anchor" id="a1cf3ad6dcb41d7202b60de3bf3c4450e"></a><!-- doxytag: member="Aftermath::Tile::canAdd" ref="a1cf3ad6dcb41d7202b60de3bf3c4450e" args="(const Resource *&amp;resource) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Tile::canAdd </td>
+          <td class="memname">bool Tile::canAdd </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Resource.html">Resource</a> *&amp;&#160;</td>
           <td class="paramname"> <em>resource</em>&#160;)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -209,16 +209,14 @@ Public Member Functions</h2></td></tr>
 <p>Returns true if this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> supports adding this type of resource. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if this Tile's terrain type supports adding this resource, false otherwise. </dd></dl>
 
-<p>Implements <a class="el" href="classAftermath_1_1SelectiveCollection.html#a6335562def3436350170775e4489e5f6">Aftermath::SelectiveCollection&lt; Resource * &gt;</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="adf664bad0ab2c959980806d57d0cc47a"></a><!-- doxytag: member="Aftermath::Tile::getTerrain" ref="adf664bad0ab2c959980806d57d0cc47a" args="() const " -->
+<a class="anchor" id="ad2d02944eb111fe5513845b35331f213"></a><!-- doxytag: member="Aftermath::Tile::getTerrain" ref="ad2d02944eb111fe5513845b35331f213" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a>* Aftermath::Tile::getTerrain </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> * Tile::getTerrain </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -232,12 +230,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a09cf401bbe6b7ccf86ffa9bd7671ae45"></a><!-- doxytag: member="Aftermath::Tile::getTileGroup" ref="a09cf401bbe6b7ccf86ffa9bd7671ae45" args="()" -->
+<a class="anchor" id="a95d23985085d66fb946b3b9824cca2d3"></a><!-- doxytag: member="Aftermath::Tile::getTileGroup" ref="a95d23985085d66fb946b3b9824cca2d3" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a>* Aftermath::Tile::getTileGroup </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> * Tile::getTileGroup </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -251,12 +249,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaa5dab24232bca69dbeded06e477c9c6"></a><!-- doxytag: member="Aftermath::Tile::getTileGroup" ref="aaa5dab24232bca69dbeded06e477c9c6" args="() const " -->
+<a class="anchor" id="a86e1609ea1c2f5b74c4ed919472a53bd"></a><!-- doxytag: member="Aftermath::Tile::getTileGroup" ref="a86e1609ea1c2f5b74c4ed919472a53bd" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a>* Aftermath::Tile::getTileGroup </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> * Tile::getTileGroup </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -266,16 +264,16 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Gets const group of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Tile.html#a09cf401bbe6b7ccf86ffa9bd7671ae45" title="Gets the TileGroup that this Tile belongs to.">getTileGroup()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Tile.html#a95d23985085d66fb946b3b9824cca2d3" title="Gets the TileGroup that this Tile belongs to.">getTileGroup()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a8d7eb55756e281acfc0b3ef113ceea28"></a><!-- doxytag: member="Aftermath::Tile::getTileUnit" ref="a8d7eb55756e281acfc0b3ef113ceea28" args="()" -->
+<a class="anchor" id="a1014752b072e8fa06e09bd95b4e732c0"></a><!-- doxytag: member="Aftermath::Tile::getTileUnit" ref="a1014752b072e8fa06e09bd95b4e732c0" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a>* Aftermath::Tile::getTileUnit </td>
+          <td class="memname"><a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> * Tile::getTileUnit </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td></td>
@@ -289,12 +287,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a482a7d17fe9db3d594908573a6729ef2"></a><!-- doxytag: member="Aftermath::Tile::getTileUnit" ref="a482a7d17fe9db3d594908573a6729ef2" args="() const " -->
+<a class="anchor" id="afc3e69733aa3c10df5f7f005a07e4921"></a><!-- doxytag: member="Aftermath::Tile::getTileUnit" ref="afc3e69733aa3c10df5f7f005a07e4921" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a>* Aftermath::Tile::getTileUnit </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> * Tile::getTileUnit </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -304,16 +302,16 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Gets const <a class="el" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> of this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a>. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Tile.html#a8d7eb55756e281acfc0b3ef113ceea28" title="Gets the TileUnit of this Tile.">getTileUnit()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classAftermath_1_1Tile.html#a1014752b072e8fa06e09bd95b4e732c0" title="Gets the TileUnit of this Tile.">getTileUnit()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a63b6f2908f762f8de4752f4deddac6ed"></a><!-- doxytag: member="Aftermath::Tile::getYield" ref="a63b6f2908f762f8de4752f4deddac6ed" args="() const " -->
+<a class="anchor" id="a75f8d05a39b6e122581da2296e0ad30b"></a><!-- doxytag: member="Aftermath::Tile::getYield" ref="a75f8d05a39b6e122581da2296e0ad30b" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::Tile::getYield </td>
+          <td class="memname">int Tile::getYield </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -327,12 +325,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afd289eb856bfcc80751a73bc2f0a101e"></a><!-- doxytag: member="Aftermath::Tile::setTerrain" ref="afd289eb856bfcc80751a73bc2f0a101e" args="(const Terrain *terrain, bool genResources=true)" -->
+<a class="anchor" id="a31eb50c68e5e9298379bf3db7129448d"></a><!-- doxytag: member="Aftermath::Tile::setTerrain" ref="a31eb50c68e5e9298379bf3db7129448d" args="(const Terrain *terrain, bool genResources=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Tile::setTerrain </td>
+          <td class="memname">void Tile::setTerrain </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Terrain.html">Terrain</a> *&#160;</td>
           <td class="paramname"> <em>terrain</em>, </td>
@@ -364,12 +362,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a90c5e830d765668a0245d5c25d86ac67"></a><!-- doxytag: member="Aftermath::Tile::setTileGroup" ref="a90c5e830d765668a0245d5c25d86ac67" args="(TileGroup *group)" -->
+<a class="anchor" id="a8d7840f9a671e1634ab779783cee1651"></a><!-- doxytag: member="Aftermath::Tile::setTileGroup" ref="a8d7840f9a671e1634ab779783cee1651" args="(TileGroup *group)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Tile::setTileGroup </td>
+          <td class="memname">void Tile::setTileGroup </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1TileGroup.html">TileGroup</a> *&#160;</td>
           <td class="paramname"> <em>group</em>&#160;)</td>
@@ -379,8 +377,8 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>For use by <a class="el" href="classAftermath_1_1TileGroup.html#a93d64b179c7156eb3ca9cacae36c13c3" title="If canAdd(tile) returns true, and the Tile isn&#39;t already in this TileGroup, this function adds th...">TileGroup::add()</a>. </p>
-<p>This function does NOT add this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> to the given group. To add this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> to a group, use <a class="el" href="classAftermath_1_1TileGroup.html#a93d64b179c7156eb3ca9cacae36c13c3" title="If canAdd(tile) returns true, and the Tile isn&#39;t already in this TileGroup, this function adds th...">TileGroup::add()</a>.</p>
+<p>For use by <a class="el" href="classAftermath_1_1TileGroup.html#a177a764505e6b2255b3eb5477836aa10" title="If canAdd(tile) returns true, and the Tile isn&#39;t already in this TileGroup, this function adds th...">TileGroup::add()</a>. </p>
+<p>This function does NOT add this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> to the given group. To add this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> to a group, use <a class="el" href="classAftermath_1_1TileGroup.html#a177a764505e6b2255b3eb5477836aa10" title="If canAdd(tile) returns true, and the Tile isn&#39;t already in this TileGroup, this function adds th...">TileGroup::add()</a>.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>- The new <a class="el" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> for this <a class="el" href="classAftermath_1_1Tile.html" title="Tile objects are what game maps are made out of.">Tile</a> to belong to. </td></tr>
@@ -390,12 +388,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a88558b8d7e7153e5d56257de8d13bb18"></a><!-- doxytag: member="Aftermath::Tile::setTileUnit" ref="a88558b8d7e7153e5d56257de8d13bb18" args="(TileUnit *tileUnit)" -->
+<a class="anchor" id="a53ec91dbe43b5369b0432883e40b28eb"></a><!-- doxytag: member="Aftermath::Tile::setTileUnit" ref="a53ec91dbe43b5369b0432883e40b28eb" args="(TileUnit *tileUnit)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Tile::setTileUnit </td>
+          <td class="memname">void Tile::setTileUnit </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1TileUnit.html">TileUnit</a> *&#160;</td>
           <td class="paramname"> <em>tileUnit</em>&#160;)</td>
@@ -415,12 +413,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a11468ba296ab626a986b4a34dc066d8c"></a><!-- doxytag: member="Aftermath::Tile::setYield" ref="a11468ba296ab626a986b4a34dc066d8c" args="(int yield)" -->
+<a class="anchor" id="a8f827faec3e76a724f5271852515eac9"></a><!-- doxytag: member="Aftermath::Tile::setYield" ref="a8f827faec3e76a724f5271852515eac9" args="(int yield)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Tile::setYield </td>
+          <td class="memname">void Tile::setYield </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"> <em>yield</em>&#160;)</td>
@@ -440,8 +438,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Tile_8hpp_source.html">Tile.hpp</a></li>
+<li>src/Tile.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -458,7 +457,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

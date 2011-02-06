@@ -77,28 +77,29 @@ Inheritance diagram for Aftermath::UnitLevel:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#a04a2c5d91d99419478edd5e4c26aa5fb">UnitLevel</a> (const std::string &amp;name, const std::string &amp;description, const sf::Image *image, const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *upgradeCost, const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *autoUpgradeCost, int power, int cargo)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1UnitLevel.html" title="A UnitLevel is the level of a TileGroupUnit.">UnitLevel</a> with the given name, description, and image.  <a href="#a04a2c5d91d99419478edd5e4c26aa5fb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8572551c6020c82da44a47886aef81d3"></a><!-- doxytag: member="Aftermath::UnitLevel::~UnitLevel" ref="a8572551c6020c82da44a47886aef81d3" args="()" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#a8572551c6020c82da44a47886aef81d3">~UnitLevel</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#a030fbb02fe6ba2d693583e95ef82bbd4">UnitLevel</a> (const std::string &amp;name, const std::string &amp;description, const Image *image, const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *upgradeCost, const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *autoUpgradeCost, int power, int cargo)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1UnitLevel.html" title="A UnitLevel is the level of a TileGroupUnit.">UnitLevel</a> with the given name, description, and image.  <a href="#a030fbb02fe6ba2d693583e95ef82bbd4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cc18e3e431d307ba4100cbbd3b43c9f"></a><!-- doxytag: member="Aftermath::UnitLevel::~UnitLevel" ref="a8cc18e3e431d307ba4100cbbd3b43c9f" args="()" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#a8cc18e3e431d307ba4100cbbd3b43c9f">~UnitLevel</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees this level, its cost, and its auto cost. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#ad0e11e18713f4bd006046c01cb1a407e">getAutoCost</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cost that is required for a unit to upgrade to this level automatially when built at a <a class="el" href="classAftermath_1_1ProductionCenter.html" title="ProductionCenters are upgradable centers of production.">ProductionCenter</a>.  <a href="#ad0e11e18713f4bd006046c01cb1a407e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#a7b37ee68b75466fe1a8dbe81751e0d26">getPower</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the power of this level.  <a href="#a7b37ee68b75466fe1a8dbe81751e0d26"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#a43cdc7d7b670c292f654062d03ea549e">getCargo</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of merchant marine points added to the controlling player of this unit.  <a href="#a43cdc7d7b670c292f654062d03ea549e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <br class="typebreak"/>
+<a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#a2e2613d7f5c28a7bbab9b2fbcd7f6db8">getAutoCost</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cost that is required for a unit to upgrade to this level automatially when built at a <a class="el" href="classAftermath_1_1ProductionCenter.html" title="ProductionCenters are upgradable centers of production.">ProductionCenter</a>.  <a href="#a2e2613d7f5c28a7bbab9b2fbcd7f6db8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#ac3318acb018945be751ed3af907a23b1">getPower</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the power of this level.  <a href="#ac3318acb018945be751ed3af907a23b1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1UnitLevel.html#ad9f084a89f4dc2768362af8cbde464df">getCargo</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of merchant marine points added to the controlling player of this unit.  <a href="#ad9f084a89f4dc2768362af8cbde464df"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classAftermath_1_1UnitLevel.html" title="A UnitLevel is the level of a TileGroupUnit.">UnitLevel</a> is the level of a <a class="el" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a>. </p>
 <p>It has a cost that is required for automatic upgrade at a <a class="el" href="classAftermath_1_1ProductionCenter.html" title="ProductionCenters are upgradable centers of production.">ProductionCenter</a>. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a04a2c5d91d99419478edd5e4c26aa5fb"></a><!-- doxytag: member="Aftermath::UnitLevel::UnitLevel" ref="a04a2c5d91d99419478edd5e4c26aa5fb" args="(const std::string &amp;name, const std::string &amp;description, const sf::Image *image, const Count&lt; const NamedType * &gt; *upgradeCost, const Count&lt; const NamedType * &gt; *autoUpgradeCost, int power, int cargo)" -->
+<a class="anchor" id="a030fbb02fe6ba2d693583e95ef82bbd4"></a><!-- doxytag: member="Aftermath::UnitLevel::UnitLevel" ref="a030fbb02fe6ba2d693583e95ef82bbd4" args="(const std::string &amp;name, const std::string &amp;description, const Image *image, const Count&lt; const Transferable * &gt; *upgradeCost, const Count&lt; const Transferable * &gt; *autoUpgradeCost, int power, int cargo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::UnitLevel::UnitLevel </td>
+          <td class="memname">UnitLevel::UnitLevel </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"> <em>name</em>, </td>
@@ -112,19 +113,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const sf::Image *&#160;</td>
+          <td class="paramtype">const Image *&#160;</td>
           <td class="paramname"> <em>image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *&#160;</td>
           <td class="paramname"> <em>upgradeCost</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> * &gt; *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; *&#160;</td>
           <td class="paramname"> <em>autoUpgradeCost</em>, </td>
         </tr>
         <tr>
@@ -166,12 +167,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad0e11e18713f4bd006046c01cb1a407e"></a><!-- doxytag: member="Aftermath::UnitLevel::getAutoCost" ref="ad0e11e18713f4bd006046c01cb1a407e" args="() const " -->
+<a class="anchor" id="a2e2613d7f5c28a7bbab9b2fbcd7f6db8"></a><!-- doxytag: member="Aftermath::UnitLevel::getAutoCost" ref="a2e2613d7f5c28a7bbab9b2fbcd7f6db8" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt;const <a class="el" href="classAftermath_1_1NamedType.html">NamedType</a> *&gt;&amp; Aftermath::UnitLevel::getAutoCost </td>
+          <td class="memname">const <a class="el" href="classAftermath_1_1Count.html">Count</a>&lt; const <a class="el" href="classAftermath_1_1Transferable.html">Transferable</a> * &gt; &amp; UnitLevel::getAutoCost </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -186,12 +187,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a43cdc7d7b670c292f654062d03ea549e"></a><!-- doxytag: member="Aftermath::UnitLevel::getCargo" ref="a43cdc7d7b670c292f654062d03ea549e" args="() const " -->
+<a class="anchor" id="ad9f084a89f4dc2768362af8cbde464df"></a><!-- doxytag: member="Aftermath::UnitLevel::getCargo" ref="ad9f084a89f4dc2768362af8cbde464df" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::UnitLevel::getCargo </td>
+          <td class="memname">int UnitLevel::getCargo </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -205,12 +206,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7b37ee68b75466fe1a8dbe81751e0d26"></a><!-- doxytag: member="Aftermath::UnitLevel::getPower" ref="a7b37ee68b75466fe1a8dbe81751e0d26" args="() const " -->
+<a class="anchor" id="ac3318acb018945be751ed3af907a23b1"></a><!-- doxytag: member="Aftermath::UnitLevel::getPower" ref="ac3318acb018945be751ed3af907a23b1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Aftermath::UnitLevel::getPower </td>
+          <td class="memname">int UnitLevel::getPower </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td> const</td>
@@ -225,8 +226,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="UnitLevel_8hpp_source.html">UnitLevel.hpp</a></li>
+<li>src/UnitLevel.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -243,7 +245,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:33 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:42 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

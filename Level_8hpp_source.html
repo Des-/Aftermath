@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -70,26 +69,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="preprocessor">#ifndef LEVEL_HPP_INCLUDED</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define LEVEL_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
-<a name="l00025"></a>00025 
-<a name="l00034"></a>00034 <span class="keyword">namespace </span>Aftermath {
-<a name="l00035"></a>00035 
-<a name="l00041"></a><a class="code" href="classAftermath_1_1Level.html">00041</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Level.html" title="An upgradable&amp;#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a> {
-<a name="l00042"></a>00042         <span class="keyword">public</span>:
-<a name="l00049"></a>00049             <a class="code" href="classAftermath_1_1Level.html#a26f94355116d05b16d025d6a14cf6aad" title="Constructs a new Level with the given monetary, resource, and research cost.">Level</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> * cost);
-<a name="l00050"></a>00050 
-<a name="l00054"></a>00054             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1Level.html#ae73b077e699ba52d46f6a0d1b200e929" title="Virtual destructor for Level; this frees this level&amp;#39;s cost.">~Level</a>();
-<a name="l00055"></a>00055 
-<a name="l00061"></a>00061             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Level.html#adea0927f5eb81ee337bc68380f7ecf72" title="Gets the cost of upgrading to this level.">getCost</a>() <span class="keyword">const</span>;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063         <span class="keyword">private</span>:
-<a name="l00064"></a>00064             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> * mCost;
-<a name="l00065"></a>00065     };
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 }
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="preprocessor">#endif // LEVEL_HPP_INCLUDED</span>
+<a name="l00023"></a>00023 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Transferable; }
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00035"></a>00035 <span class="keyword">namespace </span>Aftermath {
+<a name="l00036"></a>00036 
+<a name="l00042"></a><a class="code" href="classAftermath_1_1Level.html">00042</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Level.html" title="An upgradable&amp;#39;s level needs to hold certain information about the costs of aquiring that level...">Level</a> {
+<a name="l00043"></a>00043         <span class="keyword">public</span>:
+<a name="l00050"></a>00050             <a class="code" href="classAftermath_1_1Level.html#aabed2daf86c5ec0df5122ea5c0b696e8" title="Constructs a new Level with the given monetary, resource, and research cost.">Level</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> * cost);
+<a name="l00051"></a>00051 
+<a name="l00055"></a>00055             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1Level.html#a249eac1e8f19ff44134efa5e986feaca" title="Virtual destructor for Level; this frees this level&amp;#39;s cost.">~Level</a>();
+<a name="l00056"></a>00056 
+<a name="l00062"></a>00062             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Level.html#a1e73ec0f860ea2acd82b5c35eecbd1e7" title="Gets the cost of upgrading to this level.">getCost</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064         <span class="keyword">private</span>:
+<a name="l00065"></a>00065             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> * mCost;
+<a name="l00066"></a>00066     };
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 }
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="preprocessor">#endif // LEVEL_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

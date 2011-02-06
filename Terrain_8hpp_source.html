@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -73,44 +72,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;map&gt;</span>
 <a name="l00024"></a>00024 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="comment">// TODO: Decide for certain what graphics library to use.</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;SFML/Graphics/Image.hpp&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Graphics_8hpp.html" title="An interface for graphical elements.">Graphics.hpp</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="NamedType_8hpp.html" title="A type with a name and an image.">NamedType.hpp</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="Resource_8hpp.html" title="A resource type.">Resource.hpp</a>&quot;</span>
-<a name="l00031"></a>00031 
-<a name="l00040"></a>00040 <span class="keyword">namespace </span>Aftermath {
-<a name="l00041"></a>00041 
-<a name="l00047"></a><a class="code" href="classAftermath_1_1Terrain.html">00047</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a> {
-<a name="l00048"></a>00048         <span class="keyword">public</span>:
-<a name="l00049"></a>00049             <span class="keyword">typedef</span> std::map&lt;const Resource *, double&gt;::const_iterator
-<a name="l00050"></a>00050                 iterator;
-<a name="l00051"></a>00051 
-<a name="l00066"></a>00066             <a class="code" href="classAftermath_1_1Terrain.html#a040c032c3fb7e6f83cdb3bea12033238" title="Constructs a new terrain with the given name, description, image, and resource probabilities.">Terrain</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp; description,
-<a name="l00067"></a>00067                 <span class="keywordtype">bool</span> isLand, <span class="keywordtype">bool</span> isSea, <span class="keyword">const</span> sf::Image * image,
-<a name="l00068"></a>00068                 <span class="keyword">const</span> std::map &lt;const Resource *, double&gt; * probabilities);
-<a name="l00069"></a>00069 
-<a name="l00073"></a>00073             <a class="code" href="classAftermath_1_1Terrain.html#a99581c235ff63c27833f5380395b184b" title="Deletes this terrain and free its image and probabilities map.">~Terrain</a>();
-<a name="l00074"></a>00074 
-<a name="l00081"></a>00081             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Terrain.html#a6fc02568ee41a3207a037a7272e87222" title="Retrieves whether or not this terrain is of a land type.">isLandTerrain</a>() <span class="keyword">const</span>;
-<a name="l00082"></a>00082 
-<a name="l00088"></a>00088             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Terrain.html#ad5fb7c2b0f0b4c37ae0d5db17c79b3d8" title="Retrieves whether or not this terrain is of a sea type.">isSeaTerrain</a>() <span class="keyword">const</span>;
-<a name="l00089"></a>00089 
-<a name="l00096"></a>00096             <span class="keywordtype">double</span> <a class="code" href="classAftermath_1_1Terrain.html#af10a08ecc3080587b0fab677d1905ea8" title="Retrieves the probability that a particular Resource type is generated on tiles of this terrain type...">getProbability</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Resource.html" title="A Resource is a type of good or raw material that can be harvested from Tiles or manufactured from ot...">Resource</a> * resource) <span class="keyword">const</span>;
-<a name="l00097"></a>00097 
-<a name="l00105"></a>00105             iterator <a class="code" href="classAftermath_1_1Terrain.html#aafdd66485b1d6c36991659b1b63f73fe" title="Returns an iterator pointing to the first resource probability of this terrain type.">begin</a>() <span class="keyword">const</span>;
-<a name="l00106"></a>00106 
-<a name="l00114"></a>00114             iterator <a class="code" href="classAftermath_1_1Terrain.html#ac0efe4e99a49d74a3a4c503b5e53adc4" title="Returns an iterator pointing past the last resource probability of this terrain type.">end</a>() <span class="keyword">const</span>;
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116         <span class="keyword">private</span>:
-<a name="l00117"></a>00117             <span class="keywordtype">bool</span> mLand;
-<a name="l00118"></a>00118             <span class="keywordtype">bool</span> mSea;
-<a name="l00119"></a>00119             <span class="keyword">const</span> std::map&lt;const Resource *, double&gt; * mProbabilities;
-<a name="l00120"></a>00120     };
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 }
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124 <span class="preprocessor">#endif // TERRAIN_HPP_INCLUDED</span>
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Resource; }
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <span class="keyword">namespace </span>Aftermath {
+<a name="l00040"></a>00040 
+<a name="l00046"></a><a class="code" href="classAftermath_1_1Terrain.html">00046</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Terrain.html" title="A Terrain object represents a particular class of Tile, e.g.">Terrain</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1NamedType.html" title="NamedType is a base class for all named types like resource types, unit types, and nations...">NamedType</a> {
+<a name="l00047"></a>00047         <span class="keyword">public</span>:
+<a name="l00048"></a>00048             <span class="keyword">typedef</span> std::map&lt;const Resource *, double&gt;::const_iterator
+<a name="l00049"></a>00049                 iterator;
+<a name="l00050"></a>00050 
+<a name="l00065"></a>00065             <a class="code" href="classAftermath_1_1Terrain.html#a80c1e2e87407a9514b5b2b2951e98c5f" title="Constructs a new terrain with the given name, description, image, and resource probabilities.">Terrain</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp; description,
+<a name="l00066"></a>00066                 <span class="keywordtype">bool</span> isLand, <span class="keywordtype">bool</span> isSea, <span class="keyword">const</span> Image * image,
+<a name="l00067"></a>00067                 <span class="keyword">const</span> std::map &lt;const Resource *, double&gt; * probabilities);
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072             <a class="code" href="classAftermath_1_1Terrain.html#a2f7f0a2aee54886324ccf48a6f321de0" title="Deletes this terrain and free its image and probabilities map.">~Terrain</a>();
+<a name="l00073"></a>00073 
+<a name="l00080"></a>00080             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Terrain.html#a6b514d9050d78a79ed71c3026ba5a3ad" title="Retrieves whether or not this terrain is of a land type.">isLandTerrain</a>() <span class="keyword">const</span>;
+<a name="l00081"></a>00081 
+<a name="l00087"></a>00087             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Terrain.html#af2071eef3eb29514c1db3de898e86e35" title="Retrieves whether or not this terrain is of a sea type.">isSeaTerrain</a>() <span class="keyword">const</span>;
+<a name="l00088"></a>00088 
+<a name="l00095"></a>00095             <span class="keywordtype">double</span> <a class="code" href="classAftermath_1_1Terrain.html#ab3fabb7c5dd565a17ce965c880a10ab5" title="Retrieves the probability that a particular Resource type is generated on tiles of this terrain type...">getProbability</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Resource.html" title="A Resource is a type of good or raw material that can be harvested from Tiles or manufactured from ot...">Resource</a> * resource) <span class="keyword">const</span>;
+<a name="l00096"></a>00096 
+<a name="l00104"></a>00104             iterator <a class="code" href="classAftermath_1_1Terrain.html#aa2a7388728e6587168dd07c60ee5f884" title="Returns an iterator pointing to the first resource probability of this terrain type.">begin</a>() <span class="keyword">const</span>;
+<a name="l00105"></a>00105 
+<a name="l00113"></a>00113             iterator <a class="code" href="classAftermath_1_1Terrain.html#adc3df3cb5becaeac5e4f63844ddc55c7" title="Returns an iterator pointing past the last resource probability of this terrain type.">end</a>() <span class="keyword">const</span>;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115         <span class="keyword">private</span>:
+<a name="l00116"></a>00116             <span class="keywordtype">bool</span> mLand;
+<a name="l00117"></a>00117             <span class="keywordtype">bool</span> mSea;
+<a name="l00118"></a>00118             <span class="keyword">const</span> std::map&lt;const Resource *, double&gt; * mProbabilities;
+<a name="l00119"></a>00119     };
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 }
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 <span class="preprocessor">#endif // TERRAIN_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -127,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

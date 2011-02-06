@@ -77,27 +77,27 @@ Inheritance diagram for Aftermath::Labor:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#a2253eeb15710ef374ce6b1005b6247f5">Labor</a> (const std::string &amp;name, const std::string &amp;description, const sf::Image *image)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> with the given name, description, and image.  <a href="#a2253eeb15710ef374ce6b1005b6247f5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#a80a598827271dfda4e25f8d4a0ba8a98">giveTo</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the specified amount of labor to the given player.  <a href="#a80a598827271dfda4e25f8d4a0ba8a98"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#ab5e514dac6ae765dddbba1859aa8e4f7">canGiveTo</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given player can receive the given amount of labor.  <a href="#ab5e514dac6ae765dddbba1859aa8e4f7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#adb330a794e2dab5b7a7cacb5a64424ff">takeFrom</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes the given amount of labor from the specified player.  <a href="#adb330a794e2dab5b7a7cacb5a64424ff"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#a0496a5601ed19231a539b885145978e7">canTakeFrom</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given player has enough labor.  <a href="#a0496a5601ed19231a539b885145978e7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#a66a8d2b171a773ca203325cf5c8ed6b3">Labor</a> (const std::string &amp;name, const std::string &amp;description, const Image *image)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> with the given name, description, and image.  <a href="#a66a8d2b171a773ca203325cf5c8ed6b3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#a10206e4ddcfdbea58fc3aa8cce0085b2">giveTo</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocates the given amount of labor.  <a href="#a10206e4ddcfdbea58fc3aa8cce0085b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#a35b198a08819d5687064a1e6b33b6ab8">canGiveTo</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets if the given player has enough allocated labor to deallocate.  <a href="#a35b198a08819d5687064a1e6b33b6ab8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#abbda4885b02e81fcf1b1c99b2da03a73">takeFrom</a> (<a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates the given amount of labor.  <a href="#abbda4885b02e81fcf1b1c99b2da03a73"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAftermath_1_1Labor.html#a1354ceb93e9d1f845985d5f37f83e8b8">canTakeFrom</a> (const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;player, int amount=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given player has enough available labor to allocate.  <a href="#a1354ceb93e9d1f845985d5f37f83e8b8"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p><a class="el" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> points represent manpower for use in manufacturing. </p>
 <p>There should only be one <a class="el" href="classAftermath_1_1Labor.html" title="Labor points represent manpower for use in manufacturing.">Labor</a> type per mod pack. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2253eeb15710ef374ce6b1005b6247f5"></a><!-- doxytag: member="Aftermath::Labor::Labor" ref="a2253eeb15710ef374ce6b1005b6247f5" args="(const std::string &amp;name, const std::string &amp;description, const sf::Image *image)" -->
+<a class="anchor" id="a66a8d2b171a773ca203325cf5c8ed6b3"></a><!-- doxytag: member="Aftermath::Labor::Labor" ref="a66a8d2b171a773ca203325cf5c8ed6b3" args="(const std::string &amp;name, const std::string &amp;description, const Image *image)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Aftermath::Labor::Labor </td>
+          <td class="memname">Labor::Labor </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"> <em>name</em>, </td>
@@ -111,7 +111,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const sf::Image *&#160;</td>
+          <td class="paramtype">const Image *&#160;</td>
           <td class="paramname"> <em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -136,12 +136,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ab5e514dac6ae765dddbba1859aa8e4f7"></a><!-- doxytag: member="Aftermath::Labor::canGiveTo" ref="ab5e514dac6ae765dddbba1859aa8e4f7" args="(const Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a35b198a08819d5687064a1e6b33b6ab8"></a><!-- doxytag: member="Aftermath::Labor::canGiveTo" ref="a35b198a08819d5687064a1e6b33b6ab8" args="(const Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Labor::canGiveTo </td>
+          <td class="memname">bool Labor::canGiveTo </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -161,8 +161,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Checks if the given player can receive the given amount of labor. </p>
-<p>This checks against the player's max labor.</p>
+<p>Gets if the given player has enough allocated labor to deallocate. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to give to. </td></tr>
@@ -170,18 +169,18 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if amount &gt;= 0 and does not push player's labor above the max labor; false otherwise. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if amount &gt;= 0 and the player's allocated labor will not drop below 0; false otherwise. </dd></dl>
 
 <p>Implements <a class="el" href="classAftermath_1_1Transferable.html#a81f3cfd943672262dee330ed8a166eb8">Aftermath::Transferable</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0496a5601ed19231a539b885145978e7"></a><!-- doxytag: member="Aftermath::Labor::canTakeFrom" ref="a0496a5601ed19231a539b885145978e7" args="(const Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a1354ceb93e9d1f845985d5f37f83e8b8"></a><!-- doxytag: member="Aftermath::Labor::canTakeFrom" ref="a1354ceb93e9d1f845985d5f37f83e8b8" args="(const Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Aftermath::Labor::canTakeFrom </td>
+          <td class="memname">bool Labor::canTakeFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -201,7 +200,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Checks if the given player has enough labor. </p>
+<p>Checks if the given player has enough available labor to allocate. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to check. </td></tr>
@@ -215,12 +214,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a80a598827271dfda4e25f8d4a0ba8a98"></a><!-- doxytag: member="Aftermath::Labor::giveTo" ref="a80a598827271dfda4e25f8d4a0ba8a98" args="(Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="a10206e4ddcfdbea58fc3aa8cce0085b2"></a><!-- doxytag: member="Aftermath::Labor::giveTo" ref="a10206e4ddcfdbea58fc3aa8cce0085b2" args="(Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Labor::giveTo </td>
+          <td class="memname">void Labor::giveTo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -240,7 +239,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Gives the specified amount of labor to the given player. </p>
+<p>Deallocates the given amount of labor. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to give to. </td></tr>
@@ -253,12 +252,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adb330a794e2dab5b7a7cacb5a64424ff"></a><!-- doxytag: member="Aftermath::Labor::takeFrom" ref="adb330a794e2dab5b7a7cacb5a64424ff" args="(Player &amp;player, int amount=0) const " -->
+<a class="anchor" id="abbda4885b02e81fcf1b1c99b2da03a73"></a><!-- doxytag: member="Aftermath::Labor::takeFrom" ref="abbda4885b02e81fcf1b1c99b2da03a73" args="(Player &amp;player, int amount=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aftermath::Labor::takeFrom </td>
+          <td class="memname">void Labor::takeFrom </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classAftermath_1_1Player.html">Player</a> &amp;&#160;</td>
           <td class="paramname"> <em>player</em>, </td>
@@ -278,7 +277,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Takes the given amount of labor from the specified player. </p>
+<p>Allocates the given amount of labor. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>- The player to take from. </td></tr>
@@ -291,8 +290,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Labor_8hpp_source.html">Labor.hpp</a></li>
+<li>src/Labor.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -309,7 +309,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

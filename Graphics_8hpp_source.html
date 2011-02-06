@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Aftermath: src/TechnologyTree.hpp Source File</title>
+<title>Aftermath: src/Graphics.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -40,15 +40,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
   <div class="headertitle">
-<h1>src/TechnologyTree.hpp</h1>  </div>
+<h1>src/Graphics.hpp</h1>  </div>
 </div>
 <div class="contents">
-<a href="TechnologyTree_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//      TechnologyTree.hpp -- The technological advances made by a player.</span>
+<a href="Graphics_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//      Graphics.hpp -- An interface for graphical elements.</span>
 <a name="l00002"></a>00002 <span class="comment">//</span>
 <a name="l00003"></a>00003 <span class="comment">//      Copyright 2011 Kevin Harrison &lt;keharriso@gmail.com&gt;</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -67,36 +66,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00017"></a>00017 <span class="comment">//      You should have received a copy of the GNU General Public License</span>
 <a name="l00018"></a>00018 <span class="comment">//      along with Aftermath.  If not, see &lt;http://www.gnu.org/licenses/&gt;</span>
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#ifndef TECHNOLOGYTREE_HPP_INCLUDED</span>
-<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define TECHNOLOGYTREE_HPP_INCLUDED</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifndef GRAPHICS_HPP_INCLUDED</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define GRAPHICS_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Collection_8hpp.html" title="A generic collection.">Collection.hpp</a>&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="ProductionCenter_8hpp.html" title="A center of production.">ProductionCenter.hpp</a>&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Technology_8hpp.html" title="A technological advance.">Technology.hpp</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="comment">// TODO: Decide for certain what graphics library to use.</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;SFML/Graphics/Color.hpp&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;SFML/Graphics/Image.hpp&gt;</span>
 <a name="l00026"></a>00026 
 <a name="l00035"></a>00035 <span class="keyword">namespace </span>Aftermath {
 <a name="l00036"></a>00036 
-<a name="l00042"></a><a class="code" href="classAftermath_1_1TechnologyTree.html">00042</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection</a>&lt;const Technology *&gt; {
-<a name="l00043"></a>00043         <span class="keyword">public</span>:
-<a name="l00047"></a>00047             <a class="code" href="classAftermath_1_1TechnologyTree.html#a57df35e6490af2045598477f946efa15" title="Constructs a new TechnologyTree with no technologies.">TechnologyTree</a>();
-<a name="l00048"></a>00048 
-<a name="l00052"></a>00052             <a class="code" href="classAftermath_1_1TechnologyTree.html#a8ea4c12f579a4b63808e898f701f29df" title="Frees this TechnologyTree.">~TechnologyTree</a>();
-<a name="l00053"></a>00053 
-<a name="l00061"></a>00061             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TechnologyTree.html#a7a3205e3fa28451237671d257dd10417" title="Starts research of the given technology.">startResearch</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a> *
-<a name="l00062"></a>00062                 technology);
-<a name="l00063"></a>00063 
-<a name="l00071"></a>00071             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TechnologyTree.html#aa8a362b142f8ce0652d728117935c3cc" title="Cancels a research currently in the research queue.">cancelResearch</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; player, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Technology.html" title="A Technology is a technological advance researched by a Player.">Technology</a> *
-<a name="l00072"></a>00072                 technology);
-<a name="l00073"></a>00073 
-<a name="l00080"></a>00080             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TechnologyTree.html#a9f0c8bb79c9da094f362edeab4c96571" title="Finishes the research that has been started.">finishResearch</a>();
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082         <span class="keyword">private</span>:
-<a name="l00083"></a>00083             <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;const Technology *&gt;</a> mResearching;
-<a name="l00084"></a>00084     };
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 }
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="preprocessor">#endif // TECHNOLOGYTREE_HPP_INCLUDED</span>
+<a name="l00037"></a>00037     <span class="keyword">typedef</span> sf::Color Color;
+<a name="l00038"></a>00038     <span class="keyword">typedef</span> sf::Image Image;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="preprocessor">#endif // GRAPHICS_HPP_INCLUDED</span>
+<a name="l00043"></a>00043 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -113,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

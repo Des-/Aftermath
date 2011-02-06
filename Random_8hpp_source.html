@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Aftermath: src/TileGroupUnit.hpp Source File</title>
+<title>Aftermath: src/Random.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -44,10 +44,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 <div class="header">
   <div class="headertitle">
-<h1>src/TileGroupUnit.hpp</h1>  </div>
+<h1>src/Random.hpp</h1>  </div>
 </div>
 <div class="contents">
-<a href="TileGroupUnit_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//      TileGroupUnit.hpp -- A unit that resides in a TileGroup.</span>
+<a href="Random_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//      Random.hpp -- An interface for generating random numbers.</span>
 <a name="l00002"></a>00002 <span class="comment">//</span>
 <a name="l00003"></a>00003 <span class="comment">//      Copyright 2011 Kevin Harrison &lt;keharriso@gmail.com&gt;</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -66,44 +66,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00017"></a>00017 <span class="comment">//      You should have received a copy of the GNU General Public License</span>
 <a name="l00018"></a>00018 <span class="comment">//      along with Aftermath.  If not, see &lt;http://www.gnu.org/licenses/&gt;</span>
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#ifndef TILEGROUPUNIT_HPP_INCLUDED</span>
-<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define TILEGROUPUNIT_HPP_INCLUDED</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifndef RANDOM_HPP_INCLUDED</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define RANDOM_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Upgradable_8hpp.html" title="A type that can be upgraded.">Upgradable.hpp</a>&quot;</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Player;
-<a name="l00026"></a>00026                       <span class="keyword">class </span>UnitLevel;
-<a name="l00027"></a>00027                       <span class="keyword">class </span>UnitType; }
-<a name="l00028"></a>00028 
-<a name="l00037"></a>00037 <span class="keyword">namespace </span>Aftermath {
+<a name="l00031"></a>00031 <span class="keyword">namespace </span>Aftermath { <span class="keyword">namespace </span>Random {
+<a name="l00032"></a>00032 
+<a name="l00034"></a>00034     <span class="keywordtype">double</span> Double();
+<a name="l00035"></a>00035 
+<a name="l00037"></a>00037     <span class="keywordtype">double</span> Double(<span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max);
 <a name="l00038"></a>00038 
-<a name="l00043"></a><a class="code" href="classAftermath_1_1TileGroupUnit.html">00043</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1Upgradable.html" title="An Upgradable object can be upgraded by a Player for the proper amount of Resources and money...">Upgradable</a>&lt;UnitLevel&gt; {
-<a name="l00044"></a>00044         <span class="keyword">public</span>:
-<a name="l00052"></a>00052             <a class="code" href="classAftermath_1_1TileGroupUnit.html#a250855b200458465d7ae7e868fb3c25a" title="Constructs a new TileGroupUnit of the given UnitType and adds its merchant marine capacity to its own...">TileGroupUnit</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a> * type, <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; owner);
+<a name="l00040"></a>00040     <span class="keywordtype">float</span> Float();
+<a name="l00041"></a>00041 
+<a name="l00043"></a>00043     <span class="keywordtype">float</span> Float(<span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max);
+<a name="l00044"></a>00044 
+<a name="l00046"></a>00046     <span class="keywordtype">int</span> Int();
+<a name="l00047"></a>00047 
+<a name="l00049"></a>00049     <span class="keywordtype">int</span> Int(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max);
+<a name="l00050"></a>00050 
+<a name="l00052"></a>00052     <span class="keywordtype">long</span> Long();
 <a name="l00053"></a>00053 
-<a name="l00058"></a>00058             <a class="code" href="classAftermath_1_1TileGroupUnit.html#ad75cd51a99d53138401a63da9a7b3bc1" title="Frees this TileGroupUnit and removes its merchant marine capacity from its owner.">~TileGroupUnit</a>();
+<a name="l00055"></a>00055     <span class="keywordtype">long</span> Long(<span class="keywordtype">long</span> min, <span class="keywordtype">long</span> max);
+<a name="l00056"></a>00056 
+<a name="l00058"></a>00058     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> UInt();
 <a name="l00059"></a>00059 
-<a name="l00065"></a>00065             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a> &amp; <a class="code" href="classAftermath_1_1TileGroupUnit.html#a46331a4f2a87501eb95eebf4722dae9c" title="Gets the UnitType of this unit.">getType</a>() <span class="keyword">const</span>;
-<a name="l00066"></a>00066 
-<a name="l00073"></a>00073             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1TileGroupUnit.html#a95f87af33e1106e88ed318be724ce57e" title="Gets the amount of damage that this unit can sustain.">getToughness</a>() <span class="keyword">const</span>;
-<a name="l00074"></a>00074 
-<a name="l00080"></a>00080             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TileGroupUnit.html#a07fcc909f62964a113c79d51ccee9c6b" title="Sets the current toughness of this unit.">setToughness</a>(<span class="keywordtype">int</span> toughness);
-<a name="l00081"></a>00081 
-<a name="l00088"></a>00088             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TileGroupUnit.html#abcea01d3a7061acd4d2098a7ce1ef3d2" title="Adds the given amount of toughness to this unit.">addToughness</a>(<span class="keywordtype">int</span> toughness);
-<a name="l00089"></a>00089 
-<a name="l00093"></a>00093             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; <a class="code" href="classAftermath_1_1TileGroupUnit.html#ac9905802b61766b8c1fb1d08f4904ce8">getOwner</a>() <span class="keyword">const</span>;
-<a name="l00094"></a>00094 
-<a name="l00099"></a>00099             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1TileGroupUnit.html#a20897597129e7bbcfad2f165f9a145f6" title="Upgrades to the next level and updates the owner&amp;#39;s merchant marine capacity.">finishUpgrade</a>();
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101         <span class="keyword">private</span>:
-<a name="l00102"></a>00102             <span class="keywordtype">int</span> mToughness;
-<a name="l00103"></a>00103             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1UnitType.html" title="A UnitType is an immutable type of TileGroupUnit.">UnitType</a> * mType;
-<a name="l00104"></a>00104             <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> &amp; mOwner;
-<a name="l00105"></a>00105     };
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 }
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="preprocessor">#endif // TILEGROUPUNIT_HPP_INCLUDED</span>
+<a name="l00061"></a>00061     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> UInt(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> min, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max);
+<a name="l00062"></a>00062 
+<a name="l00064"></a>00064     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ULong();
+<a name="l00065"></a>00065 
+<a name="l00067"></a>00067     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ULong(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> min, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> max);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 } }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#endif // RANDOM_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->

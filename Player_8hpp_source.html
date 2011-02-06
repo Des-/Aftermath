@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -70,112 +69,129 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="preprocessor">#ifndef PLAYER_HPP_INCLUDED</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define PLAYER_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Collection_8hpp.html" title="A generic collection.">Collection.hpp</a>&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="Game_8hpp.html" title="An Aftermath game.">Game.hpp</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="GameSettings_8hpp.html" title="A game&amp;#39;s global settings.">GameSettings.hpp</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="Industry_8hpp.html" title="A player&amp;#39;s production capabilities.">Industry.hpp</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="Move_8hpp.html" title="An abstract move made by a player.">Move.hpp</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="Nation_8hpp.html" title="The nation that a player controls.">Nation.hpp</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="Resource_8hpp.html" title="A resource type.">Resource.hpp</a>&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="SelectiveCollection_8hpp.html" title="A collection that chooses whether or not to accept elements.">SelectiveCollection.hpp</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="TechnologyTree_8hpp.html" title="The technological advances made by a player.">TechnologyTree.hpp</a>&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="Tile_8hpp.html" title="A map tile.">Tile.hpp</a>&quot;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="TileGroup_8hpp.html" title="A group of Tiles.">TileGroup.hpp</a>&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="TransportNetwork_8hpp.html" title="A player&amp;#39;s network of resource transport.">TransportNetwork.hpp</a>&quot;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="Treaty_8hpp.html" title="The diplomatic relationship between two players.">Treaty.hpp</a>&quot;</span>
-<a name="l00039"></a>00039 
-<a name="l00048"></a>00048 <span class="keyword">namespace </span>Aftermath {
-<a name="l00049"></a>00049 
-<a name="l00058"></a><a class="code" href="classAftermath_1_1Player.html">00058</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1SelectiveCollection.html" title="A SelectiveCollection is a type of collection that decides whether or not to accept its elements...">SelectiveCollection</a>&lt;TileGroup *&gt; {
-<a name="l00059"></a>00059         <span class="keyword">public</span>:
-<a name="l00069"></a>00069             <a class="code" href="classAftermath_1_1Player.html#ac3fb46cd21124bfee4a9b3d0a61991e7" title="Constructs a new player with the given name and no nationality.">Player</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> <a class="code" href="classAftermath_1_1GameSettings.html" title="A GameSettings object holds all of the settings for a run of the game.">GameSettings</a> &amp; settings,
-<a name="l00070"></a>00070                 <span class="keywordtype">bool</span> initFromSettings = <span class="keyword">true</span>);
-<a name="l00071"></a>00071 
-<a name="l00075"></a>00075             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1Player.html#a2de4054ceb334b39fc83b70eea0d2233" title="Destructs a player object and the Nation that they control.">~Player</a>();
-<a name="l00076"></a>00076 
-<a name="l00083"></a>00083             <span class="keyword">const</span> std::string &amp; <a class="code" href="classAftermath_1_1Player.html#a573adea29cc34fe12e1884336c8b2b20" title="Gets the name of this player.">getName</a>() <span class="keyword">const</span>;
-<a name="l00084"></a>00084 
-<a name="l00090"></a>00090             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a2974c0249ea461a9bf4e648279ada786" title="Sets the name of this player.">setName</a>(<span class="keyword">const</span> std::string &amp; name);
-<a name="l00091"></a>00091 
-<a name="l00098"></a>00098             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> * <a class="code" href="classAftermath_1_1Player.html#a91f2254abffb8a633e7031e6a33d3eee" title="Gets the Nation that this player controls.">getNation</a>() <span class="keyword">const</span>;
-<a name="l00099"></a>00099 
-<a name="l00105"></a>00105             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#aa58091d8fbe901d11b4cc435266dbb58" title="Sets the Nation that this player controls.">setNation</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> * nation);
-<a name="l00106"></a>00106 
-<a name="l00115"></a>00115             <a class="code" href="classAftermath_1_1Move.html" title="Move is an entirely abstract interface for defining a type of move that can be applied to a Game...">Move</a> * <a class="code" href="classAftermath_1_1Player.html#a7807190bef26a37459489d6a5db41db2" title="Gets the next Move for this player to make.">getMove</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; game) = 0;
-<a name="l00116"></a>00116 
-<a name="l00127"></a>00127             <a class="code" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a846a1a1ea9302c262a430c73ab3b92e7" title="Gets the current diplomatic relationship that this player has with the given player.">getTreaty</a>(<a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * player);
-<a name="l00128"></a>00128 
-<a name="l00134"></a>00134             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a846a1a1ea9302c262a430c73ab3b92e7" title="Gets the current diplomatic relationship that this player has with the given player.">getTreaty</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * player) <span class="keyword">const</span>;
-<a name="l00135"></a>00135 
-<a name="l00143"></a>00143             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#a6eb8aeb5bf0649babd28926021230292" title="Returns whether or not this TileGroup can be claimed by this Player.">canAdd</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> *&amp; group) <span class="keyword">const</span>;
-<a name="l00144"></a>00144 
-<a name="l00150"></a>00150             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Resource *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a646f8232246539616e9cbfa9414cd42a" title="Provides access to this Player&amp;#39;s stockpile.">getStockpile</a>();
-<a name="l00151"></a>00151 
-<a name="l00157"></a>00157             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Resource *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a646f8232246539616e9cbfa9414cd42a" title="Provides access to this Player&amp;#39;s stockpile.">getStockpile</a>() <span class="keyword">const</span>;
-<a name="l00158"></a>00158 
-<a name="l00164"></a>00164             <a class="code" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a514be0690057eff564007ad8abcbe746" title="Provides access to this Player&amp;#39;s technology.">getTechnology</a>();
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166 
-<a name="l00172"></a>00172             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a514be0690057eff564007ad8abcbe746" title="Provides access to this Player&amp;#39;s technology.">getTechnology</a>() <span class="keyword">const</span>;
-<a name="l00173"></a>00173 
-<a name="l00179"></a>00179             <a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a11f016db9b306e719507cc83078985af" title="Provides access to this Player&amp;#39;s industry.">getIndustry</a>();
-<a name="l00180"></a>00180 
-<a name="l00186"></a>00186             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a11f016db9b306e719507cc83078985af" title="Provides access to this Player&amp;#39;s industry.">getIndustry</a>() <span class="keyword">const</span>;
-<a name="l00187"></a>00187 
-<a name="l00193"></a>00193             <a class="code" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&amp;#39;s capital by their network ...">TransportNetwork</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a9e8540348c6b0f258df9534b6d0c081c" title="Provides access to this Player&amp;#39;s transport network.">getTransport</a>();
-<a name="l00194"></a>00194 
-<a name="l00200"></a>00200             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&amp;#39;s capital by their network ...">TransportNetwork</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a9e8540348c6b0f258df9534b6d0c081c" title="Provides access to this Player&amp;#39;s transport network.">getTransport</a>() <span class="keyword">const</span>;
-<a name="l00201"></a>00201 
-<a name="l00207"></a>00207             <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;Tile *&gt;</a> <a class="code" href="classAftermath_1_1Player.html#a7d338fb6eccf5f5a3ac94a4648c25729" title="Gets the Tiles that have been surveyed by this Player.">getRevealed</a>();
-<a name="l00208"></a>00208 
-<a name="l00214"></a>00214             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection&lt;const Tile *&gt;</a> <a class="code" href="classAftermath_1_1Player.html#a7d338fb6eccf5f5a3ac94a4648c25729" title="Gets the Tiles that have been surveyed by this Player.">getRevealed</a>() <span class="keyword">const</span>;
-<a name="l00215"></a>00215 
-<a name="l00222"></a>00222             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a0fc6e54238d8a732bc963b0e75d12d27" title="Takes an amount of various types from this Player.">take</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; types);
-<a name="l00223"></a>00223 
-<a name="l00234"></a>00234             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#a67b51a12671d192ea2cb181765320ad2" title="Gets whether or not the given amount of types can be taken from this Player.">canTake</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; types) <span class="keyword">const</span>;
-<a name="l00235"></a>00235 
-<a name="l00242"></a>00242             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a7782c86e8235271bbee1eb5bc15e4b11" title="Gives an amount of various types to this Player.">give</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; types);
-<a name="l00243"></a>00243 
-<a name="l00254"></a>00254             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#a5ded8a232ad8cd363322632d46d771a9" title="Gets whether or not the given amount of types can be given to this Player.">canGive</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; types) <span class="keyword">const</span>;
-<a name="l00255"></a>00255 
-<a name="l00262"></a>00262             <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * <a class="code" href="classAftermath_1_1Player.html#a5bd15b900f53d66ff8f40784ac5863bd" title="Gets the capital TileGroup of this Player.">getCapital</a>();
-<a name="l00263"></a>00263 
-<a name="l00269"></a>00269             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * <a class="code" href="classAftermath_1_1Player.html#a5bd15b900f53d66ff8f40784ac5863bd" title="Gets the capital TileGroup of this Player.">getCapital</a>() <span class="keyword">const</span>;
-<a name="l00270"></a>00270 
-<a name="l00278"></a>00278             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#aa0363b628bae0b11f0a71be4094eeab8" title="Sets the capital TileGroup of this Player.">setCapital</a>(<a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * capital);
-<a name="l00279"></a>00279 
-<a name="l00283"></a>00283             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Player.html#a2422e03039112b20a22297731fe4d833">getMoney</a>() <span class="keyword">const</span>;
-<a name="l00284"></a>00284 
-<a name="l00290"></a>00290             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#ab0ac07458715cae583264ab878c14f03" title="Gives an amount of money to this Player.">giveMoney</a>(<span class="keywordtype">int</span> amount);
-<a name="l00291"></a>00291 
-<a name="l00297"></a>00297             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a0021489943de87e6201d4ac32cc1dd29" title="Takes an amount of money from this Player.">takeMoney</a>(<span class="keywordtype">int</span> amount);
-<a name="l00298"></a>00298 
-<a name="l00302"></a>00302             <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a96388f76e413125e474bf8fad0d3e958">getGame</a>();
-<a name="l00303"></a>00303 
-<a name="l00307"></a>00307             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a96388f76e413125e474bf8fad0d3e958">getGame</a>() <span class="keyword">const</span>;
-<a name="l00308"></a>00308 
-<a name="l00315"></a>00315             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#ab0ba56ae5409dafca7d6514c45376aa4" title="Sets the game that this player belongs to.">setGame</a>(<a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; game);
-<a name="l00316"></a>00316 
-<a name="l00317"></a>00317         <span class="keyword">private</span>:
-<a name="l00318"></a>00318             std::string mName;
-<a name="l00319"></a>00319             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> * mNation;
-<a name="l00320"></a>00320             std::map&lt;Player *, Treaty&gt; mTreaties;
-<a name="l00321"></a>00321             <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; mGame;
-<a name="l00322"></a>00322             <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;Tile *&gt;</a> mRevealed;
-<a name="l00323"></a>00323             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Resource *&gt;</a> mStockpile;
-<a name="l00324"></a>00324             <a class="code" href="classAftermath_1_1TechnologyTree.html" title="A TechnologyTree keeps track of what technologies a player has researched and what technologies a pla...">TechnologyTree</a> mTechnology;
-<a name="l00325"></a>00325             <a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> mIndustry;
-<a name="l00326"></a>00326             <a class="code" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&amp;#39;s capital by their network ...">TransportNetwork</a> mTransport;
-<a name="l00327"></a>00327             <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * mCapital;
-<a name="l00328"></a>00328             <span class="keywordtype">int</span> mMoney;
-<a name="l00329"></a>00329     };
-<a name="l00330"></a>00330 
-<a name="l00331"></a>00331 }
-<a name="l00332"></a>00332 
-<a name="l00333"></a>00333 <span class="preprocessor">#endif // PLAYER_HPP_INCLUDED</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="Collection_8hpp.html" title="A generic collection.">Collection.hpp</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="SelectiveCollection_8hpp.html" title="A collection that chooses whether or not to accept elements.">SelectiveCollection.hpp</a>&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Game;
+<a name="l00030"></a>00030                       <span class="keyword">class </span>GameSettings;
+<a name="l00031"></a>00031                       <span class="keyword">class </span>Industry;
+<a name="l00032"></a>00032                       <span class="keyword">class </span>Move;
+<a name="l00033"></a>00033                       <span class="keyword">class </span>Nation;
+<a name="l00034"></a>00034                       <span class="keyword">class </span>Resource;
+<a name="l00035"></a>00035                       <span class="keyword">class </span>Technology;
+<a name="l00036"></a>00036                       <span class="keyword">class </span>Tile;
+<a name="l00037"></a>00037                       <span class="keyword">class </span>TileGroup;
+<a name="l00038"></a>00038                       <span class="keyword">class </span>TileUnit;
+<a name="l00039"></a>00039                       <span class="keyword">class </span>Transferable;
+<a name="l00040"></a>00040                       <span class="keyword">class </span>TransportNetwork;
+<a name="l00041"></a>00041                       <span class="keyword">class </span>Treaty; }
+<a name="l00042"></a>00042 
+<a name="l00051"></a>00051 <span class="keyword">namespace </span>Aftermath {
+<a name="l00052"></a>00052 
+<a name="l00062"></a><a class="code" href="classAftermath_1_1Player.html">00062</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1SelectiveCollection.html" title="A SelectiveCollection is a type of collection that decides whether or not to accept its elements...">SelectiveCollection</a>&lt;TileGroup *&gt; {
+<a name="l00063"></a>00063         <span class="keyword">public</span>:
+<a name="l00073"></a>00073             <a class="code" href="classAftermath_1_1Player.html#a1789697ffe8acf91f31e5a16c41351f8" title="Constructs a new player with the given name and no nationality.">Player</a>(<span class="keyword">const</span> std::string &amp; name, <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; game,
+<a name="l00074"></a>00074                 <span class="keywordtype">bool</span> initFromSettings = <span class="keyword">true</span>);
+<a name="l00075"></a>00075 
+<a name="l00079"></a>00079             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1Player.html#a749d2c00e1fe0f5c2746f7505a58c062" title="Virtual destructor, frees tech, industry, and transport.">~Player</a>();
+<a name="l00080"></a>00080 
+<a name="l00087"></a>00087             <span class="keyword">const</span> std::string &amp; <a class="code" href="classAftermath_1_1Player.html#a6085fffc71ce461f8f580c803079f975" title="Gets the name of this player.">getName</a>() <span class="keyword">const</span>;
+<a name="l00088"></a>00088 
+<a name="l00094"></a>00094             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a77cfdb8708c16a0726d5bdd9e7b356d1" title="Sets the name of this player.">setName</a>(<span class="keyword">const</span> std::string &amp; name);
+<a name="l00095"></a>00095 
+<a name="l00102"></a>00102             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> * <a class="code" href="classAftermath_1_1Player.html#a1d597835af7a45667c6222a24f858c0c" title="Gets the Nation that this player controls.">getNation</a>() <span class="keyword">const</span>;
+<a name="l00103"></a>00103 
+<a name="l00109"></a>00109             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a13c1a5c1d7e9b527ce875142beb0f567" title="Sets the Nation that this player controls.">setNation</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> * nation);
+<a name="l00110"></a>00110 
+<a name="l00119"></a>00119             <span class="keyword">virtual</span> <a class="code" href="classAftermath_1_1Move.html" title="Move is an entirely abstract interface for defining a type of move that can be applied to a Game...">Move</a> * <a class="code" href="classAftermath_1_1Player.html#a4d45b7ef9d012dd39b39048c2cfaa78f" title="Gets the next Move for this player to make.">getMove</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; game) = 0;
+<a name="l00120"></a>00120 
+<a name="l00131"></a>00131             <a class="code" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a02030c447e4a9befccf98b7a8ce9e774" title="Gets the current diplomatic relationship that this player has with the given player.">getTreaty</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * player);
+<a name="l00132"></a>00132 
+<a name="l00138"></a>00138             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Treaty.html" title="The diplomatic relationship between two players.">Treaty</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a02030c447e4a9befccf98b7a8ce9e774" title="Gets the current diplomatic relationship that this player has with the given player.">getTreaty</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Player.html" title="A Player object represents a player of the game.">Player</a> * player) <span class="keyword">const</span>;
+<a name="l00139"></a>00139 
+<a name="l00147"></a>00147             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#a7c11b9ed2b1d2d31350c983508dcb852" title="Returns whether or not this TileGroup can be claimed by this Player.">canAdd</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> *&amp; group) <span class="keyword">const</span>;
+<a name="l00148"></a>00148 
+<a name="l00154"></a>00154             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Resource *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a43cec14114c126968ca17f30b3484cc2" title="Provides access to this Player&amp;#39;s stockpile.">getStockpile</a>();
+<a name="l00155"></a>00155 
+<a name="l00161"></a>00161             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Resource *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a43cec14114c126968ca17f30b3484cc2" title="Provides access to this Player&amp;#39;s stockpile.">getStockpile</a>() <span class="keyword">const</span>;
+<a name="l00162"></a>00162 
+<a name="l00168"></a>00168             <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;const Technology *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#ac5702a8ae96887d029a43b234724190d" title="Provides access to this Player&amp;#39;s technology.">getTechnology</a>();
+<a name="l00169"></a>00169 
+<a name="l00175"></a>00175             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;const Technology *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#ac5702a8ae96887d029a43b234724190d" title="Provides access to this Player&amp;#39;s technology.">getTechnology</a>() <span class="keyword">const</span>;
+<a name="l00176"></a>00176 
+<a name="l00182"></a>00182             <a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a018c18a886d36b1641b6713aa8218d04" title="Provides access to this Player&amp;#39;s industry.">getIndustry</a>();
+<a name="l00183"></a>00183 
+<a name="l00189"></a>00189             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a018c18a886d36b1641b6713aa8218d04" title="Provides access to this Player&amp;#39;s industry.">getIndustry</a>() <span class="keyword">const</span>;
+<a name="l00190"></a>00190 
+<a name="l00196"></a>00196             <a class="code" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&amp;#39;s capital by their network ...">TransportNetwork</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a26aee5260f584528c423b2124336f7e5" title="Provides access to this Player&amp;#39;s transport network.">getTransport</a>();
+<a name="l00197"></a>00197 
+<a name="l00203"></a>00203             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&amp;#39;s capital by their network ...">TransportNetwork</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a26aee5260f584528c423b2124336f7e5" title="Provides access to this Player&amp;#39;s transport network.">getTransport</a>() <span class="keyword">const</span>;
+<a name="l00204"></a>00204 
+<a name="l00210"></a>00210             <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;Tile *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#ac0a7a65cc660ffb2ca2d8a6a701086e7" title="Gets the Tiles that have been surveyed by this Player.">getRevealed</a>();
+<a name="l00211"></a>00211 
+<a name="l00217"></a>00217             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Collection.html" title="Collection is a generic collection class for groups of objects.">Collection&lt;const Tile *&gt;</a> &amp; <a class="code" href="classAftermath_1_1Player.html#ac0a7a65cc660ffb2ca2d8a6a701086e7" title="Gets the Tiles that have been surveyed by this Player.">getRevealed</a>() <span class="keyword">const</span>;
+<a name="l00218"></a>00218 
+<a name="l00225"></a>00225             <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * <a class="code" href="classAftermath_1_1Player.html#a737b2af15aecc0a13767fed8f3ac4749" title="Gets the capital TileGroup of this Player.">getCapital</a>();
+<a name="l00226"></a>00226 
+<a name="l00232"></a>00232             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * <a class="code" href="classAftermath_1_1Player.html#a737b2af15aecc0a13767fed8f3ac4749" title="Gets the capital TileGroup of this Player.">getCapital</a>() <span class="keyword">const</span>;
+<a name="l00233"></a>00233 
+<a name="l00241"></a>00241             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a80bd59a894d49a9fd3d0a0c2f767834c" title="Sets the capital TileGroup of this Player.">setCapital</a>(<a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * capital);
+<a name="l00242"></a>00242 
+<a name="l00249"></a>00249             <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * <a class="code" href="classAftermath_1_1Player.html#a112f9f769543d697cc85914a2c35ed2f" title="Gets the harbor TileGroup of this Player.">getHarbor</a>();
+<a name="l00250"></a>00250 
+<a name="l00256"></a>00256             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * <a class="code" href="classAftermath_1_1Player.html#a112f9f769543d697cc85914a2c35ed2f" title="Gets the harbor TileGroup of this Player.">getHarbor</a>() <span class="keyword">const</span>;
+<a name="l00257"></a>00257 
+<a name="l00265"></a>00265             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a459720d5483641d324191cdc74d803f9" title="Sets the harbor TileGroup of this Player.">setHarbor</a>(<a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * harbor);
+<a name="l00266"></a>00266 
+<a name="l00270"></a>00270             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1Player.html#aaac448d1bbc041adffce6359d7fcb634">getMoney</a>() <span class="keyword">const</span>;
+<a name="l00271"></a>00271 
+<a name="l00277"></a>00277             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a550c1d36a61d3f413d2febfa84119910" title="Gives an amount of money to this Player.">giveMoney</a>(<span class="keywordtype">int</span> amount);
+<a name="l00278"></a>00278 
+<a name="l00284"></a>00284             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a7275d17eb1bd1ac0d39cfbde9d1e3b70" title="Takes an amount of money from this Player.">takeMoney</a>(<span class="keywordtype">int</span> amount);
+<a name="l00285"></a>00285 
+<a name="l00289"></a>00289             <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a579afe0b56535f637d7f000b59b90435">getGame</a>();
+<a name="l00290"></a>00290 
+<a name="l00294"></a>00294             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; <a class="code" href="classAftermath_1_1Player.html#a579afe0b56535f637d7f000b59b90435">getGame</a>() <span class="keyword">const</span>;
+<a name="l00295"></a>00295 
+<a name="l00304"></a>00304             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#a37d6adf9c8a8466691e542d46ce086ab" title="Places the given TileUnit on a Tile controlled by this player.">placeTileUnit</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileUnit.html" title="A TileUnit is an instance of a SpecialistType that is owned by a Player.">TileUnit</a> * unit);
+<a name="l00305"></a>00305 
+<a name="l00312"></a>00312             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a989893460b80ab543b49aa9e31172990" title="Takes an amount of the given transferable from this player.">take</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> * type, <span class="keywordtype">int</span> amount);
+<a name="l00313"></a>00313 
+<a name="l00320"></a>00320             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a989893460b80ab543b49aa9e31172990" title="Takes an amount of the given transferable from this player.">take</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; types);
+<a name="l00321"></a>00321 
+<a name="l00332"></a>00332             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#ad067dcd11696c76ba7e80bae253c9f6c" title="Gets if an amount of the specified type can be taken from this player.">canTake</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> * type, <span class="keywordtype">int</span> amount) <span class="keyword">const</span>;
+<a name="l00333"></a>00333 
+<a name="l00344"></a>00344             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#ad067dcd11696c76ba7e80bae253c9f6c" title="Gets if an amount of the specified type can be taken from this player.">canTake</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; types) <span class="keyword">const</span>;
+<a name="l00345"></a>00345 
+<a name="l00352"></a>00352             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a3cff9bafd8bf6e986ea589188851da5c" title="Gives this player an amount of the given transferable.">give</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> * type, <span class="keywordtype">int</span> amount);
+<a name="l00353"></a>00353 
+<a name="l00360"></a>00360             <span class="keywordtype">void</span> <a class="code" href="classAftermath_1_1Player.html#a3cff9bafd8bf6e986ea589188851da5c" title="Gives this player an amount of the given transferable.">give</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; types);
+<a name="l00361"></a>00361 
+<a name="l00372"></a>00372             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#a59c3ea753d7a04e96e1761d1c0dee7e0" title="Gets if an amount of the specified type can be given to this player.">canGive</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Transferable.html" title="Transferable is an interface for something that can be given to or taken from a player or is conditio...">Transferable</a> * type, <span class="keywordtype">int</span> amount) <span class="keyword">const</span>;
+<a name="l00373"></a>00373 
+<a name="l00384"></a>00384             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Player.html#a59c3ea753d7a04e96e1761d1c0dee7e0" title="Gets if an amount of the specified type can be given to this player.">canGive</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; types) <span class="keyword">const</span>;
+<a name="l00385"></a>00385 
+<a name="l00386"></a>00386         <span class="keyword">private</span>:
+<a name="l00387"></a>00387             std::string mName;
+<a name="l00388"></a>00388             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Nation.html" title="Nation objects are immutable and are reused from game to game.">Nation</a> * mNation;
+<a name="l00389"></a>00389             std::map&lt;const Player *, Treaty&gt; mTreaties;
+<a name="l00390"></a>00390             <a class="code" href="classAftermath_1_1Game.html" title="A class to represent an ongoing game&amp;#39;s state.">Game</a> &amp; mGame;
+<a name="l00391"></a>00391             <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;Tile *&gt;</a> mRevealed;
+<a name="l00392"></a>00392             <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Resource *&gt;</a> mStockpile;
+<a name="l00393"></a>00393             <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * mCapital;
+<a name="l00394"></a>00394             <a class="code" href="classAftermath_1_1TileGroup.html" title="TileGroups are a named collections of Tiles.">TileGroup</a> * mHarbor;
+<a name="l00395"></a>00395             <span class="keywordtype">int</span> mMoney;
+<a name="l00396"></a>00396             <a class="code" href="classAftermath_1_1Collection.html">Collection&lt;const Technology *&gt;</a> mTechnology;
+<a name="l00397"></a>00397             <a class="code" href="classAftermath_1_1Industry.html" title="An Industry represents the production capabilities of a player.">Industry</a> * mIndustry;
+<a name="l00398"></a>00398             <a class="code" href="classAftermath_1_1TransportNetwork.html" title="A TransportNetwork handles all of the resources connected to a player&amp;#39;s capital by their network ...">TransportNetwork</a> * mTransport;
+<a name="l00399"></a>00399     };
+<a name="l00400"></a>00400 
+<a name="l00401"></a>00401 }
+<a name="l00402"></a>00402 
+<a name="l00403"></a>00403 <span class="preprocessor">#endif // PLAYER_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -192,7 +208,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

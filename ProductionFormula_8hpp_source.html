@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -73,32 +72,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00023"></a>00023 <span class="preprocessor">#include &lt;map&gt;</span>
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="Count_8hpp.html" title="A generic count of elements.">Count.hpp</a>&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="Resource_8hpp.html" title="A resource type.">Resource.hpp</a>&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="WorkerType_8hpp.html" title="A type of laborer.">WorkerType.hpp</a>&quot;</span>
-<a name="l00028"></a>00028 
-<a name="l00037"></a>00037 <span class="keyword">namespace </span>Aftermath {
-<a name="l00038"></a>00038 
-<a name="l00043"></a><a class="code" href="classAftermath_1_1ProductionFormula.html">00043</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (N...">ProductionFormula</a> {
-<a name="l00044"></a>00044         <span class="keyword">public</span>:
-<a name="l00052"></a>00052             <a class="code" href="classAftermath_1_1ProductionFormula.html#aa606b7856e7eb88d323a22da3ac6f001" title="Constructs a new ProductionFormula with the specified costs and outputs.">ProductionFormula</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> * input,
-<a name="l00053"></a>00053                 <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html" title="A Count is just a mapping from elements to integers.">Count&lt;const NamedType&gt;</a> * output);
-<a name="l00054"></a>00054 
-<a name="l00058"></a>00058             <a class="code" href="classAftermath_1_1ProductionFormula.html#a4e7dcaecf798cb75f66c9b0bb9b30ec8" title="Frees the costs and outputs of this ProductionFormula.">~ProductionFormula</a>();
-<a name="l00059"></a>00059 
-<a name="l00063"></a>00063             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; <a class="code" href="classAftermath_1_1ProductionFormula.html#ae0cbe16d5376dd279662408626cf34db">getInput</a>() <span class="keyword">const</span>;
-<a name="l00064"></a>00064 
-<a name="l00068"></a>00068             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> &amp; <a class="code" href="classAftermath_1_1ProductionFormula.html#a9ee109916e1c494828d02a5aeba007c4">getProductOutput</a>() <span class="keyword">const</span>;
-<a name="l00069"></a>00069 
-<a name="l00073"></a>00073             <span class="keywordtype">int</span> <a class="code" href="classAftermath_1_1ProductionFormula.html#a2ed6234ac817322b0031647ad8aa2fd6">countProducts</a>() <span class="keyword">const</span>;
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075         <span class="keyword">private</span>:
-<a name="l00076"></a>00076             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> * mInput;
-<a name="l00077"></a>00077             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const NamedType *&gt;</a> * mOutput;
-<a name="l00078"></a>00078     };
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 }
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 <span class="preprocessor">#endif // PRODUCTIONFORMULA_HPP_INCLUDED</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>Resource;
+<a name="l00028"></a>00028                       <span class="keyword">class </span>Transferable; }
+<a name="l00029"></a>00029 
+<a name="l00038"></a>00038 <span class="keyword">namespace </span>Aftermath {
+<a name="l00039"></a>00039 
+<a name="l00044"></a><a class="code" href="classAftermath_1_1ProductionFormula.html">00044</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1ProductionFormula.html" title="ProductionFormulas hold information about the requirements to produce a specified list of products (T...">ProductionFormula</a> {
+<a name="l00045"></a>00045         <span class="keyword">public</span>:
+<a name="l00053"></a>00053             <a class="code" href="classAftermath_1_1ProductionFormula.html#a7a3e211ded64e57047153a24226bafd8" title="Constructs a new ProductionFormula with the specified costs and outputs.">ProductionFormula</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> * input,
+<a name="l00054"></a>00054                 <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> * output);
+<a name="l00055"></a>00055 
+<a name="l00059"></a>00059             <a class="code" href="classAftermath_1_1ProductionFormula.html#a1430df669a3e0607a26da5dcca62bd94" title="Frees the costs and outputs of this ProductionFormula.">~ProductionFormula</a>();
+<a name="l00060"></a>00060 
+<a name="l00064"></a>00064             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; <a class="code" href="classAftermath_1_1ProductionFormula.html#a8b8a3cdadfc07382aa58c5804b6ebbf6">getInput</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00069"></a>00069             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> &amp; <a class="code" href="classAftermath_1_1ProductionFormula.html#a245a2e71efdd89881fdc02406e77c160">getOutput</a>() <span class="keyword">const</span>;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071         <span class="keyword">private</span>:
+<a name="l00072"></a>00072             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> * mInput;
+<a name="l00073"></a>00073             <span class="keyword">const</span> <a class="code" href="classAftermath_1_1Count.html">Count&lt;const Transferable *&gt;</a> * mOutput;
+<a name="l00074"></a>00074     };
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 }
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 <span class="preprocessor">#endif // PRODUCTIONFORMULA_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -115,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

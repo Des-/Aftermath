@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -71,20 +70,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define NAVY_HPP_INCLUDED</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="SelectiveCollection_8hpp.html" title="A collection that chooses whether or not to accept elements.">SelectiveCollection.hpp</a>&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="TileGroupUnit_8hpp.html" title="A unit that resides in a TileGroup.">TileGroupUnit.hpp</a>&quot;</span>
-<a name="l00025"></a>00025 
-<a name="l00034"></a>00034 <span class="keyword">namespace </span>Aftermath {
-<a name="l00035"></a>00035 
-<a name="l00039"></a><a class="code" href="classAftermath_1_1Navy.html">00039</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Navy.html" title="A Navy is a number of TileGroupUnits that travel on water.">Navy</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1SelectiveCollection.html" title="A SelectiveCollection is a type of collection that decides whether or not to accept its elements...">SelectiveCollection</a>&lt;TileGroupUnit *&gt; {
-<a name="l00040"></a>00040         <span class="keyword">public</span>:
-<a name="l00044"></a>00044             <a class="code" href="classAftermath_1_1Navy.html#a22ba1b3553a86a0f9ab78805896f77af" title="Destructor for Navy.">~Navy</a>();
-<a name="l00045"></a>00045 
-<a name="l00052"></a>00052             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Navy.html#a286a7f83ab9c8e8cbaeef0dcb89b1c67" title="Gets whether this Navy can support adding the given unit.">canAdd</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> *&amp; unit) <span class="keyword">const</span>;
-<a name="l00053"></a>00053     };
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 }
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="preprocessor">#endif // NAVY_HPP_INCLUDED</span>
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="keyword">namespace </span>Aftermath { <span class="keyword">class </span>TileGroupUnit; }
+<a name="l00026"></a>00026 
+<a name="l00035"></a>00035 <span class="keyword">namespace </span>Aftermath {
+<a name="l00036"></a>00036 
+<a name="l00040"></a><a class="code" href="classAftermath_1_1Navy.html">00040</a>     <span class="keyword">class </span><a class="code" href="classAftermath_1_1Navy.html" title="A Navy is a number of TileGroupUnits that travel on water.">Navy</a> : <span class="keyword">public</span> <a class="code" href="classAftermath_1_1SelectiveCollection.html" title="A SelectiveCollection is a type of collection that decides whether or not to accept its elements...">SelectiveCollection</a>&lt;TileGroupUnit *&gt; {
+<a name="l00041"></a>00041         <span class="keyword">public</span>:
+<a name="l00045"></a>00045             <a class="code" href="classAftermath_1_1Navy.html#a8a919794e3213134ab0b855c3e9c7faf" title="Destructor for Navy.">~Navy</a>();
+<a name="l00046"></a>00046 
+<a name="l00053"></a>00053             <span class="keywordtype">bool</span> <a class="code" href="classAftermath_1_1Navy.html#a50ef583a4963b868438ffe1c76668d2a" title="Gets whether this Navy can support adding the given unit.">canAdd</a>(<span class="keyword">const</span> <a class="code" href="classAftermath_1_1TileGroupUnit.html" title="A TileGroupUnit is a unit that travels across TileGroups.">TileGroupUnit</a> *&amp; unit) <span class="keyword">const</span>;
+<a name="l00054"></a>00054     };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 }
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 <span class="preprocessor">#endif // NAVY_HPP_INCLUDED</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 00:14:32 for Aftermath by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 6 2011 17:55:41 for Aftermath by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>
