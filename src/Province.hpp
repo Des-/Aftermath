@@ -20,13 +20,12 @@
 #ifndef PROVINCE_HPP_INCLUDED
 #define PROVINCE_HPP_INCLUDED
 
-namespace Aftermath { class Province; }
-
 #include <string>
 
-#include "Player.hpp"
-#include "Tile.hpp"
 #include "TileGroup.hpp"
+
+namespace Aftermath { class Player;
+                      class Tile; }
 
 /**
  * @file Province.hpp
@@ -51,24 +50,18 @@ namespace Aftermath {
             Province(const std::string & name);
 
             /**
-             * Frees this Province and all units on it. This does
-             * not free any tiles that were once a part of this Province.
-             */
-            ~Province();
-
-            /**
              * Returns whether or not this TileGroup is a land-based group.
              *
              * @return This function always returns true for a Province.
              */
-            bool isLand();
+            bool isLand() const;
 
             /**
              * Returns whether or not this TileGroup is a sea-based group.
              *
              * @return This function always returns false for a Province.
              */
-            bool isSea();
+            bool isSea() const;
 
             /**
              * Gets the owning Player of this Province.

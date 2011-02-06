@@ -20,14 +20,13 @@
 #ifndef PRODUCTIONCENTER_HPP_INCLUDED
 #define PRODUCTIONCENTER_HPP_INCLUDED
 
-namespace Aftermath { class ProductionCenter; }
-
 #include "Count.hpp"
-#include "Player.hpp"
-#include "ProductionCenterType.hpp"
-#include "ProductionFormula.hpp"
-#include "ProductionLevel.hpp"
 #include "Upgradable.hpp"
+
+namespace Aftermath { class Player;
+                      class ProductionCenterType;
+                      class ProductionFormula;
+                      class ProductionLevel; }
 
 /**
  * @file ProductionCenter.hpp
@@ -69,7 +68,8 @@ namespace Aftermath {
 
             /**
              * Returns whether or not this production center can produce the
-             * given formula and the player can pay for it.
+             * given formula and the player can pay for it. This takes into
+             * account costs and production capacity.
              *
              * @param player - The player to start production.
              * @param formula - The formula to produce.

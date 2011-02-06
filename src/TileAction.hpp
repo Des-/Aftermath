@@ -20,16 +20,14 @@
 #ifndef TILEACTION_HPP_INCLUDED
 #define TILEACTION_HPP_INCLUDED
 
-namespace Aftermath { class TileAction; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
-#include "Game.hpp"
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Tile.hpp"
+
+namespace Aftermath { class Game;
+                      class Tile;
+                      class TileUnit; }
 
 /**
  * @file TileAction.hpp
@@ -56,7 +54,7 @@ namespace Aftermath {
              * @param image - The image of the tile action.
              */
             TileAction(const std::string & name, const std::string &
-                description, const sf::Image * image);
+                description, const Image * image);
 
             /**
              * This checks to see if this action can be performed on the given

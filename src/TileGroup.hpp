@@ -20,14 +20,13 @@
 #ifndef TILEGROUP_HPP_INCLUDED
 #define TILEGROUP_HPP_INCLUDED
 
-namespace Aftermath { class TileGroup; }
-
 #include <string>
 
-#include "Player.hpp"
 #include "SelectiveCollection.hpp"
-#include "Tile.hpp"
-#include "TileGroupUnit.hpp"
+
+namespace Aftermath { class Player;
+                      class Tile;
+                      class TileGroupUnit; }
 
 /**
  * @file TileGroup.hpp
@@ -99,14 +98,14 @@ namespace Aftermath {
              *
              * @return true if this group is a land group, false otherwise.
              */
-            virtual bool isLand() = 0;
+            virtual bool isLand() const = 0;
 
             /**
              * Returns whether or not this TileGroup is a sea-based group.
              *
              * @return true if this group is a sea group, false otherwise.
              */
-            virtual bool isSea() = 0;
+            virtual bool isSea() const = 0;
 
             /**
              * Gets the owning Player of this TileGroup.

@@ -20,16 +20,13 @@
 #ifndef DATE_HPP_INCLUDED
 #define DATE_HPP_INCLUDED
 
-namespace Aftermath { class Date; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player; }
 
 /**
  * @file Date.hpp
@@ -56,7 +53,7 @@ namespace Aftermath {
              * @param image - The image of the new date type.
              */
             Date(const std::string & name, const std::string & description,
-                const sf::Image * image);
+                const Image * image);
 
             /**
              * Giving a date to a player is undefined and thus this function
@@ -68,13 +65,12 @@ namespace Aftermath {
             void giveTo(Player & player, int amount = 0) const;
 
             /**
-             * Giving a date to a player is undefined and thus this function
-             * returns false.
+             * Giving a date to a player does nothing.
              *
              * @param player - The player to give to.
              * @param amount - The amount to give.
              *
-             * @return false.
+             * @return true.
              */
             bool canGiveTo(const Player & player, int amount = 0) const;
 

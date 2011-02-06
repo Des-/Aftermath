@@ -20,8 +20,6 @@
 #ifndef ARRAY2D_HPP_INCLUDED
 #define ARRAY2D_HPP_INCLUDED
 
-namespace Aftermath { template <typename T> class Array2D; }
-
 #include <cstdlib>
 #include <utility>
 
@@ -105,8 +103,8 @@ namespace Aftermath {
 
     template <typename T>
     inline Array2D<T>::Array2D(unsigned rows, unsigned columns) :
-        mRows(rows), mColumns(columns),
-        mArray((T *) malloc(sizeof(T) * rows * columns)) {}
+        mArray((T *) malloc(sizeof(T) * rows * columns)),
+        mRows(rows), mColumns(columns) {}
 
     template <typename T>
     inline Array2D<T>::~Array2D() {

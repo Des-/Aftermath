@@ -20,10 +20,14 @@
 #ifndef PRODUCTIONLEVEL_HPP_INCLUDED
 #define PRODUCTIONLEVEL_HPP_INCLUDED
 
-namespace Aftermath { class ProductionLevel; }
+#include <string>
 
 #include "Count.hpp"
+#include "Graphics.hpp"
+#include "Level.hpp"
 #include "NamedType.hpp"
+
+namespace Aftermath { class Transferable; }
 
 /**
  * @file ProductionLevel.hpp
@@ -40,17 +44,21 @@ namespace Aftermath {
      * the properties that a Level must have, a ProductionLevel has a max
      * output.
      */
-    class ProductionLevel : public Level {
+    class ProductionLevel : public NamedType, public Level {
         public:
             /**
              * Constructs a new ProductionLevel with the given monetary,
              * resource, and research cost.
              *
+             * @param name - The name of this level.
+             * @param description - The description of this level.
+             * @param image - The image of this level.
              * @param cost - The cost of upgrading to this level.
              * @param maxOutput - The maximum output for any single product.
              */
-            ProductionLevel(const Count<const NamedType *> * cost,
-                int maxOutput);
+            ProductionLevel(const std::string & name, const std::string &
+                description, const Image * image, const Count<const
+                Transferable *> * cost, int maxOutput);
 
             /**
              * The production of any single product cannot surpass the

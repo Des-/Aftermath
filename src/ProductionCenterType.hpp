@@ -20,20 +20,17 @@
 #ifndef PRODUCTIONCENTERTYPE_HPP_INCLUDED
 #define PRODUCTIONCENTERTYPE_HPP_INCLUDED
 
-namespace Aftermath { class ProductionCenterType; }
-
 #include <string>
 #include <vector>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
 #include "Collection.hpp"
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
-#include "ProductionFormula.hpp"
-#include "ProductionLevel.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player;
+                      class ProductionFormula;
+                      class ProductionLevel; }
 
 /**
  * @file ProductionCenterType.hpp
@@ -57,14 +54,16 @@ namespace Aftermath {
              * levels and formulas.
              *
              * @param name - The name of this type of production center.
+             * @param description - A brief description of this type.
              * @param image - The image of this type of production center.
              * @param levels - The levels of this ProductionCenterType.
              * @param formulas - The formulas that this ProductionCenterType
              * can use.
              */
-            ProductionCenterType(const std::string & name, const sf::Image *
-                image, const std::vector<const ProductionLevel *> & levels,
-                const Collection<const ProductionFormula *> & formulas);
+            ProductionCenterType(const std::string & name, const std::string &
+                description, const Image * image, const std::vector<const
+                ProductionLevel *> & levels, const Collection<const
+                ProductionFormula *> & formulas);
 
             /**
              * Adds a type of this ProductionCenter to the given player.
@@ -86,8 +85,8 @@ namespace Aftermath {
             bool canGiveTo(const Player & player, int amount = 0) const;
 
             /**
-             * Takes the given amount of this production center type from the
-             * specified player.
+             * Taking a ProductionCenter from a player is undefined, thus this
+             * function does nothing.
              *
              * @param player - The player to take from.
              * @param amount - The amount to take.
@@ -95,14 +94,12 @@ namespace Aftermath {
             void takeFrom(Player & player, int amount = 0) const;
 
             /**
-             * Checks if the given player has enough production centers of
-             * this type.
+             * Taking a ProductionCenter from a player does nothing.
              *
              * @param player - The player to check.
              * @param amount - The amount to check for.
              *
-             * @return true if the given player's production centers of this
-             * type >= amount >= 0; false otherwise.
+             * @return true.
              */
             bool canTakeFrom(const Player & player, int amount = 0) const;
 
@@ -118,7 +115,7 @@ namespace Aftermath {
 
         private:
             const std::vector<const ProductionLevel *> & mLevels;
-            const Collection<const ProductionFormula *> & formulas;
+            const Collection<const ProductionFormula *> & mFormulas;
     };
 
 }

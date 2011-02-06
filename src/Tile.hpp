@@ -20,13 +20,12 @@
 #ifndef TILE_HPP_INCLUDED
 #define TILE_HPP_INCLUDED
 
-namespace Aftermath { class Tile; }
-
-#include "Resource.hpp"
 #include "SelectiveCollection.hpp"
-#include "Terrain.hpp"
-#include "TileGroup.hpp"
-#include "TileUnit.hpp"
+
+namespace Aftermath { class Resource;
+                      class Terrain;
+                      class TileGroup;
+                      class TileUnit; }
 
 /**
  * @file Tile.hpp
@@ -43,7 +42,7 @@ namespace Aftermath {
      * Terrain type, Resources, and room for a TileUnit. Tiles also belong to
      * TileGroups.
      */
-    class Tile : public SelectiveCollection<Resource *> {
+    class Tile : public SelectiveCollection<const Resource *> {
         public:
             /**
              * Constructs a new Tile object from the given Terrain info and
@@ -58,9 +57,10 @@ namespace Aftermath {
             Tile(const Terrain * terrain, bool genResources = true);
 
             /**
-             * Deletes this Tile object. This does not free the Terrain type
-             * or Resources of this Tile, however, as there can be multiple
-             * Tiles with the same Terrain type and resources.
+             * Deletes this Tile object. The TileUnit on this tile is also
+             * deleted. This does not free the Terrain type or Resources of
+             * this Tile, however, as there can be multiple Tiles with the
+             * same Terrain type and resources.
              */
             ~Tile();
 

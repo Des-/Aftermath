@@ -20,8 +20,6 @@
 #ifndef COUNT_HPP_INCLUDED
 #define COUNT_HPP_INCLUDED
 
-namespace Aftermath { template <typename T> class Count; }
-
 #include <map>
 
 /**
@@ -40,7 +38,34 @@ namespace Aftermath {
      * @param T - The type of elements to count.
      */
     template <typename T>
-    class Count : public std::map<T, int> {};
+    class Count : public std::map<T, int> {
+        public:
+            /**
+             * @return The number of the given element in this Count.
+             */
+            int getCount(const T & element) const;
+
+            /**
+             * @return The total count of all elements.
+             */
+            int getTotal() const;
+    };
+
+    template <typename T>
+    int Count<T>::getCount(const T & element) const {
+        typename Count<T>::const_iterator itr = find(element);
+        if (itr != std::map<T, int>::end()) return itr->second;
+        else return 0;
+    }
+
+    template <typename T>
+    int Count<T>::getTotal() const {
+        int total = 0;
+        typename Count<T>::const_iterator itr;
+        for (itr = std::map<T, int>::begin();
+            itr != std::map<T, int>::end(); ++itr) total += itr->second;
+        return total;
+    }
 
 }
 

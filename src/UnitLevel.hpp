@@ -20,16 +20,14 @@
 #ifndef UNITLEVEL_HPP_INCLUDED
 #define UNITLEVEL_HPP_INCLUDED
 
-namespace Aftermath { class UnitLevel; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
 #include "Count.hpp"
+#include "Graphics.hpp"
 #include "Level.hpp"
 #include "NamedType.hpp"
+
+namespace Aftermath { class Transferable; }
 
 /**
  * @file UnitLevel.hpp
@@ -63,9 +61,9 @@ namespace Aftermath {
              * This is added to the merchant marine of its owner.
              */
             UnitLevel(const std::string & name, const std::string &
-                description, const sf::Image * image, const Count<const
-                NamedType *> * upgradeCost, const Count<const NamedType *> *
-                autoUpgradeCost, int power, int cargo);
+                description, const Image * image, const Count<const
+                Transferable *> * upgradeCost, const Count<const Transferable
+                *> * autoUpgradeCost, int power, int cargo);
 
             /**
              * Frees this level, its cost, and its auto cost.
@@ -79,7 +77,7 @@ namespace Aftermath {
              *
              * @return A Count of the types required to automatically upgrade.
              */
-            const Count<const NamedType *> & getAutoCost() const;
+            const Count<const Transferable *> & getAutoCost() const;
 
             /**
              * Gets the power of this level. This is used to determine the
@@ -98,7 +96,7 @@ namespace Aftermath {
             int getCargo() const;
 
         private:
-            const Count<const NamedType *> * mAutoCost;
+            const Count<const Transferable *> * mAutoCost;
             int mPower;
             int mCargo;
     };

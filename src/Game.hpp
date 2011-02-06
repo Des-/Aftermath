@@ -20,12 +20,11 @@
 #ifndef GAME_HPP_INCLUDED
 #define GAME_HPP_INCLUDED
 
-namespace Aftermath { class Game; }
-
 #include "Collection.hpp"
-#include "GameSettings.hpp"
-#include "TileMap.hpp"
-#include "Player.hpp"
+
+namespace Aftermath { class GameSettings;
+                      class Player;
+                      class TileMap; }
 
 /**
  * @file Game.hpp
@@ -44,6 +43,7 @@ namespace Aftermath {
      * add() and remove() add and remove players from the game.
      */
     class Game : public Collection<Player *> {
+        public:
             /**
              * Constructs a zero-player Game with the given map, starting from
              * the given turn. The game might need to start on a different
@@ -54,8 +54,7 @@ namespace Aftermath {
              * @param settings - The current GameSettings.
              * @param turn - The turn to start the game at. Default is 0.
              */
-            Game(TileMap * map, const GameSettings & settings,
-                unsigned turn = 0);
+            Game(TileMap * map, const GameSettings & settings, int turn = 0);
 
             /**
              * Destructs this Game object, its Map, and its Player objects.
@@ -73,17 +72,12 @@ namespace Aftermath {
              *
              * @return The current turn of the Game, as an int.
              */
-            unsigned getTurn() const;
+            int getTurn() const;
 
             /**
              * @return The current historical date in the game.
              */
-            unsigned getDate() const;
-
-            /**
-             * Adds the given player to this game.
-             */
-            void add(const Player *& player);
+            int getDate() const;
 
             /**
              * @return The current GameSettings.
@@ -92,8 +86,8 @@ namespace Aftermath {
 
         private:
             TileMap * mMap;
-            unsigned mTurn;
             const GameSettings & mSettings;
+            int mTurn;
     };
 
 }

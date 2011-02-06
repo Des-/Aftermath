@@ -20,18 +20,15 @@
 #ifndef UNITTYPE_HPP_INCLUDED
 #define UNITTYPE_HPP_INCLUDED
 
-namespace Aftermath { class UnitType; }
-
 #include <string>
 #include <vector>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 #include "Transferable.hpp"
-#include "UnitLevel.hpp"
+
+namespace Aftermath { class Player;
+                      class UnitLevel; }
 
 /**
  * @file UnitType.hpp
@@ -51,7 +48,7 @@ namespace Aftermath {
         public:
             /**
              * Constructs a new UnitType with the given name, description,
-             * strength, and image.
+             * levels, and image.
              *
              * @param name - The name of the new type.
              * @param description - The description of the new type.
@@ -62,7 +59,7 @@ namespace Aftermath {
              */
             UnitType(const std::string & name,
                 const std::string & description, bool isLand, bool isSea,
-                const sf::Image * image, const std::vector<const UnitLevel *>
+                const Image * image, const std::vector<const UnitLevel *>
                 * levels);
 
             /**
@@ -134,13 +131,12 @@ namespace Aftermath {
             void takeFrom(Player & player, int amount = 0) const;
 
             /**
-             * Taking a TileGroupUnit from a player is undefined and thus this
-             * function returns false.
+             * Taking a TileGroupUnit from a player does nothing.
              *
              * @param player - The player to take from.
              * @param amount - The amount to take.
              *
-             * @return false.
+             * @return true.
              */
             bool canTakeFrom(const Player & player, int amount = 0) const;
 

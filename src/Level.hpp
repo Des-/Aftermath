@@ -20,10 +20,9 @@
 #ifndef LEVEL_HPP_INCLUDED
 #define LEVEL_HPP_INCLUDED
 
-namespace Aftermath { class Level; }
+namespace Aftermath { class Transferable; }
 
 #include "Count.hpp"
-#include "NamedType.hpp"
 
 /**
  * @file Level.hpp
@@ -48,7 +47,7 @@ namespace Aftermath {
              *
              * @param cost - The monetary, resource, and technology cost.
              */
-            Level(const Count<const NamedType *> * cost);
+            Level(const Count<const Transferable *> * cost);
 
             /**
              * Virtual destructor for Level; this frees this level's cost.
@@ -60,10 +59,10 @@ namespace Aftermath {
              *
              * @return A Count of the required types.
              */
-            const Count<const NamedType *> & getCost() const;
+            const Count<const Transferable *> & getCost() const;
 
         private:
-            const Count<const NamedType *> * mCost;
+            const Count<const Transferable *> * mCost;
     };
 
 }

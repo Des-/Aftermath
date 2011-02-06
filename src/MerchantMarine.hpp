@@ -20,16 +20,13 @@
 #ifndef MERCHANTMARINE_HPP_INCLUDED
 #define MERCHANTMARINE_HPP_INCLUDED
 
-namespace Aftermath { class MerchantMarine; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player; }
 
 /**
  * @file MerchantMarine.hpp
@@ -56,7 +53,7 @@ namespace Aftermath {
              * @param image - The image of the new type.
              */
             MerchantMarine(const std::string & name, const std::string &
-                description, const sf::Image * image);
+                description, const Image * image);
 
             /**
              * Gives the specified amount of merchant marine to the given

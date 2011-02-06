@@ -20,27 +20,27 @@
 #ifndef MOD_HPP_INCLUDED
 #define MOD_HPP_INCLUDED
 
-namespace Aftermath { class Mod; }
-
 #include <map>
 #include <string>
 
-#include "Collection.hpp"
-#include "Date.hpp"
-#include "Labor.hpp"
-#include "MerchantMarine.hpp"
-#include "Money.hpp"
+#include "Count.hpp"
 #include "NamedType.hpp"
-#include "Nation.hpp"
-#include "ProductionCenterType.hpp"
-#include "Resource.hpp"
-#include "SpecialistType.hpp"
-#include "Technology.hpp"
-#include "Terrain.hpp"
-#include "TileAction.hpp"
-#include "TransportCapacity.hpp"
-#include "UnitType.hpp"
-#include "WorkerType.hpp"
+
+namespace Aftermath { class Date;
+                      class Labor;
+                      class MerchantMarine;
+                      class Money;
+                      class Nation;
+                      class ProductionCenterType;
+                      class Resource;
+                      class SpecialistType;
+                      class Technology;
+                      class Terrain;
+                      class TileAction;
+                      class Transferable;
+                      class TransportCapacity;
+                      class UnitType;
+                      class WorkerType; }
 
 /**
  * @file Mod.hpp
@@ -163,12 +163,22 @@ namespace Aftermath {
              * @return A Count of all types that a player starts out with on
              * a new map.
              */
-            const Count<const NamedType *> & getStartingTypes() const;
+            const Count<const Transferable *> & getStartingTypes() const;
 
             /**
              * @return The max amount of bids that a country can hold at once.
              */
             int getMaxBids() const;
+
+            /**
+             * @return The starting date of this Mod.
+             */
+            int getStartDate() const;
+
+            /**
+             * @return The number that the game date advances by each turn.
+             */
+            int getDatePerTurn() const;
 
         private:
             const Date * mDate;
@@ -187,9 +197,11 @@ namespace Aftermath {
             std::map<std::string, const UnitType *> mUnitTypes;
             std::map<std::string, const WorkerType *> mWorkerTypes;
 
-            Count<const NamedType *> mStartingTypes;
+            Count<const Transferable *> mStartingTypes;
 
             int mMaxBids;
+            int mStartDate;
+            int mDatePerTurn;
     };
 
 }

@@ -20,18 +20,14 @@
 #ifndef SPECIALISTTYPE_HPP_INCLUDED
 #define SPECIALISTTYPE_HPP_INCLUDED
 
-namespace Aftermath { class SpecialistType; }
-
 #include <string>
-
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
 
 #include "Collection.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
-#include "TileAction.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player;
+                      class TileAction; }
 
 /**
  * @file SpecialistType.hpp
@@ -48,7 +44,7 @@ namespace Aftermath {
      * actions that they can perform on Tiles called TileActions.
      */
     class SpecialistType : public NamedType, public Transferable,
-                           public Collection<TileAction> {
+                           public Collection<const TileAction *> {
         public:
             /**
              * Constructs a new SpecialistType with the given name,
@@ -60,7 +56,7 @@ namespace Aftermath {
              * @param image - The image of the specialist.
              */
             SpecialistType(const std::string & name, const std::string &
-                description, const sf::Image * image);
+                description, const Image * image);
 
             /**
              * Constructs one TileUnit of this type and gives it to the given
@@ -93,13 +89,12 @@ namespace Aftermath {
             void takeFrom(Player & player, int amount = 0) const;
 
             /**
-             * Taking a specialist from a player is undefined and thus this
-             * function returns false.
+             * Taking a specialist from a player does nothing.
              *
              * @param player - The player to take from.
              * @param amount - The amount to take.
              *
-             * @return false.
+             * @return true.
              */
             bool canTakeFrom(const Player & player, int amount = 0) const;
     };

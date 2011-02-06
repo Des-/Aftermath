@@ -20,9 +20,7 @@
 #ifndef TRANSFERABLE_HPP_INCLUDED
 #define TRANSFERABLE_HPP_INCLUDED
 
-namespace Aftermath { class Transferable; }
-
-#include "Player.hpp"
+namespace Aftermath { class Player; }
 
 /**
  * @file Transferable.hpp

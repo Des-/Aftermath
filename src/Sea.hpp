@@ -20,13 +20,12 @@
 #ifndef SEA_HPP_INCLUDED
 #define SEA_HPP_INCLUDED
 
-namespace Aftermath { class Sea; }
-
 #include <string>
 
-#include "Player.hpp"
-#include "Tile.hpp"
 #include "TileGroup.hpp"
+
+namespace Aftermath { class Player;
+                      class Tile; }
 
 /**
  * @file Sea.hpp
@@ -50,24 +49,18 @@ namespace Aftermath {
             Sea(const std::string & name);
 
             /**
-             * Frees this Sea and all units on it. This does not free any
-             * tiles that were once a part of this Sea.
-             */
-            ~Sea();
-
-            /**
              * Returns whether or not this TileGroup is a land-based group.
              *
              * @return This function always returns false for a Sea.
              */
-            bool isLand();
+            bool isLand() const;
 
             /**
              * Returns whether or not this TileGroup is a sea-based group.
              *
              * @return This function always returns true for a Sea.
              */
-            bool isSea();
+            bool isSea() const;
 
             /**
              * This function does nothing for a Sea.

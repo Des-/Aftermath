@@ -20,14 +20,9 @@
 #ifndef NATION_HPP_INCLUDED
 #define NATION_HPP_INCLUDED
 
-namespace Aftermath { class Nation; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Color.hpp>
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
 
 /**
@@ -58,7 +53,7 @@ namespace Aftermath {
              * @param flag - The flag image of the new nation.
              */
             Nation(const std::string & name, const std::string & description,
-                const sf::Color & color, const sf::Image * flag);
+                const Color & color, const Image * flag);
 
             /**
              * Gets the color of this nation. This is used for coloring units,
@@ -66,10 +61,10 @@ namespace Aftermath {
              *
              * @return The national color of this nation.
              */
-            const sf::Color & getColor() const;
+            const Color & getColor() const;
 
         private:
-            sf::Color mColor;
+            Color mColor;
     };
 
 }

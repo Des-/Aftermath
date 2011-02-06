@@ -20,10 +20,8 @@
 #ifndef TILEUNIT_HPP_INCLUDED
 #define TILEUNIT_HPP_INCLUDED
 
-namespace Aftermath { class TileUnit; }
-
-#include "Player.hpp"
-#include "SpecialistType.hpp"
+namespace Aftermath { class Player;
+                      class SpecialistType; }
 
 /**
  * @file TileUnit.hpp
@@ -48,7 +46,7 @@ namespace Aftermath {
              * @param type - The type of this unit. This affects what tasks
              * the unit is able to perform.
              */
-            TileUnit(Player * owner, const SpecialistType * type);
+            TileUnit(Player & owner, const SpecialistType * type);
 
             /**
              * Gets the owner of this unit. The owner controls the movement
@@ -71,10 +69,10 @@ namespace Aftermath {
              *
              * @return The type of this unit.
              */
-            const SpecialistType & getType() const;
+            const SpecialistType * getType() const;
 
         private:
-            Player * mOwner;
+            Player & mOwner;
             const SpecialistType * mType;
     };
 

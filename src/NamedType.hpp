@@ -20,12 +20,9 @@
 #ifndef NAMEDTYPE_HPP_INCLUDED
 #define NAMEDTYPE_HPP_INCLUDED
 
-namespace Aftermath { class NamedType; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
+#include "Graphics.hpp"
 
 /**
  * @file NamedType.hpp
@@ -39,10 +36,16 @@ namespace Aftermath {
 
     /**
      * NamedType is a base class for all named types like resource types,
-     * unit types, and nations. This type should be immutable.
+     * unit types, and nations.
      */
     class NamedType {
         public:
+            /**
+             * Constructs a new NamedType with an empty name and description
+             * and no image.
+             */
+            NamedType();
+
             /**
              * Constructs a new NamedType type with the given name,
              * description, and image.
@@ -52,7 +55,7 @@ namespace Aftermath {
              * @param image - The image of the type.
              */
             NamedType(const std::string & name, const std::string &
-                description, const sf::Image * image);
+                description, const Image * image);
 
             /**
              * Virtual destructor for NamedType. Frees the image of this type.
@@ -79,12 +82,34 @@ namespace Aftermath {
              *
              * @return The image of this type.
              */
-            const sf::Image & getImage() const;
+            const Image & getImage() const;
+
+        protected:
+            /**
+             * Sets the name of this type.
+             *
+             * @param name - The new name of this type.
+             */
+            void setName(const std::string & name);
+
+            /**
+             * Sets the description of this type.
+             *
+             * @param description - The new description of this type.
+             */
+            void setDescription(const std::string & description);
+
+            /**
+             * Sets the image of this type.
+             *
+             * @param image - The new image of this type.
+             */
+            void setImage(const Image * image);
 
         private:
             std::string mName;
             std::string mDescription;
-            const sf::Image * mImage;
+            const Image * mImage;
     };
 
 }

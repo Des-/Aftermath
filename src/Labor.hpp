@@ -20,16 +20,13 @@
 #ifndef LABOR_HPP_INCLUDED
 #define LABOR_HPP_INCLUDED
 
-namespace Aftermath { class Labor; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player; }
 
 /**
  * @file Labor.hpp
@@ -56,10 +53,10 @@ namespace Aftermath {
              * @param image - The image of the new labor type.
              */
             Labor(const std::string & name, const std::string & description,
-                const sf::Image * image);
+                const Image * image);
 
             /**
-             * Gives the specified amount of labor to the given player.
+             * Deallocates the given amount of labor.
              *
              * @param player - The player to give to.
              * @param amount - The amount to give.
@@ -67,19 +64,19 @@ namespace Aftermath {
             void giveTo(Player & player, int amount = 0) const;
 
             /**
-             * Checks if the given player can receive the given amount of
-             * labor. This checks against the player's max labor.
+             * Gets if the given player has enough allocated labor to
+             * deallocate.
              *
              * @param player - The player to give to.
              * @param amount - The amount to give.
              *
-             * @return true if amount >= 0 and does not push player's labor
-             * above the max labor; false otherwise.
+             * @return true if amount >= 0 and the player's allocated labor
+             * will not drop below 0; false otherwise.
              */
             bool canGiveTo(const Player & player, int amount = 0) const;
 
             /**
-             * Takes the given amount of labor from the specified player.
+             * Allocates the given amount of labor.
              *
              * @param player - The player to take from.
              * @param amount - The amount to take.
@@ -87,7 +84,8 @@ namespace Aftermath {
             void takeFrom(Player & player, int amount = 0) const;
 
             /**
-             * Checks if the given player has enough labor.
+             * Checks if the given player has enough available labor to
+             * allocate.
              *
              * @param player - The player to check.
              * @param amount - The amount to check for.

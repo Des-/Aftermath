@@ -20,8 +20,6 @@
 #ifndef COLLECTION_HPP_INCLUDED
 #define COLLECTION_HPP_INCLUDED
 
-namespace Aftermath { template <typename T> class Collection; }
-
 #include <set>
 
 /**

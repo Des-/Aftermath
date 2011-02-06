@@ -20,16 +20,13 @@
 #ifndef WORKERTYPE_HPP_INCLUDED
 #define WORKERTYPE_HPP_INCLUDED
 
-namespace Aftermath { class WorkerType; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player; }
 
 /**
  * @file WorkerType.hpp
@@ -57,7 +54,7 @@ namespace Aftermath {
              * @param labor - The amount of labor for this type to provide.
              */
             WorkerType(const std::string & name, const std::string &
-                description, const sf::Image * image, int labor);
+                description, const Image * image, int labor);
 
             /**
              * @return The amount of labor this type provides.

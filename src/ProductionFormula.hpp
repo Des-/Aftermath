@@ -20,13 +20,12 @@
 #ifndef PRODUCTIONFORMULA_HPP_INCLUDED
 #define PRODUCTIONFORMULA_HPP_INCLUDED
 
-namespace Aftermath { class ProductionFormula; }
-
 #include <map>
 
 #include "Count.hpp"
-#include "Resource.hpp"
-#include "WorkerType.hpp"
+
+namespace Aftermath { class Resource;
+                      class Transferable; }
 
 /**
  * @file ProductionFormula.hpp
@@ -40,7 +39,7 @@ namespace Aftermath {
 
     /**
      * ProductionFormulas hold information about the requirements to produce
-     * a specified list of products (NamedTypes).
+     * a specified list of products (Transferables).
      */
     class ProductionFormula {
         public:
@@ -51,8 +50,8 @@ namespace Aftermath {
              * @param input - The elements required for production.
              * @param output - The elements created by production.
              */
-            ProductionFormula(const Count<const NamedType *> * input,
-                const Count<const NamedType> * output);
+            ProductionFormula(const Count<const Transferable *> * input,
+                const Count<const Transferable *> * output);
 
             /**
              * Frees the costs and outputs of this ProductionFormula.
@@ -62,21 +61,16 @@ namespace Aftermath {
             /**
              * @return The cost of this production formula.
              */
-            const Count<const NamedType *> & getInput() const;
+            const Count<const Transferable *> & getInput() const;
 
             /**
              * @return The products produced by this formula.
              */
-            const Count<const NamedType *> & getProductOutput() const;
-
-            /**
-             * @return The total number of products created by this formula
-             */
-            int countProducts() const;
+            const Count<const Transferable *> & getOutput() const;
 
         private:
-            const Count<const NamedType *> * mInput;
-            const Count<const NamedType *> * mOutput;
+            const Count<const Transferable *> * mInput;
+            const Count<const Transferable *> * mOutput;
     };
 
 }

@@ -21,8 +21,6 @@
 #ifndef SELECTIVECOLLECTION_HPP_INCLUDED
 #define SELECTIVECOLLECTION_HPP_INCLUDED
 
-namespace Aftermath { template <typename T> class SelectiveCollection; }
-
 #include "Collection.hpp"
 
 /**
@@ -67,7 +65,7 @@ namespace Aftermath {
              * @param element - The element to add.
              */
             virtual void add(const T & element) {
-                if(canAdd(element))
+                if (canAdd(element))
                     Collection<T>::add(element);
             }
     };

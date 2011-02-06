@@ -20,16 +20,13 @@
 #ifndef TERRAIN_HPP_INCLUDED
 #define TERRAIN_HPP_INCLUDED
 
-namespace Aftermath { class Terrain; }
-
 #include <map>
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Resource.hpp"
+
+namespace Aftermath { class Resource; }
 
 /**
  * @file Terrain.hpp
@@ -66,7 +63,7 @@ namespace Aftermath {
              * generating resources for tiles.
              */
             Terrain(const std::string & name, const std::string & description,
-                bool isLand, bool isSea, const sf::Image * image,
+                bool isLand, bool isSea, const Image * image,
                 const std::map <const Resource *, double> * probabilities);
 
             /**

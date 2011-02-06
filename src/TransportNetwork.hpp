@@ -20,11 +20,11 @@
 #ifndef TRANSPORTNETWORK_HPP_INCLUDED
 #define TRANSPORTNETWORK_HPP_INCLUDED
 
-namespace Aftermath { class TransportNetwork; }
-
+#include "Collection.hpp"
 #include "Count.hpp"
-#include "Player.hpp"
-#include "Resource.hpp"
+
+namespace Aftermath { class Player;
+                      class Resource; }
 
 /**
  * @file TransportNetwork.hpp
@@ -44,11 +44,6 @@ namespace Aftermath {
     class TransportNetwork {
         public:
             /**
-             * Constructs a new transport network with no capacity.
-             */
-            TransportNetwork();
-
-            /**
              * Gets the amount of the given resource type that is connected to
              * this transport network.
              *
@@ -59,19 +54,20 @@ namespace Aftermath {
             int getAvailable(const Resource * resource) const;
 
             /**
-             * Adds one unit of the given resource to this TransportNetwork.
+             * Adds the given resource to this TransportNetwork.
              *
              * @param resource - The type of resource to add.
+             * @param amount - The amount to add.
              */
-            void addAvailable(const Resource * resource);
+            void addAvailable(const Resource * resource, int amount);
 
             /**
-             * Removes one unit of the given resource from this
-             * TransportNetwork.
+             * Removes the given resource from this TransportNetwork.
              *
              * @param resource - The type of resource to remove.
+             * @param amount - The amount to remove.
              */
-            void removeAvailable(const Resource * resource);
+            void removeAvailable(const Resource * resource, int amount);
 
             /**
              * Gets the amount of the given type of resource that is being
@@ -85,18 +81,20 @@ namespace Aftermath {
             int getTransporting(const Resource * resource) const;
 
             /**
-             * Starts to transport one unit of the given resource.
+             * Starts to transport the given resource.
              *
              * @param resource - The type of resource to transport.
+             * @param amount - The amount to transport.
              */
-            void startTransporting(const Resource * resource);
+            void startTransporting(const Resource * resource, int amount);
 
             /**
              * Stops transporting one unit of the given resource.
              *
              * @param resource - The type of resource to stop transporting.
+             * @param amount - The amount to stop transporting.
              */
-            void cancelTransporting(const Resource * resource);
+            void stopTransporting(const Resource * resource, int amount);
 
             /**
              * Ships the resources in the transport queue to the given player.
@@ -116,6 +114,72 @@ namespace Aftermath {
             int getTotalTransporting() const;
 
             /**
+             * Gets the amount of the resource type that is being traded
+             * internationally.
+             *
+             * @param resource - The resource to check for.
+             *
+             * @return The units of the resource type that are being offered
+             * for sale.
+             */
+            int getTrading(const Resource * resource) const;
+
+            /**
+             * Adds to the amount of the given resource type that is
+             * being traded. Also takes from the given player.
+             *
+             * @param player - The player to sell the resource.
+             * @param resource - The resource to sell.
+             * @param amount - The amount to sell.
+             */
+            void startTrading(Player & player, const Resource * resource, int
+                amount);
+
+            /**
+             * Subtracts from the amount of the given resource type
+             * that is being traded. Also refunds the resources to the given
+             * player.
+             *
+             * @param player - The player to refund.
+             * @param resource - The resource to cancel selling.
+             * @param amount - The amount to cancel selling.
+             */
+            void stopTrading(Player & player, const Resource * resource, int
+                amount);
+
+            /**
+             * Gives the given player an amount of the given resource and
+             * takes the resource off of the trading queue. This does NOT
+             * pay the selling player, it only gives the resource to the
+             * buyer.
+             *
+             * @param player - The player to sell to.
+             * @param resource - The resource to sell.
+             * @param amount - The amount to sell.
+             */
+            void finishTrade(Player & player, const Resource * resource, int
+                amount);
+
+            /**
+             * @return The collection of resources that are being bid on.
+             */
+            const Collection<const Resource *> & getBidding() const;
+
+            /**
+             * Starts bidding on the given resource.
+             *
+             * @param resource - The resource to bid for.
+             */
+            void startBidding(const Resource * resource);
+
+            /**
+             * Stops bidding on the given resource.
+             *
+             * @param resource - The resource to stop bidding for.
+             */
+            void cancelBidding(const Resource * resource);
+
+           /**
              * Gets the capacity of this TransportNetwork, in units. This
              * represents the maximum amount of resources that can be
              * transported in one turn.
@@ -143,82 +207,18 @@ namespace Aftermath {
             /**
              * Adds to the merchant marine capacity. This changes the amount
              * of any single resource type that can be traded internationally.
+             *
+             * @param capacity - The capacity to add. This can be negative.
              */
             void addMerchantMarine(int capacity);
-
-            /**
-             * Gets the amount of the resource type that is being traded
-             * internationally. A positive number indicates the units of
-             * resources that are being exported. Any negative number
-             * indicates that the resource is being bid for.
-             *
-             * @param resource - The resource to check for.
-             *
-             * @return The units of the resource type that are being offered
-             * for sale; any negative number means a bid for the resource.
-             */
-            int getTrading(const Resource * resource) const;
-
-            /**
-             * Gets the total number of resources that are being bid on. This
-             * number cannot exceed the limit established by the mod pack and
-             * game settings.
-             *
-             * @return The number of resources being bid on.
-             */
-            int getBidding() const;
-
-            /**
-             * Adds one unit to the amount of the given resource type that is
-             * being traded. Also takes a unit from the given player.
-             *
-             * @param player - The player to sell the resource.
-             * @param resource - The resource to sell.
-             */
-            void startTrading(Player & player, const Resource * resource);
-
-            /**
-             * Subtracts one unit from the amount of the given resource type
-             * that is being traded. Also refunds the resources to the given
-             * player.
-             *
-             * @param player - The player to refund.
-             * @param resource - The resource to cancel selling.
-             */
-            void cancelTrading(Player & player, const Resource * resource);
-
-            /**
-             * Starts bidding on the given resource.
-             *
-             * @param resource - The resource to bid for.
-             */
-            void startBidding(const Resource * resource);
-
-            /**
-             * Stops bidding on the given resource.
-             *
-             * @param resource - The resource to stop bidding for.
-             */
-            void cancelBidding(const Resource * resource);
-
-            /**
-             * Gives the given player one unit of the given resource and
-             * takes the resource off of the trading queue. This does NOT
-             * pay the selling player, it only gives the resource to the
-             * buyer.
-             *
-             * @param player - The player to sell to.
-             * @param resource - The resource to sell.
-             */
-            void finishTrade(Player & player, const Resource * resource);
 
         private:
             Count<const Resource *> mTransporting;
             Count<const Resource *> mAvailable;
             Count<const Resource *> mTrading;
+            Collection<const Resource *> mBidding;
             int mCapacity;
             int mMarine;
-            int mBidding;
     };
 
 }

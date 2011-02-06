@@ -20,12 +20,11 @@
 #ifndef INDUSTRY_HPP_INCLUDED
 #define INDUSTRY_HPP_INCLUDED
 
-namespace Aftermath { class Industry; }
-
 #include "Collection.hpp"
 #include "Count.hpp"
-#include "ProductionCenter.hpp"
-#include "WorkerType.hpp"
+
+namespace Aftermath { class ProductionCenter;
+                      class WorkerType; }
 
 /**
  * @file Industry.hpp

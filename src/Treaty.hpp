@@ -20,8 +20,6 @@
 #ifndef TREATY_HPP_INCLUDED
 #define TREATY_HPP_INCLUDED
 
-namespace Aftermath { class Treaty; }
-
 /**
  * @file Treaty.hpp
  *
@@ -115,7 +113,7 @@ namespace Aftermath {
              *
              * @param boycott - true means boycott, false means allow trade.
              */
-            void setBoycott(bool boycott) const;
+            void setBoycott(bool boycott);
 
             /**
              * Gets the relationship level between p1 and p2.

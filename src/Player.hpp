@@ -20,24 +20,25 @@
 #ifndef PLAYER_HPP_INCLUDED
 #define PLAYER_HPP_INCLUDED
 
-namespace Aftermath { class Player; }
+#include "Collection.hpp"
+#include "Count.hpp"
+#include "SelectiveCollection.hpp"
 
 #include <string>
 
-#include "Collection.hpp"
-#include "Count.hpp"
-#include "Game.hpp"
-#include "GameSettings.hpp"
-#include "Industry.hpp"
-#include "Move.hpp"
-#include "Nation.hpp"
-#include "Resource.hpp"
-#include "SelectiveCollection.hpp"
-#include "TechnologyTree.hpp"
-#include "Tile.hpp"
-#include "TileGroup.hpp"
-#include "TransportNetwork.hpp"
-#include "Treaty.hpp"
+namespace Aftermath { class Game;
+                      class GameSettings;
+                      class Industry;
+                      class Move;
+                      class Nation;
+                      class Resource;
+                      class Technology;
+                      class Tile;
+                      class TileGroup;
+                      class TileUnit;
+                      class Transferable;
+                      class TransportNetwork;
+                      class Treaty; }
 
 /**
  * @file Player.hpp
@@ -50,12 +51,13 @@ namespace Aftermath { class Player; }
 namespace Aftermath {
 
     /**
-     * A Player object represents a player of the game. Players have their own
-     * Nation, name, and method of making moves. That means Players can be
-     * controlled by both humans and AI. Players also have Treaties with other
-     * players, a list of TileGroups that they control, a stockpile of
-     * Resources, a TechnologyTree, an Industry, and a TransportNetwork.
-     * Players also keep track of which Tiles they have surveyed.
+     * A Player object represents a player of the game. Players have their
+     * own Nation, name, and method of making moves. That means Players can
+     * be controlled by both humans and AI. Players also have Treaties with
+     * other players, a list of TileGroups that they control, a stockpile
+     * of Resources, a Collection of Technology, an Industry, and a
+     * TransportNetwork. Players also keep track of which Tiles they have
+     * surveyed.
      */
     class Player : public SelectiveCollection<TileGroup *> {
         public:
@@ -63,16 +65,16 @@ namespace Aftermath {
              * Constructs a new player with the given name and no nationality.
              *
              * @param name - The name of the new player.
-             * @param settings - The current GameSettings.
+             * @param game - The game for this player to belong to.
              * @param initFromSettings - Whether or not to initialize this
              * player using the given game settings. This adds starting
              * technologies and resources.
              */
-            Player(const std::string & name, const GameSettings & settings,
+            Player(const std::string & name, Game & game,
                 bool initFromSettings = true);
 
             /**
-             * Destructs a player object and the Nation that they control.
+             * Virtual destructor, frees tech, industry, and transport.
              */
             virtual ~Player();
 
@@ -126,7 +128,7 @@ namespace Aftermath {
              * relationship between the two players, from this player's
              * perspective.
              */
-            Treaty & getTreaty(Player * player);
+            Treaty & getTreaty(const Player * player);
 
             /**
              * Gets the const Treaty object between these two players.
@@ -161,17 +163,16 @@ namespace Aftermath {
             /**
              * Provides access to this Player's technology.
              *
-             * @return A reference to this Player's TechnologyTree.
+             * @return A reference to this Player's technology.
              */
-            TechnologyTree & getTechnology();
-
+            Collection<const Technology *> & getTechnology();
 
             /**
              * Provides const access to this Player's technology.
              *
              * @see getTechnology()
              */
-            const TechnologyTree & getTechnology() const;
+            const Collection<const Technology *> & getTechnology() const;
 
             /**
              * Provides access to this Player's industry.
@@ -206,54 +207,14 @@ namespace Aftermath {
              *
              * @return A Collection of the tiles that have been revealed.
              */
-            Collection<Tile *> getRevealed();
+            Collection<Tile *> & getRevealed();
 
             /**
              * Gets the const Tiles that have been surveyed by this player.
              *
              * @see getRevealed()
              */
-            const Collection<const Tile *> getRevealed() const;
-
-            /**
-             * Takes an amount of various types from this Player. This could
-             * be resources, workers,  labor, or other types.
-             *
-             * @param types - A Count of the types to take.
-             */
-            void take(const Count<const NamedType *> & types);
-
-            /**
-             * Gets whether or not the given amount of types can be taken from
-             * this Player. This could mean checking to see if the player has
-             * the required resources or labor.
-             *
-             * @param types - A Count of the types to take.
-             *
-             * @return true if the given amount of types can be taken from
-             * this Player; false otherwise.
-             */
-            bool canTake(const Count<const NamedType *> & types) const;
-
-            /**
-             * Gives an amount of various types to this Player. This could be
-             * resources, workers, labor, technology, or other types.
-             *
-             * @param types - A Count of the types to give.
-             */
-            void give(const Count<const NamedType *> & types);
-
-            /**
-             * Gets whether or not the given amount of types can be given to
-             * this Player. This could mean checking if the player has all of
-             * the required technologies.
-             *
-             * @param types - A Count of the types to give.
-             *
-             * @return true if the given amount of types can be given to this
-             * Player; false otherwise.
-             */
-            bool canGive(const Count<const NamedType *> & types) const;
+            const Collection<const Tile *> & getRevealed() const;
 
             /**
              * Gets the capital TileGroup of this Player.
@@ -278,6 +239,30 @@ namespace Aftermath {
              * @param capital - The new capital of this Player.
              */
             void setCapital(TileGroup * capital);
+
+            /**
+             * Gets the harbor TileGroup of this Player.
+             *
+             * @return The TileGroup specified as harbor by the setHarbor()
+             * function, or NULL if the harbor has not been set.
+             */
+            TileGroup * getHarbor();
+
+            /**
+             * Gets the const harbor TileGroup of this Player.
+             *
+             * @see getHarbor()
+             */
+            const TileGroup * getHarbor() const;
+
+            /**
+             * Sets the harbor TileGroup of this Player. The function does
+             * not add the harbor to this Player, it is assumed that the
+             * given TileGroup is already owned by the player.
+             *
+             * @param harbor - The new harbor of this Player.
+             */
+            void setHarbor(TileGroup * harbor);
 
             /**
              * @return The amount of money that this Player has.
@@ -309,25 +294,108 @@ namespace Aftermath {
             const Game & getGame() const;
 
             /**
-             * Sets the game that this player belongs to. This does NOT add
-             * this player to the given game. To do that, use Game::add().
+             * Places the given TileUnit on a Tile controlled by this player.
              *
-             * @param game - The game for this player to belong to.
+             * @param unit - The unit to place.
+             *
+             * @return true if the unit was successfully placed;
+             * false otherwise.
              */
-            void setGame(Game & game);
+            bool placeTileUnit(const TileUnit * unit);
+
+            /**
+             * Takes an amount of the given transferable from this player.
+             *
+             * @param type - The type of transferable to take.
+             * @param amount - The amount to take.
+             */
+            void take(const Transferable * type, int amount);
+
+            /**
+             * Takes an amount of various types from this Player. This could
+             * be resources, workers,  labor, or other types.
+             *
+             * @param types - A Count of the types to take.
+             */
+            void take(const Count<const Transferable *> & types);
+
+            /**
+             * Gets if an amount of the specified type can be taken from this
+             * player
+             *
+             * @param type - The type of transferable to take.
+             * @param amount - The amount to take.
+             *
+             * @return true if the type can be take from this player; false
+             * otherwise.
+             */
+            bool canTake(const Transferable * type, int amount) const;
+
+            /**
+             * Gets whether or not the given amount of types can be taken from
+             * this Player. This could mean checking to see if the player has
+             * the required resources or labor.
+             *
+             * @param types - A Count of the types to take.
+             *
+             * @return true if the given amount of types can be taken from
+             * this Player; false otherwise.
+             */
+            bool canTake(const Count<const Transferable *> & types) const;
+
+            /**
+             * Gives this player an amount of the given transferable.
+             *
+             * @param type - The type of transferable to give.
+             * @param amount - The amount to give.
+             */
+            void give(const Transferable * type, int amount);
+
+            /**
+             * Gives an amount of various types to this Player. This could be
+             * resources, workers, labor, technology, or other types.
+             *
+             * @param types - A Count of the types to give.
+             */
+            void give(const Count<const Transferable *> & types);
+
+            /**
+             * Gets if an amount of the specified type can be given to this
+             * player
+             *
+             * @param type - The type of transferable to give.
+             * @param amount - The amount to give.
+             *
+             * @return true if this player can be given amount of type; false
+             * otherwise.
+             */
+            bool canGive(const Transferable * type, int amount) const;
+
+            /**
+             * Gets whether or not the given amount of types can be given to
+             * this Player. This could mean checking if the player has all of
+             * the required technologies.
+             *
+             * @param types - A Count of the types to give.
+             *
+             * @return true if the given amount of types can be given to this
+             * Player; false otherwise.
+             */
+            bool canGive(const Count<const Transferable *> & types) const;
 
         private:
             std::string mName;
             const Nation * mNation;
-            std::map<Player *, Treaty> mTreaties;
+            std::map<const Player *, Treaty> mTreaties;
             Game & mGame;
             Collection<Tile *> mRevealed;
             Count<const Resource *> mStockpile;
-            TechnologyTree mTechnology;
-            Industry mIndustry;
-            TransportNetwork mTransport;
             TileGroup * mCapital;
+            TileGroup * mHarbor;
             int mMoney;
+            Collection<const Technology *> mTechnology;
+            Industry * mIndustry;
+            TransportNetwork * mTransport;
     };
 
 }

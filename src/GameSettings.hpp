@@ -20,12 +20,10 @@
 #ifndef GAMESETTINGS_HPP_INCLUDED
 #define GAMESETTINGS_HPP_INCLUDED
 
-namespace Aftermath { class GameSettings; }
-
 #include <map>
 #include <string>
 
-#include "Mod.hpp"
+namespace Aftermath { class Mod; }
 
 /**
  * @file GameSettings.hpp
@@ -59,7 +57,7 @@ namespace Aftermath {
             /**
              * Gets the Mod of this GameSettings.
              */
-            const Mod & getMod();
+            const Mod & getMod() const;
 
         private:
             const Mod * mMod;

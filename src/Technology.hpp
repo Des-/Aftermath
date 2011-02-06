@@ -20,16 +20,13 @@
 #ifndef TECHNOLOGY_HPP_INCLUDED
 #define TECHNOLOGY_HPP_INCLUDED
 
-namespace Aftermath { class Technology; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player; }
 
 /**
  * @file Technology.hpp
@@ -55,10 +52,10 @@ namespace Aftermath {
              * @param image - The image of the new technology.
              */
             Technology(const std::string & name, const std::string &
-                description, const sf::Image * image);
+                description, const Image * image);
 
             /**
-             * This adds this technology to the given player's TechnologyTree.
+             * This adds this technology to the given player's technology.
              *
              * @param player - The player to give to.
              * @param amount - The amount to give.
@@ -77,7 +74,7 @@ namespace Aftermath {
             bool canGiveTo(const Player & player, int amount = 0) const;
 
             /**
-             * Taking a technology from a player does nothing.
+             * Removes this technology from the given players' technology.
              *
              * @param player - The player to take from.
              * @param amount - The amount to take.

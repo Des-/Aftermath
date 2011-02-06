@@ -20,14 +20,13 @@
 #ifndef TILEMAP_HPP_INCLUDED
 #define TILEMAP_HPP_INCLUDED
 
-namespace Aftermath { class TileMap; }
-
 #include <string>
 
 #include "Array2D.hpp"
 #include "Collection.hpp"
-#include "Tile.hpp"
-#include "TileGroup.hpp"
+
+namespace Aftermath { class Tile;
+                      class TileGroup; }
 
 /**
  * @file TileMap.hpp
@@ -70,7 +69,7 @@ namespace Aftermath {
             const std::string & getName() const;
 
         private:
-            std::string & mName;
+            std::string mName;
     };
 
 }

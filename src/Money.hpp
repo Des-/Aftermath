@@ -20,16 +20,13 @@
 #ifndef MONEY_HPP_INCLUDED
 #define MONEY_HPP_INCLUDED
 
-namespace Aftermath { class Money; }
-
 #include <string>
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Image.hpp>
-
+#include "Graphics.hpp"
 #include "NamedType.hpp"
-#include "Player.hpp"
 #include "Transferable.hpp"
+
+namespace Aftermath { class Player; }
 
 /**
  * @file Money.hpp
@@ -56,7 +53,7 @@ namespace Aftermath {
              * @param image - The image of the new money type.
              */
             Money(const std::string & name, const std::string & description,
-                const sf::Image * image);
+                const Image * image);
 
             /**
              * Gives the specified amount of money to the given player.

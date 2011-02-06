@@ -20,12 +20,11 @@
 #ifndef UPGRADABLE_HPP_INCLUDED
 #define UPGRADABLE_HPP_INCLUDED
 
-namespace Aftermath { template <class LevelType> class Upgradable; }
-
 #include <vector>
 
 #include "Count.hpp"
-#include "NamedType.hpp"
+
+namespace Aftermath { class NamedType; }
 
 /**
  * @file Upgradable.hpp
@@ -74,6 +73,16 @@ namespace Aftermath {
              */
             const LevelType & getLevel() const {
                 return *(mLevels[mLevel]);
+            }
+
+            /**
+             * Gets the next level of this Upgradable. This will be in the
+             * set of levels that was passed to this Upgradable's constructor.
+             *
+             * @return The next level of this Upgradable.
+             */
+            const LevelType & getNextLevel() const {
+                return *(mLevels[mLevel + 1]);
             }
 
             /**
@@ -175,7 +184,7 @@ namespace Aftermath {
         private:
             bool mUpgrading;
             int mLevel;
-            std::vector<const LevelType *> & mLevels;
+            const std::vector<const LevelType *> & mLevels;
     };
 
 }
