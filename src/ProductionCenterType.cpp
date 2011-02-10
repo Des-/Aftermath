@@ -46,3 +46,13 @@ bool ProductionCenterType::canTakeFrom(const Player & player, int amount)
         const {
     return true;
 }
+
+const std::vector<const ProductionLevel *> & ProductionCenterType::getLevels()
+        const {
+    return mLevels;
+}
+
+const Collection<const ProductionFormula *> & ProductionCenterType::
+        getFormulas() const {
+    return mFormulas;
+}

@@ -1,0 +1,37 @@
+/* doxygen index page */
+
+/** @mainpage Aftermath Developer Documentation
+
+@section intro_sec Introduction
+
+Aftermath is an effort to produce an deep and engaging strategy game set from
+the early 18th to the early 20th century. Our goal is to provide a unique
+balance of deep thought, comprehensive detail, and historical accuracy that
+adds up to an enjoyable grand strategy experience.
+
+Clearly, we've got our work cut out for us! If you want to discuss the
+project, join our freenode channel at \#aftermath.
+
+@section legal_sec Legal
+
+Aftermath is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Aftermath is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
+*/
+
+/** @namespace Aftermath
+ * The namepace for all Aftermath functions and data structures.
+ */
+
+/** @namespace Aftermath::Random
+ * The namespace for all random number generation used in Aftermath.
+ */

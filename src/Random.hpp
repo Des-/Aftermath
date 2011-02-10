@@ -30,37 +30,40 @@
 
 namespace Aftermath { namespace Random {
 
-    /** @return A random double (64 bits of randomness). */
+    /** Initializes the PRNG **/
+    void init(); // TODO: Possibly save/load PRNG states. Implement if needed.
+
+    /** @return A random double from 0 to 1. */
     double Double();
 
-    /** @return A random double between min and max, inclusive. */
+    /** @return A random double between min and max. */
     double Double(double min, double max);
 
-    /** @return A random float (32 bits of randomness). */
+    /** @return A random float. */
     float Float();
 
-    /** @return A random float between min and max, inclusive. */
+    /** @return A random float between min and max. */
     float Float(float min, float max);
 
-    /** @return A random int (32 bits of randomness). */
+    /** @return A random int. */
     int Int();
 
     /** @return A random int between min and max, inclusive. */
     int Int(int min, int max);
 
-    /** @return A random long (64 bits of randomness). */
+    /** @return A random long. */
     long Long();
 
     /** @return A random long between min and max, inclusive. */
     long Long(long min, long max);
 
-    /** @return A random uint (32 bits of randomness). */
+    /** @return A random uint. */
     unsigned int UInt();
 
     /** @return A random uint between min and max, inclusive */
     unsigned int UInt(unsigned int min, unsigned int max);
 
-    /** @return A random ulong (64 bits of randomness). */
+    /** @return A random ulong. */
     unsigned long ULong();
 
     /** @return A random ulong between min and max, inclusive. */
