@@ -22,7 +22,7 @@
 using namespace Aftermath;
 
 UnitLevel::UnitLevel(const std::string & name, const std::string &
-    description, const Image * image, const Count<const Transferable *> *
+    description, const Image & image, const Count<const Transferable *> *
     upgradeCost, const Count<const Transferable *> * autoUpgradeCost,
     int power, int cargo) : NamedType(name, description, image),
         Level(upgradeCost), mAutoCost(autoUpgradeCost), mPower(power),

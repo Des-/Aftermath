@@ -61,7 +61,7 @@ namespace Aftermath {
              * can use.
              */
             ProductionCenterType(const std::string & name, const std::string &
-                description, const Image * image, const std::vector<const
+                description, const Image & image, const std::vector<const
                 ProductionLevel *> & levels, const Collection<const
                 ProductionFormula *> & formulas);
 

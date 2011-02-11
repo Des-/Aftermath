@@ -35,7 +35,7 @@
 
 using namespace Aftermath;
 
-Mod::Mod(const std::string & directory) {
+Mod::Mod(const std::string & directory) : mDirectory(directory) {
     // TODO
 }
 
@@ -60,6 +60,7 @@ Mod::~Mod() {
     DELETE_EACH(TileAction, mTileActions);
     DELETE_EACH(UnitType, mUnitTypes);
     DELETE_EACH(WorkerType, mWorkerTypes);
+    DELETE_EACH(Image, mImages);
 
     #undef DELETE_EACH
 }
@@ -138,4 +139,8 @@ int Mod::getStartDate() const {
 
 int Mod::getDatePerTurn() const {
     return mDatePerTurn;
+}
+
+const Image & Mod::getImage(const std::string & imagePath) {
+    // TODO
 }

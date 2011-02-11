@@ -59,7 +59,7 @@ namespace Aftermath {
              */
             UnitType(const std::string & name,
                 const std::string & description, bool isLand, bool isSea,
-                const Image * image, const std::vector<const UnitLevel *>
+                const Image & image, const std::vector<const UnitLevel *>
                 * levels);
 
             /**

@@ -24,7 +24,7 @@
 using namespace Aftermath;
 
 Technology::Technology(const std::string & name, const std::string &
-    description, const Image * image) :
+    description, const Image & image) :
         NamedType(name, description, image) {}
 
 void Technology::giveTo(Player & player, int amount) const {

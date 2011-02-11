@@ -24,7 +24,7 @@
 using namespace Aftermath;
 
 Resource::Resource(const std::string & name, const std::string & description,
-    const Image * image) : NamedType(name, description, image) {}
+    const Image & image) : NamedType(name, description, image) {}
 
 void Resource::giveTo(Player & player, int amount) const {
     player.getStockpile()[this] += amount;

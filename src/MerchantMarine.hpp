@@ -53,7 +53,7 @@ namespace Aftermath {
              * @param image - The image of the new type.
              */
             MerchantMarine(const std::string & name, const std::string &
-                description, const Image * image);
+                description, const Image & image);
 
             /**
              * Gives the specified amount of merchant marine to the given

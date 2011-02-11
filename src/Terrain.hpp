@@ -63,7 +63,7 @@ namespace Aftermath {
              * generating resources for tiles.
              */
             Terrain(const std::string & name, const std::string & description,
-                bool isLand, bool isSea, const Image * image,
+                bool isLand, bool isSea, const Image & image,
                 const std::map <const Resource *, double> * probabilities);
 
             /**

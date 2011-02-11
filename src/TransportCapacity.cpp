@@ -24,7 +24,7 @@
 using namespace Aftermath;
 
 TransportCapacity::TransportCapacity(const std::string & name, const
-    std::string & description, const Image * image) :
+    std::string & description, const Image & image) :
         NamedType(name, description, image) {}
 
 void TransportCapacity::giveTo(Player & player, int amount) const {

@@ -53,7 +53,7 @@ namespace Aftermath {
              * @param flag - The flag image of the new nation.
              */
             Nation(const std::string & name, const std::string & description,
-                const Color & color, const Image * flag);
+                const Color & color, const Image & flag);
 
             /**
              * Gets the color of this nation. This is used for coloring units,

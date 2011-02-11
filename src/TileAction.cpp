@@ -22,4 +22,4 @@
 using namespace Aftermath;
 
 TileAction::TileAction(const std::string & name, const std::string &
-    description, const Image * image) : NamedType(name, description, image) {}
+    description, const Image & image) : NamedType(name, description, image) {}

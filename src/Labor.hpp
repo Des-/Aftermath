@@ -53,7 +53,7 @@ namespace Aftermath {
              * @param image - The image of the new labor type.
              */
             Labor(const std::string & name, const std::string & description,
-                const Image * image);
+                const Image & image);
 
             /**
              * Deallocates the given amount of labor.

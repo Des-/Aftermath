@@ -24,6 +24,7 @@
 #include <string>
 
 #include "Count.hpp"
+#include "Graphics.hpp"
 #include "NamedType.hpp"
 
 namespace Aftermath { class Date;
@@ -180,7 +181,21 @@ namespace Aftermath {
              */
             int getDatePerTurn() const;
 
+            /**
+             * Searches for the image in this Mod's graphics cache. If the
+             * image is not already in the cache, it is loaded from the given
+             * path.
+             *
+             * @param imagePath - The path of the image to load, relative to
+             * the Mod's "images" directory.
+             *
+             * @return A reference to the image from the given path.
+             */
+            const Image & getImage(const std::string & imagePath);
+
         private:
+            std::string mDirectory;
+
             const Date * mDate;
             const Labor * mLabor;
             const MerchantMarine * mMerchantMarine;
@@ -196,6 +211,8 @@ namespace Aftermath {
             std::map<std::string, const TileAction *> mTileActions;
             std::map<std::string, const UnitType *> mUnitTypes;
             std::map<std::string, const WorkerType *> mWorkerTypes;
+
+            std::map<std::string, const Image *> mImages;
 
             Count<const Transferable *> mStartingTypes;
 

@@ -55,10 +55,10 @@ namespace Aftermath {
              * @param image - The image of the type.
              */
             NamedType(const std::string & name, const std::string &
-                description, const Image * image);
+                description, const Image & image);
 
             /**
-             * Virtual destructor for NamedType. Frees the image of this type.
+             * Virtual destructor for NamedType.
              */
             virtual ~NamedType();
 
@@ -104,12 +104,12 @@ namespace Aftermath {
              *
              * @param image - The new image of this type.
              */
-            void setImage(const Image * image);
+            void setImage(const Image & image);
 
         private:
             std::string mName;
             std::string mDescription;
-            const Image * mImage;
+            const Image & mImage;
     };
 
 }

@@ -22,7 +22,7 @@
 using namespace Aftermath;
 
 Terrain::Terrain(const std::string & name, const std::string & description,
-    bool isLand, bool isSea, const Image * image,
+    bool isLand, bool isSea, const Image & image,
     const std::map <const Resource *, double> * probabilities) :
         NamedType(name, description, image), mLand(isLand), mSea(isSea),
         mProbabilities(probabilities) {}

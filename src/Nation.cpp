@@ -22,7 +22,7 @@
 using namespace Aftermath;
 
 Nation::Nation(const std::string & name, const std::string & description,
-        const Color & color, const Image * flag) :
+        const Color & color, const Image & flag) :
     NamedType(name, description, flag), mColor(color) {}
 
 const Color & Nation::getColor() const {
