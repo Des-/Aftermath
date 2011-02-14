@@ -24,7 +24,7 @@
 using namespace Aftermath;
 
 MerchantMarine::MerchantMarine(const std::string & name, const std::string &
-    description, const Image & image) :
+    description, const std::string & image) :
     NamedType(name, description, image) {}
 
 void MerchantMarine::giveTo(Player & player, int amount) const {

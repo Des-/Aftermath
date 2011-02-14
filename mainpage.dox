@@ -32,6 +32,10 @@ along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
  * The namepace for all Aftermath functions and data structures.
  */
 
+/** @namespace Aftermath::Engine
+ * The namespace for the Aftermath game engine.
+ */
+
 /** @namespace Aftermath::Random
  * The namespace for all random number generation used in Aftermath.
  */

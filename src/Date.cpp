@@ -24,7 +24,7 @@
 using namespace Aftermath;
 
 Date::Date(const std::string & name, const std::string & description, const
-    Image & image) : NamedType(name, description, image) {}
+    std::string & image) : NamedType(name, description, image) {}
 
 void Date::giveTo(Player & player, int amount) const {}
 

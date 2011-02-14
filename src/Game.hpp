@@ -22,7 +22,7 @@
 
 #include "Collection.hpp"
 
-namespace Aftermath { class GameSettings;
+namespace Aftermath { class Mod;
                       class Player;
                       class TileMap; }
 
@@ -37,24 +37,21 @@ namespace Aftermath { class GameSettings;
 namespace Aftermath {
 
     /**
-     * A class to represent an ongoing game's state. Use playTurn() to advance
-     * the Game's turn.
+     * A class to represent an ongoing game's state. Use nextTurn() to advance
+     * to the next player's turn.
      *
      * add() and remove() add and remove players from the game.
      */
     class Game : public Collection<Player *> {
         public:
             /**
-             * Constructs a zero-player Game with the given map, starting from
-             * the given turn. The game might need to start on a different
-             * turn when loading a saved game. Add players to the Game with
-             * the addPlayer() function.
+             * Constructs a zero-player Game with the given map. Add players
+             * to the Game with the addPlayer() function.
              *
              * @param map - The TileMap to start the game with.
-             * @param settings - The current GameSettings.
-             * @param turn - The turn to start the game at. Default is 0.
+             * @param mod - The Mod for this game to run.
              */
-            Game(TileMap * map, const GameSettings & settings, int turn = 0);
+            Game(TileMap * map, const Mod & mod);
 
             /**
              * Destructs this Game object, its Map, and its Player objects.
@@ -62,13 +59,26 @@ namespace Aftermath {
             ~Game();
 
             /**
-             * Advances this Game's turn. This plays through each player's
-             * turn and handles and pre- and post-turn actions.
+             * Starts or resumes this game.
+             *
+             * @param player - The player to move first.
+             * @param turn - The turn to start at.
              */
-            void playTurn();
+            void start(Player * player, int turn = 0);
 
             /**
-             * Returns the number of times playTurn() has been called.
+             * Moves play to the next player's turn.
+             */
+            void nextTurn();
+
+            /**
+             * @return The player whose turn it currently is.
+             */
+            const Player & getPlayer();
+
+            /**
+             * Returns the number of times each player has had a turn. This
+             * advances every size() calls to nextTurn().
              *
              * @return The current turn of the Game, as an int.
              */
@@ -80,14 +90,19 @@ namespace Aftermath {
             int getDate() const;
 
             /**
-             * @return The current GameSettings.
+             * @return The mod that this game is running.
              */
-            const GameSettings & getSettings() const;
+            const Mod & getMod() const;
 
         private:
             TileMap * mMap;
-            const GameSettings & mSettings;
+            const Mod & mMod;
             int mTurn;
+            iterator mPlayer;
+
+            void beginTurn(Player & player);
+            void endTurn(Player & player);
+            void beginTurn();
     };
 
 }

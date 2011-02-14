@@ -25,12 +25,13 @@
 #include "SelectiveCollection.hpp"
 
 #include <string>
+#include <queue>
 
 namespace Aftermath { class Game;
                       class GameSettings;
                       class Industry;
-                      class Move;
                       class Nation;
+                      class Move;
                       class Resource;
                       class Technology;
                       class Tile;
@@ -107,16 +108,6 @@ namespace Aftermath {
              * @param nation - The new nation for this player to control.
              */
             void setNation(const Nation * nation);
-
-            /**
-             * Gets the next Move for this player to make.
-             *
-             * @param game - The game for this player to move in.
-             *
-             * @return The next move of this player, or NULL if the player
-             * ends his or her turn.
-             */
-            virtual Move * getMove(const Game & game) = 0;
 
             /**
              * Gets the current diplomatic relationship that this player has
@@ -383,6 +374,21 @@ namespace Aftermath {
              */
             bool canGive(const Count<const Transferable *> & types) const;
 
+            /**
+             * Adds the given Move to this player's queue.
+             *
+             * @param move - The move to add.
+             */
+            void pushMove(Move * move);
+
+            /**
+             * Pops the next Move off of this player's queue.
+             *
+             * @return The next Move of this player, or NULL if there is none
+             * yet.
+             */
+            Move * popMove();
+
         private:
             std::string mName;
             const Nation * mNation;
@@ -396,6 +402,7 @@ namespace Aftermath {
             Collection<const Technology *> mTechnology;
             Industry * mIndustry;
             TransportNetwork * mTransport;
+            std::queue<Move *> mMoves;
     };
 
 }

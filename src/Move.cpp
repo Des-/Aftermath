@@ -1,4 +1,4 @@
-//      GameSettings.cpp -- A game's global settings.
+//      Move.cpp -- An abstract move made by a player.
 //
 //      Copyright 2011 Kevin Harrison <keharriso@gmail.com>
 //
@@ -17,17 +17,11 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
-#include "GameSettings.hpp"
-#include "Mod.hpp"
+#include "Move.hpp"
 
 using namespace Aftermath;
 
-GameSettings::GameSettings(const Mod * mod) : mMod(mod) {}
-
-GameSettings::~GameSettings() {
-    delete mMod;
-}
-
-const Mod & GameSettings::getMod() const {
-    return *mMod;
+Move * Move::parse(const std::string & str) {
+    // TODO
+    return NULL;
 }

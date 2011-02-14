@@ -24,7 +24,6 @@
 #include <vector>
 
 #include "Collection.hpp"
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 #include "Transferable.hpp"
 
@@ -61,8 +60,8 @@ namespace Aftermath {
              * can use.
              */
             ProductionCenterType(const std::string & name, const std::string &
-                description, const Image & image, const std::vector<const
-                ProductionLevel *> & levels, const Collection<const
+                description, const std::string & image, const std::vector
+                <const ProductionLevel *> & levels, const Collection<const
                 ProductionFormula *> & formulas);
 
             /**

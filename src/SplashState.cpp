@@ -1,4 +1,4 @@
-//      TileAction.cpp -- An action performed on a Tile by a TileUnit.
+//      SplashState.cpp -- A splash screen.
 //
 //      Copyright 2011 Kevin Harrison <keharriso@gmail.com>
 //
@@ -17,10 +17,33 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
-#include "TileAction.hpp"
+#include "SplashState.hpp"
 
-using namespace Aftermath;
+using namespace Aftermath::Engine;
 
-TileAction::TileAction(const std::string & name, const std::string &
-    description, const std::string & image) :
-    NamedType(name, description, image) {}
+SplashState::SplashState(const std::string & id, float time, const std::string
+    & image, App & app) : State(id, app), mTime(time), mImage(image) {}
+
+SplashState::~SplashState() {}
+
+void SplashState::init() {
+    State::init();
+    mSplashSprite = mApp.getMod().newSprite(mImage);
+}
+
+void SplashState::handleEvent(sf::Event event) {}
+
+void SplashState::update() {
+    if(!isPaused() && getElapsedTime() > mTime)
+        mApp.getStateManager().removeActiveState();
+}
+
+void SplashState::draw() {
+    mApp.getWindow().Clear();
+    mApp.getWindow().Draw(*mSplashSprite);
+}
+
+void SplashState::cleanup() {
+    delete mSplashSprite;
+    State::Cleanup();
+}

@@ -22,7 +22,6 @@
 
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 #include "Transferable.hpp"
 
@@ -54,7 +53,7 @@ namespace Aftermath {
              * @param labor - The amount of labor for this type to provide.
              */
             WorkerType(const std::string & name, const std::string &
-                description, const Image & image, int labor);
+                description, const std::string & image, int labor);
 
             /**
              * @return The amount of labor this type provides.

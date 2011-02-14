@@ -23,7 +23,6 @@
 #include <string>
 
 #include "Count.hpp"
-#include "Graphics.hpp"
 #include "Level.hpp"
 #include "NamedType.hpp"
 
@@ -61,7 +60,7 @@ namespace Aftermath {
              * This is added to the merchant marine of its owner.
              */
             UnitLevel(const std::string & name, const std::string &
-                description, const Image & image, const Count<const
+                description, const std::string & image, const Count<const
                 Transferable *> * upgradeCost, const Count<const Transferable
                 *> * autoUpgradeCost, int power, int cargo);
 

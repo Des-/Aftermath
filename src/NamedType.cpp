@@ -21,13 +21,11 @@
 
 using namespace Aftermath;
 
-NamedType::NamedType() : mImage(Image()) {}
+NamedType::NamedType(const std::string & name, const std::string & description,
+        const std::string & image) :
+    mName(name), mDescription(description), mImage(image) {}
 
 NamedType::~NamedType() {}
-
-NamedType::NamedType(const std::string & name, const std::string & description,
-        const Image & image) :
-    mName(name), mDescription(description), mImage(image) {}
 
 const std::string & NamedType::getName() const {
     return mName;
@@ -37,6 +35,18 @@ const std::string & NamedType::getDescription() const {
     return mDescription;
 }
 
-const Image & NamedType::getImage() const {
+const std::string & NamedType::getImage() const {
     return mImage;
+}
+
+void NamedType::setName(const std::string & name) {
+    mName = name;
+}
+
+void NamedType::setDescription(const std::string & description) {
+    mDescription = description;
+}
+
+void NamedType::setImage(const std::string & image) {
+    mImage = image;
 }

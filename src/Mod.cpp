@@ -17,6 +17,7 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
+#include "App.hpp"
 #include "Date.hpp"
 #include "Labor.hpp"
 #include "MerchantMarine.hpp"
@@ -35,11 +36,17 @@
 
 using namespace Aftermath;
 
-Mod::Mod(const std::string & directory) : mDirectory(directory) {
-    // TODO
+#define FONT_DIR "/fonts/"
+#define IMAGE_DIR "/images/"
+#define MOD_IMAGE "icon.png"
+
+Mod::Mod(Engine::App & app) : NamedType("", "", ""), mApp(app),
+        mLoaded(false) {
+    mApp.getLogger() << "Mod constructed" << std::endl;
 }
 
 Mod::~Mod() {
+    mApp.getLogger() << "Freeing Mod" << std::endl;
     delete mDate;
     delete mLabor;
     delete mMerchantMarine;
@@ -47,22 +54,30 @@ Mod::~Mod() {
     delete mTransportCapacity;
 
     #define DELETE_EACH(T, MAP) { \
-        std::map<std::string, const T *>::iterator itr; \
+        std::map<std::string, T *>::iterator itr; \
         for (itr = MAP.begin(); itr != MAP.end(); ++itr) delete itr->second; \
     }
 
-    DELETE_EACH(Nation, mNations);
-    DELETE_EACH(ProductionCenterType, mProductionCenterTypes);
-    DELETE_EACH(Resource, mResources);
-    DELETE_EACH(SpecialistType, mSpecialistTypes);
-    DELETE_EACH(Technology, mTechnology);
-    DELETE_EACH(Terrain, mTerrain);
-    DELETE_EACH(TileAction, mTileActions);
-    DELETE_EACH(UnitType, mUnitTypes);
-    DELETE_EACH(WorkerType, mWorkerTypes);
-    DELETE_EACH(Image, mImages);
+    DELETE_EACH(const Nation, mNations);
+    DELETE_EACH(const ProductionCenterType, mProductionCenterTypes);
+    DELETE_EACH(const Resource, mResources);
+    DELETE_EACH(const SpecialistType, mSpecialistTypes);
+    DELETE_EACH(const Technology, mTechnology);
+    DELETE_EACH(const Terrain, mTerrain);
+    DELETE_EACH(const TileAction, mTileActions);
+    DELETE_EACH(const UnitType, mUnitTypes);
+    DELETE_EACH(const WorkerType, mWorkerTypes);
+    DELETE_EACH(sf::Image, mImages);
+    DELETE_EACH(sf::Font, mFonts);
 
     #undef DELETE_EACH
+}
+
+bool Mod::load(const std::string & path) {
+    mApp.getLogger() << "Loading mod: '" << path << "'" << std::endl;
+    mDirectory = path;
+    // TODO
+    return false;
 }
 
 const Date * Mod::getDate() const {
@@ -141,6 +156,31 @@ int Mod::getDatePerTurn() const {
     return mDatePerTurn;
 }
 
-const Image & Mod::getImage(const std::string & imagePath) {
-    // TODO
+sf::Sprite * Mod::newSprite(const std::string & imagePath) {
+    sf::Image * img = mImages[imagePath];
+    if (img == NULL) {
+        img = new sf::Image();
+        if(img->LoadFromFile(mDirectory + IMAGE_DIR + imagePath))
+             mApp.getLogger() << "Image loaded: '" << imagePath << "'"
+                              << std::endl;
+        else mApp.getLogger() << "Error loading image: '" << imagePath << "'"
+                              << std::endl;
+        mImages[imagePath] = img;
+    }
+    return new sf::Sprite(*img);
+}
+
+sf::Text * Mod::newText(const std::string & string, const std::string &
+        fontPath, unsigned int characterSize) {
+    sf::Font * font = mFonts[fontPath];
+    if (font == NULL) {
+        font = new sf::Font();
+        if(font->LoadFromFile(mDirectory + FONT_DIR + fontPath))
+             mApp.getLogger() << "Font loaded: '" << fontPath << "'"
+                              << std::endl;
+        else mApp.getLogger() << "Error loading font: '" << fontPath << "'"
+                              << std::endl;
+        mFonts[fontPath] = font;
+    }
+    return new sf::Text(string, *font, characterSize);
 }

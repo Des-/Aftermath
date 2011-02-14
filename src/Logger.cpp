@@ -1,4 +1,4 @@
-//      TileAction.cpp -- An action performed on a Tile by a TileUnit.
+//      Logger.cpp -- Logs to a file.
 //
 //      Copyright 2011 Kevin Harrison <keharriso@gmail.com>
 //
@@ -17,10 +17,34 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
-#include "TileAction.hpp"
+#include "Logger.hpp"
 
-using namespace Aftermath;
+using namespace Aftermath::Engine;
 
-TileAction::TileAction(const std::string & name, const std::string &
-    description, const std::string & image) :
-    NamedType(name, description, image) {}
+Logger::Logger() : mLogging(false) {}
+
+void Logger::open(const std::string & logFile) {
+    mStream.open(logFile.c_str());
+    mLogging = true;
+}
+
+void Logger::close() {
+    mStream.close();
+    mLogging = false;
+}
+
+void Logger::stop() {
+    mLogging = false;
+}
+
+void Logger::resume() {
+    mLogging = true;
+}
+
+bool Logger::isOpen() const {
+    return mStream.is_open();
+}
+
+bool Logger::isLogging() const {
+    return mLogging && isOpen();
+}

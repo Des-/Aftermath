@@ -22,7 +22,6 @@
 
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 #include "Transferable.hpp"
 
@@ -53,7 +52,7 @@ namespace Aftermath {
              * @param image - The image of the new type.
              */
             TransportCapacity(const std::string & name, const std::string &
-                description, const Image & image);
+                description, const std::string & image);
 
             /**
              * Gives the specified amount of transport capacity to the given

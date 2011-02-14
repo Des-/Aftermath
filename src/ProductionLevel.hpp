@@ -23,7 +23,6 @@
 #include <string>
 
 #include "Count.hpp"
-#include "Graphics.hpp"
 #include "Level.hpp"
 #include "NamedType.hpp"
 
@@ -57,7 +56,7 @@ namespace Aftermath {
              * @param maxOutput - The maximum output for any single product.
              */
             ProductionLevel(const std::string & name, const std::string &
-                description, const Image & image, const Count<const
+                description, const std::string & image, const Count<const
                 Transferable *> * cost, int maxOutput);
 
             /**

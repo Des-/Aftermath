@@ -22,7 +22,6 @@
 
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 #include "Transferable.hpp"
 
@@ -53,7 +52,7 @@ namespace Aftermath {
              * @param image - The image of the new resource.
              */
             Resource(const std::string & name, const std::string &
-                description, const Image & image);
+                description, const std::string & image);
 
         // TODO: Add base cost
 

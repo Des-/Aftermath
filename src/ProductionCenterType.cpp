@@ -25,7 +25,7 @@
 using namespace Aftermath;
 
 ProductionCenterType::ProductionCenterType(const std::string & name,
-    const std::string & description, const Image & image,
+    const std::string & description, const std::string & image,
     const std::vector <const ProductionLevel *> & levels,
     const Collection<const ProductionFormula *> & formulas) :
         NamedType(name, description, image), mLevels(levels),

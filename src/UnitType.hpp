@@ -23,7 +23,6 @@
 #include <string>
 #include <vector>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 #include "Transferable.hpp"
 
@@ -59,8 +58,8 @@ namespace Aftermath {
              */
             UnitType(const std::string & name,
                 const std::string & description, bool isLand, bool isSea,
-                const Image & image, const std::vector<const UnitLevel *>
-                * levels);
+                const std::string & image, const std::vector<const UnitLevel
+                *> * levels);
 
             /**
              * Frees this UnitType and its levels.

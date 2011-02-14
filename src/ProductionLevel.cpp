@@ -22,9 +22,9 @@
 using namespace Aftermath;
 
 ProductionLevel::ProductionLevel(const std::string & name, const std::string &
-    description, const Image & image, const Count<const Transferable *> *
-    cost, int maxOutput) : NamedType(name, description, image), Level(cost),
-        mMaxOutput(maxOutput) {}
+    description, const std::string & image, const Count<const Transferable
+    *> * cost, int maxOutput) : NamedType(name, description, image),
+    Level(cost), mMaxOutput(maxOutput) {}
 
 int ProductionLevel::getMaxOutput() const {
     return mMaxOutput;

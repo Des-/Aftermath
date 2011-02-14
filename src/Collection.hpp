@@ -132,6 +132,18 @@ namespace Aftermath {
                 return mElements.size();
             }
 
+            /**
+             * Finds the given element in this Collection.
+             *
+             * @param element - The element to find.
+             *
+             * @return An iterator pointing to the element, or end() if the
+             * element was not found.
+             */
+            iterator find(const T & element) const {
+                return mElements.find(element);
+            }
+
         private:
             std::set<T> mElements;
     };

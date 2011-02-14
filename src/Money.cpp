@@ -23,7 +23,7 @@
 using namespace Aftermath;
 
 Money::Money(const std::string & name, const std::string & description,
-    const Image & image) : NamedType(name, description, image) {}
+    const std::string & image) : NamedType(name, description, image) {}
 
 void Money::giveTo(Player & player, int amount) const {
     player.giveMoney(amount);

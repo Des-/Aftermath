@@ -18,7 +18,6 @@
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
 #include "Game.hpp"
-#include "GameSettings.hpp"
 #include "MerchantMarine.hpp"
 #include "Mod.hpp"
 #include "Player.hpp"
@@ -28,20 +27,22 @@
 
 using namespace Aftermath;
 
-inline void addMerchantMarine(Player & p, int n) {
-    Count<const Transferable *> mm;
-    mm[p.getGame().getSettings().getMod().getMerchantMarine()] = n;
-    p.give(mm);
-}
+// Give cargo to owner
+#define GIVE_CARGO(CARGO) \
+    mOwner.give(mOwner.getGame().getMod().getMerchantMarine(), (CARGO))
+
+// Take cargo from owner
+#define TAKE_CARGO(CARGO) \
+    mOwner.take(mOwner.getGame().getMod().getMerchantMarine(), (CARGO));
 
 TileGroupUnit::TileGroupUnit(const UnitType * type, Player & owner) :
         Upgradable(type->getLevels()),
         mToughness(getLevel().getPower()), mType(type), mOwner(owner) {
-    addMerchantMarine(owner, getLevel().getCargo());
+    GIVE_CARGO(getLevel().getCargo());
 }
 
 TileGroupUnit::~TileGroupUnit() {
-    addMerchantMarine(mOwner, -getLevel().getCargo());
+    TAKE_CARGO(getLevel().getCargo());
 }
 
 const UnitType & TileGroupUnit::getType() const {
@@ -65,7 +66,7 @@ const Player & TileGroupUnit::getOwner() const {
 }
 
 void TileGroupUnit::finishUpgrade() {
-    addMerchantMarine(mOwner, -getLevel().getCargo());
-    addMerchantMarine(mOwner, getNextLevel().getCargo());
+    TAKE_CARGO(getLevel().getCargo());
+    GIVE_CARGO(getNextLevel().getCargo());
     Upgradable<UnitLevel>::finishUpgrade();
 }

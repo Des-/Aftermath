@@ -22,8 +22,8 @@
 using namespace Aftermath;
 
 Terrain::Terrain(const std::string & name, const std::string & description,
-    bool isLand, bool isSea, const Image & image,
-    const std::map <const Resource *, double> * probabilities) :
+    bool isLand, bool isSea, const std::string & image,
+    const std::map <const Resource *, float> * probabilities) :
         NamedType(name, description, image), mLand(isLand), mSea(isSea),
         mProbabilities(probabilities) {}
 
@@ -39,10 +39,10 @@ bool Terrain::isSeaTerrain() const {
     return mSea;
 }
 
-double Terrain::getProbability(const Resource * resource) const {
+float Terrain::getProbability(const Resource * resource) const {
     iterator itr = mProbabilities->find(resource);
     if (itr != mProbabilities->end()) return itr->second;
-    else return 0.0;
+    else return 0.0f;
 }
 
 Terrain::iterator Terrain::begin() const {

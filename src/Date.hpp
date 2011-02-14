@@ -22,11 +22,8 @@
 
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 #include "Transferable.hpp"
-
-namespace Aftermath { class Player; }
 
 /**
  * @file Date.hpp
@@ -53,7 +50,7 @@ namespace Aftermath {
              * @param image - The image of the new date type.
              */
             Date(const std::string & name, const std::string & description,
-                const Image & image);
+                const std::string & image);
 
             /**
              * Giving a date to a player is undefined and thus this function

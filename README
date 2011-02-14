@@ -13,3 +13,7 @@ adds up to an enjoyable grand strategy experience.
 
 Clearly, we've got our work cut out for us! If you want to discuss the
 project, join our freenode channel at #aftermath.
+
+DEPENDENCIES
+------------
+Aftermath requires the Simple and Fast Multimedia Library (SFML) and the C++ bindings for libconfig (libconfig++).

@@ -24,7 +24,7 @@
 using namespace Aftermath;
 
 Labor::Labor(const std::string & name, const std::string & description,
-    const Image & image) : NamedType(name, description, image) {}
+    const std::string & image) : NamedType(name, description, image) {}
 
 void Labor::giveTo(Player & player, int amount) const {
     player.getIndustry().allocateLabor(-amount);

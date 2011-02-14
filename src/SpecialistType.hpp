@@ -56,7 +56,7 @@ namespace Aftermath {
              * @param image - The image of the specialist.
              */
             SpecialistType(const std::string & name, const std::string &
-                description, const Image & image);
+                description, const std::string & image);
 
             /**
              * Constructs one TileUnit of this type and gives it to the given

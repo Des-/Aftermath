@@ -26,8 +26,8 @@
 using namespace Aftermath;
 
 UnitType::UnitType(const std::string & name, const std::string & description,
-    bool isLand, bool isSea, const Image & image, const std::vector<const
-    UnitLevel *> * levels) : NamedType(name, description, image),
+    bool isLand, bool isSea, const std::string & image, const std::vector
+    <const UnitLevel *> * levels) : NamedType(name, description, image),
     mLand(isLand), mSea(isSea), mLevels(levels) {}
 
 UnitType::~UnitType() {

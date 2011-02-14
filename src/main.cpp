@@ -1,4 +1,4 @@
-//      Graphics.hpp -- An interface for graphical elements.
+//      main.cpp -- The main function.
 //
 //      Copyright 2011 Kevin Harrison <keharriso@gmail.com>
 //
@@ -17,27 +17,13 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
-#ifndef GRAPHICS_HPP_INCLUDED
-#define GRAPHICS_HPP_INCLUDED
+#include "App.hpp"
 
-// TODO: Decide for certain what graphics library to use.
-#include <SFML/Graphics/Color.hpp>
-#include <SFML/Graphics/Image.hpp>
-
-/**
- * @file Graphics.hpp
- *
- * An interface for graphical elements.
- *
- * @author Kevin Harrison <keharriso@gmail.com>
- */
-
-namespace Aftermath {
-
-    typedef sf::Color Color;
-    typedef sf::Image Image;
-
+int main(int argc, char * argv[]) {
+    Aftermath::Engine::App app("Aftermath");
+    app.handleArgs(argc, argv);
+    app.init();
+    app.run();
+    app.cleanup();
+    return app.getExitCode();
 }
-
-#endif // GRAPHICS_HPP_INCLUDED
-

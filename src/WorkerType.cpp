@@ -24,7 +24,7 @@
 using namespace Aftermath;
 
 WorkerType::WorkerType(const std::string & name, const std::string &
-    description, const Image & image, int labor) :
+    description, const std::string & image, int labor) :
         NamedType(name, description, image), mLabor(labor) {}
 
 int WorkerType::getLabor() const {

@@ -22,8 +22,6 @@
 
 #include <string>
 
-#include "Graphics.hpp"
-
 /**
  * @file NamedType.hpp
  *
@@ -41,21 +39,15 @@ namespace Aftermath {
     class NamedType {
         public:
             /**
-             * Constructs a new NamedType with an empty name and description
-             * and no image.
-             */
-            NamedType();
-
-            /**
              * Constructs a new NamedType type with the given name,
              * description, and image.
              *
              * @param name - The name of the new type.
              * @param description - A brief description of the type.
-             * @param image - The image of the type.
+             * @param image - The image path of this named type.
              */
             NamedType(const std::string & name, const std::string &
-                description, const Image & image);
+                description, const std::string & image);
 
             /**
              * Virtual destructor for NamedType.
@@ -76,13 +68,12 @@ namespace Aftermath {
              */
             const std::string & getDescription() const;
 
-
             /**
-             * Gets the image of this type.
+             * Gets the image path of this type.
              *
-             * @return The image of this type.
+             * @return A constant reference this type's image path.
              */
-            const Image & getImage() const;
+            const std::string & getImage() const;
 
         protected:
             /**
@@ -100,16 +91,16 @@ namespace Aftermath {
             void setDescription(const std::string & description);
 
             /**
-             * Sets the image of this type.
+             * Sets the image path of this type.
              *
-             * @param image - The new image of this type.
+             * @param image - The path to the new image of this type.
              */
-            void setImage(const Image & image);
+            void setImage(const std::string & image);
 
         private:
             std::string mName;
             std::string mDescription;
-            const Image & mImage;
+            std::string mImage;
     };
 
 }

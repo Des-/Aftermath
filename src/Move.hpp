@@ -20,6 +20,8 @@
 #ifndef MOVE_HPP_INCLUDED
 #define MOVE_HPP_INCLUDED
 
+#include <string>
+
 namespace Aftermath { class Game; }
 
 /**
@@ -60,6 +62,23 @@ namespace Aftermath {
              * @param game - The game to apply this move to.
              */
             virtual void apply(Game & game) const = 0;
+
+            /**
+             * Serializes this move into a string representation suitable for
+             * network transmission.
+             *
+             * @return The serialized form of this Move.
+             */
+            virtual std::string * serialize() const = 0;
+
+            /**
+             * Parses the given string into a Move.
+             *
+             * @param str - The string to parse.
+             *
+             * @return The newly parsed move.
+             */
+            static Move * parse(const std::string & str);
     };
 
 }

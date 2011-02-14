@@ -22,11 +22,8 @@
 
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 #include "Transferable.hpp"
-
-namespace Aftermath { class Player; }
 
 /**
  * @file Money.hpp
@@ -53,7 +50,7 @@ namespace Aftermath {
              * @param image - The image of the new money type.
              */
             Money(const std::string & name, const std::string & description,
-                const Image & image);
+                const std::string & image);
 
             /**
              * Gives the specified amount of money to the given player.

@@ -23,8 +23,12 @@
 #include <map>
 #include <string>
 
+#include <SFML/Graphics/Font.hpp>
+#include <SFML/Graphics/Image.hpp>
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
+
 #include "Count.hpp"
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 
 namespace Aftermath { class Date;
@@ -41,7 +45,8 @@ namespace Aftermath { class Date;
                       class Transferable;
                       class TransportCapacity;
                       class UnitType;
-                      class WorkerType; }
+                      class WorkerType;
+                      namespace Engine { class App; } }
 
 /**
  * @file Mod.hpp
@@ -55,22 +60,30 @@ namespace Aftermath {
 
     /**
      * A Mod is a pack of tiles, resources, nations, units, technologies,
-     * images, and more.
+     * images, and more. It loads and manages the application's resources.
      */
     class Mod : public NamedType {
         public:
             /**
-             * Constructs a new Mod and loads all data from the given root
-             * directory.
+             * Constructs a new, empty Mod.
              *
-             * @param directory - The root directory of the Mod to load.
+             * @param app - The App using this mod.
              */
-            Mod(const std::string & directory);
+            Mod(Engine::App & app);
 
             /**
              * Frees this mod and all data that it loaded.
              */
             ~Mod();
+
+            /**
+             * Loads all assets from the given mod folder.
+             *
+             * @param path - The path to the root folder of the mod.
+             *
+             * @return true if loading was successful, false otherwise.
+             */
+            bool load(const std::string & path);
 
             /**
              * @return The single Date type of this Mod.
@@ -184,16 +197,33 @@ namespace Aftermath {
             /**
              * Searches for the image in this Mod's graphics cache. If the
              * image is not already in the cache, it is loaded from the given
-             * path.
+             * path. The image is loaded from "<MOD_ROOT>/images/<imagePath>".
              *
              * @param imagePath - The path of the image to load, relative to
              * the Mod's "images" directory.
              *
-             * @return A reference to the image from the given path.
+             * @return A pointer to a new sprite from the given image path.
              */
-            const Image & getImage(const std::string & imagePath);
+            sf::Sprite * newSprite(const std::string & imagePath);
+
+            /**
+             * Searches for the font in this Mod's font cache. If the font is
+             * not already in the cache, it is loaded from the given path. The
+             * font is loaded from "<MOD_ROOT>/fonts/<fontPath>".
+             *
+             * @param string - The text to display.
+             * @param fontPath - Path to the font file, relative to the Mod's
+             * "fonts" directory.
+             * @param characterSize - The size of the font to display.
+             */
+            sf::Text * newText(const std::string & string, const std::string
+                & fontPath, unsigned int characterSize=30);
+
+            // TODO: Add sounds and music
 
         private:
+            Engine::App & mApp;
+            bool mLoaded;
             std::string mDirectory;
 
             const Date * mDate;
@@ -212,7 +242,8 @@ namespace Aftermath {
             std::map<std::string, const UnitType *> mUnitTypes;
             std::map<std::string, const WorkerType *> mWorkerTypes;
 
-            std::map<std::string, const Image *> mImages;
+            std::map<std::string, sf::Image *> mImages;
+            std::map<std::string, sf::Font *> mFonts;
 
             Count<const Transferable *> mStartingTypes;
 

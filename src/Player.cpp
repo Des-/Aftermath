@@ -18,9 +18,9 @@
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
 #include "Game.hpp"
-#include "GameSettings.hpp"
 #include "Industry.hpp"
 #include "Mod.hpp"
+#include "Move.hpp"
 #include "Player.hpp"
 #include "TileGroup.hpp"
 #include "Transferable.hpp"
@@ -33,12 +33,16 @@ Player::Player(const std::string & name, Game & game, bool initFromSettings) :
         mName(name), mNation(NULL), mGame(game), mCapital(NULL),
         mHarbor(NULL),mMoney(0), mIndustry(new Industry()),
         mTransport(new TransportNetwork()) {
-    give(game.getSettings().getMod().getStartingTypes());
+    give(game.getMod().getStartingTypes());
 }
 
 Player::~Player() {
     delete mIndustry;
     delete mTransport;
+    while (!mMoves.empty()) {
+        delete mMoves.front();
+        mMoves.pop();
+    }
 }
 
 const std::string & Player::getName() const {
@@ -198,4 +202,15 @@ bool Player::canGive(const Count<const Transferable *> & types) const {
     for (itr = types.begin(); itr != types.end(); ++itr)
         if (!canGive(itr->first, itr->second)) return false;
     return true;
+}
+
+void Player::pushMove(Move * move) {
+    mMoves.push(move);
+}
+
+Move * Player::popMove() {
+    if (mMoves.empty()) return NULL;
+    Move * move = mMoves.front();
+    mMoves.pop();
+    return move;
 }

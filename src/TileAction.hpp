@@ -22,7 +22,6 @@
 
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 
 namespace Aftermath { class Game;
@@ -54,7 +53,7 @@ namespace Aftermath {
              * @param image - The image of the tile action.
              */
             TileAction(const std::string & name, const std::string &
-                description, const Image & image);
+                description, const std::string & image);
 
             /**
              * This checks to see if this action can be performed on the given

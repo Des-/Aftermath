@@ -22,7 +22,6 @@
 
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 
 /**
@@ -48,23 +47,38 @@ namespace Aftermath {
              *
              * @param name - The name of the new nation.
              * @param description - The description of the new nation.
-             * @param color - The national color of the new nation (used for
-             * coloring units, borders, and maps)
              * @param flag - The flag image of the new nation.
+             * @param r - The red component of the national color.
+             * @param g - The green component of the national color.
+             * @param b - The blue component of the national color.
+             * @param a - The alpha component of the national color.
              */
             Nation(const std::string & name, const std::string & description,
-                const Color & color, const Image & flag);
+                const std::string & flag, unsigned char r, unsigned char g,
+                unsigned char b, unsigned char a);
 
             /**
-             * Gets the color of this nation. This is used for coloring units,
-             * borders, and maps.
-             *
-             * @return The national color of this nation.
+             * @return The red component of the national color.
              */
-            const Color & getColor() const;
+            unsigned char getRed() const;
+
+            /**
+             * @return The green component of the national color.
+             */
+            unsigned char getGreen() const;
+
+            /**
+             * @return The blue component of the national color.
+             */
+            unsigned char getBlue() const;
+
+            /**
+             * @return The alpha component of the national color.
+             */
+            unsigned char getAlpha() const;
 
         private:
-            Color mColor;
+            unsigned char mR, mG, mB, mA;
     };
 
 }

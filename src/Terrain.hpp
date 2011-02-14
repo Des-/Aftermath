@@ -23,7 +23,6 @@
 #include <map>
 #include <string>
 
-#include "Graphics.hpp"
 #include "NamedType.hpp"
 
 namespace Aftermath { class Resource; }
@@ -45,7 +44,7 @@ namespace Aftermath {
      */
     class Terrain : public NamedType {
         public:
-            typedef std::map<const Resource *, double>::const_iterator
+            typedef std::map<const Resource *, float>::const_iterator
                 iterator;
 
             /**
@@ -63,8 +62,8 @@ namespace Aftermath {
              * generating resources for tiles.
              */
             Terrain(const std::string & name, const std::string & description,
-                bool isLand, bool isSea, const Image & image,
-                const std::map <const Resource *, double> * probabilities);
+                bool isLand, bool isSea, const std::string & image,
+                const std::map <const Resource *, float> * probabilities);
 
             /**
              * Deletes this terrain and free its image and probabilities map.
@@ -92,13 +91,13 @@ namespace Aftermath {
              *
              * @return The probability, from 0 to 1, of the resource type.
              */
-            double getProbability(const Resource * resource) const;
+            float getProbability(const Resource * resource) const;
 
             /**
              * Returns an iterator pointing to the first resource probability
              * of this terrain type.
              *
-             * @return An iterator of pair<Resource *, double> that points to
+             * @return An iterator of pair<Resource *, float> that points to
              * the beginning of the probability map.
              */
             iterator begin() const;
@@ -107,7 +106,7 @@ namespace Aftermath {
              * Returns an iterator pointing past the last resource probability
              * of this terrain type.
              *
-             * @return An iterator of pair<Resource *, double> that points
+             * @return An iterator of pair<Resource *, float> that points
              * past the end of the probability map.
              */
             iterator end() const;
@@ -115,7 +114,7 @@ namespace Aftermath {
         private:
             bool mLand;
             bool mSea;
-            const std::map<const Resource *, double> * mProbabilities;
+            const std::map<const Resource *, float> * mProbabilities;
     };
 
 }

@@ -18,17 +18,14 @@
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
 #include "Game.hpp"
-#include "GameSettings.hpp"
 #include "Mod.hpp"
 #include "Player.hpp"
 #include "TileMap.hpp"
 
 using namespace Aftermath;
 
-class Mod;
-
-Game::Game(TileMap * map, const GameSettings & settings, int turn) :
-    mMap(map), mSettings(settings), mTurn(turn) {}
+Game::Game(TileMap * map, const Mod & mod) :
+    mMap(map), mMod(mod) {}
 
 Game::~Game() {
     delete mMap;
@@ -36,8 +33,22 @@ Game::~Game() {
     for (itr = begin(); itr != end(); ++itr) delete *itr;
 }
 
-void Game::playTurn() {
-    // TODO
+void Game::start(Player * player, int turn) {
+    mTurn = turn;
+    mPlayer = find(player);
+    beginTurn();
+    beginTurn(**mPlayer);
+}
+
+void Game::nextTurn() {
+    endTurn(**mPlayer);
+    ++mPlayer;
+    if (mPlayer == end()) {
+        ++mTurn;
+        beginTurn();
+        mPlayer = begin();
+    }
+    beginTurn(**mPlayer);
 }
 
 int Game::getTurn() const {
@@ -45,10 +56,24 @@ int Game::getTurn() const {
 }
 
 int Game::getDate() const {
-    const Mod & mod = getSettings().getMod();
-    return mTurn * mod.getDatePerTurn() + mod.getStartDate();
+    return mTurn * getMod().getDatePerTurn() + getMod().getStartDate();
 }
 
-const GameSettings & Game::getSettings() const {
-    return mSettings;
+const Mod & Game::getMod() const {
+    return mMod;
+}
+
+// Begins a player's turn
+void Game::beginTurn(Player & player) {
+    // TODO
+}
+
+// Ends a player's turn
+void Game::endTurn(Player & player) {
+    // TODO
+}
+
+// Begins a game turn
+void Game::beginTurn() {
+    // TODO
 }
