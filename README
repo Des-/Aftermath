@@ -16,4 +16,4 @@ project, join our freenode channel at #aftermath.
 
 DEPENDENCIES
 ------------
-Aftermath requires the Simple and Fast Multimedia Library (SFML) and the C++ bindings for libconfig (libconfig++).
+Compiling Aftermath requires the Simple and Fast Multimedia Library (SFML) v2.0 and the C++ bindings for libconfig (libconfig++).

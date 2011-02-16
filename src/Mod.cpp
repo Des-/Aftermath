@@ -17,7 +17,7 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
-#include "App.hpp"
+#include "engine/App.hpp"
 #include "Date.hpp"
 #include "Labor.hpp"
 #include "MerchantMarine.hpp"

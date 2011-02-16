@@ -27,7 +27,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include "Logger.hpp"
-#include "Mod.hpp"
+#include "../Mod.hpp"
 #include "StateManager.hpp"
 
 /**

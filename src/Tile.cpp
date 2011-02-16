@@ -17,7 +17,7 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
-#include "Random.hpp"
+#include "engine/Random.hpp"
 #include "Terrain.hpp"
 #include "Tile.hpp"
 #include "TileUnit.hpp"
