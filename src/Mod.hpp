@@ -23,6 +23,7 @@
 #include <map>
 #include <string>
 
+#include <SFML/Graphics/Color.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Image.hpp>
 #include <SFML/Graphics/Sprite.hpp>
@@ -214,10 +215,13 @@ namespace Aftermath {
              * @param string - The text to display.
              * @param fontPath - Path to the font file, relative to the Mod's
              * "fonts" directory.
+             * @param color - The color of the new text.
              * @param characterSize - The size of the font to display.
              */
-            sf::Text * newText(const std::string & string, const std::string
-                & fontPath, unsigned int characterSize=30);
+            sf::Text * newText(const std::string & string,
+                    const std::string & fontPath,
+                    const sf::Color & color = sf::Color::Black,
+                    unsigned int characterSize = 30);
 
             // TODO: Add sounds and music
 

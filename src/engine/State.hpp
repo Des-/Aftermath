@@ -22,7 +22,10 @@
 
 #include <string>
 
-#include "App.hpp"
+#include <SFML/System/Clock.hpp>
+#include <SFML/Window/Event.hpp>
+
+namespace Aftermath { namespace Engine { class App; } }
 
 /**
  * @file State.hpp
@@ -45,103 +48,57 @@ namespace Aftermath { namespace Engine {
              * @param id - The ID to use for this State object
              * @param app - A reference to the App
              */
-            State(const std::string & id, App & app) : mApp(app), mId(id),
-                    mInit(false), mPaused(false), mCleanup(false),
-                    mElapsedTime(0.0f), mPausedTime(0.0f) {
-                mApp.getLogger() << "Constructed state '" << mId << "'"
-                                 << std::endl;
-            }
+            State(const std::string & id, App & app);
 
             /**
              * Virtual State deconstructor.
              */
-            virtual ~State() {}
+            virtual ~State();
 
             /**
              * @return The ID for this State object
              */
-            const std::string & getId() const {
-                return mId;
-            }
+            const std::string & getId() const;
 
             /**
              * Initializes this State
              */
-            virtual void init() {
-                mApp.getLogger() << "Initalizing state '" << mId << "'"
-                                 << std::endl;
-                if(!mInit) {
-                    mInit = true;
-                    mPaused = false;
-                    mElapsedTime = 0.0f;
-                    mElapsedClock.Reset();
-                    mPausedTime = 0.0f;
-                    mPausedClock.Reset();
-                }
-            }
+            virtual void init();
 
             /**
              * Marks this state for cleanup.
              */
-            void markCleanup() {
-                mApp.getLogger() << "Marking state '" << mId
-                                 << "' for cleanup" << std::endl;
-                if(mInit) {
-                    mCleanup = true;
-                    mInit = false;
-                    mElapsedTime += mElapsedClock.GetElapsedTime();
-                    if(mPaused)
-                        mPausedTime += mPausedClock.GetElapsedTime();
-                }
-            }
+            void markCleanup();
 
             /**
              * @return true if init() has been called without a call to
              * cleanup(); false otherwise.
              */
-            bool isInitialized() const {
-                return mInit;
-            }
+            bool isInitialized() const;
 
             /**
              * @return true if state is not the active state, false otherwise.
              */
-            bool isPaused() const {
-                return mPaused;
-            }
+            bool isPaused() const;
 
             /**
              * Pauses this State when the Application loses focus or another
              * State becomes activate.
              */
-            virtual void pause() {
-                mApp.getLogger() << "Pausing state '" << mId << "'"
-                                 << std::endl;
-                if(!mPaused) {
-                    mPaused = true;
-                    mPausedClock.Reset();
-                }
-            }
+            virtual void pause();
 
             /**
              * Resumes this State when the Application gains focus or the
              * previous State is removed.
              */
-            virtual void resume() {
-                mApp.getLogger() << "Resuming state '" << mId << "'"
-                                 << std::endl;
-                if(mPaused) {
-                    mPaused = false;
-                    mPausedTime += mPausedClock.GetElapsedTime();
-                }
-            }
+            virtual void resume();
 
             /**
              * Handles the given event.
              *
              * @param event - The SFML event to handle.
              */
-            virtual void handleEvent(sf::Event event) = 0;
+            virtual void handleEvent(sf::Event & event) = 0;
 
             /**
              * Updates this State when it is active.
@@ -156,9 +113,7 @@ namespace Aftermath { namespace Engine {
             /**
              * Calls cleanup() if this class has been marked for cleanup.
              */
-            void startCleanup() {
-                if (true == mCleanup) Cleanup();
-            }
+            void startCleanup();
 
             /**
              * getElapsedTime() will return one of the following:
@@ -167,11 +122,12 @@ namespace Aftermath { namespace Engine {
              * 3) (If uninitialized) the total time from init to markCleanup
              * @return total elapsed time as described above.
              */
-            float getElapsedTime() const {
-                float result = mElapsedClock.GetElapsedTime();
-                if(!mInit) result = mElapsedTime;
-                return result;
-            }
+            float getElapsedTime() const;
+
+            /**
+             * @return The app that this state belongs to.
+             */
+            App & getApp();
 
         protected:
             /** Reference to this state's App */
@@ -180,10 +136,7 @@ namespace Aftermath { namespace Engine {
             /**
              * Cleans up this State before it is removed.
              */
-            virtual void Cleanup() {
-                mApp.getLogger() << "Cleaning up state '" << mId << "'"
-                                 << std::endl;
-            }
+            virtual void cleanup();
 
         private:
             std::string           mId;

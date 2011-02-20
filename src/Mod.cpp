@@ -171,7 +171,7 @@ sf::Sprite * Mod::newSprite(const std::string & imagePath) {
 }
 
 sf::Text * Mod::newText(const std::string & string, const std::string &
-        fontPath, unsigned int characterSize) {
+        fontPath, const sf::Color & color, unsigned int characterSize) {
     sf::Font * font = mFonts[fontPath];
     if (font == NULL) {
         font = new sf::Font();
@@ -182,5 +182,7 @@ sf::Text * Mod::newText(const std::string & string, const std::string &
                               << std::endl;
         mFonts[fontPath] = font;
     }
-    return new sf::Text(string, *font, characterSize);
+    sf::Text * text = new sf::Text(string, *font, characterSize);
+    text->SetColor(color);
+    return text;
 }

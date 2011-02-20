@@ -17,32 +17,39 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
+#include "App.hpp"
 #include "MenuState.hpp"
 
 using namespace Aftermath::Engine;
 
-MenuState::MenuState(App & app) : State(std::string("Menu"), app) {}
+MenuState::MenuState(App & app) : WidgetState(std::string("Menu"), app) {}
 
 MenuState::~MenuState() {}
 
 void MenuState::init() {
     State::init();
 
-    mMenuText1 = mApp.getMod().newText("Play Game", "menu.ttf");
-    mMenuText2 = mApp.getMod().newText("Exit", "menu.ttf");
+    add(new Button(mApp.getMod().newSprite("gui/menu_button_up.png"),
+        mApp.getMod().newSprite("gui/menu_button_over.png"),
+        mApp.getMod().newSprite("gui/menu_button_down.png"),
+        mApp.getMod().newText("Play", "menu.ttf"),
+        400, 300,
+        100, 50,
+        &MenuState::playClicked));
 
-    // Position the string
-    mMenuText1->SetColor(sf::Color(255,255,255));
-    mMenuText1->Move(400.f, 300.f);
-
-    mMenuText2->SetColor(sf::Color(255,255,255));
-    mMenuText2->Move(400.f, 400.f);
+    add(new Button(mApp.getMod().newSprite("gui/menu_button_up.png"),
+        mApp.getMod().newSprite("gui/menu_button_over.png"),
+        mApp.getMod().newSprite("gui/menu_button_down.png"),
+        mApp.getMod().newText("Exit", "menu.ttf"),
+        400, 400,
+        100, 50,
+        &MenuState::exitClicked));
 
     // Load menu image
     mMenuSprite = mApp.getMod().newSprite("gui/main_menu.png");
 }
 
-void MenuState::handleEvent(sf::Event event) {
+void MenuState::handleEvent(sf::Event & event) {
     switch (event.Type) {
         case sf::Event::KeyPressed:
             switch (event.Key.Code) {
@@ -54,23 +61,17 @@ void MenuState::handleEvent(sf::Event event) {
             break;
         default: break;
     }
+    WidgetState::handleEvent(event);
 }
-
-void MenuState::update() {}
 
 void MenuState::draw() {
     mApp.getWindow().Clear();
     mApp.getWindow().Draw(*mMenuSprite);
-    mApp.getWindow().Draw(*mMenuText1);
-    mApp.getWindow().Draw(*mMenuText2);
+    WidgetState::draw();
 }
 
 void MenuState::cleanup() {
     delete mMenuSprite;
     mMenuSprite = NULL;
-    delete mMenuText1;
-    mMenuText1 = NULL;
-    delete mMenuText2;
-    mMenuText2 = NULL;
-    State::Cleanup();
+    WidgetState::cleanup();
 }

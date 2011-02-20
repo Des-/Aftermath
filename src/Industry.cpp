@@ -23,8 +23,6 @@
 
 using namespace Aftermath;
 
-class WorkerType;
-
 Industry::Industry() {}
 
 Industry::~Industry() {

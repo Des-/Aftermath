@@ -67,7 +67,7 @@ namespace Aftermath { namespace Engine {
              *
              * @param event - The SFML event to handle.
              */
-            void handleEvent(sf::Event event);
+            void handleEvent(sf::Event & event);
 
             /**
              * Updates this State when it is active.

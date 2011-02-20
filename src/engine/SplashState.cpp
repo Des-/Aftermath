@@ -17,6 +17,7 @@
 //      You should have received a copy of the GNU General Public License
 //      along with Aftermath.  If not, see <http://www.gnu.org/licenses/>
 
+#include "App.hpp"
 #include "SplashState.hpp"
 
 using namespace Aftermath::Engine;
@@ -31,7 +32,7 @@ void SplashState::init() {
     mSplashSprite = mApp.getMod().newSprite(mImage);
 }
 
-void SplashState::handleEvent(sf::Event event) {}
+void SplashState::handleEvent(sf::Event & event) {}
 
 void SplashState::update() {
     if(!isPaused() && getElapsedTime() > mTime)
@@ -45,5 +46,5 @@ void SplashState::draw() {
 
 void SplashState::cleanup() {
     delete mSplashSprite;
-    State::Cleanup();
+    State::cleanup();
 }
