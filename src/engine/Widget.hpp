@@ -69,27 +69,27 @@ namespace Aftermath { namespace Engine {
              * @return The x position of this Widget, relative to the left
              * edge of its RenderWindow.
              */
-            int getX() const;
+            float getX() const;
 
             /**
              * Sets the x position of this Widget.
              *
              * @param x - The new x position.
              */
-            void setX(int x);
+            void setX(float x);
 
             /**
              * @return The y position of this Widget, relative to the left
              * edge of its RenderWindow.
              */
-            int getY() const;
+            float getY() const;
 
             /**
              * Sets the y position of this Widget.
              *
              * @param y - The new y position.
              */
-            void setY(int y);
+            void setY(float y);
 
             /**
              * Sets the x and y position of this widget.
@@ -97,7 +97,7 @@ namespace Aftermath { namespace Engine {
              * @param x - The new x position.
              * @param y - The new y position.
              */
-            void setPosition(int x, int y);
+            void setPosition(float x, float y);
 
             /**
              * Moves this Widget by the given offset.
@@ -107,31 +107,31 @@ namespace Aftermath { namespace Engine {
              * @param dy - The amount in the y direction to move by. This can
              * be negative.
              */
-            void move(int dx, int dy);
+            void move(float dx, float dy);
 
             /**
              * @return The width of this Widget, as specified by setWidth().
              */
-            int getWidth() const;
+            float getWidth() const;
 
             /**
              * Sets the width of this widget.
              *
              * @param width - The new width.
              */
-            void setWidth(int width);
+            void setWidth(float width);
 
             /**
              * @return The height of this Widget, as specified by setHeight().
              */
-            int getHeight() const;
+            float getHeight() const;
 
             /**
              * Sets the height of this widget.
              *
              * @param height - The new height.
              */
-            void setHeight(int height);
+            void setHeight(float height);
 
             /**
              * Sets the width and height of this widget.
@@ -139,7 +139,7 @@ namespace Aftermath { namespace Engine {
              * @param width - The new width.
              * @param height - The new height.
              */
-            void setSize(int width, int height);
+            void setSize(float width, float height);
 
             /**
              * Gets if this Widget contains the given point on its
@@ -148,7 +148,7 @@ namespace Aftermath { namespace Engine {
              * @param true if this widget contains the given point, false
              * otherwise.
              */
-            virtual bool contains(int x, int y) const;
+            virtual bool contains(float x, float y) const;
 
             /**
              * @return true if the mouse is hovering over this Widget; false
@@ -293,10 +293,10 @@ namespace Aftermath { namespace Engine {
             virtual void draw(sf::RenderWindow & window) {}
 
         private:
-            int mX;
-            int mY;
-            int mWidth;
-            int mHeight;
+            float mX;
+            float mY;
+            float mWidth;
+            float mHeight;
             bool mMouseOver;
             bool mMousePressing;
             bool mMouseFocused;

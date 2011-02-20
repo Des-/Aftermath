@@ -34,54 +34,54 @@ void Widget::setState(State * state) {
     mState = state;
 }
 
-int Widget::getX() const {
+float Widget::getX() const {
     return mX;
 }
 
-void Widget::setX(int x) {
+void Widget::setX(float x) {
     mX = x;
 }
 
-int Widget::getY() const {
+float Widget::getY() const {
     return mY;
 }
 
-void Widget::setY(int y) {
+void Widget::setY(float y) {
     mY = y;
 }
 
-void Widget::setPosition(int x, int y) {
+void Widget::setPosition(float x, float y) {
     setX(x);
     setY(y);
 }
 
-void Widget::move(int dx, int dy) {
+void Widget::move(float dx, float dy) {
     mX += dx;
     mY += dy;
 }
 
-int Widget::getWidth() const {
+float Widget::getWidth() const {
     return mWidth;
 }
 
-void Widget::setWidth(int width) {
+void Widget::setWidth(float width) {
     mWidth = width;
 }
 
-int Widget::getHeight() const {
+float Widget::getHeight() const {
     return mHeight;
 }
 
-void Widget::setHeight(int height) {
+void Widget::setHeight(float height) {
     mHeight = height;
 }
 
-void Widget::setSize(int width, int height) {
+void Widget::setSize(float width, float height) {
     setWidth(width);
     setHeight(height);
 }
 
-bool Widget::contains(int x, int y) const {
+bool Widget::contains(float x, float y) const {
     return x >= mX && x - mX < mWidth && y >= mY && y - mY < mHeight;
 }
 

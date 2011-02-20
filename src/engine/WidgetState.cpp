@@ -32,6 +32,35 @@ void WidgetState::init() {
 }
 
 void WidgetState::handleEvent(sf::Event & event) {
+    sf::Vector2f mousePos;
+    // Correct for window zoom
+    switch (event.Type) {
+        case sf::Event::MouseMoved:
+            mousePos = mApp.getWindow().ConvertCoords(
+                    event.MouseMove.X, event.MouseMove.Y);
+            event.MouseMove.X = mousePos.x;
+            event.MouseMove.Y = mousePos.y;
+            break;
+        case sf::Event::MouseWheelMoved:
+            mousePos = mApp.getWindow().ConvertCoords(
+                    event.MouseWheel.X, event.MouseWheel.Y);
+            event.MouseWheel.X = mousePos.x;
+            event.MouseWheel.Y = mousePos.y;
+            break;
+        case sf::Event::MouseButtonPressed:
+            mousePos = mApp.getWindow().ConvertCoords(
+                    event.MouseButton.X, event.MouseButton.Y);
+            event.MouseButton.X = mousePos.x;
+            event.MouseButton.Y = mousePos.y;
+            break;
+        case sf::Event::MouseButtonReleased:
+            mousePos = mApp.getWindow().ConvertCoords(
+                    event.MouseButton.X, event.MouseButton.Y);
+            event.MouseButton.X = mousePos.x;
+            event.MouseButton.Y = mousePos.y;
+            break;
+        default: break;
+    }
     iterator itr;
     for (itr = begin(); itr != end(); ++itr)
         (*itr)->handleEvent(event); // Pass events on to widgets

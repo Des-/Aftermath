@@ -59,8 +59,8 @@ namespace Aftermath { namespace Engine {
                     sf::Sprite * overImage,
                     sf::Sprite * downImage,
                     sf::Text * text = NULL,
-                    int x = 0, int y = 0,
-                    int width = -1, int height = -1,
+                    float x = 0, float y = 0,
+                    float width = -1, float height = -1,
                     void (*callback)(Widget *) = NULL,
                     bool fitText = true, bool fitToText = false);
 
@@ -109,6 +109,17 @@ namespace Aftermath { namespace Engine {
              * @param window - The window to draw to.
              */
             virtual void draw(sf::RenderWindow & window);
+
+            /**
+             * Checks pixel by pixel with the button's default (up) image.
+             *
+             * @param x - The x coordinate of the point to check.
+             * @param y - The y coordinate of the point to check.
+             *
+             * @return true if this button contains the given point; false
+             * otherwise.
+             */
+            bool contains(float x, float y) const;
 
         private:
             sf::Text   * mText;
