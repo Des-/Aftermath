@@ -23,9 +23,9 @@ using namespace Aftermath;
 
 Terrain::Terrain(const std::string & name, const std::string & description,
     bool isLand, bool isSea, const std::string & image,
-    const std::map <const Resource *, float> * probabilities) :
-        NamedType(name, description, image), mLand(isLand), mSea(isSea),
-        mProbabilities(probabilities) {}
+    const std::map <const Resource *, float> * probabilities, bool isRevealed)
+        : NamedType(name, description, image), mLand(isLand), mSea(isSea),
+          mProbabilities(probabilities), mRevealed(isRevealed) {}
 
 Terrain::~Terrain() {
     delete mProbabilities;
@@ -51,4 +51,8 @@ Terrain::iterator Terrain::begin() const {
 
 Terrain::iterator Terrain::end() const {
     return mProbabilities->end();
+}
+
+bool Terrain::isRevealed() const {
+    return mRevealed;
 }

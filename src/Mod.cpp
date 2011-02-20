@@ -156,7 +156,7 @@ int Mod::getDatePerTurn() const {
     return mDatePerTurn;
 }
 
-sf::Sprite * Mod::newSprite(const std::string & imagePath) {
+sf::Image * Mod::getImage(const std::string & imagePath) {
     sf::Image * img = mImages[imagePath];
     if (img == NULL) {
         img = new sf::Image();
@@ -167,7 +167,11 @@ sf::Sprite * Mod::newSprite(const std::string & imagePath) {
                               << std::endl;
         mImages[imagePath] = img;
     }
-    return new sf::Sprite(*img);
+    return img;
+}
+
+sf::Sprite * Mod::newSprite(const std::string & imagePath) {
+    return new sf::Sprite(*getImage(imagePath));
 }
 
 sf::Text * Mod::newText(const std::string & string, const std::string &

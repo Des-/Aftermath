@@ -203,6 +203,16 @@ namespace Aftermath {
              * @param imagePath - The path of the image to load, relative to
              * the Mod's "images" directory.
              *
+             * @return A pointer to a new image from the given image path.
+             */
+            sf::Image * getImage(const std::string & imagePath);
+
+            /**
+             * Gets the image with getImage() and creates a new sprite.
+             *
+             * @param imagePath - The path of the image to load, relative to
+             * the Mod's "images" directory.
+             *
              * @return A pointer to a new sprite from the given image path.
              */
             sf::Sprite * newSprite(const std::string & imagePath);

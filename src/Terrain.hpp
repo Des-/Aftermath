@@ -60,10 +60,13 @@ namespace Aftermath {
              * @param probabilities - A map between resource types and their
              * probabilities for this tile. This is used when randomly
              * generating resources for tiles.
+             * @param isRevealed - Whether or not this terrain must be
+             * surveyed to discover its resources.
              */
             Terrain(const std::string & name, const std::string & description,
                 bool isLand, bool isSea, const std::string & image,
-                const std::map <const Resource *, float> * probabilities);
+                const std::map <const Resource *, float> * probabilities,
+                bool isRevealed);
 
             /**
              * Deletes this terrain and free its image and probabilities map.
@@ -111,10 +114,20 @@ namespace Aftermath {
              */
             iterator end() const;
 
+            /**
+             * Gets whether or not this terrain must be surveyed to discover
+             * its resources.
+             *
+             * @return true if this terrain does not require surveying; false
+             * otherwise.
+             */
+            bool isRevealed() const;
+
         private:
             bool mLand;
             bool mSea;
             const std::map<const Resource *, float> * mProbabilities;
+            bool mRevealed;
     };
 
 }
